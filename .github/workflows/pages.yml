@@ -30,3 +30,4 @@ jobs:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+# re-trigger after enabling Pages
