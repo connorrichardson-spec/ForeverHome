@@ -8,7 +8,7 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 2. A virtual walkthrough viewable in a phone browser via a shareable link.
 
 ## Status
-- **Phase:** Discovery (room program drafted; lot, budget, size not yet defined)
+- **Phase:** Discovery. Draft v0 layout + tooling pipeline built (placeholder sizes, no lot yet)
 - **Last updated:** 2026-10-25
 
 ## Key Decisions
@@ -55,11 +55,28 @@ Owners are flexible on which floor a room lands on.
 - Basement bedroom requires code egress window (window well); confirm with local code.
 - Stack wet walls (basement bath / main half bath / upstairs baths) to simplify plumbing.
 
-## Repo Layout (planned)
-- `docs/` — this brief, decision log, research notes
-- `design/` — parametric source models (single source of truth)
-- `exports/` — generated CAD/PDF/IFC files for the builder
-- `web/` — phone-friendly 3D walkthrough
+## Repo Layout
+- `design/house.py` — **single source of truth**: levels, rooms (rectangles, ft), doors, fixtures. Edit this.
+- `design/geometry.py` — turns rooms into walls, openings (doors/windows auto-placed), 3D boxes.
+- `design/build.py` — generates everything below. Run: `.venv/bin/python design/build.py`
+  (first time: `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`)
+- `exports/` — builder-facing output (commit these): `ForeverHome_plans.pdf` (3 floor plans at 1/8"=1' + 4 elevations),
+  `ForeverHome_plans.dxf` (CAD, layers per level, feet), `schedules/rooms.csv`, `schedules/openings.csv`
+- `web/` — phone walkthrough (Three.js, vendored in `web/vendor/`, no build step). `model.json` is generated.
+- `.github/workflows/pages.yml` — publishes `web/` + `exports/` to GitHub Pages on every push to main.
+- Live site (once Pages is enabled): https://connorrichardson-spec.github.io/ForeverHome/
+- Preview locally: `cd web && python3 -m http.server 8000`, open http://localhost:8000
+
+## Draft v0 Status / Known Gaps
+- Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
+- Finished area in draft: basement ~1,650 + main ~2,620 + upper ~2,130 = **~6,400 sq ft** (excl. garage, patio).
+  That is bigger than expected; generous great room, halls and basement. Trim once priorities are set.
+- Not modeled yet: roof, foundation, stairs geometry (steps are visual only; use floor buttons in viewer),
+  structure, MEP, sections, IFC export, real furniture, finishes, site/lot.
+- Viewer was **not** tested in a real WebGL browser during creation (sandbox had none); verify on phone.
+- DXF/PDF are drafting aids; stamped construction documents must come from a licensed architect/engineer.
+- Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-25 (later): Built pipeline: design/ -> PDF plans/elevations, DXF, CSV schedules, Three.js phone walkthrough, Pages workflow. Pages must be enabled by hand (Settings > Pages > Source: GitHub Actions).
 - 2026-10-25: Repo created, docs scaffolding started. Room program captured and expanded (garage, laundry, primary suite, pantry, patio). Size is derived from rooms, not fixed.
