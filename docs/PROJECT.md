@@ -15,9 +15,9 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 _None yet. Log each with date and reasoning._
 
 ## Open Questions
-- Lot / location / climate zone / local code jurisdiction?
-- Budget range and target square footage?
-- Bedrooms, bathrooms, must-have rooms, style, single vs. multi-story?
+- Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
+- Budget: unknown. Size is intentionally not fixed; it will fall out of the room program.
+- Lot slope matters: a walk-out basement lot changes the design (basement windows/daylight).
 - Preferred CAD output formats the builder wants (DWG, PDF, IFC)?
 
 ## Requirements (room program, v1 — 2026-10-25)
@@ -38,9 +38,18 @@ Owners are flexible on which floor a room lands on.
 **Upper floor**
 - Primary bedroom + 3 additional bedrooms (4 total)
 
-**Not yet specified:** garage size, laundry location, primary bath/closet, pantry, hall bath(s), outdoor spaces.
+**Added (2026-10-25 answers)**
+- Garage: 3-car, attached, with a little storage and some workspace (not a full shop)
+- Laundry: upstairs
+- Primary suite: primary bath + large walk-in closet with a center island
+- One shared bathroom for the other 3 upstairs bedrooms
+- Walk-in pantry (off kitchen)
+- Covered patio with outdoor kitchen and fireplace
+
+**Still unspecified:** exact garage door layout, hall/bath fixtures, finishes.
 
 ## Design Notes / Constraints
+- Style: modern meets traditional.
 - Squat rack needs ~9 ft finished basement ceiling (rack ~7.5-8 ft + bar clearance).
 - Sauna and cold plunge need drainage, ventilation/moisture control, and electrical (dedicated circuit for sauna); plan them near the basement bathroom plumbing.
 - Basement bedroom requires code egress window (window well); confirm with local code.
@@ -53,4 +62,4 @@ Owners are flexible on which floor a room lands on.
 - `web/` — phone-friendly 3D walkthrough
 
 ## Session Log
-- 2026-10-25: Repo created, docs scaffolding started. Initial room program captured.
+- 2026-10-25: Repo created, docs scaffolding started. Room program captured and expanded (garage, laundry, primary suite, pantry, patio). Size is derived from rooms, not fixed.
