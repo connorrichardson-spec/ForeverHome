@@ -8,7 +8,7 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 2. A virtual walkthrough viewable in a phone browser via a shareable link.
 
 ## Status
-- **Phase:** Discovery (requirements and lot not yet defined)
+- **Phase:** Discovery (room program drafted; lot, budget, size not yet defined)
 - **Last updated:** 2026-10-25
 
 ## Key Decisions
@@ -20,8 +20,31 @@ _None yet. Log each with date and reasoning._
 - Bedrooms, bathrooms, must-have rooms, style, single vs. multi-story?
 - Preferred CAD output formats the builder wants (DWG, PDF, IFC)?
 
-## Requirements
-_To fill in: must-haves, nice-to-haves, deal-breakers._
+## Requirements (room program, v1 — 2026-10-25)
+Owners are flexible on which floor a room lands on.
+
+**Basement**
+- Bedroom (needs egress window) + full bathroom
+- Storage area
+- Small play area
+- Home gym: fits squat rack, small cold plunge, small sauna
+
+**Main floor**
+- Open plan: living room, kitchen, dining
+- Separate office
+- Half bath
+- Mudroom entering from the garage
+
+**Upper floor**
+- Primary bedroom + 3 additional bedrooms (4 total)
+
+**Not yet specified:** garage size, laundry location, primary bath/closet, pantry, hall bath(s), outdoor spaces.
+
+## Design Notes / Constraints
+- Squat rack needs ~9 ft finished basement ceiling (rack ~7.5-8 ft + bar clearance).
+- Sauna and cold plunge need drainage, ventilation/moisture control, and electrical (dedicated circuit for sauna); plan them near the basement bathroom plumbing.
+- Basement bedroom requires code egress window (window well); confirm with local code.
+- Stack wet walls (basement bath / main half bath / upstairs baths) to simplify plumbing.
 
 ## Repo Layout (planned)
 - `docs/` — this brief, decision log, research notes
@@ -30,4 +53,4 @@ _To fill in: must-haves, nice-to-haves, deal-breakers._
 - `web/` — phone-friendly 3D walkthrough
 
 ## Session Log
-- 2026-10-25: Repo created, docs scaffolding started.
+- 2026-10-25: Repo created, docs scaffolding started. Initial room program captured.
