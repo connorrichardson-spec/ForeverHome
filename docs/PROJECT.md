@@ -47,6 +47,8 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   ends became walk-ins: Bedroom 2 is now a full 12x16 with an 8.5x4.5 walk-in at the west end; Bedroom 4 a full 14x14
   with a 7.5x4.5 walk-in at the east end (its reach-in is gone, bed moved to the west wall). Primary door across from
   Bedroom 2's, laundry door next to Bedroom 4's. Same footprint, so no cost change.
+- 2026-10-26: Main-floor half bath -> 3/4 "Main Bath" (3.5x3.6 shower in the NE corner, toilet moved to the SE corner,
+  door shifted west to x 36). Aging in place: the office (next to the foyer) can become a main-floor bedroom later.
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -72,7 +74,7 @@ Owners are flexible on which floor a room lands on.
 **Main floor**
 - Open plan: living room, kitchen, dining
 - Separate office
-- Half bath
+- Half bath (2026-10-26: now a 3/4 bath, see Key Decisions)
 - Mudroom entering from the garage
 
 **Upper floor**
@@ -150,7 +152,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Sauna and cold plunge need drainage, ventilation/moisture control, and electrical (dedicated circuit for sauna); plan them near the basement bathroom plumbing.
 - Basement bedroom requires code egress window (window well); confirm with local code. (2026-10-26: no basement
   windows planned, so no legal basement bedroom for now.)
-- Stack wet walls (basement bath / main half bath / upstairs baths) to simplify plumbing.
+- Stack wet walls (basement bath / main 3/4 bath / upstairs baths) to simplify plumbing.
 - Placeholder finishes (2026-10-25): white-oak hardwood in finished rooms; wet rooms (all 4 baths + laundry) are
   12x24 porcelain tile; garage + mechanical concrete, gym rubber mats (squat rack), sauna cedar, patio stone pavers.
   One `floor=` edit per room to change.
@@ -158,7 +160,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
   main->upper 18 risers @ 7.33", 10" treads, ~4.5 ft flights, full-width landing on the south wall. Both flights
   start/end at y=10.8, leaving a 3.2 ft walkway along the north wall on every floor; foyer and hall open onto that
   walkway (3 ft cased openings). Verify headroom/landing depth with the builder (landings ~6.9 ft deep since the 2026-10-26 entry bay).
-  Paint colors per room (`paint=` in house.py): greige common areas, green office, navy half bath, soft blues/greens in bedrooms.
+  Paint colors per room (`paint=` in house.py): greige common areas, green office, navy main bath, soft blues/greens in bedrooms.
 
 ## Repo Layout
 - `design/house.py` — **single source of truth**: levels, rooms (rectangles, ft, with `paint=`/`floor=` finishes), doors
@@ -201,6 +203,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26 (late night, cont.): half bath -> 3/4 Main Bath (aging in place).
 - 2026-10-26 (late night, cont.): upper hall trimmed to 40 ft; dead ends -> walk-ins for Bedrooms 2 and 4.
 - 2026-10-26 (late night): basement windows removed, water heater to the SE corner (new `water_heater` kind),
   squat rack on the west wall, treadmill gone; upper hall moved 2 ft north so Bedrooms 2 + 3 are 12x16.

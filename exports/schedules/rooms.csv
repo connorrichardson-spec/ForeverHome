@@ -5,7 +5,7 @@ main,Office,14,16,224,yes,
 main,Foyer,10,19,179.5,yes,In the 3 ft entry bay under the front gable
 main,Foyer Closet,3.5,3,10.5,yes,Coat closet
 main,Stair,10,19,190,no,5.2 ft walkway foyer <-> hall; open to above
-main,Half Bath,8,8,64,yes,
+main,Main Bath,8,8,64,yes,"3/4 bath (shower, no tub) so the office can become a main-floor bedroom later"
 main,Hall,8,6,48,yes,
 main,Mudroom,14,14,196,yes,
 main,Pantry,12,12,144,yes,Walk-in
