@@ -63,6 +63,24 @@ Owners are flexible on which floor a room lands on.
   doors to the covered patio. Single story; roof TBD. Living room's north windows are gone (wall is now interior).
 - Bonus room: storage door moved to the south end (was behind the TV); bookcase moved between windows.
 
+**Added (2026-10-25, Tasks.md round 4)**
+- Kids Playroom opening widened to ~16.4 ft (wall west of the old opening removed)
+- Pantry: floor-to-ceiling cabinet (5 ft) on the east wall; counter + uppers continue beside it
+- Mudroom: built-in locker wall on the south wall (shoe cubbies, bench, hooks, upper cubbies); bench-only bay under the window
+- Foyer coat closet (3.5x3) in the SE corner, opening toward the stair
+
+**Exterior (2026-10-25, draft)** — modern farmhouse read of "modern meets traditional":
+- White board-and-batten siding, ledgestone base (2.5 ft) on the main level, white trim, black window frames with
+  2-over-2 grilles, black front door, carriage-style garage doors with a glass top row.
+- Roof: 8:12 side gables (charcoal architectural shingles) over the two-story block and the bonus room, eaves at the
+  upper wall top; 4:12 metal sheds on the rear one-story strip; 6:12 metal hips over the playroom and covered patio;
+  8:12 metal gable front porch on cedar posts. Ridges ~34 ft (main), ~29 ft (bonus) above main floor.
+- Covered patio: cedar posts/beams, tongue-and-groove ceiling, stone chimney for the outdoor fireplace.
+- Site placeholders: driveway, front walk, sidewalk/street, shrubs, trees, exterior lights. No lot yet, so all of
+  this (and grade = main floor) is a stand-in.
+- Open: bonus-room roof/knee walls, gutters/downspouts, basement window wells, roof drainage at the valleys where
+  the rear sheds meet the playroom/patio hips (needs crickets or a re-think once a roof designer looks at it).
+
 **Still unspecified:** exact garage door layout. Finishes in the model are placeholders to react to (see Design Notes).
 
 ## Design Notes / Constraints
@@ -84,6 +102,8 @@ Owners are flexible on which floor a room lands on.
 - `design/house.py` — **single source of truth**: levels, rooms (rectangles, ft, with `paint=`/`floor=` finishes), doors
   (first room listed = side the door swings into), and `FURNITURE` placements. Edit this.
 - `design/furniture.py` — furniture/cabinet/appliance/fixture library (each piece built from boxes; `facing` = which way its front points).
+- `design/exterior.py` — roofs (gable / hip / shed from `ROOFS` in house.py) and site (`SITE`: paving, porches,
+  lights, chimneys, shrubs, trees) as sloped polygons + boxes. Siding/stone/trim are applied to walls in geometry.py.
 - `design/export.py` — writes `exports/house.json` (semantic model: rooms, finishes, walls, openings, stairs, furniture;
   feet) and `exports/house.glb` (glTF, meters; one named object per wall/floor/ceiling/stair/furniture piece, materials
   named by finish, furniture origins at footprint center with kind/facing/size as custom properties). **Blender
@@ -97,7 +117,9 @@ Owners are flexible on which floor a room lands on.
   Textures (plank floors, tile, fabric, pavers) are drawn procedurally in `viewer.js`; geometry is merged per material for phones.
   Lighting: sky HDRI (`web/vendor/hdri/`, Poly Haven CC0), ACES tone mapping, soft sun shadows, GTAO ambient occlusion
   (HQ button; default on for desktop, off for phones). Stair openings have invisible blockers (walk mode doesn't climb).
-  Deep link to a view: `index.html#main/38/27/60` (level/x/y/heading deg, 0 = north), or `#doll`.
+  Deep link to a view: `index.html#main/38/27/60` (level/x/y/heading deg, 0 = north), `#doll`, or
+  `#doll/35/28/120` (azimuth from the front, elevation, distance). Dollhouse opens as an exterior view; turn off
+  Roof (and Upper) to look inside.
 - `.github/workflows/pages.yml` — publishes `web/` + `exports/` to GitHub Pages on every push to main.
 - Live site (once Pages is enabled): https://connorrichardson-spec.github.io/ForeverHome/
 - Preview locally: `./run-local.sh` (serves web/ + exports/ on http://localhost:8000 and opens a separate Firefox
@@ -108,8 +130,8 @@ Owners are flexible on which floor a room lands on.
 - Finished area in draft: basement ~1,650 + main ~2,910 + upper ~3,100 (incl. ~880 bonus over garage) = **~7,700 sq ft**
   (excl. garage, patio).
   That is bigger than expected; generous great room, halls and basement. Trim once priorities are set.
-- Not modeled yet: roof, foundation, stairs geometry (steps are visual only; use floor buttons in viewer),
-  structure, MEP, sections, IFC export, site/lot. Furniture is blocky (boxes only); walk mode can't climb stairs.
+- Not modeled yet: foundation, structure, MEP, sections, IFC export, real lot/grading, gutters, window wells.
+  Furniture is blocky (boxes only); walk mode can't climb stairs. PDF now has a roof plan (A-6.0) and elevations with roofs.
 - Viewer verified in headless Chromium (software WebGL, no console errors) on 2026-10-25; still verify on a real phone,
   especially frame rate with shadows (and HQ/AO if turned on).
 - `house.glb` checked programmatically (parses; all 340 objects match source geometry), not yet opened in Blender.
@@ -117,6 +139,9 @@ Owners are flexible on which floor a room lands on.
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-25 (night, round 4): wider playroom opening, pantry tall cabinet, mudroom lockers, foyer coat closet.
+- 2026-10-25 (night): Exterior: siding, stone base, trim, window frames, full roof system, front porch, covered-patio
+  structure, site (driveway, walks, plants, lights). Roof plan sheet + roofed elevations; roofs in DXF and glb.
 - 2026-10-25 (late, round 3): wider stair walkway + bigger office, Kids Playroom bump-out with patio sliders,
   bonus-room door/bookcase fixes.
 - 2026-10-25 (late): Tasks.md round 2 done (wider hall, primary WC + door swing, Jack-and-Jill basement bath, pantry

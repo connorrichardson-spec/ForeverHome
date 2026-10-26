@@ -38,7 +38,8 @@ ROOMS = {
  ],
  "main": [
   dict(name="Office", paint="#4f5e53", rect=(0, 0, 14, 16)),
-  dict(name="Foyer", rect=(14, 0, 28, 16)),
+  dict(name="Foyer", poly=[(14, 0), (24.5, 0), (24.5, 3), (28, 3), (28, 16), (14, 16)]),
+  dict(name="Foyer Closet", rect=(24.5, 0, 28, 3), win="none", note="Coat closet"),
   dict(name="Stair", rect=(28, 0, 38, 16), win="none", stair="up", stair_line=10.8,
        floor_rect=(28, 10.8, 38, 16), ceil_rect=(28, 10.8, 38, 16), note="5.2 ft walkway foyer <-> hall"),
   dict(name="Half Bath", floor="tile", paint="#2f4a5c", rect=(38, 0, 46, 8), win="small"),
@@ -93,16 +94,17 @@ DOORS = [
  ("basement", "Bsmt Bedroom", "Bsmt Hall", "door", dict(at=(57.5, 14))), ("basement", "Bsmt Bedroom", "Bsmt Bath", "door"),
  ("basement", "Bsmt Bath", "Bsmt Hall", "door"),
  ("basement", "Play Area", "Bsmt Hall", "cased"), ("basement", "Storage", "Bsmt Hall", "door"),
- ("main", "Foyer", None, "door", dict(side="S")),
+ ("main", "Foyer", None, "door", dict(side="S", at=(21, 0))),
  ("main", "Garage", None, "door", dict(side="N", at=(75, 26))),
  ("main", "Office", "Foyer", "door"), ("main", "Foyer", "Stair", "cased", dict(at=(28, 13.4), w=4.5)),
- ("main", "Foyer", "Great Room", "cased"), ("main", "Stair", "Hall", "cased", dict(at=(38, 12.0), w=3.5)),
+ ("main", "Foyer", "Great Room", "cased"),
+ ("main", "Foyer", "Foyer Closet", "door", dict(w=2.5)), ("main", "Stair", "Hall", "cased", dict(at=(38, 12.0), w=3.5)),
  ("main", "Half Bath", "Hall", "door"), ("main", "Hall", "Great Room", "cased"),
  ("main", "Hall", "Mudroom", "cased"),
  ("main", "Mudroom", "Garage", "door"), ("main", "Pantry", "Mudroom", "door"),
  ("main", "Pantry", "Great Room", "door"),
  ("main", "Great Room", "Covered Patio", "patio"),
- ("main", "Kids Playroom", "Great Room", "cased", dict(w=8.0)),
+ ("main", "Kids Playroom", "Great Room", "cased", dict(at=(8.6, 46), w=16.4)),
  ("main", "Kids Playroom", "Covered Patio", "patio", dict(w=8.0)),
  ("upper", "Bedroom 2", "Upper Hall", "door", dict(at=(7, 14))),
  ("upper", "Bedroom 3", "Upper Hall", "door", dict(at=(21, 14))),
@@ -200,8 +202,9 @@ FURNITURE = [
  # pantry
  ("main", "base_cab", 48.2, 14.4, "E", dict(W=11.2, label="Pantry cabs")),
  ("main", "pantry_shelves", 48.2, 14.4, "E", dict(W=11.2, D=1.2, z0=4.2, label=None)),
- ("main", "base_cab", 57.8, 14.4, "W", dict(W=11.2, drawers=True, label="Pantry cabs")),
- ("main", "upper_cab", 58.7, 14.4, "W", dict(W=11.2, z=4.6, H=3.6)),
+ ("main", "tall_cab", 57.8, 14.4, "W", dict(W=5.0, H=9.6)),
+ ("main", "base_cab", 57.8, 19.4, "W", dict(W=6.2, drawers=True, label="Pantry cabs")),
+ ("main", "upper_cab", 58.7, 19.4, "W", dict(W=6.2, z=4.6, H=3.6)),
  # office
  ("main", "desk", 5, 4, "W", {}),
  ("main", "office_chair", 2.8, 5.75, "E", {}),
@@ -211,7 +214,8 @@ FURNITURE = [
  # foyer / half bath / hall / mudroom
  ("main", "bench", 14.2, 9, "E", {}),
  ("main", "art", 14.18, 9.5, "E", dict(W=3, color="fix:#a7745a")),
- ("main", "console_table", 23.5, 0.3, "N", {}),
+ ("main", "console_table", 14.2, 1.0, "E", {}),
+ ("main", "closet_rod", 24.7, 0.3, "N", dict(W=3.1, D=2.0, seed=41, label="Coats")),
  ("main", "rug", 18.5, 2, "N", dict(W=5, D=8, color="fabric:#3e4a5c", border="fabric:#c9b98f")),
  ("main", "pendant", 20, 7, "N", dict(W=2, D=2, z=7.5, ceil=10.0)),
  ("main", "plant", 26.2, 7.0, "N", {}),
@@ -219,7 +223,7 @@ FURNITURE = [
  ("main", "toilet", 43.4, 2, "W", {}),
  ("main", "rug", 39, 8.8, "N", dict(W=6, D=4.4, color="fabric:#b7a98f")),
  ("main", "wardrobe_wall", 46.2, 0.4, "E", dict(W=7, D=1.75, label="Lockers")),
- ("main", "bench", 49, 0.3, "N", dict(W=8)),
+ ("main", "mudroom_lockers", 49.55, 0.3, "N", dict(W=9.2, sections=4, open_section=1)),
  ("main", "rug", 51, 3.5, "N", dict(W=3, D=8, color="fabric:#5d5f61", border="fabric:#3a3b3c")),
  # kids playroom
  ("main", "rug", 4, 48.5, "N", dict(W=13, D=7.5, color="fabric:#f0e2c0", border="fabric:#7fa6b5")),
@@ -306,3 +310,44 @@ FURNITURE = [
  *[("upper", "shelving_metal", 91.75, sy, "W", dict(seed=40 + i)) for i, sy in enumerate((1, 8, 15))],
  ("upper", "shelving_metal", 87, 23.75, "S", dict(seed=44)),
 ]
+
+# Roofs (see exterior.py). base = height of the roof's underside at the wall line (top of wall).
+# gable: ridge along "x" or "y"; ends = which gable ends get a sided triangle (others die into a taller roof/wall).
+# shed: low = side of the low eave. hip: all sides slope. ovh: overhang (ft), number or per-side dict.
+# finish: shingle (charcoal architectural asphalt) | metal (black standing seam)
+ROOFS = [
+ dict(name="Main roof west", kind="gable", rect=(0, 0, 38, 41.5), ridge="x", base=20.0, pitch=8 / 12,
+      ovh=dict(S=1.5, N=1.5, W=1.0, E=0), ends="WE", finish="shingle"),
+ dict(name="Main roof east", kind="gable", rect=(38, 0, 60, 35.5), ridge="x", base=20.0, pitch=8 / 12,
+      ovh=dict(S=1.5, N=1.5, W=0, E=0), ends="E", finish="shingle"),
+ dict(name="Bonus roof", kind="gable", rect=(60, 0, 94, 26), ridge="x", base=20.0, pitch=8 / 12,
+      ovh=dict(S=1.5, N=1.5, W=0, E=1.0), ends="E", finish="shingle",
+      note="Eave at the bonus-room wall top for now; lower it for knee walls / sloped ceilings"),
+ dict(name="Rear roof west", kind="shed", rect=(0, 41.5, 38, 46), low="N", base=10.0, pitch=4 / 12,
+      ovh=dict(W=1.0), ends="W", finish="metal"),
+ dict(name="Rear roof east", kind="shed", rect=(38, 35.5, 60, 46), low="N", base=10.0, pitch=4 / 12,
+      ovh=dict(E=1.0), ends="E", finish="metal"),
+ dict(name="Playroom roof", kind="hip", rect=(0, 46, 26, 58), base=10.0, pitch=6 / 12, ovh=1.0, finish="metal"),
+ dict(name="Patio roof", kind="hip", rect=(26, 46, 60, 62), base=10.0, pitch=6 / 12, ovh=1.0, finish="metal"),
+ dict(name="Front porch roof", kind="gable", rect=(15, -7, 27, 0), ridge="y", base=9.0, pitch=8 / 12,
+      ovh=dict(S=0.8, N=0, W=1.0, E=1.0), ends="S", finish="metal"),
+]
+
+# Site: paving (name, rect, material), porches (posts + beams + ceiling), lights (x, y, z, facing),
+# chimneys (x0, y0, x1, y1, z0, z1), shrubs (x, y, r), trees (x, y, canopy r, trunk height)
+SITE = dict(
+ paving=[("street", (-60, -48, 160, -37), "fix:#3b3c3e"), ("sidewalk", (-60, -37, 160, -32), "concrete"),
+         ("driveway", (61, -32, 93.5, 0), "concrete"), ("front walk", (19, -32, 23, -7), "concrete"),
+         ("porch deck", (15, -7, 27, 0), "pavers")],
+ porches=[dict(name="front porch", rect=(15, -7, 27, 0), beam_top=9.0, posts=[(15.35, -6.65), (26.65, -6.65)],
+               open="SWE"),
+          dict(name="covered patio", rect=(26, 46, 60, 62), beam_top=10.0, open="NE",
+               posts=[(26.35, 61.65), (37.6, 61.65), (48.9, 61.65), (59.65, 61.65), (59.65, 53.8)])],
+ lights=[(18.7, -0.33, 5.4, "S"), (23.3, -0.33, 5.4, "S"), (72.0, -0.33, 8.2, "S"), (83.0, -0.33, 8.2, "S"),
+         (77.0, 26.33, 6.8, "N"), (36.0, 46.25, 7.0, "N"), (50.5, 46.25, 7.0, "N"), (26.25, 57.0, 7.0, "E")],
+ chimneys=[(29.4, 60.0, 32.6, 61.6, 8.0, 15.5)],
+ shrubs=[(2, -2.1, 1.3), (5.5, -2.3, 1.5), (9, -2.1, 1.3), (12.4, -2.2, 1.2), (29.6, -2.1, 1.2), (32.6, -2.3, 1.5),
+         (36, -2.1, 1.3), (40, -2.2, 1.2), (44, -2.3, 1.5), (48, -2.1, 1.3), (52, -2.2, 1.4), (56, -2.1, 1.2),
+         (58.9, -2.0, 1.0), (-2.1, 18, 1.2), (-2.3, 30, 1.5), (-2.1, 44, 1.2), (-2.2, 50, 1.3)],
+ trees=[(6, -22, 7, 8), (46, -24, 6, 7), (108, -8, 7, 9), (-16, 30, 8, 9), (82, 54, 8, 10), (112, 40, 7, 8)],
+)

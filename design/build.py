@@ -5,10 +5,11 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
-from matplotlib.patches import Rectangle, Arc
+from matplotlib.patches import Rectangle, Arc, Polygon
 import ezdxf
 import house as H
 import geometry as G
+import exterior as E
 import export
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +21,7 @@ NOT_LIVING = {"Garage", "Covered Patio", "Mechanical", "Stair"}
 DRAFT = "DRAFT v0 - NOT FOR CONSTRUCTION"
 
 DATA = {l: G.boxes_for_level(l) for l in H.LEVELS}
+POLYS = {"main": E.site()[1], "roof": E.roof_polys()}     # sloped / organic geometry (feet)
 
 
 def fmt(ft):
@@ -121,34 +123,42 @@ def write_plans():
     print("wrote", path)
 
 
-MAT_COL = {"wallExt": "#d8d2c4", "wallInt": "#d8d2c4", "glass": "#9ad0e6", "garageDoor": "#b9bcc0", "doorExt": "#6b4f3a"}
+MAT_COL = {"wallExt": "#d8d2c4", "wallInt": "#d8d2c4", "glass": "#9ad0e6", "garageDoor": "#b9bcc0",
+           "doorExt": "#2a2d31", "siding": "#efece4", "stone": "#b9ae9f", "trim": "#fbfaf7", "frame": "#222222",
+           "shingle": "#4a4d52", "metalRoof": "#2c2e31", "wood:#8a6a4a": "#8a6a4a"}   # soffits omitted (hidden)
+VIEW = {  # u (horizontal on sheet) and depth (larger = farther from the viewer) per elevation
+    "S": (lambda x, y: x, lambda x, y: y), "N": (lambda x, y: -x, lambda x, y: -y),
+    "E": (lambda x, y: -y, lambda x, y: -x), "W": (lambda x, y: y, lambda x, y: x)}
 
 
 def elevation(ax, view):
     ax.set_aspect("equal"); ax.axis("off")
-    items = []
+    U, Dp = VIEW[view]
+    items = []                                     # (depth, u-coords, z-coords, color)
     for level in H.LEVELS:
         for b in DATA[level][0]:
-            if b["mat"] in MAT_COL and b["z"] + b["h"] > 0 and not b.get("furn"):
-                items.append(b)
-    if view in ("S", "N"):
-        key = lambda b: (b["x"], b["w"])
-        flip = view == "N"
-        items.sort(key=(lambda b: b["y"]) if view == "N" else (lambda b: -b["y"]))   # far first
-    else:
-        key = lambda b: (b["y"], b["d"])
-        flip = view == "E"
-        items.sort(key=(lambda b: b["x"]) if view == "E" else (lambda b: -b["x"]))
-    xs = []
-    for b in items:
-        u0, du = key(b)
-        z0 = max(b["z"], 0); dz = b["z"] + b["h"] - z0
-        if flip:
-            u0 = -(u0 + du)
-        xs += [u0, u0 + du]
-        ax.add_patch(Rectangle((u0, z0), du, dz, fc=MAT_COL[b["mat"]], ec="#333", lw=0.25))
-    ax.plot([min(xs) - 5, max(xs) + 5], [0, 0], c="#444", lw=1.2)
-    ax.set_xlim(min(xs) - 6, max(xs) + 6); ax.set_ylim(-3, 24)
+            if b["mat"] not in MAT_COL or b["z"] + b["h"] <= 0 or b.get("furn") or b["h"] < 0.35 and b["z"] < 0.1:
+                continue
+            xs, ys = (b["x"], b["x"] + b["w"]), (b["y"], b["y"] + b["d"])
+            us = [U(x, y) for x in xs for y in ys]
+            near = min(Dp(x, y) for x in xs for y in ys)
+            z0, z1 = max(b["z"], 0), b["z"] + b["h"]
+            items.append((near, [min(us), max(us), max(us), min(us)], [z0, z0, z1, z1], MAT_COL[b["mat"]]))
+    for lst in POLYS.values():
+        for p in lst:
+            if p["mat"] not in MAT_COL:
+                continue
+            pts = p["pts"]
+            items.append((sum(Dp(x, y) for x, y, _ in pts) / len(pts), [U(x, y) for x, y, _ in pts],
+                          [z for _, _, z in pts], MAT_COL[p["mat"]]))
+    items.sort(key=lambda t: -t[0])                # painter's order: far first
+    us_all = []
+    for _, us, zs, col in items:
+        us_all += us
+        ax.add_patch(Polygon(list(zip(us, zs)), closed=True, fc=col, ec="#333", lw=0.2))
+    lo, hi = min(us_all), max(us_all)
+    ax.plot([lo - 5, hi + 5], [0, 0], c="#444", lw=1.2)
+    ax.set_xlim(lo - 6, hi + 6); ax.set_ylim(-3, 37)
     ax.set_title({"S": "SOUTH (FRONT) ELEVATION", "N": "NORTH (REAR) ELEVATION",
                   "E": "EAST ELEVATION", "W": "WEST ELEVATION"}[view], fontsize=8, loc="left")
 
@@ -157,10 +167,39 @@ def write_elev_pages(pdf):
     for pg, views in enumerate([("S", "N"), ("E", "W")]):
         fig = plt.figure(figsize=(17, 11))
         for k, v in enumerate(views):
-            ax = fig.add_axes([0.05, 0.50 - k * 0.42 + 0.03, 0.9, 0.38])
+            ax = fig.add_axes([0.05, 0.50 - k * 0.43 + 0.02, 0.9, 0.41])
             elevation(ax, v)
-        sheet_frame(fig, "EXTERIOR ELEVATIONS", f"A-{4 + pg}.0", scale="NTS (roof not yet modeled)")
+        sheet_frame(fig, "EXTERIOR ELEVATIONS", f"A-{4 + pg}.0", scale="NTS")
         pdf.savefig(fig); plt.close(fig)
+    write_roof_plan(pdf)
+
+
+def write_roof_plan(pdf):
+    W, Hh = 17, 11
+    fig = plt.figure(figsize=(W, Hh))
+    x0, x1, y0, y1 = -4, 98, -10, 66
+    axw, axh = (x1 - x0) / 8, (y1 - y0) / 8
+    ax = fig.add_axes([0.5 - axw / 2 / W, 0.46 - axh / 2 / Hh, axw / W, axh / Hh])
+    ax.set_xlim(x0, x1); ax.set_ylim(y0, y1); ax.axis("off")
+    for level in ("main", "upper"):
+        for b in cut_boxes(level):
+            if b["mat"] == "wallExt":
+                ax.add_patch(Rectangle((b["x"], b["y"]), b["w"], b["d"], fill=False, ec="#999", lw=0.3, ls=":"))
+    roofs = sorted((p for p in POLYS["roof"] if p["mat"] in ("shingle", "metalRoof")),
+                   key=lambda p: max(z for _, _, z in p["pts"]))
+    for p in roofs:
+        ax.add_patch(Polygon([(x, y) for x, y, _ in p["pts"]], closed=True,
+                             fc="#d9dadc" if p["mat"] == "shingle" else "#bfc3c7", ec="#222", lw=0.6))
+    for r in H.ROOFS:
+        rx0, ry0, rx1, ry1 = r["rect"]
+        rise = round(r["pitch"] * 12)
+        ax.text((rx0 + rx1) / 2, (ry0 + ry1) / 2, f"{r['name'].upper()}\n{rise}:12 {r['finish']}\n"
+                f"ridge +{fmt(E.ridge_height(r))}", fontsize=4.5, ha="center", va="center", color="#333")
+    ax.annotate("N", (2, 62), fontsize=12, fontweight="bold", ha="center")
+    sheet_frame(fig, "ROOF PLAN", "A-6.0")
+    fig.text(0.02, 0.03, "Heights above main finished floor. Roof massing is a draft: overhangs, pitches and the "
+             "bonus-room eave (knee walls) still to be designed.", fontsize=7)
+    pdf.savefig(fig); plt.close(fig)
 
 
 def write_dxf():
@@ -190,6 +229,11 @@ def write_dxf():
                 msp.add_text(t, height=0.8, dxfattribs={"layer": f"L{i}-A-TEXT"}).set_placement((x + dx - len(t) * .3, y))
         msp.add_text(LEVEL_TITLES[level] + "  (DRAFT)", height=2,
                      dxfattribs={"layer": f"L{i}-A-TEXT"}).set_placement((dx, -8))
+    doc.layers.add("ROOF-A-ROOF", color=1)
+    for p in POLYS["roof"]:
+        if p["mat"] in ("shingle", "metalRoof"):
+            msp.add_lwpolyline([(x + 360.0, y) for x, y, _ in p["pts"]], close=True, dxfattribs={"layer": "ROOF-A-ROOF"})
+    msp.add_text("ROOF PLAN  (DRAFT)", height=2, dxfattribs={"layer": "ROOF-A-ROOF"}).set_placement((360.0, -8))
     path = os.path.join(EXP, "ForeverHome_plans.dxf")
     doc.saveas(path)
     print("wrote", path)
@@ -225,10 +269,14 @@ def write_model_json():
         for b in DATA[level][0]:
             boxes.append([round(b[k], 3) for k in ("x", "y", "z", "w", "d", "h")] +
                          [b["mat"], 1 if b["c"] else 0, b.get("label", "")])
-        out["levels"][level] = {"elev": elev, "height": height, "boxes": boxes}
+        out["levels"][level] = {"elev": elev, "height": height, "boxes": boxes,
+                                "polys": [[p["mat"], [round(c, 3) for pt in p["pts"] for c in pt]]
+                                          for p in POLYS.get(level, [])]}
         for r in H.ROOMS[level]:
             for name, x, y, area, dims in room_label(r):
                 out["rooms"].append({"level": level, "name": name, "x": round(x, 2), "y": round(y, 2)})
+    out["levels"]["roof"] = {"elev": H.LEVELS["upper"][0] + H.LEVELS["upper"][1], "height": 0, "boxes": [],
+                             "polys": [[p["mat"], [round(c, 3) for pt in p["pts"] for c in pt]] for p in POLYS["roof"]]}
     path = os.path.join(WEB, "model.json")
     with open(path, "w") as f:
         json.dump(out, f, separators=(",", ":"))
@@ -241,5 +289,5 @@ if __name__ == "__main__":
     write_plans()
     write_dxf()
     write_model_json()
-    export.write(DATA, EXP)
+    export.write(DATA, EXP, POLYS)
     print("finished sq ft by level:", {k: round(v) for k, v in totals.items()}, "total", round(sum(totals.values())))

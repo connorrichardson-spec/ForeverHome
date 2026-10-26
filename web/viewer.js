@@ -8,8 +8,8 @@ import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 
 const EYE = 5.5, RADIUS = 1.1, WALK_SPEED = 4.5;       // feet, feet/sec
 const SPAWN = { basement: [40, 18, 90], main: [21, 5, 0], upper: [30, 16, 0] }; // x, y, heading deg (0 = north)
-const COLORS = { wallExt: 0xe7e1d3, wallInt: 0xf4f1ea, doorExt: 0x6b4f3a, garageDoor: 0xc3c6ca,
-  trim: 0xf7f6f2, door: 0xf4f3ef, ceiling: 0xf8f7f3 };
+const COLORS = { wallExt: 0xe7e1d3, wallInt: 0xf4f1ea, doorExt: 0x24282d, garageDoor: 0xc3c6ca,
+  trim: 0xf7f6f2, door: 0xf4f3ef, ceiling: 0xf8f7f3, soffit: 0xf2f0ea };
 
 const isTouch = matchMedia("(pointer: coarse)").matches;
 const $ = (s) => document.querySelector(s);
@@ -36,7 +36,7 @@ scene.add(sun, sun.target);
 const groundShape = new THREE.Shape().setFromPoints([[-253, -269], [347, -269], [347, 331], [-253, 331]].map(([x, y]) => new THREE.Vector2(x, y)));
 groundShape.holes.push(new THREE.Path().setFromPoints([[28, 0], [28, 14], [38, 14], [38, 0]].map(([x, y]) => new THREE.Vector2(x, y))));
 const ground = new THREE.Mesh(new THREE.ShapeGeometry(groundShape),
-  new THREE.MeshStandardMaterial({ color: 0x7c9a62, roughness: 1 }));
+  new THREE.MeshStandardMaterial({ color: 0x8fae6e, roughness: 1 }));   // grass map attached below
 ground.rotation.x = -Math.PI / 2; ground.position.y = -0.02; ground.receiveShadow = true;   // shape xy = house xy
 scene.add(ground);
 
@@ -135,6 +135,69 @@ const TEX = {
       g.fillRect(i * tw + (row % 3) * tw / 3 + 1.5, row * th + 1.5, tw - 3, th - 3);
     }
   }),
+  siding: () => canvasTex(4, (g, P) => {         // board-and-batten: 12" boards, 2.5" battens every 16"
+    g.fillStyle = "#f4f2ec"; g.fillRect(0, 0, P, P); const r = rng(29), bw = P / 3;
+    for (let i = 0; i < 3; i++) {
+      const x = i * bw;
+      g.fillStyle = "rgba(0,0,0,.10)"; g.fillRect(x + bw * 0.16, 0, 3, P);             // batten shadow
+      g.fillStyle = "#fbfaf6"; g.fillRect(x, 0, bw * 0.16, P);                          // batten face
+      g.fillStyle = "rgba(255,255,255,.6)"; g.fillRect(x, 0, 2, P);
+      for (let k = 0; k < 40; k++) { g.fillStyle = `rgba(0,0,0,${r() * 0.025})`; g.fillRect(x + r() * bw, r() * P, 1, 20 + r() * 60); }
+    }
+  }),
+  stone: () => canvasTex(3, (g, P) => {          // ledgestone, warm grays
+    g.fillStyle = "#6f675e"; g.fillRect(0, 0, P, P); const r = rng(31);
+    let y = 0;
+    while (y < P) {
+      const h = 18 + r() * 26; let x = -r() * 80;
+      while (x < P) {
+        const w = 50 + r() * 140, v = r();
+        g.fillStyle = `hsl(${28 + v * 14}, ${8 + v * 10}%, ${52 + v * 20}%)`;
+        for (const off of [0, P]) g.fillRect(x - off + 2, y + 2, w - 4, h - 4);
+        x += w;
+      }
+      y += h;
+    }
+  }),
+  shingle: () => canvasTex(3, (g, P) => {        // architectural asphalt, ~5.5" exposure, staggered tabs
+    g.fillStyle = "#2c2e31"; g.fillRect(0, 0, P, P); const r = rng(37), rows = 6, rh = P / rows;
+    for (let row = 0; row < rows; row++) {
+      let x = -r() * 60;
+      while (x < P) {
+        const w = 25 + r() * 60, v = r();
+        g.fillStyle = `hsl(210, 3%, ${22 + v * 14}%)`;
+        for (const off of [0, P]) g.fillRect(x - off, row * rh, w - 2, rh - 3);
+        x += w;
+      }
+      g.fillStyle = "rgba(0,0,0,.55)"; g.fillRect(0, row * rh + rh - 4, P, 4);
+    }
+    const d = g.getImageData(0, 0, P, P);
+    for (let i = 0; i < d.data.length; i += 4) { const n = (r() - 0.5) * 22; d.data[i] += n; d.data[i + 1] += n; d.data[i + 2] += n; }
+    g.putImageData(d, 0, 0);
+  }),
+  metalRoof: () => canvasTex(4, (g, P) => {      // standing seam every 16"
+    g.fillStyle = "#3a3d41"; g.fillRect(0, 0, P, P);
+    for (let i = 0; i < 3; i++) {
+      const x = i * P / 3;
+      g.fillStyle = "#55595e"; g.fillRect(x, 0, 4, P);
+      g.fillStyle = "rgba(0,0,0,.35)"; g.fillRect(x + 4, 0, 4, P);
+    }
+  }),
+  grass: () => canvasTex(10, (g, P) => {
+    g.fillStyle = "#7f9f5f"; g.fillRect(0, 0, P, P); const r = rng(41);
+    for (let i = 0; i < 9000; i++) {
+      const v = r(); g.fillStyle = `hsl(${85 + v * 25}, ${30 + v * 20}%, ${32 + v * 22}%)`;
+      g.fillRect(r() * P, r() * P, 1.5, 3 + r() * 4);
+    }
+  }),
+  garageDoor: () => canvasTex(8, (g, P) => {     // 4 raised sections, glass top row
+    g.fillStyle = "#eceae4"; g.fillRect(0, 0, P, P); const sh = P / 4;
+    for (let k = 0; k < 4; k++) {
+      g.fillStyle = "rgba(0,0,0,.35)"; g.fillRect(0, k * sh, P, 3);
+      if (k === 0) for (let i = 0; i < 4; i++) { g.fillStyle = "#30353b"; g.fillRect(i * P / 4 + 10, 18, P / 4 - 20, sh - 36); }
+      else for (let i = 0; i < 4; i++) { g.strokeStyle = "rgba(0,0,0,.18)"; g.lineWidth = 3; g.strokeRect(i * P / 4 + 10, k * sh + 14, P / 4 - 20, sh - 28); }
+    }
+  }),
   rubber: () => canvasTex(4, (g, P) => {
     g.fillStyle = "#2a2b2d"; g.fillRect(0, 0, P, P); const r = rng(17);
     for (let i = 0; i < 2500; i++) { g.fillStyle = r() < 0.5 ? "#4a4c50" : "#1c1c1e"; g.fillRect(r() * P, r() * P, 2, 2); }
@@ -172,6 +235,12 @@ function mat(name) {
     fabric: () => S({ color: hex, map: tex("fabric"), roughness: 1 }),
     tile: () => S({ color: hex, map: tex("tile"), roughness: 0.25 }),
     floorTile: () => S({ color: 0xffffff, map: tex("floorTile"), roughness: 0.35 }),
+    siding: () => S({ color: 0xffffff, map: tex("siding"), roughness: 0.8 }),
+    stone: () => S({ color: 0xffffff, map: tex("stone"), roughness: 0.95 }),
+    shingle: () => S({ color: 0xffffff, map: tex("shingle"), roughness: 0.9 }),
+    metalRoof: () => S({ color: 0xb0b4b8, map: tex("metalRoof"), roughness: 0.55, metalness: 0.25, envMapIntensity: 0.35 }),
+    garageDoor: () => S({ color: 0xffffff, map: tex("garageDoor"), roughness: 0.6 }),
+    frame: () => S({ color: 0x1d1f22, roughness: 0.4, metalness: 0.2 }),
     lamp: () => S({ color: hex, emissive: hex, emissiveIntensity: 1.3 }),
     ceiling: () => S({ color: 0xf8f7f3, emissive: 0x9a978f, roughness: 1 }),   // faces away from sky light
   }[kind];
@@ -209,6 +278,33 @@ function boxesToGeometry(list) {
   return g;
 }
 
+// Sloped / organic geometry (roofs, gable ends, plants): flat-shaded triangles, double-sided,
+// UVs projected on each face's own plane (u = horizontal along the face, v = up the face) in feet.
+function polysToGeometry(list) {
+  const pos = [], nor = [], uv = [], up = new THREE.Vector3(0, 1, 0);
+  for (const flat of list) {
+    const P = [];
+    for (let i = 0; i < flat.length; i += 3) P.push(new THREE.Vector3(flat[i], flat[i + 2], -flat[i + 1]));
+    const n = new THREE.Vector3().subVectors(P[1], P[0]).cross(new THREE.Vector3().subVectors(P[2], P[0])).normalize();
+    const u = Math.abs(n.y) > 0.99 ? new THREE.Vector3(1, 0, 0) : new THREE.Vector3().crossVectors(up, n).normalize();
+    const v = new THREE.Vector3().crossVectors(n, u);
+    for (let k = 1; k < P.length - 1; k++) for (const p of [P[0], P[k], P[k + 1]]) {
+      pos.push(p.x, p.y, p.z); nor.push(n.x, n.y, n.z); uv.push(p.dot(u), p.dot(v));
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute("normal", new THREE.Float32BufferAttribute(nor, 3));
+  g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2));
+  return g;
+}
+function matDouble(name) {
+  const key = name + "|2";
+  if (!mats[key]) { mats[key] = mat(name).clone(); mats[key].side = THREE.DoubleSide; }
+  return mats[key];
+}
+ground.material.map = tex("grass"); ground.material.color.set(0xffffff); ground.material.needsUpdate = true;
+
 const model = await (await fetch("./model.json")).json();
 const levelGroups = {}, colliders = [], ceilings = [];
 for (const [lvl, L] of Object.entries(model.levels)) {
@@ -225,6 +321,13 @@ for (const [lvl, L] of Object.entries(model.levels)) {
     mesh.receiveShadow = true;
     if (m === "glass") mesh.renderOrder = 1;
     if (m === "ceiling") ceilings.push(mesh);
+    g.add(mesh);
+  }
+  const polyByMat = {};
+  for (const [m, pts] of L.polys ?? []) (polyByMat[m] ??= []).push(pts);
+  for (const [m, list] of Object.entries(polyByMat)) {
+    const mesh = new THREE.Mesh(polysToGeometry(list), matDouble(m));
+    mesh.castShadow = mesh.receiveShadow = true;
     g.add(mesh);
   }
   levelGroups[lvl] = g; scene.add(g);
@@ -334,27 +437,42 @@ jump.onchange = () => {
   const [l, x, y] = JSON.parse(jump.value); teleport(l, x, y, me.yaw * 180 / Math.PI); jump.value = "";
 };
 document.querySelectorAll("[data-lvl]").forEach((b) => (b.onclick = () => { const s = SPAWN[b.dataset.lvl]; teleport(b.dataset.lvl, s[0], s[1], s[2]); }));
+// Dollhouse: with the roof on it's an exterior view (solid ground, no labels); with the roof off you
+// look into the rooms (see-through ground so the basement shows, room labels on).
+function syncDoll() {
+  const inside = mode === "doll" && !levelGroups.roof.visible;
+  ground.material.transparent = inside; ground.material.opacity = inside ? 0.3 : 1;
+  ground.material.depthWrite = !inside; ground.material.needsUpdate = true;
+  labels.visible = inside;
+  labels.children.forEach((s) => (s.visible = levelGroups[s.userData.level].visible));
+}
 document.querySelectorAll("[data-show]").forEach((b) => (b.onclick = () => {
   b.classList.toggle("on"); levelGroups[b.dataset.show].visible = b.classList.contains("on");
-  labels.children.forEach((s) => (s.visible = levelGroups[s.userData.level].visible));
+  syncDoll();
 }));
+// orbit camera around the house: azimuth deg (0 = from the front/south, 90 = from the east), elevation deg, distance ft
+function dollView(az, el, dist) {
+  const a = az * Math.PI / 180, e = el * Math.PI / 180, t = new THREE.Vector3(47, 10, -27);
+  orbit.target.copy(t);
+  cam.position.set(t.x + dist * Math.cos(e) * Math.sin(a), t.y + dist * Math.sin(e), t.z + dist * Math.cos(e) * Math.cos(a));
+  orbit.update();
+}
 function setMode(m) {
   mode = m;
   $("#mWalk").classList.toggle("on", m === "walk"); $("#mDoll").classList.toggle("on", m === "doll");
   $("#walkCtl").style.display = m === "walk" ? "contents" : "none";
   $("#dollCtl").style.display = m === "doll" ? "contents" : "none";
   stick.style.display = m === "walk" && isTouch ? "block" : "none";
-  labels.visible = m === "doll"; orbit.enabled = m === "doll";
+  orbit.enabled = m === "doll";
   ceilings.forEach((c) => (c.visible = m === "walk"));     // dollhouse looks down into the rooms
-  ground.material.transparent = m === "doll"; ground.material.opacity = m === "doll" ? 0.3 : 1;
-  ground.material.depthWrite = m !== "doll"; ground.material.needsUpdate = true;
   $("#help").textContent = m === "walk"
     ? (isTouch ? "Left thumb: move · Right thumb: look · Buttons above switch floors" : "WASD / arrows to move · drag to look")
-    : "Drag to orbit · pinch to zoom · toggle floors above";
-  if (m === "doll") { cam.position.set(47, 90, 30); orbit.target.set(47, 5, -25); cam.rotation.order = "XYZ"; orbit.update(); }
+    : "Drag to orbit · pinch to zoom · turn off Roof / floors above to look inside";
+  if (m === "doll") { dollView(35, 28, 120); cam.rotation.order = "XYZ"; }
   else teleport(level, me.x, me.y, me.yaw * 180 / Math.PI);
   for (const g of Object.values(levelGroups)) g.visible = true;
   document.querySelectorAll("[data-show]").forEach((b) => b.classList.add("on"));
+  syncDoll();
 }
 $("#mWalk").onclick = () => setMode("walk"); $("#mDoll").onclick = () => setMode("doll");
 // ambient occlusion (GTAO) — on by default on desktop, toggle with the HQ button
@@ -380,11 +498,12 @@ addEventListener("resize", () => {
 });
 
 // ---------- loop ----------
-// optional deep link: #level/x/y/heading (e.g. #main/38/30/45) or #doll
+// optional deep link: #level/x/y/heading (e.g. #main/38/30/45), #doll, or #doll/azimuth/elevation/distance
 const hash = location.hash.slice(1).split("/");
 if (model.levels[hash[0]] && hash.length >= 3) teleport(hash[0], +hash[1], +hash[2], +(hash[3] ?? 0));
 else teleport("main", ...SPAWN.main);
 setMode(hash[0] === "doll" ? "doll" : "walk");
+if (hash[0] === "doll" && hash.length >= 4) dollView(+hash[1], +hash[2], +hash[3]);
 $("#loading").remove();
 let last = performance.now();
 renderer.setAnimationLoop((now) => {

@@ -24,7 +24,9 @@ BASE = {
     "concrete": ("#c9c7c2", 0, 0.85), "rubber": ("#2a2b2d", 0, 0.95), "pavers": ("#a39d92", 0, 0.9),
     "trim": ("#f7f6f2", 0, 0.5), "door": ("#f4f3ef", 0, 0.5), "ceiling": ("#f8f7f3", 0, 0.95),
     "wallExt": ("#e7e1d3", 0, 0.85), "wallInt": ("#f4f1ea", 0, 0.85), "garageDoor": ("#c3c6ca", 0, 0.6),
-    "doorExt": ("#6b4f3a", 0, 0.6), "glass": ("#bfe3f0", 0, 0.05), "mirror": ("#e8eef2", 1, 0.03),
+    "doorExt": ("#24282d", 0, 0.4), "glass": ("#bfe3f0", 0, 0.05), "mirror": ("#e8eef2", 1, 0.03),
+    "siding": ("#efece4", 0, 0.8), "stone": ("#b9ae9f", 0, 0.9), "shingle": ("#4a4d52", 0, 0.85),
+    "metalRoof": ("#2c2e31", 0.7, 0.4), "soffit": ("#f2f0ea", 0, 0.8), "frame": ("#1d1f22", 0.2, 0.4),
 }
 KIND_PBR = {"paint": (0, 0.9), "fix": (0, 0.75), "gloss": (0, 0.22), "metal": (0.85, 0.3), "wood": (0, 0.55),
             "fabric": (0, 1.0), "tile": (0, 0.25), "lamp": (0, 0.5)}
@@ -47,7 +49,7 @@ def gltf_material(key):
     m = {"name": key.replace(":#", "_").replace(":", "_"),
          "pbrMetallicRoughness": {"baseColorFactor": _lin(hexstr) + [1.0], "metallicFactor": metal,
                                   "roughnessFactor": rough},
-         "extras": {"forever_home_material": key}}
+         "extras": {"forever_home_material": key}, "doubleSided": True}
     if key == "glass":
         m["pbrMetallicRoughness"]["baseColorFactor"][3] = 0.25
         m["alphaMode"] = "BLEND"
@@ -131,6 +133,27 @@ class GLB:
         self.g["meshes"].append({"name": name, "primitives": prims})
         return len(self.g["meshes"]) - 1
 
+    def poly_mesh(self, name, by_mat):
+        """by_mat: {material key: [polygons]} (house feet, convex planar) -> flat-shaded triangles."""
+        prims = []
+        for key, polys in by_mat.items():
+            P, N = [], []
+            for poly in polys:
+                pts = _to_gltf(np.array(poly["pts"], float) * FT)
+                n = np.cross(pts[1] - pts[0], pts[2] - pts[0])
+                n = n / (np.linalg.norm(n) or 1)
+                for k in range(1, len(pts) - 1):
+                    P += [pts[0], pts[k], pts[k + 1]]
+                    N += [n] * 3
+            p, n = np.array(P, np.float32), np.array(N, np.float32)
+            uv = np.stack([p[:, 0] + p[:, 2], p[:, 1]], axis=1).astype(np.float32)
+            prims.append({"attributes": {
+                "POSITION": self._acc(p, 5126, "VEC3", 34962, True),
+                "NORMAL": self._acc(n, 5126, "VEC3", 34962),
+                "TEXCOORD_0": self._acc(uv, 5126, "VEC2", 34962)}, "material": self.material(key)})
+        self.g["meshes"].append({"name": name, "primitives": prims})
+        return len(self.g["meshes"]) - 1
+
     def node(self, name, mesh=None, children=None, origin=(0, 0, 0), yaw=0.0, extras=None):
         nd = {"name": name}
         if mesh is not None:
@@ -182,11 +205,21 @@ def _furniture_records(level):
     return out
 
 
-def write(data, exp_dir):
+def _poly_nodes(glb, level, polys):
+    groups = {}
+    for p in polys:
+        groups.setdefault(p["obj"], {}).setdefault(p["mat"], []).append(p)
+    return [glb.node(f"{level}/{tag}", glb.poly_mesh(f"{level}/{tag}", by_mat)) for tag, by_mat in groups.items()]
+
+
+def write(data, exp_dir, polys=None):
     """data: {level: (boxes, walls, ops)} from geometry.boxes_for_level."""
+    polys = polys or {}
     doc = {"units": "feet", "axes": "x east, y north (front faces south, -y), z up",
            "glb": "house.glb (meters, glTF y-up; node names match the 'node' fields below)",
-           "levels": {}, "rooms": [], "walls": [], "openings": [], "stairs": [], "furniture": []}
+           "levels": {}, "rooms": [], "walls": [], "openings": [], "stairs": [], "furniture": [],
+           "roofs": [dict(r, ridge_height=round(__import__("exterior").ridge_height(r), 2)) for r in H.ROOFS],
+           "site": H.SITE}
     glb = GLB()
     for level, (elev, height) in H.LEVELS.items():
         boxes, walls, ops = data[level]
@@ -243,7 +276,10 @@ def write(data, exp_dir):
                 name = f"{level}/{kind}/{room}"
             children.append(glb.node(name, glb.mesh(name, by_mat, origin, yaw), origin=origin, yaw=yaw,
                                      extras=extras))
+        children += _poly_nodes(glb, level, polys.get(level, []))
         glb.g["scenes"][0]["nodes"].append(glb.node(level, children=children))
+    if polys.get("roof"):
+        glb.g["scenes"][0]["nodes"].append(glb.node("roof", children=_poly_nodes(glb, "roof", polys["roof"])))
 
     with open(os.path.join(exp_dir, "house.json"), "w") as f:
         json.dump(doc, f, indent=1)

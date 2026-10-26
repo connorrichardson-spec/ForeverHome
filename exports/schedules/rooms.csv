@@ -10,7 +10,8 @@ basement,Bsmt Bedroom,12,14,168,Egress window required
 basement,Play Area,20,16,320,
 basement,Storage,12,16,192,
 main,Office,14,16,224,
-main,Foyer,14,16,224,
+main,Foyer,14,16,213.5,
+main,Foyer Closet,3.5,3,10.5,Coat closet
 main,Stair,10,16,160,5.2 ft walkway foyer <-> hall
 main,Half Bath,8,8,64,
 main,Hall,8,6,48,

@@ -261,6 +261,53 @@ def upper_cab(W=6.0, D=1.1, z=4.6, H=2.8, color=CAB):
     return p
 
 
+def tall_cab(W=6.0, D=2.0, H=9.6, color=CAB):
+    """Floor-to-ceiling pantry cabinets: tall lower doors + short upper doors, toe kick."""
+    p = []
+    _box(p, 0, 0, 0, W, D - 0.25, 0.35, "fix:#2a2a2a")
+    _box(p, 0, 0, 0.35, W, D - 0.05, H - 0.35, color)
+    _cab_fronts(p, 0, W, D - 0.05, 0.4, 6.3, color, door_w=1.5)
+    _cab_fronts(p, 0, W, D - 0.05, 6.75, H - 6.85, color, door_w=1.5)
+    _box(p, -0.05, -0.02, H - 0.15, W + 0.1, D + 0.05, 0.15, "trim", False)        # crown
+    return p
+
+
+def mudroom_lockers(W=12.0, D=1.75, H=7.6, sections=5, open_section=2, color="gloss:#e9ece8",
+                    seat="wood:#b08860", seed=19):
+    """Built-in locker wall: shoe cubbies under a bench, open hook bays, upper cubbies with baskets.
+    `open_section` is left bench-only (no dividers/uppers) to keep a window above it clear."""
+    p = []
+    rnd = random.Random(seed)
+    sw = W / sections
+    baskets = ["fabric:#b9a07a", "fabric:#8f8a80", "fabric:#c7b79c"]
+    _box(p, 0, 0, 0, W, D - 0.2, 0.3, "fix:#2a2a2a")                                 # toe kick
+    _box(p, 0, 0, 0.3, W, D, 0.08, color)                                            # cubby floor
+    _box(p, 0, 0, 1.5, W, D + 0.05, 0.15, seat)                                       # bench seat
+    for i in range(sections):                                                         # back panel (stops at
+        top = 1.65 if i == open_section else H                                        # the bench below a window)
+        _box(p, i * sw, 0, 0, sw, 0.06, top, color, False)
+    for i in range(sections + 1):                                                     # lower dividers
+        _box(p, min(i * sw, W - 0.08), 0, 0.3, 0.08, D, 1.2, color)
+    for i in range(sections):
+        u0 = i * sw
+        if rnd.random() < 0.8:                                                        # shoes
+            _box(p, u0 + 0.3, 0.4, 0.38, 0.9, 0.9, 0.35, rnd.choice(["fix:#2b2b2b", "fix:#7a5a3c", "fix:#d5d0c6"]), False)
+        if i == open_section:
+            _box(p, u0 + 0.1, 0.1, 1.65, sw - 0.2, D - 0.2, 0.25, "fabric:#6f7d6a", False)   # cushion
+            continue
+        for x in (u0, u0 + sw - 0.08):                                                # tall dividers
+            _box(p, x, 0, 1.65, 0.08, D, H - 1.65, color, False)
+        _box(p, u0, 0, 6.2, sw, D, 0.08, color, False)                                # upper cubby shelf
+        _box(p, u0, 0, H - 0.1, sw, D + 0.1, 0.1, color, False)                       # top cap
+        _box(p, u0 + 0.25, D - 0.15 - 1.2, 6.3, sw - 0.5, 1.2, 0.95, rnd.choice(baskets), False)
+        for hx in (u0 + sw * 0.3, u0 + sw * 0.7):                                     # hooks + a coat
+            _box(p, hx - 0.04, 0.06, 5.0, 0.08, 0.25, 0.08, "metal:#2b2c2e", False)
+        if rnd.random() < 0.7:
+            _box(p, u0 + sw * 0.3 - 0.45, 0.12, 2.7, 0.9, 0.5, 2.35,
+                 rnd.choice(["fabric:#2e3b4e", "fabric:#6d7a5c", "fabric:#9a3b3b", "fabric:#c8b38f"]), False)
+    return p
+
+
 def fridge(W=3.0, D=2.5, H=6.0):
     p = []
     _box(p, 0, 0, 0, W, D, H, STEEL)
@@ -769,7 +816,8 @@ KINDS = {
  "art": (art, None), "bench": (bench, "Bench"), "console_table": (console_table, "Console"),
  "dining_table": (dining_table, "Dining table"), "chair": (chair, None), "stool": (stool, None),
  "pendant": (pendant, None), "base_cab": (base_cab, "Base cab"), "upper_cab": (upper_cab, None),
- "fridge": (fridge, "Ref"), "range": (range_oven, "Range"), "hood": (hood, None),
+ "fridge": (fridge, "Ref"), "tall_cab": (tall_cab, "Pantry cab"),
+ "mudroom_lockers": (mudroom_lockers, "Lockers / bench"), "range": (range_oven, "Range"), "hood": (hood, None),
  "dishwasher": (dishwasher, "DW"), "island": (island, "Island"), "pantry_shelves": (pantry_shelves, "Shelves"),
  "bookcase": (bookcase, "Books"), "bed": (bed, "Bed"), "nightstand": (nightstand, None),
  "dresser": (dresser, "Dresser"), "desk": (desk, "Desk"), "office_chair": (office_chair, None),

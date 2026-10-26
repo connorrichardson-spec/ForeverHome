@@ -2,6 +2,7 @@
 from collections import defaultdict
 import house as H
 import furniture as F
+import exterior as E
 
 DOOR_W, DOOR_H = 3.0, 6.67
 CASED_W, CASED_H = 6.0, 8.0
@@ -10,6 +11,7 @@ WIN_W, WIN_H, WIN_SILL = 4.0, 4.5, 3.0
 SIDE_NORMAL = {"S": (0, -1), "N": (0, 1), "W": (-1, 0), "E": (1, 0)}
 DEFAULT_PAINT = "#e6e1d6"
 SKIN, BASE_H, BASE_T = 0.02, 0.4, 0.05      # paint film, baseboard height / proud depth
+SIDING_T, STONE_T, STONE_H = 0.08, 0.2, 2.5  # exterior cladding depths, stone base height (main level)
 FLOOR_MAT = {"hardwood": "hardwood", "concrete": "concrete", "rubber": "rubber",
              "cedar": "wood:#c48a57", "pavers": "pavers", "tile": "floorTile"}
 CASE_W, CASE_T = 0.3, 0.06                   # door/window casing width, proud depth
@@ -222,11 +224,49 @@ def boxes_for_level(level):
         else:
             box(x=y0, y=lo + 0.02, z=z_floor, w=y1 - y0, d=0.15, h=head - z_floor - 0.03, mat="door", c=False)
 
+    def frames(w, o, lo, hi, sill, head):
+        """Black window / slider frames with grilles, centered in the wall."""
+        ft, fd = 0.15, 0.3
+        add(w["axis"], w["c"], lo, lo + ft, fd, sill, head, "frame", False)
+        add(w["axis"], w["c"], hi - ft, hi, fd, sill, head, "frame", False)
+        add(w["axis"], w["c"], lo, hi, fd, head - ft, head, "frame", False)
+        add(w["axis"], w["c"], lo, hi, fd, sill, sill + ft, "frame", False)
+        if o["kind"] == "window" and o["w"] >= 2.5:
+            add(w["axis"], w["c"], o["pos"] - 0.05, o["pos"] + 0.05, 0.16, sill, head, "frame", False)
+            zm = (sill + head) / 2
+            add(w["axis"], w["c"], lo, hi, 0.16, zm - 0.04, zm + 0.04, "frame", False)
+        elif o["kind"] == "patio":
+            n = max(2, round(o["w"] / 4))
+            for k in range(1, n):
+                u = lo + (hi - lo) * k / n
+                add(w["axis"], w["c"], u - 0.1, u + 0.1, fd, sill, head, "frame", False)
+
+    def ext_trim(w, o, lo, hi, sill, head, s):
+        """White trim boards around an opening on the siding face."""
+        face = w["c"] + s * (w["t"] / 2 + SIDING_T)
+        def strip(a, b, z0, z1, t=0.07):
+            add(w["axis"], face + s * t / 2, a, b, t, z0, z1, "trim", False)
+        cw = 0.4
+        strip(lo - cw, lo, sill, head)
+        strip(hi, hi + cw, sill, head)
+        strip(lo - cw - 0.1, hi + cw + 0.1, head, head + 0.5, 0.1)                 # head board
+        if o["kind"] == "window":
+            strip(lo - cw - 0.1, hi + cw + 0.1, sill - 0.15, sill, 0.22)           # sill nose
+            strip(lo - cw, hi + cw, sill - 0.5, sill - 0.15)
+
     def casing(w, o, lo, hi, head):
         """Trim around an opening on each indoor face, plus jamb liners in the reveal."""
+        sill = z_floor + o["sill"]
+        if level != "basement":
+            for s in (-1, 1):
+                off = s * (w["t"] / 2 + 0.05)
+                p = (o["pos"], w["c"] + off) if w["axis"] == "h" else (w["c"] + off, o["pos"])
+                if room_at(*p) is None:
+                    ext_trim(w, o, lo, hi, sill, head, s)
         if o["kind"] == "garage":
             return
-        sill = z_floor + o["sill"]
+        if o["kind"] in ("window", "patio"):
+            frames(w, o, lo, hi, sill, head)
         add(w["axis"], w["c"], lo, lo + 0.04, w["t"], sill, head, "trim", False)      # jambs
         add(w["axis"], w["c"], hi - 0.04, hi, w["t"], sill, head, "trim", False)
         add(w["axis"], w["c"], lo, hi, w["t"], head - 0.04, head, "trim", False)
@@ -247,8 +287,30 @@ def boxes_for_level(level):
                 strip(lo - CASE_W - 0.1, hi + CASE_W + 0.1, sill - 0.08, sill, 0.25)    # stool
                 strip(lo - CASE_W, hi + CASE_W, sill - 0.45, sill - 0.08)                # apron
 
+    def cladding(w, s, lo, hi, z0, z1):
+        """Board-and-batten siding on an outside face; stone base + cap on the main level.
+        Pieces at the wall's ends wrap the corner; upper-level siding also covers the floor band."""
+        face = w["c"] + s * w["t"] / 2
+
+        def span(th):           # extend past the wall end by its half-thickness + cladding depth
+            ea = w["a"] - w["t"] / 2 - th if lo <= w["a"] - w["t"] / 2 + 1e-6 else max(lo, w["a"])
+            eb = w["b"] + w["t"] / 2 + th if hi >= w["b"] + w["t"] / 2 - 1e-6 else min(hi, w["b"])
+            return ea, eb
+        at_floor = z0 <= z_floor + 1e-6
+        zs = z_floor - H.FLOOR_T if (level == "upper" and at_floor) else z0
+        if level == "main":
+            zt = z_floor + STONE_H
+            if z0 < zt:
+                add(w["axis"], face + s * STONE_T / 2, *span(STONE_T), STONE_T, z0, min(z1, zt), "stone", False)
+                if z1 >= zt:
+                    add(w["axis"], face + s * 0.14, *span(0.28), 0.28, zt, zt + 0.15, "fix:#d6d0c4", False)
+            zs = max(zs, zt)
+        if z1 > zs:
+            add(w["axis"], face + s * SIDING_T / 2, *span(SIDING_T), SIDING_T, zs, z1, "siding", False)
+
     def skins(w, lo, hi, z0, z1):
-        """Paint film (and baseboard if it starts at the floor) on each indoor face."""
+        """Paint film (and baseboard if it starts at the floor) on each indoor face; cladding outside."""
+        lo_raw, hi_raw = lo, hi
         lo, hi = max(lo, w["a"]), min(hi, w["b"])
         if hi - lo < 1e-6:
             return
@@ -257,6 +319,8 @@ def boxes_for_level(level):
             off = s * (w["t"] / 2 + 0.05)
             r = room_at(mid, w["c"] + off) if w["axis"] == "h" else room_at(w["c"] + off, mid)
             if r is None:
+                if level != "basement":
+                    cladding(w, s, lo_raw, hi_raw, z0, z1)
                 continue
             paint = r.get("paint", DEFAULT_PAINT)
             mat = paint if ":" in paint else "paint:" + paint
@@ -327,6 +391,8 @@ def boxes_for_level(level):
         if "stair" in r:
             tag[0] = f"stair/{r['name']}"
             stair_boxes(level, r, box)
+    if level == "main":
+        boxes += E.site()[0]
     for n, (parts, _, _) in enumerate(furniture(level)):
         tag[0] = f"furn{n}"
         for x, y, z, w, d, h, m, c in parts:
