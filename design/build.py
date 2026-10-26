@@ -9,6 +9,7 @@ from matplotlib.patches import Rectangle, Arc
 import ezdxf
 import house as H
 import geometry as G
+import export
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXP = os.path.join(ROOT, "exports")
@@ -38,7 +39,8 @@ def cut_boxes(level):
 def glass_boxes(level):
     elev = H.LEVELS[level][0]
     return [b for b in DATA[level][0]
-            if b["mat"] in ("glass", "garageDoor", "doorExt") and b["z"] <= elev + CUT <= b["z"] + b["h"] + 1e-6]
+            if b["mat"] in ("glass", "garageDoor", "doorExt") and not b.get("furn")
+            and b["z"] <= elev + CUT <= b["z"] + b["h"] + 1e-6]
 
 
 def room_label(r):
@@ -68,10 +70,13 @@ def draw_plan(ax, level, ox=0.0):
             else:
                 ax.plot([o["c"], o["c"] + r], [o["pos"] - r / 2, o["pos"] - r / 2], c="#333", lw=0.5, zorder=5)
                 ax.add_patch(Arc((o["c"], o["pos"] - r / 2), 2 * r, 2 * r, theta1=0, theta2=90, lw=0.4, zorder=5))
-    for f in H.FIXTURES:
-        if f[0] == level:
-            ax.add_patch(Rectangle((f[2], f[3]), f[4], f[5], fc="none", ec="#777", lw=0.5, ls="--", zorder=2))
-            ax.text(f[2] + f[4] / 2, f[3] + f[5] / 2, f[1], fontsize=3.5, ha="center", va="center", color="#777")
+    for b in DATA[level][0]:
+        if b["mat"] == "stair":
+            ax.add_patch(Rectangle((b["x"], b["y"]), b["w"], b["d"], fill=False, ec="#444", lw=0.35, zorder=2))
+    for _, (fx0, fy0, fx1, fy1), label in G.furniture(level):
+        if label:
+            ax.add_patch(Rectangle((fx0, fy0), fx1 - fx0, fy1 - fy0, fc="none", ec="#777", lw=0.5, ls="--", zorder=2))
+            ax.text((fx0 + fx1) / 2, (fy0 + fy1) / 2, label, fontsize=3, ha="center", va="center", color="#777")
     for r in H.ROOMS[level]:
         for name, x, y, area, dims in room_label(r):
             if r.get("stair") and level != "basement" and False:
@@ -123,7 +128,7 @@ def elevation(ax, view):
     items = []
     for level in H.LEVELS:
         for b in DATA[level][0]:
-            if b["mat"] in MAT_COL and b["z"] + b["h"] > 0:
+            if b["mat"] in MAT_COL and b["z"] + b["h"] > 0 and not b.get("furn"):
                 items.append(b)
     if view in ("S", "N"):
         key = lambda b: (b["x"], b["w"])
@@ -174,10 +179,10 @@ def write_dxf():
             msp.add_lwpolyline([(b["x"] + dx, b["y"]), (b["x"] + b["w"] + dx, b["y"]),
                                 (b["x"] + b["w"] + dx, b["y"] + max(b["d"], .1)), (b["x"] + dx, b["y"] + max(b["d"], .1))],
                                close=True, dxfattribs={"layer": f"L{i}-A-GLAZ"})
-        for f in H.FIXTURES:
-            if f[0] == level:
-                msp.add_lwpolyline([(f[2] + dx, f[3]), (f[2] + f[4] + dx, f[3]), (f[2] + f[4] + dx, f[3] + f[5]),
-                                    (f[2] + dx, f[3] + f[5])], close=True, dxfattribs={"layer": f"L{i}-A-FIXT"})
+        for _, (fx0, fy0, fx1, fy1), label in G.furniture(level):
+            if label:
+                msp.add_lwpolyline([(fx0 + dx, fy0), (fx1 + dx, fy0), (fx1 + dx, fy1), (fx0 + dx, fy1)],
+                                   close=True, dxfattribs={"layer": f"L{i}-A-FIXT"})
         for r in H.ROOMS[level]:
             for name, x, y, area, dims in room_label(r):
                 t = name + (f" {fmt(dims[0])}x{fmt(dims[1])}" if dims else "")
@@ -235,4 +240,5 @@ if __name__ == "__main__":
     write_plans()
     write_dxf()
     write_model_json()
+    export.write(DATA, EXP)
     print("finished sq ft by level:", {k: round(v) for k, v in totals.items()}, "total", round(sum(totals.values())))
