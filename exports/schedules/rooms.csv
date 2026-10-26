@@ -12,8 +12,8 @@ main,Pantry,12,12,144,yes,Walk-in
 main,Great Room,56,26,1244,yes,Open plan: living / dining / kitchen
 main,Garage,26,30,780,no,3-car side-load + storage/workspace
 main,Patio,34,16,544,no,Open paver patio + fireplace; outdoor kitchen deferred (stub gas/power/water for later)
-upper,Bedroom 2,12,16,170.75,yes,"Teen room: queen, desk, dresser"
-upper,Bed 2 Closet,8.5,2.5,21.25,yes,"Reach-in, sliding doors"
+upper,Bedroom 2,12,16,192,yes,"Teen room: queen, desk, dresser"
+upper,Bed 2 Closet,8.5,4.5,38.25,yes,Walk-in in the old west end of the hall
 upper,Bedroom 3,12,19,200.75,yes,"Teen room: queen, desk (in the entry-bay nook), dresser"
 upper,Bed 3 Closet,8.5,2.5,21.25,yes,"Reach-in, sliding doors"
 upper,Stair,10,19,190,no,Two-story stair hall; tall window stacked over the main-floor one
@@ -21,10 +21,10 @@ upper,Bath 2 Tub/WC,10,8,80,yes,"Toilet, tub/shower + separate shower behind a d
 upper,Bath 2,10,8,80,yes,Shared double vanity (Bedrooms 2-4); compartmented so two or three can use it at once
 upper,Laundry,12,12,144,yes,
 upper,Linen,12,4,48,yes,"Linen / storage, off the laundry"
-upper,Upper Hall,56,4.5,252,yes,4.5 ft wide
+upper,Upper Hall,40,4.5,180,yes,4.5 ft wide; ends at the last doors
 upper,Primary Bedroom,18,14,252,yes,
 upper,Primary Bath,12,14,145.5,yes,
 upper,Primary WC,4.5,5,22.5,yes,Water closet
 upper,Primary Closet,12,14,168,yes,"Walk-in, center island"
-upper,Bedroom 4,14,14,174.75,yes,
-upper,Bed 4 Closet,2.5,8.5,21.25,yes,"Reach-in, sliding doors"
+upper,Bedroom 4,14,14,196,yes,
+upper,Bed 4 Closet,7.5,4.5,33.75,yes,Walk-in in the old east end of the hall

@@ -43,6 +43,10 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   north (now y 16-20.5). Same footprint, no added cost; the north rooms each give up 2 ft: primary bedroom 18x14,
   primary bath 12x14 + WC, closet 12x14 (island shortened to 5 ft), Bedroom 4 14x14. Bath 2 halves 10x8 each,
   laundry 12x12; upper stair landing/walkway reaches y 16 to meet the hall.
+- 2026-10-26: Upper hall trimmed to end at the last doors (56 -> 40 ft long, x 8.5-48.5; 252 -> 180 sq ft). The dead
+  ends became walk-ins: Bedroom 2 is now a full 12x16 with an 8.5x4.5 walk-in at the west end; Bedroom 4 a full 14x14
+  with a 7.5x4.5 walk-in at the east end (its reach-in is gone, bed moved to the west wall). Primary door across from
+  Bedroom 2's, laundry door next to Bedroom 4's. Same footprint, so no cost change.
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -197,6 +201,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26 (late night, cont.): upper hall trimmed to 40 ft; dead ends -> walk-ins for Bedrooms 2 and 4.
 - 2026-10-26 (late night): basement windows removed, water heater to the SE corner (new `water_heater` kind),
   squat rack on the west wall, treadmill gone; upper hall moved 2 ft north so Bedrooms 2 + 3 are 12x16.
 - 2026-10-26 (night): side-load garage, full front porch, entry gable bay + tall stair window, island closet back.

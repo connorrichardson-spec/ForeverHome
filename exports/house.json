@@ -565,19 +565,11 @@
      16
     ],
     [
-     8.5,
-     16
-    ],
-    [
-     8.5,
-     13.5
-    ],
-    [
      0,
-     13.5
+     16
     ]
    ],
-   "area_sqft": 170.8,
+   "area_sqft": 192,
    "paint": "#c6d4de",
    "floor": "hardwood",
    "windows": "normal",
@@ -591,26 +583,26 @@
    "polygon": [
     [
      0,
-     13.5
-    ],
-    [
-     8.5,
-     13.5
+     16
     ],
     [
      8.5,
      16
+    ],
+    [
+     8.5,
+     20.5
     ],
     [
      0,
-     16
+     20.5
     ]
    ],
-   "area_sqft": 21.2,
+   "area_sqft": 38.2,
    "paint": "#c6d4de",
    "floor": "hardwood",
    "windows": "none",
-   "note": "Reach-in, sliding doors",
+   "note": "Walk-in in the old west end of the hall",
    "zones": []
   },
   {
@@ -844,27 +836,27 @@
    "kind": "indoor",
    "polygon": [
     [
-     0,
+     8.5,
      16
     ],
     [
-     56,
+     48.5,
      16
     ],
     [
-     56,
+     48.5,
      20.5
     ],
     [
-     0,
+     8.5,
      20.5
     ]
    ],
-   "area_sqft": 252.0,
+   "area_sqft": 180.0,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
-   "note": "4.5 ft wide",
+   "note": "4.5 ft wide; ends at the last doors",
    "zones": []
   },
   {
@@ -1009,19 +1001,11 @@
      34.5
     ],
     [
-     44.5,
-     34.5
-    ],
-    [
-     44.5,
-     26
-    ],
-    [
      42,
-     26
+     34.5
     ]
    ],
-   "area_sqft": 174.8,
+   "area_sqft": 196.0,
    "paint": "#e3d7c5",
    "floor": "hardwood",
    "windows": "normal",
@@ -1034,27 +1018,27 @@
    "kind": "indoor",
    "polygon": [
     [
-     42,
-     26
+     48.5,
+     16
     ],
     [
-     44.5,
-     26
+     56,
+     16
     ],
     [
-     44.5,
-     34.5
+     56,
+     20.5
     ],
     [
-     42,
-     34.5
+     48.5,
+     20.5
     ]
    ],
-   "area_sqft": 21.2,
-   "paint": "#e6e1d6",
+   "area_sqft": 33.8,
+   "paint": "#e3d7c5",
    "floor": "hardwood",
    "windows": "none",
-   "note": "Reach-in, sliding doors",
+   "note": "Walk-in in the old east end of the hall",
    "zones": []
   }
  ],
@@ -2091,9 +2075,9 @@
    "exterior": false,
    "rooms": [
     "Bed 2 Closet",
-    "Upper Hall"
+    "Bedroom 2"
    ],
-   "node": "upper/wall/05 Bed 2 Closet | Upper Hall"
+   "node": "upper/wall/05 Bed 2 Closet | Bedroom 2"
   },
   {
    "id": "wall6",
@@ -2198,7 +2182,7 @@
     16
    ],
    "end": [
-    56,
+    48.5,
     16
    ],
    "thickness": 0.33,
@@ -2213,61 +2197,23 @@
    "id": "wall12",
    "level": "upper",
    "start": [
-    8.5,
-    13.5
+    48.5,
+    16
    ],
    "end": [
-    8.5,
+    56,
     16
    ],
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Bed 2 Closet",
-    "Bedroom 2"
+    "Bed 4 Closet",
+    "Laundry"
    ],
-   "node": "upper/wall/12 Bed 2 Closet | Bedroom 2"
+   "node": "upper/wall/12 Bed 4 Closet | Laundry"
   },
   {
    "id": "wall13",
-   "level": "upper",
-   "start": [
-    0,
-    13.5
-   ],
-   "end": [
-    8.5,
-    13.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 2 Closet",
-    "Bedroom 2"
-   ],
-   "node": "upper/wall/13 Bed 2 Closet | Bedroom 2"
-  },
-  {
-   "id": "wall14",
-   "level": "upper",
-   "start": [
-    15.5,
-    13.5
-   ],
-   "end": [
-    24,
-    13.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 3 Closet",
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/14 Bed 3 Closet | Bedroom 3"
-  },
-  {
-   "id": "wall15",
    "level": "upper",
    "start": [
     0,
@@ -2275,35 +2221,17 @@
    ],
    "end": [
     0,
-    13.5
+    16
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Bedroom 2"
    ],
-   "node": "upper/wall/15 Bedroom 2"
+   "node": "upper/wall/13 Bedroom 2"
   },
   {
-   "id": "wall16",
-   "level": "upper",
-   "start": [
-    0,
-    13.5
-   ],
-   "end": [
-    0,
-    16
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Bed 2 Closet"
-   ],
-   "node": "upper/wall/16 Bed 2 Closet"
-  },
-  {
-   "id": "wall17",
+   "id": "wall14",
    "level": "upper",
    "start": [
     0,
@@ -2316,12 +2244,12 @@
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
-    "Upper Hall"
+    "Bed 2 Closet"
    ],
-   "node": "upper/wall/17 Upper Hall"
+   "node": "upper/wall/14 Bed 2 Closet"
   },
   {
-   "id": "wall18",
+   "id": "wall15",
    "level": "upper",
    "start": [
     0,
@@ -2336,347 +2264,51 @@
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/18 Primary Bedroom"
+   "node": "upper/wall/15 Primary Bedroom"
   },
   {
-   "id": "wall19",
+   "id": "wall16",
    "level": "upper",
    "start": [
-    14,
-    -3
-   ],
-   "end": [
-    14,
-    0
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/19 Bedroom 3"
-  },
-  {
-   "id": "wall20",
-   "level": "upper",
-   "start": [
-    14,
-    -3
-   ],
-   "end": [
-    24,
-    -3
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/20 Bedroom 3"
-  },
-  {
-   "id": "wall21",
-   "level": "upper",
-   "start": [
-    24,
-    -3
-   ],
-   "end": [
-    34,
-    -3
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Stair"
-   ],
-   "node": "upper/wall/21 Stair"
-  },
-  {
-   "id": "wall22",
-   "level": "upper",
-   "start": [
-    24,
-    -3
-   ],
-   "end": [
-    24,
-    13.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bedroom 3",
-    "Stair"
-   ],
-   "node": "upper/wall/22 Bedroom 3 | Stair"
-  },
-  {
-   "id": "wall23",
-   "level": "upper",
-   "start": [
-    24,
-    13.5
-   ],
-   "end": [
-    24,
-    16
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 3 Closet",
-    "Stair"
-   ],
-   "node": "upper/wall/23 Bed 3 Closet | Stair"
-  },
-  {
-   "id": "wall24",
-   "level": "upper",
-   "start": [
-    15.5,
-    13.5
-   ],
-   "end": [
-    15.5,
-    16
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 3 Closet",
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/24 Bed 3 Closet | Bedroom 3"
-  },
-  {
-   "id": "wall25",
-   "level": "upper",
-   "start": [
-    34,
-    -3
-   ],
-   "end": [
-    34,
-    0
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Stair"
-   ],
-   "node": "upper/wall/25 Stair"
-  },
-  {
-   "id": "wall26",
-   "level": "upper",
-   "start": [
-    34,
-    0
-   ],
-   "end": [
-    34,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2 Tub/WC",
-    "Stair"
-   ],
-   "node": "upper/wall/26 Bath 2 Tub/WC | Stair"
-  },
-  {
-   "id": "wall27",
-   "level": "upper",
-   "start": [
-    34,
-    8
-   ],
-   "end": [
-    34,
-    16
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2",
-    "Stair"
-   ],
-   "node": "upper/wall/27 Bath 2 | Stair"
-  },
-  {
-   "id": "wall28",
-   "level": "upper",
-   "start": [
-    44,
-    0
-   ],
-   "end": [
-    44,
-    4
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2 Tub/WC",
-    "Linen"
-   ],
-   "node": "upper/wall/28 Bath 2 Tub/WC | Linen"
-  },
-  {
-   "id": "wall29",
-   "level": "upper",
-   "start": [
-    44,
-    4
-   ],
-   "end": [
-    44,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2 Tub/WC",
-    "Laundry"
-   ],
-   "node": "upper/wall/29 Bath 2 Tub/WC | Laundry"
-  },
-  {
-   "id": "wall30",
-   "level": "upper",
-   "start": [
-    44,
-    8
-   ],
-   "end": [
-    44,
-    16
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2",
-    "Laundry"
-   ],
-   "node": "upper/wall/30 Bath 2 | Laundry"
-  },
-  {
-   "id": "wall31",
-   "level": "upper",
-   "start": [
-    34,
-    8
-   ],
-   "end": [
-    44,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bath 2",
-    "Bath 2 Tub/WC"
-   ],
-   "node": "upper/wall/31 Bath 2 | Bath 2 Tub/WC"
-  },
-  {
-   "id": "wall32",
-   "level": "upper",
-   "start": [
-    44,
-    4
-   ],
-   "end": [
-    56,
-    4
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Laundry",
-    "Linen"
-   ],
-   "node": "upper/wall/32 Laundry | Linen"
-  },
-  {
-   "id": "wall33",
-   "level": "upper",
-   "start": [
-    56,
-    0
-   ],
-   "end": [
-    56,
-    4
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Linen"
-   ],
-   "node": "upper/wall/33 Linen"
-  },
-  {
-   "id": "wall34",
-   "level": "upper",
-   "start": [
-    56,
-    4
-   ],
-   "end": [
-    56,
-    16
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Laundry"
-   ],
-   "node": "upper/wall/34 Laundry"
-  },
-  {
-   "id": "wall35",
-   "level": "upper",
-   "start": [
-    56,
+    8.5,
     16
    ],
    "end": [
-    56,
+    8.5,
     20.5
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
+    "Bed 2 Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/35 Upper Hall"
+   "node": "upper/wall/16 Bed 2 Closet | Upper Hall"
   },
   {
-   "id": "wall36",
-   "level": "upper",
-   "start": [
-    56,
-    20.5
-   ],
-   "end": [
-    56,
-    34.5
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Bedroom 4"
-   ],
-   "node": "upper/wall/36 Bedroom 4"
-  },
-  {
-   "id": "wall37",
+   "id": "wall17",
    "level": "upper",
    "start": [
     0,
+    20.5
+   ],
+   "end": [
+    8.5,
+    20.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 2 Closet",
+    "Primary Bedroom"
+   ],
+   "node": "upper/wall/17 Bed 2 Closet | Primary Bedroom"
+  },
+  {
+   "id": "wall18",
+   "level": "upper",
+   "start": [
+    8.5,
     20.5
    ],
    "end": [
@@ -2689,10 +2321,10 @@
     "Primary Bedroom",
     "Upper Hall"
    ],
-   "node": "upper/wall/37 Primary Bedroom | Upper Hall"
+   "node": "upper/wall/18 Primary Bedroom | Upper Hall"
   },
   {
-   "id": "wall38",
+   "id": "wall19",
    "level": "upper",
    "start": [
     18,
@@ -2708,10 +2340,10 @@
     "Primary Bath",
     "Upper Hall"
    ],
-   "node": "upper/wall/38 Primary Bath | Upper Hall"
+   "node": "upper/wall/19 Primary Bath | Upper Hall"
   },
   {
-   "id": "wall39",
+   "id": "wall20",
    "level": "upper",
    "start": [
     25.5,
@@ -2727,10 +2359,10 @@
     "Primary WC",
     "Upper Hall"
    ],
-   "node": "upper/wall/39 Primary WC | Upper Hall"
+   "node": "upper/wall/20 Primary WC | Upper Hall"
   },
   {
-   "id": "wall40",
+   "id": "wall21",
    "level": "upper",
    "start": [
     30,
@@ -2746,13 +2378,32 @@
     "Primary Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/40 Primary Closet | Upper Hall"
+   "node": "upper/wall/21 Primary Closet | Upper Hall"
   },
   {
-   "id": "wall41",
+   "id": "wall22",
    "level": "upper",
    "start": [
     42,
+    20.5
+   ],
+   "end": [
+    48.5,
+    20.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bedroom 4",
+    "Upper Hall"
+   ],
+   "node": "upper/wall/22 Bedroom 4 | Upper Hall"
+  },
+  {
+   "id": "wall23",
+   "level": "upper",
+   "start": [
+    48.5,
     20.5
    ],
    "end": [
@@ -2762,13 +2413,385 @@
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Bedroom 4",
-    "Upper Hall"
+    "Bed 4 Closet",
+    "Bedroom 4"
    ],
-   "node": "upper/wall/41 Bedroom 4 | Upper Hall"
+   "node": "upper/wall/23 Bed 4 Closet | Bedroom 4"
+  },
+  {
+   "id": "wall24",
+   "level": "upper",
+   "start": [
+    14,
+    -3
+   ],
+   "end": [
+    14,
+    0
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/24 Bedroom 3"
+  },
+  {
+   "id": "wall25",
+   "level": "upper",
+   "start": [
+    14,
+    -3
+   ],
+   "end": [
+    24,
+    -3
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/25 Bedroom 3"
+  },
+  {
+   "id": "wall26",
+   "level": "upper",
+   "start": [
+    24,
+    -3
+   ],
+   "end": [
+    34,
+    -3
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Stair"
+   ],
+   "node": "upper/wall/26 Stair"
+  },
+  {
+   "id": "wall27",
+   "level": "upper",
+   "start": [
+    24,
+    -3
+   ],
+   "end": [
+    24,
+    13.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bedroom 3",
+    "Stair"
+   ],
+   "node": "upper/wall/27 Bedroom 3 | Stair"
+  },
+  {
+   "id": "wall28",
+   "level": "upper",
+   "start": [
+    24,
+    13.5
+   ],
+   "end": [
+    24,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Stair"
+   ],
+   "node": "upper/wall/28 Bed 3 Closet | Stair"
+  },
+  {
+   "id": "wall29",
+   "level": "upper",
+   "start": [
+    15.5,
+    13.5
+   ],
+   "end": [
+    24,
+    13.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/29 Bed 3 Closet | Bedroom 3"
+  },
+  {
+   "id": "wall30",
+   "level": "upper",
+   "start": [
+    15.5,
+    13.5
+   ],
+   "end": [
+    15.5,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/30 Bed 3 Closet | Bedroom 3"
+  },
+  {
+   "id": "wall31",
+   "level": "upper",
+   "start": [
+    34,
+    -3
+   ],
+   "end": [
+    34,
+    0
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Stair"
+   ],
+   "node": "upper/wall/31 Stair"
+  },
+  {
+   "id": "wall32",
+   "level": "upper",
+   "start": [
+    34,
+    0
+   ],
+   "end": [
+    34,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Tub/WC",
+    "Stair"
+   ],
+   "node": "upper/wall/32 Bath 2 Tub/WC | Stair"
+  },
+  {
+   "id": "wall33",
+   "level": "upper",
+   "start": [
+    34,
+    8
+   ],
+   "end": [
+    34,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2",
+    "Stair"
+   ],
+   "node": "upper/wall/33 Bath 2 | Stair"
+  },
+  {
+   "id": "wall34",
+   "level": "upper",
+   "start": [
+    44,
+    0
+   ],
+   "end": [
+    44,
+    4
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Tub/WC",
+    "Linen"
+   ],
+   "node": "upper/wall/34 Bath 2 Tub/WC | Linen"
+  },
+  {
+   "id": "wall35",
+   "level": "upper",
+   "start": [
+    44,
+    4
+   ],
+   "end": [
+    44,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Tub/WC",
+    "Laundry"
+   ],
+   "node": "upper/wall/35 Bath 2 Tub/WC | Laundry"
+  },
+  {
+   "id": "wall36",
+   "level": "upper",
+   "start": [
+    44,
+    8
+   ],
+   "end": [
+    44,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2",
+    "Laundry"
+   ],
+   "node": "upper/wall/36 Bath 2 | Laundry"
+  },
+  {
+   "id": "wall37",
+   "level": "upper",
+   "start": [
+    34,
+    8
+   ],
+   "end": [
+    44,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2",
+    "Bath 2 Tub/WC"
+   ],
+   "node": "upper/wall/37 Bath 2 | Bath 2 Tub/WC"
+  },
+  {
+   "id": "wall38",
+   "level": "upper",
+   "start": [
+    44,
+    4
+   ],
+   "end": [
+    56,
+    4
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Laundry",
+    "Linen"
+   ],
+   "node": "upper/wall/38 Laundry | Linen"
+  },
+  {
+   "id": "wall39",
+   "level": "upper",
+   "start": [
+    56,
+    0
+   ],
+   "end": [
+    56,
+    4
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Linen"
+   ],
+   "node": "upper/wall/39 Linen"
+  },
+  {
+   "id": "wall40",
+   "level": "upper",
+   "start": [
+    56,
+    4
+   ],
+   "end": [
+    56,
+    16
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Laundry"
+   ],
+   "node": "upper/wall/40 Laundry"
+  },
+  {
+   "id": "wall41",
+   "level": "upper",
+   "start": [
+    56,
+    16
+   ],
+   "end": [
+    56,
+    20.5
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bed 4 Closet"
+   ],
+   "node": "upper/wall/41 Bed 4 Closet"
   },
   {
    "id": "wall42",
+   "level": "upper",
+   "start": [
+    56,
+    20.5
+   ],
+   "end": [
+    56,
+    34.5
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bedroom 4"
+   ],
+   "node": "upper/wall/42 Bedroom 4"
+  },
+  {
+   "id": "wall43",
+   "level": "upper",
+   "start": [
+    48.5,
+    16
+   ],
+   "end": [
+    48.5,
+    20.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 4 Closet",
+    "Upper Hall"
+   ],
+   "node": "upper/wall/43 Bed 4 Closet | Upper Hall"
+  },
+  {
+   "id": "wall44",
    "level": "upper",
    "start": [
     18,
@@ -2784,10 +2807,10 @@
     "Primary Bath",
     "Primary Bedroom"
    ],
-   "node": "upper/wall/42 Primary Bath | Primary Bedroom"
+   "node": "upper/wall/44 Primary Bath | Primary Bedroom"
   },
   {
-   "id": "wall43",
+   "id": "wall45",
    "level": "upper",
    "start": [
     0,
@@ -2802,10 +2825,10 @@
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/43 Primary Bedroom"
+   "node": "upper/wall/45 Primary Bedroom"
   },
   {
-   "id": "wall44",
+   "id": "wall46",
    "level": "upper",
    "start": [
     18,
@@ -2820,10 +2843,10 @@
    "rooms": [
     "Primary Bath"
    ],
-   "node": "upper/wall/44 Primary Bath"
+   "node": "upper/wall/46 Primary Bath"
   },
   {
-   "id": "wall45",
+   "id": "wall47",
    "level": "upper",
    "start": [
     30,
@@ -2838,31 +2861,13 @@
    "rooms": [
     "Primary Closet"
    ],
-   "node": "upper/wall/45 Primary Closet"
+   "node": "upper/wall/47 Primary Closet"
   },
   {
-   "id": "wall46",
+   "id": "wall48",
    "level": "upper",
    "start": [
     42,
-    34.5
-   ],
-   "end": [
-    44.5,
-    34.5
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Bed 4 Closet"
-   ],
-   "node": "upper/wall/46 Bed 4 Closet"
-  },
-  {
-   "id": "wall47",
-   "level": "upper",
-   "start": [
-    44.5,
     34.5
    ],
    "end": [
@@ -2874,10 +2879,10 @@
    "rooms": [
     "Bedroom 4"
    ],
-   "node": "upper/wall/47 Bedroom 4"
+   "node": "upper/wall/48 Bedroom 4"
   },
   {
-   "id": "wall48",
+   "id": "wall49",
    "level": "upper",
    "start": [
     25.5,
@@ -2893,10 +2898,10 @@
     "Primary Bath",
     "Primary WC"
    ],
-   "node": "upper/wall/48 Primary Bath | Primary WC"
+   "node": "upper/wall/49 Primary Bath | Primary WC"
   },
   {
-   "id": "wall49",
+   "id": "wall50",
    "level": "upper",
    "start": [
     25.5,
@@ -2912,10 +2917,10 @@
     "Primary Bath",
     "Primary WC"
    ],
-   "node": "upper/wall/49 Primary Bath | Primary WC"
+   "node": "upper/wall/50 Primary Bath | Primary WC"
   },
   {
-   "id": "wall50",
+   "id": "wall51",
    "level": "upper",
    "start": [
     30,
@@ -2931,10 +2936,10 @@
     "Primary Closet",
     "Primary WC"
    ],
-   "node": "upper/wall/50 Primary Closet | Primary WC"
+   "node": "upper/wall/51 Primary Closet | Primary WC"
   },
   {
-   "id": "wall51",
+   "id": "wall52",
    "level": "upper",
    "start": [
     30,
@@ -2950,10 +2955,10 @@
     "Primary Bath",
     "Primary Closet"
    ],
-   "node": "upper/wall/51 Primary Bath | Primary Closet"
+   "node": "upper/wall/52 Primary Bath | Primary Closet"
   },
   {
-   "id": "wall52",
+   "id": "wall53",
    "level": "upper",
    "start": [
     42,
@@ -2961,7 +2966,7 @@
    ],
    "end": [
     42,
-    26
+    34.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2969,64 +2974,7 @@
     "Bedroom 4",
     "Primary Closet"
    ],
-   "node": "upper/wall/52 Bedroom 4 | Primary Closet"
-  },
-  {
-   "id": "wall53",
-   "level": "upper",
-   "start": [
-    42,
-    26
-   ],
-   "end": [
-    42,
-    34.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 4 Closet",
-    "Primary Closet"
-   ],
-   "node": "upper/wall/53 Bed 4 Closet | Primary Closet"
-  },
-  {
-   "id": "wall54",
-   "level": "upper",
-   "start": [
-    44.5,
-    26
-   ],
-   "end": [
-    44.5,
-    34.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 4 Closet",
-    "Bedroom 4"
-   ],
-   "node": "upper/wall/54 Bed 4 Closet | Bedroom 4"
-  },
-  {
-   "id": "wall55",
-   "level": "upper",
-   "start": [
-    42,
-    26
-   ],
-   "end": [
-    44.5,
-    26
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 4 Closet",
-    "Bedroom 4"
-   ],
-   "node": "upper/wall/55 Bed 4 Closet | Bedroom 4"
+   "node": "upper/wall/53 Bedroom 4 | Primary Closet"
   }
  ],
  "openings": [
@@ -3474,13 +3422,13 @@
   },
   {
    "level": "upper",
-   "wall": "wall13",
-   "kind": "closet",
+   "wall": "wall5",
+   "kind": "door",
    "center": [
     4.25,
-    13.5
+    16
    ],
-   "width": 4.0,
+   "width": 2.5,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Bed 2 Closet"
@@ -3500,7 +3448,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall14",
+   "wall": "wall29",
    "kind": "closet",
    "center": [
     19.75,
@@ -3529,7 +3477,7 @@
    "wall": "wall11",
    "kind": "door",
    "center": [
-    50.0,
+    46,
     16
    ],
    "width": 3.0,
@@ -3539,7 +3487,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall32",
+   "wall": "wall38",
    "kind": "door",
    "center": [
     50.0,
@@ -3565,7 +3513,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall31",
+   "wall": "wall37",
    "kind": "door",
    "center": [
     37.5,
@@ -3578,10 +3526,10 @@
   },
   {
    "level": "upper",
-   "wall": "wall37",
+   "wall": "wall18",
    "kind": "door",
    "center": [
-    9.0,
+    12,
     20.5
    ],
    "width": 3.0,
@@ -3591,7 +3539,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall42",
+   "wall": "wall44",
    "kind": "door",
    "center": [
     18,
@@ -3604,7 +3552,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall49",
+   "wall": "wall50",
    "kind": "door",
    "center": [
     27.75,
@@ -3617,7 +3565,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall51",
+   "wall": "wall52",
    "kind": "door",
    "center": [
     30,
@@ -3630,7 +3578,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall41",
+   "wall": "wall22",
    "kind": "door",
    "center": [
     47,
@@ -3643,13 +3591,13 @@
   },
   {
    "level": "upper",
-   "wall": "wall54",
-   "kind": "closet",
+   "wall": "wall23",
+   "kind": "door",
    "center": [
-    44.5,
-    30.25
+    52.25,
+    20.5
    ],
-   "width": 4.0,
+   "width": 2.5,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Bed 4 Closet"
@@ -3682,11 +3630,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall15",
+   "wall": "wall13",
    "kind": "window",
    "center": [
     0,
-    6.75
+    8.0
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3695,7 +3643,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall18",
+   "wall": "wall15",
    "kind": "window",
    "center": [
     0,
@@ -3708,7 +3656,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall19",
+   "wall": "wall24",
    "kind": "window",
    "center": [
     14,
@@ -3721,7 +3669,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall20",
+   "wall": "wall25",
    "kind": "window",
    "center": [
     19.0,
@@ -3734,7 +3682,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall21",
+   "wall": "wall26",
    "kind": "window",
    "center": [
     29.0,
@@ -3747,7 +3695,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall25",
+   "wall": "wall31",
    "kind": "window",
    "center": [
     34,
@@ -3760,7 +3708,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall36",
+   "wall": "wall42",
    "kind": "window",
    "center": [
     56,
@@ -3773,7 +3721,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall43",
+   "wall": "wall45",
    "kind": "window",
    "center": [
     4.5,
@@ -3786,7 +3734,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall43",
+   "wall": "wall45",
    "kind": "window",
    "center": [
     13.5,
@@ -3799,7 +3747,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall44",
+   "wall": "wall46",
    "kind": "window",
    "center": [
     24.0,
@@ -3812,10 +3760,10 @@
   },
   {
    "level": "upper",
-   "wall": "wall47",
+   "wall": "wall48",
    "kind": "window",
    "center": [
-    50.25,
+    49.0,
     34.5
    ],
    "width": 4.0,
@@ -6437,20 +6385,20 @@
    "label": "Rod/shelf",
    "facing": "S",
    "center": [
-    4.3,
-    15.2
+    4.25,
+    19.7
    ],
-   "width": 7.8,
+   "width": 8.1,
    "depth": 1.2,
    "footprint": [
-    0.4,
-    14.6,
-    8.2,
-    15.8
+    0.2,
+    19.1,
+    8.3,
+    20.3
    ],
    "node": "upper/furniture/Bed 2 Closet/Rod/shelf 6",
    "opts": {
-    "W": 7.8,
+    "W": 8.1,
     "D": 1.2,
     "seed": 31
    }
@@ -6883,20 +6831,20 @@
    "label": null,
    "facing": "N",
    "center": [
-    13.0,
+    16.5,
     18.25
    ],
-   "width": 20,
+   "width": 13,
    "depth": 3.0,
    "footprint": [
-    3,
+    10,
     16.75,
     23,
     19.75
    ],
    "node": "upper/furniture/Upper Hall/rug 24",
    "opts": {
-    "W": 20,
+    "W": 13,
     "D": 3,
     "color": "fabric:#a49a8b",
     "border": "fabric:#5d564d"
@@ -6910,20 +6858,20 @@
    "label": null,
    "facing": "N",
    "center": [
-    44.0,
+    40.5,
     18.25
    ],
-   "width": 20,
+   "width": 13,
    "depth": 3.0,
    "footprint": [
     34,
     16.75,
-    54,
+    47,
     19.75
    ],
    "node": "upper/furniture/Upper Hall/rug 25",
    "opts": {
-    "W": 20,
+    "W": 13,
     "D": 3,
     "color": "fabric:#a49a8b",
     "border": "fabric:#5d564d"
@@ -7423,18 +7371,18 @@
    "room": "Bedroom 4",
    "kind": "bed",
    "label": "Bed",
-   "facing": "N",
+   "facing": "E",
    "center": [
-    53.0,
-    24.2
+    45.8,
+    27.5
    ],
-   "width": 5.0,
+   "width": 5,
    "depth": 7.0,
    "footprint": [
-    50.5,
-    20.7,
-    55.5,
-    27.7
+    42.3,
+    25,
+    49.3,
+    30
    ],
    "node": "upper/furniture/Bedroom 4/Bed 46",
    "opts": {
@@ -7449,18 +7397,18 @@
    "room": "Bedroom 4",
    "kind": "nightstand",
    "label": null,
-   "facing": "N",
+   "facing": "E",
    "center": [
-    49.6,
-    21.45
+    43.05,
+    24.1
    ],
    "width": 1.6,
    "depth": 1.5,
    "footprint": [
-    48.8,
-    20.7,
-    50.4,
-    22.2
+    42.3,
+    23.3,
+    43.8,
+    24.9
    ],
    "node": "upper/furniture/Bedroom 4/nightstand 47",
    "opts": {
@@ -7471,122 +7419,146 @@
    "id": "furn48",
    "level": "upper",
    "room": "Bedroom 4",
-   "kind": "dresser",
-   "label": "Dresser",
-   "facing": "W",
+   "kind": "nightstand",
+   "label": null,
+   "facing": "E",
    "center": [
-    54.925,
+    43.05,
     30.9
    ],
-   "width": 5.0,
-   "depth": 1.75,
+   "width": 1.6,
+   "depth": 1.5,
    "footprint": [
-    54.05,
-    28.4,
-    55.8,
-    33.4
+    42.3,
+    30.1,
+    43.8,
+    31.7
    ],
-   "node": "upper/furniture/Bedroom 4/Dresser 48",
+   "node": "upper/furniture/Bedroom 4/nightstand 48",
    "opts": {
-    "W": 5
+    "W": 1.6
    }
   },
   {
    "id": "furn49",
    "level": "upper",
    "room": "Bedroom 4",
-   "kind": "desk",
-   "label": "Desk",
-   "facing": "S",
+   "kind": "dresser",
+   "label": "Dresser",
+   "facing": "W",
    "center": [
-    47.25,
-    33.0
+    54.925,
+    25.3
    ],
-   "width": 4.5,
-   "depth": 2.5,
+   "width": 5.0,
+   "depth": 1.75,
    "footprint": [
-    45,
-    31.75,
-    49.5,
-    34.25
+    54.05,
+    22.8,
+    55.8,
+    27.8
    ],
-   "node": "upper/furniture/Bedroom 4/Desk 49",
+   "node": "upper/furniture/Bedroom 4/Dresser 49",
    "opts": {
-    "W": 4.5
+    "W": 5
    }
   },
   {
    "id": "furn50",
    "level": "upper",
    "room": "Bedroom 4",
-   "kind": "office_chair",
-   "label": null,
-   "facing": "N",
+   "kind": "desk",
+   "label": "Desk",
+   "facing": "S",
    "center": [
-    47.3,
-    30.7
+    52.75,
+    33.0
    ],
-   "width": 2.0,
-   "depth": 2.0,
+   "width": 4.5,
+   "depth": 2.5,
    "footprint": [
-    46.3,
-    29.7,
-    48.3,
-    31.7
+    50.5,
+    31.75,
+    55.0,
+    34.25
    ],
-   "node": "upper/furniture/Bedroom 4/office_chair 50",
+   "node": "upper/furniture/Bedroom 4/Desk 50",
    "opts": {
-    "color": "fabric:#8a9aa8"
+    "W": 4.5
    }
   },
   {
    "id": "furn51",
    "level": "upper",
    "room": "Bedroom 4",
-   "kind": "rug",
+   "kind": "office_chair",
    "label": null,
    "facing": "N",
    "center": [
-    51.0,
-    27.2
+    52.8,
+    30.7
    ],
-   "width": 9.0,
-   "depth": 6.0,
+   "width": 2.0,
+   "depth": 2.0,
    "footprint": [
-    46.5,
-    24.2,
-    55.5,
-    30.2
+    51.8,
+    29.7,
+    53.8,
+    31.7
    ],
-   "node": "upper/furniture/Bedroom 4/rug 51",
+   "node": "upper/furniture/Bedroom 4/office_chair 51",
    "opts": {
-    "W": 9,
-    "D": 6,
-    "color": "fabric:#e7e3da"
+    "color": "fabric:#8a9aa8"
    }
   },
   {
    "id": "furn52",
    "level": "upper",
+   "room": "Bedroom 4",
+   "kind": "rug",
+   "label": null,
+   "facing": "N",
+   "center": [
+    49.5,
+    27.5
+   ],
+   "width": 8.0,
+   "depth": 8.0,
+   "footprint": [
+    45.5,
+    23.5,
+    53.5,
+    31.5
+   ],
+   "node": "upper/furniture/Bedroom 4/rug 52",
+   "opts": {
+    "W": 8,
+    "D": 8,
+    "color": "fabric:#e7e3da"
+   }
+  },
+  {
+   "id": "furn53",
+   "level": "upper",
    "room": "Bed 4 Closet",
    "kind": "closet_rod",
    "label": "Rod/shelf",
-   "facing": "E",
+   "facing": "N",
    "center": [
-    42.8,
-    30.25
+    52.25,
+    16.8
    ],
-   "width": 8.1,
+   "width": 7.1,
    "depth": 1.2,
    "footprint": [
-    42.2,
-    26.2,
-    43.4,
-    34.3
+    48.7,
+    16.2,
+    55.8,
+    17.4
    ],
-   "node": "upper/furniture/Bed 4 Closet/Rod/shelf 52",
+   "node": "upper/furniture/Bed 4 Closet/Rod/shelf 53",
    "opts": {
-    "W": 8.1,
+    "W": 7.1,
     "D": 1.2
    }
   }
