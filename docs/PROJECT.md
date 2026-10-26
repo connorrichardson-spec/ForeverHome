@@ -69,6 +69,14 @@ Owners are flexible on which floor a room lands on.
 - Mudroom: built-in locker wall on the south wall (shoe cubbies, bench, hooks, upper cubbies); bench-only bay under the window
 - Foyer coat closet (3.5x3) in the SE corner, opening toward the stair
 
+**Changed (2026-10-25, upper-floor re-plan)**
+- The two small south bedrooms are combined into one 28x14 Bedroom 2 with a 7x5 walk-in closet (king bed + desk/reading nook)
+- The bonus room over the garage is now Bedroom 3 (26x26: king bed + sitting area), with an 8x10 walk-in closet
+  and 8x16 attic storage in the old bonus-storage strip. No bonus/play room upstairs any more (kids playroom is on main).
+- Shared Bath 2 grew from 10x10 to 10x14 (absorbed the hall linen closet): tub/shower, separate walk-in shower,
+  toilet, double vanity, window. Linen moved to the old storage closet off the laundry.
+- Bedroom count unchanged: primary + 3 (Bedrooms 2, 3, 4).
+
 **Exterior (2026-10-25, draft)** — modern farmhouse read of "modern meets traditional":
 - White board-and-batten siding, ledgestone base (2.5 ft) on the main level, white trim, black window frames with
   2-over-2 grilles, black front door, carriage-style garage doors with a glass top row.
@@ -139,6 +147,7 @@ Owners are flexible on which floor a room lands on.
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-25 (late night): upper re-plan: south bedrooms combined, bonus room -> Bedroom 3, Bath 2 enlarged.
 - 2026-10-25 (night, round 4): wider playroom opening, pantry tall cabinet, mudroom lockers, foyer coat closet.
 - 2026-10-25 (night): Exterior: siding, stone base, trim, window frames, full roof system, front porch, covered-patio
   structure, site (driveway, walks, plants, lights). Roof plan sheet + roofed elevations; roofs in DXF and glb.
