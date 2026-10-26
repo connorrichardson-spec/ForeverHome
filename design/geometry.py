@@ -122,8 +122,10 @@ def build_openings(level, walls):
                         swing=None if d[2] is None else d[1]))
     if level == "main":
         g = next(r for r in H.ROOMS["main"] if r["name"] == "Garage")
-        for x in H.GARAGE_DOORS:
-            ops.append(dict(axis="h", c=g["rect"][1], pos=x, w=9.0, sill=0.0, h=8.0, kind="garage"))
+        gx0, gy0, gx1, gy1 = g["rect"]
+        for side, pos, gw in H.GARAGE_DOORS:
+            ax, c = {"S": ("h", gy0), "N": ("h", gy1), "W": ("v", gx0), "E": ("v", gx1)}[side]
+            ops.append(dict(axis=ax, c=c, pos=pos, w=gw, sill=0.0, h=8.0, kind="garage"))
     # auto windows on exterior walls
     for w in walls:
         if not w["ext"]:

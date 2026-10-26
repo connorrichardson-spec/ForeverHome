@@ -27,6 +27,11 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   Kids Playroom bump-out removed (living room gets its north windows back). Covered patio -> open pavers (no roof,
   posts or beams). Upper floor cut to 34.5 ft deep everywhere so the main roof is one gable plus one rear shed:
   primary bedroom 18x16, galley closet 16x7 (no island), primary bath 16x9 + WC.
+- 2026-10-26 (character for the money): side-load garage (front of the house is all house); full-width 10 ft front
+  porch; foyer + stair pulled 3 ft forward on all floors (x 14-34) under a front-facing gable, with a tall stair
+  window stacked over a main-floor one (stair hall was already open to above). Primary suite re-planned so the
+  closet island is back: bath 12x16 + WC, closet 12x16 with island, reached through the bath. Bedroom 4 shrunk to
+  14x16 with a reach-in. Bedroom 3 gains a 10x3 desk nook in the bay. Main stair landing now ~6.9 ft deep.
 - 2026-10-26: Kids are teenagers. Bedroom 2 split back into two 12x14 teen rooms (Bedrooms 2 + 3: queen bed, desk,
   dresser, 8.5x2.5 reach-in with sliding doors, ~147 sq ft each). No room over the garage any more: garage gets a
   one-story 8:12 gable (attic-truss storage, pull-down stair). Laundry stays windowless (garage roof is in the way).
@@ -34,9 +39,9 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
 - Budget: owners want to be **under $1M** (2026-10-26; excl. land/site work). Rough estimates (TN/MO, not builder
-  quotes): ~8,150 sq ft start was $1.9M-2.7M. Now ~4,170 finished + ~2,240 unfinished basement:
-  custom builder ($250-350/sf) ~$1.2M-1.7M; semi-custom/production builder ($175-225/sf) ~$0.87M-1.18M.
-  So <$1M likely needs a semi-custom builder with mid-grade finishes, or another ~500-800 sq ft cut.
+  quotes): ~8,150 sq ft start was $1.9M-2.7M. Now ~4,290 finished (incl. stairs) + ~2,300 unfinished basement,
+  500 sq ft front porch, side-load garage court: custom builder ($250-350/sf) ~$1.25M-1.8M; semi-custom/production
+  builder ($175-225/sf) ~$0.92M-1.26M. <$1M needs a semi-custom builder at the lower-middle of its range.
   Rule of thumb: every 500 finished sq ft ~ $90k-175k depending on builder tier.
 - Shared Bath 2 serves 3 teenagers, so it is compartmented (2026-10-26): toilet + tub/shower + shower in a 10x7 room
   behind a door, double vanity in the 10x7 room off the hall. Vanity side has no window (could add a skylight/tube).
@@ -64,7 +69,7 @@ Owners are flexible on which floor a room lands on.
 **Added (2026-10-25 answers)**
 - Garage: 3-car, attached, with a little storage and some workspace (not a full shop)
 - Laundry: upstairs
-- Primary suite: primary bath + walk-in closet (center island dropped 2026-10-26 for the simpler roof: 16x7 galley)
+- Primary suite: primary bath + large walk-in closet with a center island (12x16, restored 2026-10-26)
 - One shared bathroom for the other 3 upstairs bedrooms
 - Walk-in pantry (off kitchen)
 - Open paver patio with fireplace (2026-10-26: no roof; outdoor kitchen deferred, stub gas/power/water now)
@@ -103,9 +108,12 @@ Owners are flexible on which floor a room lands on.
 **Exterior (2026-10-25, draft)** — modern farmhouse read of "modern meets traditional":
 - White board-and-batten siding, ledgestone base (2.5 ft) on the main level, white trim, black window frames with
   2-over-2 grilles, black front door, carriage-style garage doors with a glass top row.
-- Roof (simplified 2026-10-26): one 8:12 side gable (charcoal architectural shingles) over the 56x34.5 two-story
-  block, one full-width 4:12 metal shed over the 5.5 ft one-story strip at the back, a one-story 8:12 garage gable,
-  and the 8:12 metal gable front porch on cedar posts. Ridges ~31.5 ft (main), ~19 ft (garage) above main floor.
+- Roof (2026-10-26): one 8:12 side gable (charcoal architectural shingles) over the 56x34.5 two-story block
+  (modeled as 3 coplanar pieces), a front-facing 8:12 entry gable over the 20 ft entry bay, one full-width 4:12 metal
+  shed at the back, a one-story 8:12 side-load garage gable (gable end over the doors), and a full-width 10 ft deep
+  front porch with a 4:12 metal shed roof on cedar posts. Ridges ~31.5 ft (main), ~26.7 ft (entry), ~20 ft (garage).
+- Garage (2026-10-26): side-load, 26x30, one 16 ft + one 9 ft door on the east wall, windows facing the street,
+  30x32 concrete turnaround court. Needs a lot roughly 115 ft+ wide (house + garage 82 ft + court).
 - Patio: open pavers, no roof; stone chimney for the outdoor fireplace.
 - Site placeholders: driveway, front walk, sidewalk/street, shrubs, trees, exterior lights. No lot yet, so all of
   this (and grade = main floor) is a stand-in.
@@ -136,7 +144,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Stair (2026-10-25): stacked U-shaped (switchback) stairs in the 10x14 stair hall, basement->main 16 risers @ 7.5",
   main->upper 18 risers @ 7.33", 10" treads, ~4.5 ft flights, full-width landing on the south wall. Both flights
   start/end at y=10.8, leaving a 3.2 ft walkway along the north wall on every floor; foyer and hall open onto that
-  walkway (3 ft cased openings). Verify headroom/landing depth with the builder (main landing is ~3.9 ft deep).
+  walkway (3 ft cased openings). Verify headroom/landing depth with the builder (landings ~6.9 ft deep since the 2026-10-26 entry bay).
   Paint colors per room (`paint=` in house.py): greige common areas, green office, navy half bath, soft blues/greens in bedrooms.
 
 ## Repo Layout
@@ -168,8 +176,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 
 ## Draft v0 Status / Known Gaps
 - Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
-- Area (from `rooms.csv`, excl. garage + patio, 2026-10-26): **finished ~4,170 sq ft** incl. stairs
-  (main ~2,240, upper ~1,930); build.py prints ~3,870 (excludes stairs). Basement ~2,240 all unfinished.
+- Area (from `rooms.csv`, excl. garage + patio + porch, 2026-10-26): **finished ~4,290 sq ft** incl. stairs
+  (main ~2,300, upper ~1,990); build.py prints ~3,930 (excludes stairs). Basement ~2,300 all unfinished.
   Was ~8,150 all finished at the start of 2026-10-26.
 - Not modeled yet: foundation, structure, MEP, sections, IFC export, real lot/grading, gutters, window wells.
   Furniture is blocky (boxes only); walk mode can't climb stairs. PDF now has a roof plan (A-6.0) and elevations with roofs.
@@ -180,6 +188,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26 (night): side-load garage, full front porch, entry gable bay + tall stair window, island closet back.
+  GARAGE_DOORS is now (side, position, width).
 - 2026-10-26 (evening): toward <$1M: unfinished basement, no playroom, open paver patio, one-gable roof
   (primary suite re-planned). Doors' `at` now also picks which shared wall they go on.
 - 2026-10-26: Outdoor kitchen removed from the covered patio (future add).
