@@ -35,6 +35,14 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 - 2026-10-26: Kids are teenagers. Bedroom 2 split back into two 12x14 teen rooms (Bedrooms 2 + 3: queen bed, desk,
   dresser, 8.5x2.5 reach-in with sliding doors, ~147 sq ft each). No room over the garage any more: garage gets a
   one-story 8:12 gable (attic-truss storage, pull-down stair). Laundry stays windowless (garage roof is in the way).
+- 2026-10-26: Basement has **no windows** (owners expect the lot won't allow them; no egress window/well). So the future
+  basement bedroom is now a "future flex room": a legal bedroom would need an egress window + well (or a walk-out lot).
+  Water heater is its own unit in the SE basement corner (was beside the furnace); squat rack on the west gym wall;
+  treadmill dropped.
+- 2026-10-26: Bedrooms 2 + 3 grown 12x14 -> 12x16 (~171 / ~201 sq ft incl. the bay nook) by moving the upper hall 2 ft
+  north (now y 16-20.5). Same footprint, no added cost; the north rooms each give up 2 ft: primary bedroom 18x14,
+  primary bath 12x14 + WC, closet 12x14 (island shortened to 5 ft), Bedroom 4 14x14. Bath 2 halves 10x8 each,
+  laundry 12x12; upper stair landing/walkway reaches y 16 to meet the hall.
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -52,7 +60,7 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 Owners are flexible on which floor a room lands on.
 
 **Basement** (2026-10-26: built unfinished; these are the future rooms, see Key Decisions)
-- Bedroom (needs egress window) + full bathroom
+- Bedroom + full bathroom (2026-10-26: no basement windows, so the bedroom is a future flex room unless egress is added)
 - Storage area
 - Small play area
 - Home gym: fits squat rack, small cold plunge, small sauna
@@ -117,7 +125,7 @@ Owners are flexible on which floor a room lands on.
 - Patio: open pavers, no roof; stone chimney for the outdoor fireplace.
 - Site placeholders: driveway, front walk, sidewalk/street, shrubs, trees, exterior lights. No lot yet, so all of
   this (and grade = main floor) is a stand-in.
-- Open: gutters/downspouts, basement window wells (egress well at the future bedroom).
+- Open: gutters/downspouts.
 
 **Changed (2026-10-26, size/cost cut)**
 - Great room 1,700 -> 1,340 sq ft: back wall moved 6 ft south (living 26x24, dining 22x12, kitchen 34x12 with the
@@ -136,7 +144,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Style: modern meets traditional.
 - Squat rack needs ~9 ft finished basement ceiling (rack ~7.5-8 ft + bar clearance).
 - Sauna and cold plunge need drainage, ventilation/moisture control, and electrical (dedicated circuit for sauna); plan them near the basement bathroom plumbing.
-- Basement bedroom requires code egress window (window well); confirm with local code.
+- Basement bedroom requires code egress window (window well); confirm with local code. (2026-10-26: no basement
+  windows planned, so no legal basement bedroom for now.)
 - Stack wet walls (basement bath / main half bath / upstairs baths) to simplify plumbing.
 - Placeholder finishes (2026-10-25): white-oak hardwood in finished rooms; wet rooms (all 4 baths + laundry) are
   12x24 porcelain tile; garage + mechanical concrete, gym rubber mats (squat rack), sauna cedar, patio stone pavers.
@@ -188,6 +197,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26 (late night): basement windows removed, water heater to the SE corner (new `water_heater` kind),
+  squat rack on the west wall, treadmill gone; upper hall moved 2 ft north so Bedrooms 2 + 3 are 12x16.
 - 2026-10-26 (night): side-load garage, full front porch, entry gable bay + tall stair window, island closet back.
   GARAGE_DOORS is now (side, position, width).
 - 2026-10-26 (evening): toward <$1M: unfinished basement, no playroom, open paver patio, one-gable roof

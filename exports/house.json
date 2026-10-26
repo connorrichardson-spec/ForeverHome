@@ -104,7 +104,7 @@
    "area_sqft": 2130,
    "paint": "#d8d6d0",
    "floor": "concrete",
-   "windows": "high",
+   "windows": "none",
    "note": "Unfinished basement; future rooms shown as zones",
    "zones": [
     {
@@ -135,7 +135,7 @@
      ]
     },
     {
-     "name": "Future bedroom",
+     "name": "Future flex room",
      "rect": [
       44,
       0,
@@ -562,22 +562,22 @@
     ],
     [
      12,
-     14
+     16
     ],
     [
      8.5,
-     14
+     16
     ],
     [
      8.5,
-     11.5
+     13.5
     ],
     [
      0,
-     11.5
+     13.5
     ]
    ],
-   "area_sqft": 146.8,
+   "area_sqft": 170.8,
    "paint": "#c6d4de",
    "floor": "hardwood",
    "windows": "normal",
@@ -591,19 +591,19 @@
    "polygon": [
     [
      0,
-     11.5
+     13.5
     ],
     [
      8.5,
-     11.5
+     13.5
     ],
     [
      8.5,
-     14
+     16
     ],
     [
      0,
-     14
+     16
     ]
    ],
    "area_sqft": 21.2,
@@ -636,22 +636,22 @@
     ],
     [
      24,
-     11.5
+     13.5
     ],
     [
      15.5,
-     11.5
+     13.5
     ],
     [
      15.5,
-     14
+     16
     ],
     [
      12,
-     14
+     16
     ]
    ],
-   "area_sqft": 176.8,
+   "area_sqft": 200.8,
    "paint": "#d9dfd6",
    "floor": "hardwood",
    "windows": "normal",
@@ -665,19 +665,19 @@
    "polygon": [
     [
      15.5,
-     11.5
+     13.5
     ],
     [
      24,
-     11.5
+     13.5
     ],
     [
      24,
-     14
+     16
     ],
     [
      15.5,
-     14
+     16
     ]
    ],
    "area_sqft": 21.2,
@@ -702,14 +702,14 @@
     ],
     [
      34,
-     14
+     16
     ],
     [
      24,
-     14
+     16
     ]
    ],
-   "area_sqft": 170,
+   "area_sqft": 190,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "normal",
@@ -719,7 +719,7 @@
     24,
     10.8,
     34,
-    14
+    16
    ]
   },
   {
@@ -737,14 +737,14 @@
     ],
     [
      44,
-     7
+     8
     ],
     [
      34,
-     7
+     8
     ]
    ],
-   "area_sqft": 70,
+   "area_sqft": 80,
    "paint": "#eef0ee",
    "floor": "tile",
    "windows": "small",
@@ -758,22 +758,22 @@
    "polygon": [
     [
      34,
-     7
+     8
     ],
     [
      44,
-     7
+     8
     ],
     [
      44,
-     14
+     16
     ],
     [
      34,
-     14
+     16
     ]
    ],
-   "area_sqft": 70,
+   "area_sqft": 80,
    "paint": "#eef0ee",
    "floor": "tile",
    "windows": "none",
@@ -795,14 +795,14 @@
     ],
     [
      56,
-     14
+     16
     ],
     [
      44,
-     14
+     16
     ]
    ],
-   "area_sqft": 120,
+   "area_sqft": 144,
    "paint": "#d3dde0",
    "floor": "tile",
    "windows": "none",
@@ -845,19 +845,19 @@
    "polygon": [
     [
      0,
-     14
+     16
     ],
     [
      56,
-     14
+     16
     ],
     [
      56,
-     18.5
+     20.5
     ],
     [
      0,
-     18.5
+     20.5
     ]
    ],
    "area_sqft": 252.0,
@@ -874,11 +874,11 @@
    "polygon": [
     [
      0,
-     18.5
+     20.5
     ],
     [
      18,
-     18.5
+     20.5
     ],
     [
      18,
@@ -889,7 +889,7 @@
      34.5
     ]
    ],
-   "area_sqft": 288.0,
+   "area_sqft": 252.0,
    "paint": "#cfd5d0",
    "floor": "hardwood",
    "windows": "normal",
@@ -903,19 +903,19 @@
    "polygon": [
     [
      18,
-     18.5
+     20.5
     ],
     [
      25.5,
-     18.5
+     20.5
     ],
     [
      25.5,
-     23.5
+     25.5
     ],
     [
      30,
-     23.5
+     25.5
     ],
     [
      30,
@@ -926,7 +926,7 @@
      34.5
     ]
    ],
-   "area_sqft": 169.5,
+   "area_sqft": 145.5,
    "paint": "#e5e9e6",
    "floor": "tile",
    "windows": "normal",
@@ -940,19 +940,19 @@
    "polygon": [
     [
      25.5,
-     18.5
+     20.5
     ],
     [
      30,
-     18.5
+     20.5
     ],
     [
      30,
-     23.5
+     25.5
     ],
     [
      25.5,
-     23.5
+     25.5
     ]
    ],
    "area_sqft": 22.5,
@@ -969,11 +969,11 @@
    "polygon": [
     [
      30,
-     18.5
+     20.5
     ],
     [
      42,
-     18.5
+     20.5
     ],
     [
      42,
@@ -984,7 +984,7 @@
      34.5
     ]
    ],
-   "area_sqft": 192.0,
+   "area_sqft": 168.0,
    "paint": "#ece7dd",
    "floor": "hardwood",
    "windows": "none",
@@ -998,11 +998,11 @@
    "polygon": [
     [
      42,
-     18.5
+     20.5
     ],
     [
      56,
-     18.5
+     20.5
     ],
     [
      56,
@@ -1014,14 +1014,14 @@
     ],
     [
      44.5,
-     24
+     26
     ],
     [
      42,
-     24
+     26
     ]
    ],
-   "area_sqft": 197.8,
+   "area_sqft": 174.8,
    "paint": "#e3d7c5",
    "floor": "hardwood",
    "windows": "normal",
@@ -1035,11 +1035,11 @@
    "polygon": [
     [
      42,
-     24
+     26
     ],
     [
      44.5,
-     24
+     26
     ],
     [
      44.5,
@@ -1050,7 +1050,7 @@
      34.5
     ]
    ],
-   "area_sqft": 26.2,
+   "area_sqft": 21.2,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
@@ -2066,7 +2066,7 @@
    ],
    "end": [
     12,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2081,11 +2081,11 @@
    "level": "upper",
    "start": [
     0,
-    14
+    16
    ],
    "end": [
     8.5,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2100,11 +2100,11 @@
    "level": "upper",
    "start": [
     8.5,
-    14
+    16
    ],
    "end": [
     12,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2119,11 +2119,11 @@
    "level": "upper",
    "start": [
     12,
-    14
+    16
    ],
    "end": [
     15.5,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2138,11 +2138,11 @@
    "level": "upper",
    "start": [
     15.5,
-    14
+    16
    ],
    "end": [
     24,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2157,11 +2157,11 @@
    "level": "upper",
    "start": [
     24,
-    14
+    16
    ],
    "end": [
     34,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2176,11 +2176,11 @@
    "level": "upper",
    "start": [
     34,
-    14
+    16
    ],
    "end": [
     44,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2195,11 +2195,11 @@
    "level": "upper",
    "start": [
     44,
-    14
+    16
    ],
    "end": [
     56,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2214,11 +2214,11 @@
    "level": "upper",
    "start": [
     8.5,
-    11.5
+    13.5
    ],
    "end": [
     8.5,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2233,11 +2233,11 @@
    "level": "upper",
    "start": [
     0,
-    11.5
+    13.5
    ],
    "end": [
     8.5,
-    11.5
+    13.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2252,11 +2252,11 @@
    "level": "upper",
    "start": [
     15.5,
-    11.5
+    13.5
    ],
    "end": [
     24,
-    11.5
+    13.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2275,7 +2275,7 @@
    ],
    "end": [
     0,
-    11.5
+    13.5
    ],
    "thickness": 0.5,
    "exterior": true,
@@ -2289,11 +2289,11 @@
    "level": "upper",
    "start": [
     0,
-    11.5
+    13.5
    ],
    "end": [
     0,
-    14
+    16
    ],
    "thickness": 0.5,
    "exterior": true,
@@ -2307,11 +2307,11 @@
    "level": "upper",
    "start": [
     0,
-    14
+    16
    ],
    "end": [
     0,
-    18.5
+    20.5
    ],
    "thickness": 0.5,
    "exterior": true,
@@ -2325,7 +2325,7 @@
    "level": "upper",
    "start": [
     0,
-    18.5
+    20.5
    ],
    "end": [
     0,
@@ -2401,7 +2401,7 @@
    ],
    "end": [
     24,
-    11.5
+    13.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2416,11 +2416,11 @@
    "level": "upper",
    "start": [
     24,
-    11.5
+    13.5
    ],
    "end": [
     24,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2435,11 +2435,11 @@
    "level": "upper",
    "start": [
     15.5,
-    11.5
+    13.5
    ],
    "end": [
     15.5,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2476,7 +2476,7 @@
    ],
    "end": [
     34,
-    7
+    8
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2491,11 +2491,11 @@
    "level": "upper",
    "start": [
     34,
-    7
+    8
    ],
    "end": [
     34,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2533,7 +2533,7 @@
    ],
    "end": [
     44,
-    7
+    8
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2548,11 +2548,11 @@
    "level": "upper",
    "start": [
     44,
-    7
+    8
    ],
    "end": [
     44,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2567,11 +2567,11 @@
    "level": "upper",
    "start": [
     34,
-    7
+    8
    ],
    "end": [
     44,
-    7
+    8
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2627,7 +2627,7 @@
    ],
    "end": [
     56,
-    14
+    16
    ],
    "thickness": 0.5,
    "exterior": true,
@@ -2641,11 +2641,11 @@
    "level": "upper",
    "start": [
     56,
-    14
+    16
    ],
    "end": [
     56,
-    18.5
+    20.5
    ],
    "thickness": 0.5,
    "exterior": true,
@@ -2659,7 +2659,7 @@
    "level": "upper",
    "start": [
     56,
-    18.5
+    20.5
    ],
    "end": [
     56,
@@ -2677,11 +2677,11 @@
    "level": "upper",
    "start": [
     0,
-    18.5
+    20.5
    ],
    "end": [
     18,
-    18.5
+    20.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2696,11 +2696,11 @@
    "level": "upper",
    "start": [
     18,
-    18.5
+    20.5
    ],
    "end": [
     25.5,
-    18.5
+    20.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2715,11 +2715,11 @@
    "level": "upper",
    "start": [
     25.5,
-    18.5
+    20.5
    ],
    "end": [
     30,
-    18.5
+    20.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2734,11 +2734,11 @@
    "level": "upper",
    "start": [
     30,
-    18.5
+    20.5
    ],
    "end": [
     42,
-    18.5
+    20.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2753,11 +2753,11 @@
    "level": "upper",
    "start": [
     42,
-    18.5
+    20.5
    ],
    "end": [
     56,
-    18.5
+    20.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2772,7 +2772,7 @@
    "level": "upper",
    "start": [
     18,
-    18.5
+    20.5
    ],
    "end": [
     18,
@@ -2881,11 +2881,11 @@
    "level": "upper",
    "start": [
     25.5,
-    18.5
+    20.5
    ],
    "end": [
     25.5,
-    23.5
+    25.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2900,11 +2900,11 @@
    "level": "upper",
    "start": [
     25.5,
-    23.5
+    25.5
    ],
    "end": [
     30,
-    23.5
+    25.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2919,11 +2919,11 @@
    "level": "upper",
    "start": [
     30,
-    18.5
+    20.5
    ],
    "end": [
     30,
-    23.5
+    25.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2938,7 +2938,7 @@
    "level": "upper",
    "start": [
     30,
-    23.5
+    25.5
    ],
    "end": [
     30,
@@ -2957,11 +2957,11 @@
    "level": "upper",
    "start": [
     42,
-    18.5
+    20.5
    ],
    "end": [
     42,
-    24
+    26
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2976,7 +2976,7 @@
    "level": "upper",
    "start": [
     42,
-    24
+    26
    ],
    "end": [
     42,
@@ -2995,7 +2995,7 @@
    "level": "upper",
    "start": [
     44.5,
-    24
+    26
    ],
    "end": [
     44.5,
@@ -3014,11 +3014,11 @@
    "level": "upper",
    "start": [
     42,
-    24
+    26
    ],
    "end": [
     44.5,
-    24
+    26
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -3042,253 +3042,6 @@
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Stair"
-  },
-  {
-   "level": "basement",
-   "wall": "wall0",
-   "kind": "window",
-   "center": [
-    19.0,
-    -3
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall6",
-   "kind": "window",
-   "center": [
-    7.0,
-    0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall7",
-   "kind": "window",
-   "center": [
-    39.5,
-    0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall7",
-   "kind": "window",
-   "center": [
-    50.5,
-    0
-   ],
-   "width": 3.5,
-   "height": 4.0,
-   "sill": 2.5,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall8",
-   "kind": "window",
-   "center": [
-    14,
-    -1.5
-   ],
-   "width": 2,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall9",
-   "kind": "window",
-   "center": [
-    56,
-    5.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall9",
-   "kind": "window",
-   "center": [
-    56,
-    15.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall9",
-   "kind": "window",
-   "center": [
-    56,
-    25.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall9",
-   "kind": "window",
-   "center": [
-    56,
-    35.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    4.667,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    14.0,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    23.333,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    32.667,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    42.0,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall10",
-   "kind": "window",
-   "center": [
-    51.333,
-    40
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall11",
-   "kind": "window",
-   "center": [
-    0,
-    5.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall11",
-   "kind": "window",
-   "center": [
-    0,
-    15.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall11",
-   "kind": "window",
-   "center": [
-    0,
-    25.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
-  },
-  {
-   "level": "basement",
-   "wall": "wall11",
-   "kind": "window",
-   "center": [
-    0,
-    35.0
-   ],
-   "width": 4.0,
-   "height": 1.5,
-   "sill": 6.0,
-   "swings_into": null
   },
   {
    "level": "main",
@@ -3712,7 +3465,7 @@
    "kind": "door",
    "center": [
     10.25,
-    14
+    16
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3725,7 +3478,7 @@
    "kind": "closet",
    "center": [
     4.25,
-    11.5
+    13.5
    ],
    "width": 4.0,
    "height": 6.67,
@@ -3738,7 +3491,7 @@
    "kind": "door",
    "center": [
     13.75,
-    14
+    16
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3751,7 +3504,7 @@
    "kind": "closet",
    "center": [
     19.75,
-    11.5
+    13.5
    ],
    "width": 4.0,
    "height": 6.67,
@@ -3764,7 +3517,7 @@
    "kind": "cased",
    "center": [
     29.0,
-    14
+    16
    ],
    "width": 6.0,
    "height": 8.0,
@@ -3777,7 +3530,7 @@
    "kind": "door",
    "center": [
     50.0,
-    14
+    16
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3803,7 +3556,7 @@
    "kind": "door",
    "center": [
     39.0,
-    14
+    16
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3816,7 +3569,7 @@
    "kind": "door",
    "center": [
     37.5,
-    7
+    8
    ],
    "width": 2.5,
    "height": 6.67,
@@ -3829,7 +3582,7 @@
    "kind": "door",
    "center": [
     9.0,
-    18.5
+    20.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3842,7 +3595,7 @@
    "kind": "door",
    "center": [
     18,
-    26.5
+    28.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3855,7 +3608,7 @@
    "kind": "door",
    "center": [
     27.75,
-    23.5
+    25.5
    ],
    "width": 2.5,
    "height": 6.67,
@@ -3868,7 +3621,7 @@
    "kind": "door",
    "center": [
     30,
-    27
+    28.5
    ],
    "width": 2.5,
    "height": 6.67,
@@ -3881,7 +3634,7 @@
    "kind": "door",
    "center": [
     47,
-    18.5
+    20.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3894,7 +3647,7 @@
    "kind": "closet",
    "center": [
     44.5,
-    29.25
+    30.25
    ],
    "width": 4.0,
    "height": 6.67,
@@ -3933,7 +3686,7 @@
    "kind": "window",
    "center": [
     0,
-    5.75
+    6.75
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3946,7 +3699,7 @@
    "kind": "window",
    "center": [
     0,
-    26.5
+    27.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -4011,7 +3764,7 @@
    "kind": "window",
    "center": [
     56,
-    26.5
+    27.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -4104,18 +3857,18 @@
    "room": "Unfinished",
    "kind": "squat_rack",
    "label": "Squat rack",
-   "facing": "S",
+   "facing": "E",
    "center": [
-    7.25,
-    9.5
+    4.3,
+    10.25
    ],
    "width": 4.5,
    "depth": 5.0,
    "footprint": [
-    5,
-    7,
-    9.5,
-    12.0
+    1.8,
+    8,
+    6.8,
+    12.5
    ],
    "node": "basement/furniture/Unfinished/Squat rack 0",
    "opts": {}
@@ -4150,15 +3903,15 @@
    "label": null,
    "facing": "N",
    "center": [
-    11.7,
+    12.7,
     11.1
    ],
    "width": 1.4,
    "depth": 4.2,
    "footprint": [
-    11,
+    12,
     9,
-    12.4,
+    13.4,
     13.2
    ],
    "node": "basement/furniture/Unfinished/weight_bench 2",
@@ -4168,30 +3921,8 @@
    "id": "furn3",
    "level": "basement",
    "room": "Unfinished",
-   "kind": "treadmill",
-   "label": "Treadmill",
-   "facing": "E",
-   "center": [
-    13.25,
-    21.0
-   ],
-   "width": 3.0,
-   "depth": 6.5,
-   "footprint": [
-    10,
-    19.5,
-    16.5,
-    22.5
-   ],
-   "node": "basement/furniture/Unfinished/Treadmill 3",
-   "opts": {}
-  },
-  {
-   "id": "furn4",
-   "level": "basement",
-   "room": "Unfinished",
    "kind": "furnace",
-   "label": "Furnace / WH",
+   "label": "Furnace",
    "facing": "N",
    "center": [
     19.55,
@@ -4205,7 +3936,29 @@
     20.8,
     10.8
    ],
-   "node": "basement/furniture/Unfinished/Furnace / WH 4",
+   "node": "basement/furniture/Unfinished/Furnace 3",
+   "opts": {}
+  },
+  {
+   "id": "furn4",
+   "level": "basement",
+   "room": "Unfinished",
+   "kind": "water_heater",
+   "label": "WH",
+   "facing": "N",
+   "center": [
+    54.8,
+    1.2
+   ],
+   "width": 1.8,
+   "depth": 1.8,
+   "footprint": [
+    53.9,
+    0.3,
+    55.7,
+    2.1
+   ],
+   "node": "basement/furniture/Unfinished/WH 4",
    "opts": {}
   },
   {
@@ -6535,20 +6288,20 @@
    "facing": "N",
    "center": [
     5.5,
-    6.75
+    7.5
    ],
    "width": 8.0,
-   "depth": 7.5,
+   "depth": 9,
    "footprint": [
     1.5,
     3,
     9.5,
-    10.5
+    12
    ],
    "node": "upper/furniture/Bedroom 2/rug 0",
    "opts": {
     "W": 8,
-    "D": 7.5,
+    "D": 9,
     "color": "fabric:#e7e3da",
     "border": "fabric:#8c9cab"
    }
@@ -6562,15 +6315,15 @@
    "facing": "E",
    "center": [
     3.65,
-    6.5
+    7.25
    ],
-   "width": 5,
+   "width": 5.0,
    "depth": 6.7,
    "footprint": [
     0.3,
-    4,
+    4.75,
     7.0,
-    9
+    9.75
    ],
    "node": "upper/furniture/Bedroom 2/Queen bed 1",
    "opts": {
@@ -6589,15 +6342,15 @@
    "facing": "E",
    "center": [
     1.05,
-    10.0
+    10.75
    ],
    "width": 1.6,
    "depth": 1.5,
    "footprint": [
     0.3,
-    9.2,
+    9.95,
     1.8,
-    10.8
+    11.55
    ],
    "node": "upper/furniture/Bedroom 2/nightstand 2",
    "opts": {
@@ -6661,15 +6414,15 @@
    "facing": "W",
    "center": [
     10.925,
-    6.75
+    7.75
    ],
    "width": 4.5,
    "depth": 1.75,
    "footprint": [
     10.05,
-    4.5,
+    5.5,
     11.8,
-    9.0
+    10.0
    ],
    "node": "upper/furniture/Bedroom 2/Dresser 5",
    "opts": {
@@ -6685,15 +6438,15 @@
    "facing": "S",
    "center": [
     4.3,
-    13.2
+    15.2
    ],
    "width": 7.8,
    "depth": 1.2,
    "footprint": [
     0.4,
-    12.6,
+    14.6,
     8.2,
-    13.8
+    15.8
    ],
    "node": "upper/furniture/Bed 2 Closet/Rod/shelf 6",
    "opts": {
@@ -6711,20 +6464,20 @@
    "facing": "N",
    "center": [
     18.5,
-    6.75
+    7.5
    ],
    "width": 8.0,
-   "depth": 7.5,
+   "depth": 9,
    "footprint": [
     14.5,
     3,
     22.5,
-    10.5
+    12
    ],
    "node": "upper/furniture/Bedroom 3/rug 7",
    "opts": {
     "W": 8,
-    "D": 7.5,
+    "D": 9,
     "color": "fabric:#d6c9b0",
     "border": "fabric:#8c6a55"
    }
@@ -6738,15 +6491,15 @@
    "facing": "W",
    "center": [
     20.45,
-    6.5
+    7.25
    ],
-   "width": 5,
+   "width": 5.0,
    "depth": 6.7,
    "footprint": [
     17.1,
-    4,
+    4.75,
     23.8,
-    9
+    9.75
    ],
    "node": "upper/furniture/Bedroom 3/Queen bed 8",
    "opts": {
@@ -6766,15 +6519,15 @@
    "facing": "W",
    "center": [
     23.05,
-    10.0
+    10.75
    ],
    "width": 1.6,
    "depth": 1.5,
    "footprint": [
     22.3,
-    9.2,
+    9.95,
     23.8,
-    10.8
+    11.55
    ],
    "node": "upper/furniture/Bedroom 3/nightstand 9",
    "opts": {
@@ -6838,15 +6591,15 @@
    "facing": "E",
    "center": [
     13.075,
-    6.75
+    7.75
    ],
    "width": 4.5,
    "depth": 1.75,
    "footprint": [
     12.2,
-    4.5,
+    5.5,
     13.95,
-    9.0
+    10.0
    ],
    "node": "upper/furniture/Bedroom 3/Dresser 12",
    "opts": {
@@ -6862,15 +6615,15 @@
    "facing": "S",
    "center": [
     19.8,
-    13.2
+    15.2
    ],
    "width": 7.8,
    "depth": 1.2,
    "footprint": [
     15.9,
-    12.6,
+    14.6,
     23.7,
-    13.8
+    15.8
    ],
    "node": "upper/furniture/Bed 3 Closet/Rod/shelf 13",
    "opts": {
@@ -6961,15 +6714,15 @@
    "facing": "W",
    "center": [
     42.9,
-    10.5
+    12.5
    ],
    "width": 6.0,
    "depth": 1.8,
    "footprint": [
     42,
-    7.5,
+    9.5,
     43.8,
-    13.5
+    15.5
    ],
    "node": "upper/furniture/Bath 2/Vanity 17",
    "opts": {
@@ -6986,15 +6739,15 @@
    "facing": "N",
    "center": [
     39.25,
-    10.9
+    12.6
    ],
    "width": 3.5,
    "depth": 2.2,
    "footprint": [
     37.5,
-    9.8,
+    11.5,
     41.0,
-    12.0
+    13.7
    ],
    "node": "upper/furniture/Bath 2/rug 18",
    "opts": {
@@ -7131,15 +6884,15 @@
    "facing": "N",
    "center": [
     13.0,
-    16.25
+    18.25
    ],
    "width": 20,
    "depth": 3.0,
    "footprint": [
     3,
-    14.75,
+    16.75,
     23,
-    17.75
+    19.75
    ],
    "node": "upper/furniture/Upper Hall/rug 24",
    "opts": {
@@ -7158,15 +6911,15 @@
    "facing": "N",
    "center": [
     44.0,
-    16.25
+    18.25
    ],
    "width": 20,
    "depth": 3.0,
    "footprint": [
     34,
-    14.75,
+    16.75,
     54,
-    17.75
+    19.75
    ],
    "node": "upper/furniture/Upper Hall/rug 25",
    "opts": {
@@ -7185,15 +6938,15 @@
    "facing": "E",
    "center": [
     3.8,
-    26.5
+    27.5
    ],
    "width": 6.5,
    "depth": 7.0,
    "footprint": [
     0.3,
-    23.25,
+    24.25,
     7.3,
-    29.75
+    30.75
    ],
    "node": "upper/furniture/Primary Bedroom/King bed 26",
    "opts": {
@@ -7213,15 +6966,15 @@
    "facing": "E",
    "center": [
     1.05,
-    22.25
+    23.25
    ],
    "width": 1.8,
    "depth": 1.5,
    "footprint": [
     0.3,
-    21.35,
+    22.35,
     1.8,
-    23.15
+    24.15
    ],
    "node": "upper/furniture/Primary Bedroom/nightstand 27",
    "opts": {}
@@ -7235,15 +6988,15 @@
    "facing": "E",
    "center": [
     1.05,
-    30.75
+    31.75
    ],
    "width": 1.8,
    "depth": 1.5,
    "footprint": [
     0.3,
-    29.85,
+    30.85,
     1.8,
-    31.65
+    32.65
    ],
    "node": "upper/furniture/Primary Bedroom/nightstand 28",
    "opts": {}
@@ -7257,15 +7010,15 @@
    "facing": "E",
    "center": [
     8.2,
-    26.5
+    27.5
    ],
    "width": 4.0,
    "depth": 1.4,
    "footprint": [
     7.5,
-    24.5,
+    25.5,
     8.9,
-    28.5
+    29.5
    ],
    "node": "upper/furniture/Primary Bedroom/Bench 29",
    "opts": {
@@ -7281,20 +7034,20 @@
    "facing": "N",
    "center": [
     8.0,
-    26.5
+    27.5
    ],
    "width": 10,
-   "depth": 11,
+   "depth": 10.0,
    "footprint": [
     3,
-    21,
+    22.5,
     13,
-    32
+    32.5
    ],
    "node": "upper/furniture/Primary Bedroom/rug 30",
    "opts": {
     "W": 10,
-    "D": 11,
+    "D": 10,
     "color": "fabric:#d9d3c7",
     "border": "fabric:#a39a8e"
    }
@@ -7356,15 +7109,15 @@
    "facing": "W",
    "center": [
     17.0,
-    22.0
+    24.0
    ],
    "width": 6.0,
    "depth": 1.6,
    "footprint": [
     16.2,
-    19.0,
+    21.0,
     17.8,
-    25.0
+    27.0
    ],
    "node": "upper/furniture/Primary Bedroom/Media 33",
    "opts": {
@@ -7380,15 +7133,15 @@
    "facing": "W",
    "center": [
     17.755,
-    22.0
+    24.0
    ],
    "width": 5.0,
    "depth": 0.15,
    "footprint": [
     17.68,
-    19.5,
+    21.5,
     17.83,
-    24.5
+    26.5
    ],
    "node": "upper/furniture/Primary Bedroom/tv_wall 34",
    "opts": {
@@ -7404,15 +7157,15 @@
    "facing": "N",
    "center": [
     21.8,
-    19.6
+    21.6
    ],
    "width": 6.0,
    "depth": 1.8,
    "footprint": [
     18.8,
-    18.7,
+    20.7,
     24.8,
-    20.5
+    22.5
    ],
    "node": "upper/furniture/Primary Bath/Vanity 35",
    "opts": {
@@ -7429,15 +7182,15 @@
    "facing": "N",
    "center": [
     27.85,
-    19.9
+    21.9
    ],
    "width": 1.7,
    "depth": 2.4,
    "footprint": [
     27.0,
-    18.7,
+    20.7,
     28.7,
-    21.1
+    23.1
    ],
    "node": "upper/furniture/Primary WC/WC 36",
    "opts": {}
@@ -7502,15 +7255,15 @@
    "facing": "N",
    "center": [
     23.0,
-    26.6
+    27.6
    ],
    "width": 4,
    "depth": 2.2,
    "footprint": [
     21,
-    25.5,
+    26.5,
     25,
-    27.7
+    28.7
    ],
    "node": "upper/furniture/Primary Bath/rug 39",
    "opts": {
@@ -7550,15 +7303,15 @@
    "facing": "N",
    "center": [
     36.0,
-    19.575
+    21.575
    ],
    "width": 11.4,
    "depth": 1.75,
    "footprint": [
     30.3,
-    18.7,
+    20.7,
     41.7,
-    20.45
+    22.45
    ],
    "node": "upper/furniture/Primary Closet/Closet system 41",
    "opts": {
@@ -7599,19 +7352,19 @@
    "facing": "W",
    "center": [
     40.96,
-    26.5
+    27.5
    ],
-   "width": 11.8,
+   "width": 9.8,
    "depth": 1.75,
    "footprint": [
     40.085,
-    20.6,
+    22.6,
     41.835,
     32.4
    ],
    "node": "upper/furniture/Primary Closet/Closet system 43",
    "opts": {
-    "W": 11.8,
+    "W": 9.8,
     "seed": 17
    }
   },
@@ -7624,18 +7377,20 @@
    "facing": "E",
    "center": [
     35.25,
-    26.5
+    27.5
    ],
-   "width": 6.0,
+   "width": 5,
    "depth": 2.5,
    "footprint": [
     34,
-    23.5,
+    25,
     36.5,
-    29.5
+    30
    ],
    "node": "upper/furniture/Primary Closet/Island 44",
-   "opts": {}
+   "opts": {
+    "W": 5
+   }
   },
   {
    "id": "furn45",
@@ -7645,16 +7400,16 @@
    "label": null,
    "facing": "N",
    "center": [
-    35.6,
-    26.8
+    35.25,
+    27.5
    ],
    "width": 1.4,
    "depth": 1.4,
    "footprint": [
-    34.9,
-    26.1,
-    36.3,
-    27.5
+    34.55,
+    26.8,
+    35.95,
+    28.2
    ],
    "node": "upper/furniture/Primary Closet/pendant 45",
    "opts": {
@@ -7671,15 +7426,15 @@
    "facing": "N",
    "center": [
     53.0,
-    22.2
+    24.2
    ],
    "width": 5.0,
    "depth": 7.0,
    "footprint": [
     50.5,
-    18.7,
+    20.7,
     55.5,
-    25.7
+    27.7
    ],
    "node": "upper/furniture/Bedroom 4/Bed 46",
    "opts": {
@@ -7697,15 +7452,15 @@
    "facing": "N",
    "center": [
     49.6,
-    19.45
+    21.45
    ],
    "width": 1.6,
    "depth": 1.5,
    "footprint": [
     48.8,
-    18.7,
+    20.7,
     50.4,
-    20.2
+    22.2
    ],
    "node": "upper/furniture/Bedroom 4/nightstand 47",
    "opts": {
@@ -7721,15 +7476,15 @@
    "facing": "W",
    "center": [
     54.925,
-    29.5
+    30.9
    ],
-   "width": 5,
+   "width": 5.0,
    "depth": 1.75,
    "footprint": [
     54.05,
-    27,
+    28.4,
     55.8,
-    32
+    33.4
    ],
    "node": "upper/furniture/Bedroom 4/Dresser 48",
    "opts": {
@@ -7793,20 +7548,20 @@
    "facing": "N",
    "center": [
     51.0,
-    26.0
+    27.2
    ],
    "width": 9.0,
-   "depth": 7.0,
+   "depth": 6.0,
    "footprint": [
     46.5,
-    22.5,
+    24.2,
     55.5,
-    29.5
+    30.2
    ],
    "node": "upper/furniture/Bedroom 4/rug 51",
    "opts": {
     "W": 9,
-    "D": 7,
+    "D": 6,
     "color": "fabric:#e7e3da"
    }
   },
@@ -7819,19 +7574,19 @@
    "facing": "E",
    "center": [
     42.8,
-    29.3
+    30.25
    ],
-   "width": 9.8,
+   "width": 8.1,
    "depth": 1.2,
    "footprint": [
     42.2,
-    24.4,
+    26.2,
     43.4,
-    34.2
+    34.3
    ],
    "node": "upper/furniture/Bed 4 Closet/Rod/shelf 52",
    "opts": {
-    "W": 9.8,
+    "W": 8.1,
     "D": 1.2
    }
   }

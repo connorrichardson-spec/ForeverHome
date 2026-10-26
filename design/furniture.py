@@ -660,8 +660,13 @@ def furnace(W=2.5, D=2.5, H=5.0):
     p = []
     _box(p, 0, 0, 0, W, D, H, "gloss:#d9d9d6")
     _box(p, 0.3, 0.3, H, W - 0.6, D - 0.6, 3.5, STEEL, False)     # plenum
-    _box(p, W + 0.3, 0.4, 0, 1.8, 1.8, 5.2, "gloss:#f2f2f0")       # water heater
-    _box(p, W + 1.0, 1.0, 5.2, 0.3, 0.3, 3.3, STEEL, False)
+    return p
+
+
+def water_heater(W=1.8, D=1.8, H=5.2):
+    p = []
+    _box(p, 0, 0, 0, W, D, H, "gloss:#f2f2f0")
+    _box(p, W / 2 - 0.15, D / 2 - 0.15, H, 0.3, 0.3, 3.3, STEEL, False)  # flue
     return p
 
 
@@ -826,7 +831,8 @@ KINDS = {
  "shower": (shower, "Shower"), "tub": (tub, "Tub"), "towel_bar": (towel_bar, None),
  "washer": (washer, "W"), "dryer": (lambda **k: washer(dryer=True, **k), "D"),
  "utility_sink": (utility_sink_counter, "Sink / counter"), "shelving_metal": (shelving_metal, "Shelving"),
- "workbench": (workbench, "Workbench"), "car": (car, "Car"), "furnace": (furnace, "Furnace / WH"),
+ "workbench": (workbench, "Workbench"), "car": (car, "Car"), "furnace": (furnace, "Furnace"),
+ "water_heater": (water_heater, "WH"),
  "elec_panel": (elec_panel, None), "squat_rack": (squat_rack, "Squat rack"),
  "weight_bench": (weight_bench, None), "dumbbell_rack": (dumbbell_rack, "Dumbbells"),
  "treadmill": (treadmill, "Treadmill"), "cold_plunge": (cold_plunge, "Cold plunge"),
