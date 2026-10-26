@@ -9,6 +9,9 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 
 ## Status
 - **Phase:** Discovery. Draft v0 layout + tooling pipeline built (placeholder sizes, no lot yet). Walkthrough is furnished with placeholder finishes.
+- **Timeline (2026-10-26):** build is likely several years out; state (and so lot) not chosen. Goal for now: decide as
+  much as possible that doesn't depend on the lot (layout, finishes, kitchen/bath design, specs), keep it all current
+  here and in the model, so it's ready to hand to a builder later. Lot-dependent items stay flagged as open.
 - **Last updated:** 2026-10-26
 
 ## Key Decisions
