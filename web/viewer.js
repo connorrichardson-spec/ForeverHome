@@ -13,8 +13,11 @@ const COLORS = { wallExt: 0xe7e1d3, wallInt: 0xf4f1ea, doorExt: 0x24282d, garage
 
 const isTouch = matchMedia("(pointer: coarse)").matches;
 const $ = (s) => document.querySelector(s);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+// render resolution: capped below the screen's on hi-dpi displays, and lowered further at runtime
+// if frames come in slow (see the loop at the bottom)
+let pixelRatio = Math.min(devicePixelRatio, isTouch ? 1.25 : 1.5);
+renderer.setPixelRatio(pixelRatio);
 renderer.setSize(innerWidth, innerHeight);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.05;
@@ -24,6 +27,7 @@ scene.background = new THREE.Color(0xbfd6e6);
 scene.add(new THREE.HemisphereLight(0xffffff, 0x8a8478, 1.1));
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.autoUpdate = false;      // the house never moves: re-bake only when visibility changes
 const sun = new THREE.DirectionalLight(0xfff4e5, 2.2);     // afternoon sun from the south-west
 sun.target.position.set(47, 0, -31);
 sun.position.set(47 - 45, 85, -31 + 60);
@@ -62,6 +66,7 @@ new RGBELoader().load("./vendor/hdri/sky_1k.hdr", (hdr) => {
   hdr.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = new THREE.PMREMGenerator(renderer).fromEquirectangular(hdr).texture;
   scene.background = hdr; scene.backgroundIntensity = 0.9;
+  invalidate();
 });
 
 // ---------- procedural textures (world-scaled: `size` = feet covered by one tile) ----------
@@ -348,6 +353,13 @@ for (const r of model.rooms) {
   labels.add(sp);
 }
 
+// ---------- render on demand ----------
+// Nothing in the scene animates, so frames are only drawn when the camera moves or something is
+// toggled. invalidate() requests a frame; invalidate(true) also re-bakes the sun shadows.
+let dirty = true;
+function invalidate(shadows = false) { dirty = true; if (shadows) renderer.shadowMap.needsUpdate = true; }
+renderer.shadowMap.needsUpdate = true;
+
 // ---------- state ----------
 let mode = "walk", level = "main";
 const me = { x: 0, y: 0, yaw: 0, pitch: 0 };   // yaw 0 = looking north (+y house)
@@ -355,6 +367,7 @@ function teleport(lvl, x, y, heading) {
   level = lvl; me.x = x; me.y = y; me.yaw = (heading ?? 0) * Math.PI / 180; me.pitch = 0;
   for (const [k, g] of Object.entries(levelGroups)) g.visible = true;
   document.querySelectorAll("[data-lvl]").forEach((b) => b.classList.toggle("on", b.dataset.lvl === lvl));
+  invalidate(true);
 }
 function placeCamera() {
   cam.position.set(me.x, model.levels[level].elev + EYE, -me.y);
@@ -445,6 +458,7 @@ function syncDoll() {
   ground.material.depthWrite = !inside; ground.material.needsUpdate = true;
   labels.visible = inside;
   labels.children.forEach((s) => (s.visible = levelGroups[s.userData.level].visible));
+  invalidate(true);
 }
 document.querySelectorAll("[data-show]").forEach((b) => (b.onclick = () => {
   b.classList.toggle("on"); levelGroups[b.dataset.show].visible = b.classList.contains("on");
@@ -475,7 +489,7 @@ function setMode(m) {
   syncDoll();
 }
 $("#mWalk").onclick = () => setMode("walk"); $("#mDoll").onclick = () => setMode("doll");
-// ambient occlusion (GTAO) — on by default on desktop, toggle with the HQ button
+// ambient occlusion (GTAO) — off by default (it's the heaviest part of a frame), toggle with the HQ button
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, cam));
 const ao = new GTAOPass(scene, cam, innerWidth, innerHeight);
@@ -488,13 +502,14 @@ ao.overrideVisibility = function () {
 };
 composer.addPass(ao);
 composer.addPass(new OutputPass());
-let hq = !isTouch;
+let hq = false;
 const hqBtn = $("#hq");
-const setHQ = (on) => { hq = on; hqBtn.classList.toggle("on", on); };
+const setHQ = (on) => { hq = on; hqBtn.classList.toggle("on", on); invalidate(); };
 hqBtn.onclick = () => setHQ(!hq); setHQ(hq);
 addEventListener("resize", () => {
   cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix();
   renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight);
+  invalidate();
 });
 
 // ---------- loop ----------
@@ -505,7 +520,8 @@ else teleport("main", ...SPAWN.main);
 setMode(hash[0] === "doll" ? "doll" : "walk");
 if (hash[0] === "doll" && hash.length >= 4) dollView(+hash[1], +hash[2], +hash[3]);
 $("#loading").remove();
-let last = performance.now();
+let last = performance.now(), slow = 0;
+const lastView = new THREE.Matrix4();
 renderer.setAnimationLoop((now) => {
   const dt = Math.min((now - last) / 1000, 0.1); last = now;
   if (mode === "walk") {
@@ -519,5 +535,16 @@ renderer.setAnimationLoop((now) => {
     me.x += (sy * f + cy * s) * WALK_SPEED * dt; me.y += (cy * f - sy * s) * WALK_SPEED * dt;
     collide(); placeCamera();
   } else orbit.update();
+  cam.updateMatrixWorld();
+  if (!lastView.equals(cam.matrixWorld)) { lastView.copy(cam.matrixWorld); dirty = true; }
+  if (!dirty) { slow = 0; return; }
+  dirty = false;
   if (hq) composer.render(); else renderer.render(scene, cam);
+  // adaptive resolution: if a run of continuous frames averages under ~35 fps, drop the pixel ratio
+  // a step (down to 0.75) — weak/integrated GPUs stay smooth, strong ones keep the sharp image
+  if (dt > 0.028) slow++; else slow = Math.max(0, slow - 1);
+  if (slow > 20 && pixelRatio > 0.75) {
+    pixelRatio = Math.max(0.75, pixelRatio - 0.25); slow = 0;
+    renderer.setPixelRatio(pixelRatio); composer.setPixelRatio(pixelRatio); invalidate();
+  }
 });

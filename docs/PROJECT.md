@@ -182,8 +182,9 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
   `ForeverHome_plans.dxf` (CAD, layers per level, feet), `schedules/rooms.csv`, `schedules/openings.csv`
 - `web/` — phone walkthrough (Three.js, vendored in `web/vendor/`, no build step). `model.json` is generated.
   Textures (plank floors, tile, fabric, pavers) are drawn procedurally in `viewer.js`; geometry is merged per material for phones.
-  Lighting: sky HDRI (`web/vendor/hdri/`, Poly Haven CC0), ACES tone mapping, soft sun shadows, GTAO ambient occlusion
-  (HQ button; default on for desktop, off for phones). Stair openings have invisible blockers (walk mode doesn't climb).
+  Lighting: sky HDRI (`web/vendor/hdri/`, Poly Haven CC0), ACES tone mapping, soft sun shadows (baked once, re-baked only when
+  floors/roof/mode change), GTAO ambient occlusion (HQ button, off by default). Renders on demand (no frames while
+  standing still); pixel ratio capped at 1.5 desktop / 1.25 phone and stepped down to 0.75 if frames run slow. Stair openings have invisible blockers (walk mode doesn't climb).
   Deep link to a view: `index.html#main/38/27/60` (level/x/y/heading deg, 0 = north), `#doll`, or
   `#doll/35/28/120` (azimuth from the front, elevation, distance). Dollhouse opens as an exterior view; turn off
   Roof (and Upper) to look inside.
@@ -191,6 +192,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Live site (once Pages is enabled): https://connorrichardson-spec.github.io/ForeverHome/
 - Preview locally: `./run-local.sh` (serves web/ + exports/ on http://localhost:8000 and opens a separate Firefox
   instance on the NVIDIA GPU; plain Firefox on this laptop runs on the slower Intel iGPU). Ctrl+C to stop.
+  `./run-local.sh --live` opens the published Pages site in that same NVIDIA Firefox (no local server).
 
 ## Draft v0 Status / Known Gaps
 - Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
@@ -213,6 +215,9 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
   the office door. Roofs take `label=False` to skip the roof-plan label.
 - 2026-10-26 (late night, cont.): half bath -> 3/4 Main Bath (aging in place).
 - 2026-10-26 (late night, cont.): upper hall trimmed to 40 ft; dead ends -> walk-ins for Bedrooms 2 and 4.
+- 2026-10-26 (perf): Pages felt laggy vs local — cause was the browser GPU (Intel iGPU), not hosting. Viewer made
+  lighter: baked shadows, render on demand, HQ/AO off by default, capped + adaptive pixel ratio, high-performance GPU
+  hint; `run-local.sh --live`.
 - 2026-10-26 (late night): basement windows removed, water heater to the SE corner (new `water_heater` kind),
   squat rack on the west wall, treadmill gone; upper hall moved 2 ft north so Bedrooms 2 + 3 are 12x16.
 - 2026-10-26 (night): side-load garage, full front porch, entry gable bay + tall stair window, island closet back.
