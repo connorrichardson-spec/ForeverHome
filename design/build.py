@@ -17,7 +17,7 @@ EXP = os.path.join(ROOT, "exports")
 WEB = os.path.join(ROOT, "web")
 CUT = 4.0                      # plan cut height above floor (ft)
 LEVEL_TITLES = {"basement": "BASEMENT PLAN", "main": "MAIN FLOOR PLAN", "upper": "UPPER FLOOR PLAN"}
-NOT_LIVING = {"Garage", "Covered Patio", "Mechanical", "Stair"}
+NOT_LIVING = {"Garage", "Patio", "Mechanical", "Stair"}
 DRAFT = "DRAFT v0 - NOT FOR CONSTRUCTION"
 
 DATA = {l: G.boxes_for_level(l) for l in H.LEVELS}

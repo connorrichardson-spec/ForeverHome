@@ -37,8 +37,8 @@ def seg_axis(p, q):
     return "v", p[0], min(p[1], q[1]), max(p[1], q[1])        # along y at x=c
 
 
-def shared_interval(ra, rb):
-    """Longest collinear overlap between edges of two rooms -> (axis,c,a,b)."""
+def shared_interval(ra, rb, at=None):
+    """Longest collinear overlap between edges of two rooms -> (axis,c,a,b); with `at`, the one through that point."""
     best = None
     for p, q in edges(room_poly(ra)):
         ax, c, a, b = seg_axis(p, q)
@@ -46,6 +46,9 @@ def shared_interval(ra, rb):
             ax2, c2, a2, b2 = seg_axis(p2, q2)
             if ax == ax2 and c == c2:
                 lo, hi = max(a, a2), min(b, b2)
+                if at is not None and not ((ax == "h" and c == at[1] and lo <= at[0] <= hi) or
+                                           (ax == "v" and c == at[0] and lo <= at[1] <= hi)):
+                    continue
                 if hi - lo > 0.01 and (best is None or hi - lo > best[3] - best[2]):
                     best = (ax, c, lo, hi)
     return best
@@ -105,7 +108,7 @@ def build_openings(level, walls):
                     cand.append((ax, c, a, b))
             iv = max(cand, key=lambda t: t[3] - t[2])
         else:
-            iv = shared_interval(ra, find_room(level, d[2]))
+            iv = shared_interval(ra, find_room(level, d[2]), opt.get("at"))
             if iv is None:
                 raise ValueError(f"{level}: {d[1]} and {d[2]} share no wall")
         ax, c, a, b = iv

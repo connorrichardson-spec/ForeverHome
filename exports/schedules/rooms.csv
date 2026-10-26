@@ -1,13 +1,6 @@
 level,room,bbox_width_ft,bbox_depth_ft,area_sqft,finished,note
-basement,Gym,18,24,432,yes,"Squat rack, cold plunge, sauna access"
-basement,Sauna,6,8,48,yes,
-basement,Mechanical,6,6,36,no,
 basement,Stair,10,14,140,no,
-basement,Bsmt Hall,38,5,190,yes,
-basement,Bsmt Bath,10,14,124,yes,Full bath; doors from hall and bedroom
-basement,Bsmt Closet,4,4,16,yes,
-basement,Bsmt Bedroom,12,14,168,yes,Egress window required
-basement,Unfinished,56,21,1086,no,Unfinished: storage now; future play area / rec room
+basement,Unfinished,56,40,2100,no,Unfinished basement; future rooms shown as zones
 main,Office,14,16,224,yes,
 main,Foyer,10,16,149.5,yes,
 main,Foyer Closet,3.5,3,10.5,yes,Coat closet
@@ -18,8 +11,7 @@ main,Mudroom,14,14,196,yes,
 main,Pantry,12,12,144,yes,Walk-in
 main,Great Room,56,26,1244,yes,Open plan: living / dining / kitchen
 main,Garage,34,26,884,no,3-car + storage/workspace
-main,Kids Playroom,22,12,264,yes,Bump-out off the living room; single story (roof TBD)
-main,Covered Patio,34,16,544,no,Outdoor kitchen + fireplace
+main,Patio,34,16,544,no,Open paver patio + fireplace; outdoor kitchen deferred (stub gas/power/water for later)
 upper,Bedroom 2,12,14,146.75,yes,"Teen room: queen, desk, dresser"
 upper,Bed 2 Closet,8.5,2.5,21.25,yes,"Reach-in, sliding doors"
 upper,Bedroom 3,12,14,146.75,yes,"Teen room: queen, desk, dresser"
@@ -30,9 +22,9 @@ upper,Bath 2,10,7,70,yes,Shared double vanity (Bedrooms 2-4); compartmented so t
 upper,Laundry,12,10,120,yes,
 upper,Linen,12,4,48,yes,"Linen / storage, off the laundry"
 upper,Upper Hall,56,4.5,252,yes,4.5 ft wide
-upper,Primary Bedroom,18,21.5,387,yes,
-upper,Primary Closet,16,12,192,yes,Center island
-upper,Primary Bath,16,9.5,134.5,yes,
+upper,Primary Bedroom,18,16,288,yes,
+upper,Primary Closet,16,7,112,yes,Galley walk-in
+upper,Primary Bath,16,9,126.5,yes,
 upper,Primary WC,3.5,5,17.5,yes,Water closet
 upper,Bedroom 4,18,16,288,yes,
 upper,Bed 4 Closet,4,16,64,yes,
