@@ -203,6 +203,11 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26 (late night, cont.): walkthrough touch-ups. Siding/stone no longer wrap into rooms at inside corners
+  (entry bay, garage/great-room corner); paint + baseboard now wrap outside corners (no bare wall core); entry gable
+  split at the front wall so its side overhangs stop hanging into Bedroom 3 / Bath 2; stair flights get a drywall
+  soffit underneath (`geometry.stair_polys`); stair->hall cased opening kept on the walkway floor; foyer bench clear of
+  the office door. Roofs take `label=False` to skip the roof-plan label.
 - 2026-10-26 (late night, cont.): half bath -> 3/4 Main Bath (aging in place).
 - 2026-10-26 (late night, cont.): upper hall trimmed to 40 ft; dead ends -> walk-ins for Bedrooms 2 and 4.
 - 2026-10-26 (late night): basement windows removed, water heater to the SE corner (new `water_heater` kind),

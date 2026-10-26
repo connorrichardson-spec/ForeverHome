@@ -3075,9 +3075,9 @@
    "kind": "cased",
    "center": [
     34,
-    12.0
+    12.4
    ],
-   "width": 3.5,
+   "width": 3.0,
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Stair"
@@ -5575,15 +5575,15 @@
    "facing": "E",
    "center": [
     14.9,
-    11.0
+    12.0
    ],
    "width": 4.0,
    "depth": 1.4,
    "footprint": [
     14.2,
-    9,
+    10,
     15.6,
-    13.0
+    14.0
    ],
    "node": "main/furniture/Foyer/Bench 63",
    "opts": {}
@@ -5597,15 +5597,15 @@
    "facing": "E",
    "center": [
     14.23,
-    11.0
+    12.0
    ],
    "width": 3.0,
    "depth": 0.1,
    "footprint": [
     14.18,
-    9.5,
+    10.5,
     14.28,
-    12.5
+    13.5
    ],
    "node": "main/furniture/Foyer/art 64",
    "opts": {
@@ -7663,7 +7663,7 @@
     14,
     -3,
     34,
-    10
+    0
    ],
    "ridge": "y",
    "base": 20.0,
@@ -7677,6 +7677,24 @@
    "ends": "S",
    "finish": "shingle",
    "note": "Front-facing gable over the entry bay; ridge dies into the main roof",
+   "ridge_height": 26.67
+  },
+  {
+   "name": "Entry gable back",
+   "kind": "gable",
+   "rect": [
+    14,
+    0,
+    34,
+    10
+   ],
+   "ridge": "y",
+   "base": 20.0,
+   "pitch": 0.6666666666666666,
+   "ovh": 0,
+   "ends": "",
+   "finish": "shingle",
+   "label": false,
    "ridge_height": 26.67
   },
   {

@@ -292,14 +292,42 @@ def boxes_for_level(level):
                 strip(lo - CASE_W - 0.1, hi + CASE_W + 0.1, sill - 0.08, sill, 0.25)    # stool
                 strip(lo - CASE_W, hi + CASE_W, sill - 0.45, sill - 0.08)                # apron
 
+    def corner(w, s, end, d):
+        """How cladding meets the wall end `end` (d=-1 low end, +1 high end) on outside side s:
+        'wrap' at an outside corner, 'stop' at an inside corner (the outside there is a room), 'butt' when an
+        exterior wall continues in line."""
+        if any(o is not w and o["ext"] and o["axis"] == w["axis"] and o["c"] == w["c"] and
+               (o["a"] if d > 0 else o["b"]) == end for o in walls):
+            return "butt"
+        along, across = end + d * 0.3, w["c"] + s * (w["t"] / 2 + 0.3)
+        return "stop" if (room_at(along, across) if w["axis"] == "h" else room_at(across, along)) else "wrap"
+
+    def wraps(w, s, end, d, r):
+        """At an outside corner (room r also lies past the wall end on side s, with no wall continuing in line),
+        -> half-thickness of the wall the end butts into, else 0."""
+        if any(o is not w and o["axis"] == w["axis"] and o["c"] == w["c"] and (o["a"] if d > 0 else o["b"]) == end
+               for o in walls):
+            return 0
+        along, across = end + d * 0.3, w["c"] + s * (w["t"] / 2 + 0.05)
+        if (room_at(along, across) if w["axis"] == "h" else room_at(across, along)) is not r:
+            return 0
+        perp = [o["t"] for o in walls if o["axis"] != w["axis"] and o["c"] == end and o["a"] <= w["c"] <= o["b"]]
+        return max(perp) / 2 if perp else 0
+
     def cladding(w, s, lo, hi, z0, z1):
         """Board-and-batten siding on an outside face; stone base + cap on the main level.
-        Pieces at the wall's ends wrap the corner; upper-level siding also covers the floor band."""
+        Pieces wrap outside corners, stop at the neighbouring wall's face at inside corners;
+        upper-level siding also covers the floor band."""
         face = w["c"] + s * w["t"] / 2
 
-        def span(th):           # extend past the wall end by its half-thickness + cladding depth
-            ea = w["a"] - w["t"] / 2 - th if lo <= w["a"] - w["t"] / 2 + 1e-6 else max(lo, w["a"])
-            eb = w["b"] + w["t"] / 2 + th if hi >= w["b"] + w["t"] / 2 - 1e-6 else min(hi, w["b"])
+        def span(th):
+            ea, eb = max(lo, w["a"]), min(hi, w["b"])
+            if lo <= w["a"] - w["t"] / 2 + 1e-6:
+                ea = {"wrap": w["a"] - w["t"] / 2 - th, "stop": w["a"] + H.EXT_T / 2, "butt": w["a"]}[
+                    corner(w, s, w["a"], -1)]
+            if hi >= w["b"] + w["t"] / 2 - 1e-6:
+                eb = {"wrap": w["b"] + w["t"] / 2 + th, "stop": w["b"] - H.EXT_T / 2, "butt": w["b"]}[
+                    corner(w, s, w["b"], 1)]
             return ea, eb
         at_floor = z0 <= z_floor + 1e-6
         zs = z_floor - H.FLOOR_T if (level == "upper" and at_floor) else z0
@@ -330,12 +358,16 @@ def boxes_for_level(level):
             paint = r.get("paint", DEFAULT_PAINT)
             mat = paint if ":" in paint else "paint:" + paint
             face = w["c"] + s * w["t"] / 2
+            # outside corners: the room wraps the wall end, so carry paint + baseboard over the end grain
+            wrap_a = lo_raw <= w["a"] - w["t"] / 2 + 1e-6 and wraps(w, s, w["a"], -1, r)
+            wrap_b = hi_raw >= w["b"] + w["t"] / 2 - 1e-6 and wraps(w, s, w["b"], 1, r)
             for t, za, zb, m in ((SKIN, z0, z1, mat), (BASE_T, z0, z0 + BASE_H, "trim")):
                 if m == "trim" and (z0 > z_floor + 1e-6 or r["name"] in ("Garage", "Sauna", "Mechanical")
                                      or r.get("unfinished")):
                     continue
                 c0 = face if s > 0 else face - t
-                add(w["axis"], c0 + t / 2, lo, hi, t, za, min(zb, z1), m, False)
+                add(w["axis"], c0 + t / 2, lo - (wrap_a + t if wrap_a else 0), hi + (wrap_b + t if wrap_b else 0),
+                    t, za, min(zb, z1), m, False)
 
     for i, w in enumerate(walls):
         tag[0] = f"wall{i}"
@@ -457,6 +489,41 @@ def stair_boxes(level, r, box):
             c=False)
         box(x=L["X0"], y=L["Y0"], z=elev + 0.3, w=L["X1"] - L["X0"], d=L["Y"] - L["Y0"], h=4.5, mat="block",
             c=True)
+
+
+def stair_polys(level):
+    """Drywall underside of each flight: a sloped soffit through the inner corners of the treads, plus side
+    faces closing the sawtooth between it and the tread blocks. -> polygons (absolute feet, like roofs)."""
+    out = []
+    elev = H.LEVELS[level][0]
+    for r in H.ROOMS[level]:
+        if r.get("stair") != "up":
+            continue
+        paint = r.get("paint", DEFAULT_PAINT)
+        paint = paint if ":" in paint else "paint:" + paint
+        L = stair_layout(level, r)
+        T, rr, k, n, fw, Y, land = TREAD, L["r"], L["k"], L["n"], L["fw"], L["Y"], L["land"]
+        z_min = elev - H.FLOOR_T
+        # (x0, x1, [(y_lo, y_hi, block bottom)], soffit z at y)
+        f1 = [(Y - (i + 1) * T, Y - i * T, max(elev, elev + (i + 1) * rr - 0.9)) for i in range(k - 1)]
+        f2 = [(land + j * T, land + (j + 1) * T, elev + (k + j + 1) * rr - 0.9) for j in range(n - k - 1)]
+        flights = [(L["X0"], L["X0"] + fw, f1, lambda y: elev + rr - 0.9 + (Y - T - y) * rr / T),
+                   (L["X1"] - fw, L["X1"], f2, lambda y: elev + (k + 1) * rr - 0.9 + (y - land - T) * rr / T)]
+        for x0, x1, treads, zs in flights:
+            if not treads:
+                continue
+            ya, yb = min(t[0] for t in treads), max(t[1] for t in treads)
+            za, zb = max(zs(ya), z_min), max(zs(yb), z_min)
+            out.append(dict(mat=paint, pts=[(x0, ya, za), (x1, ya, za), (x1, yb, zb), (x0, yb, zb)],
+                            obj=f"stair/{r['name']}"))
+            for y0, y1, bot in treads:
+                z0, z1 = max(zs(y0), z_min), max(zs(y1), z_min)
+                if bot - max(z0, z1) < 0.01 and bot - min(z0, z1) < 0.01:
+                    continue
+                for x in (x0, x1):
+                    out.append(dict(mat=paint, pts=[(x, y0, z0), (x, y1, z1), (x, y1, bot), (x, y0, bot)],
+                                    obj=f"stair/{r['name']}"))
+    return out
 
 
 def furniture(level):

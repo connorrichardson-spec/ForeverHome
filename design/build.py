@@ -21,7 +21,9 @@ NOT_LIVING = {"Garage", "Patio", "Mechanical", "Stair"}
 DRAFT = "DRAFT v0 - NOT FOR CONSTRUCTION"
 
 DATA = {l: G.boxes_for_level(l) for l in H.LEVELS}
-POLYS = {"main": E.site()[1], "roof": E.roof_polys()}     # sloped / organic geometry (feet)
+POLYS = {l: G.stair_polys(l) for l in H.LEVELS}            # sloped / organic geometry (feet)
+POLYS["main"] += E.site()[1]
+POLYS["roof"] = E.roof_polys()
 
 
 def fmt(ft):
@@ -191,6 +193,8 @@ def write_roof_plan(pdf):
         ax.add_patch(Polygon([(x, y) for x, y, _ in p["pts"]], closed=True,
                              fc="#d9dadc" if p["mat"] == "shingle" else "#bfc3c7", ec="#222", lw=0.6))
     for r in H.ROOFS:
+        if r.get("label") is False:
+            continue
         rx0, ry0, rx1, ry1 = r["rect"]
         rise = round(r["pitch"] * 12)
         ax.text((rx0 + rx1) / 2, (ry0 + ry1) / 2, f"{r['name'].upper()}\n{rise}:12 {r['finish']}\n"
