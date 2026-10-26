@@ -9,14 +9,31 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 
 ## Status
 - **Phase:** Discovery. Draft v0 layout + tooling pipeline built (placeholder sizes, no lot yet). Walkthrough is furnished with placeholder finishes.
-- **Last updated:** 2026-10-25
+- **Last updated:** 2026-10-26
 
 ## Key Decisions
-_None yet. Log each with date and reasoning._
+- 2026-10-26: Shrink to cut cost. Great room 30 -> 24 ft deep (whole house 46 -> 40 ft deep on main, 41.5 -> 40 upper),
+  upper hall 5.5 -> 4.5 ft, basement hall 8 -> 5 ft. Reason: size/cost well over what owners want.
+- 2026-10-26: Removed a 4 ft north-south strip at x=18-22 on every floor (house 60 -> 56 ft wide main block):
+  foyer 14 -> 10 ft wide, living 26 -> 22, playroom 26 -> 22, Bedroom 2 28 -> 24, primary bedroom 22 -> 18 ft wide.
+- 2026-10-26: Bedroom 3 over the garage shrunk to 14x14 + 8x4.5 walk-in; rest of the space is unfinished attic
+  storage off the hall. Keeps 4 bedrooms upstairs.
+- 2026-10-26: Basement = full footprint of the main block (56x40; playroom bump-out and garage on slab/crawl).
+  Finished: gym (18x24), sauna, bedroom, bath, hall. ~1,090 sq ft unfinished (storage now, future play/rec area).
+  Reason: a partial basement still needs foundation walls around the rest; unfinished basement is the cheapest
+  space in the house and can be finished later.
+- 2026-10-26: Kids are teenagers. Bedroom 2 split back into two 12x14 teen rooms (Bedrooms 2 + 3: queen bed, desk,
+  dresser, 8.5x2.5 reach-in with sliding doors, ~147 sq ft each). No room over the garage any more: garage gets a
+  one-story 8:12 gable (attic-truss storage, pull-down stair). Laundry stays windowless (garage roof is in the way).
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
-- Budget: unknown. Size is intentionally not fixed; it will fall out of the room program.
+- Budget: not set, but owners want to cut size and cost substantially (2026-10-26). Rough estimate at ~8,150 sq ft
+  was $1.9M-2.7M (TN/MO custom build, mid-upper finishes, excl. land/site/design fees). After the 2026-10-26 cuts
+  (~5,750 finished + ~1,120 unfinished basement): roughly $1.4M-2.05M (main+upper $250-350/sf, finished bsmt $100-150,
+  unfinished bsmt $30-50, garage, patio). Rule of thumb: every 500 finished sq ft ~ $125k-175k. Not a builder quote.
+- Shared Bath 2 serves 3 teenagers, so it is compartmented (2026-10-26): toilet + tub/shower + shower in a 10x7 room
+  behind a door, double vanity in the 10x7 room off the hall. Vanity side has no window (could add a skylight/tube).
 - Lot slope matters: a walk-out basement lot changes the design (basement windows/daylight).
 - Preferred CAD output formats the builder wants (DWG, PDF, IFC)?
 
@@ -80,14 +97,25 @@ Owners are flexible on which floor a room lands on.
 **Exterior (2026-10-25, draft)** — modern farmhouse read of "modern meets traditional":
 - White board-and-batten siding, ledgestone base (2.5 ft) on the main level, white trim, black window frames with
   2-over-2 grilles, black front door, carriage-style garage doors with a glass top row.
-- Roof: 8:12 side gables (charcoal architectural shingles) over the two-story block and the bonus room, eaves at the
-  upper wall top; 4:12 metal sheds on the rear one-story strip; 6:12 metal hips over the playroom and covered patio;
-  8:12 metal gable front porch on cedar posts. Ridges ~34 ft (main), ~29 ft (bonus) above main floor.
+- Roof: 8:12 side gables (charcoal architectural shingles) over the two-story block (eaves at the upper wall top)
+  and a one-story garage gable (2026-10-26); 4:12 metal shed on the rear one-story strip east of the patio; 6:12 metal hips over the playroom and covered patio;
+  8:12 metal gable front porch on cedar posts. Ridges ~33 ft (main), ~19 ft (garage) above main floor.
 - Covered patio: cedar posts/beams, tongue-and-groove ceiling, stone chimney for the outdoor fireplace.
 - Site placeholders: driveway, front walk, sidewalk/street, shrubs, trees, exterior lights. No lot yet, so all of
   this (and grade = main floor) is a stand-in.
-- Open: bonus-room roof/knee walls, gutters/downspouts, basement window wells, roof drainage at the valleys where
+- Open: gutters/downspouts, basement window wells, roof drainage at the valleys where
   the rear sheds meet the playroom/patio hips (needs crickets or a re-think once a roof designer looks at it).
+
+**Changed (2026-10-26, size/cost cut)**
+- Great room 1,700 -> 1,340 sq ft: back wall moved 6 ft south (living 26x24, dining 22x12, kitchen 34x12 with the
+  island and a 4 ft working aisle). Kids Playroom and covered patio moved with it (same sizes).
+- Upper hall 4.5 ft wide (reverses part of round 2's 5.5 ft); primary suite, Bedroom 4 + closet shift south 1 ft.
+  Upper back wall now lines up with main (40 ft), so the west rear shed roof is gone. Primary bath ~0.5 ft shallower.
+- Basement hall 5 ft wide; gym 22x19 (was 22x22); play area + storage moved 3 ft south (same sizes).
+
+**Changed (2026-10-26, cost cut round 2)** — see Key Decisions. Basement play area is now unfinished (future);
+the main-floor Kids Playroom covers play for now. Front porch recentred on the moved front door (12x7).
+Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finished sq ft, `finished` column in rooms.csv.
 
 **Still unspecified:** exact garage door layout. Finishes in the model are placeholders to react to (see Design Notes).
 
@@ -135,9 +163,9 @@ Owners are flexible on which floor a room lands on.
 
 ## Draft v0 Status / Known Gaps
 - Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
-- Finished area in draft: basement ~1,650 + main ~2,910 + upper ~3,100 (incl. ~880 bonus over garage) = **~7,700 sq ft**
-  (excl. garage, patio).
-  That is bigger than expected; generous great room, halls and basement. Trim once priorities are set.
+- Area (from `rooms.csv`, excl. garage + patio, 2026-10-26): **finished ~5,750 sq ft** incl. stairs
+  (basement ~1,120, main ~2,500, upper ~2,120); build.py prints ~5,300 (excludes stairs). Plus ~1,120 unfinished
+  basement (incl. mechanical). Was ~8,150 all finished at the start of 2026-10-26.
 - Not modeled yet: foundation, structure, MEP, sections, IFC export, real lot/grading, gutters, window wells.
   Furniture is blocky (boxes only); walk mode can't climb stairs. PDF now has a roof plan (A-6.0) and elevations with roofs.
 - Viewer verified in headless Chromium (software WebGL, no console errors) on 2026-10-25; still verify on a real phone,
@@ -147,6 +175,11 @@ Owners are flexible on which floor a room lands on.
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-26: Bath 2 compartmented for three teens.
+- 2026-10-26 (later still): Bedroom 2 split into two teen rooms; garage bedroom removed, garage roof lowered.
+- 2026-10-26 (later): 4 ft strip out of the west side (foyer, living, primary, Bedroom 2), Bedroom 3 -> 14x14 +
+  unfinished attic, full-footprint basement with ~1,090 unfinished. Added `unfinished` room flag.
+- 2026-10-26: Size/cost cut: great room 6 ft shallower, narrower upper + basement halls (~8,150 -> ~7,530 sq ft).
 - 2026-10-25 (late night): upper re-plan: south bedrooms combined, bonus room -> Bedroom 3, Bath 2 enlarged.
 - 2026-10-25 (night, round 4): wider playroom opening, pantry tall cabinet, mudroom lockers, foyer coat closet.
 - 2026-10-25 (night): Exterior: siding, stone base, trim, window frames, full roof system, front porch, covered-patio

@@ -246,12 +246,14 @@ def write_schedules():
         for r in H.ROOMS[level]:
             x0, y0, x1, y1 = G.bounds(r)
             area = G.room_area(r)
-            rows.append([level, r["name"], f"{x1 - x0:g}", f"{y1 - y0:g}", f"{area:g}", r.get("note", "")])
-            if r["name"] not in NOT_LIVING and r.get("kind") != "outdoor":
+            finished = r["name"] not in NOT_LIVING and r.get("kind") != "outdoor" and not r.get("unfinished")
+            rows.append([level, r["name"], f"{x1 - x0:g}", f"{y1 - y0:g}", f"{area:g}", "yes" if finished else "no",
+                         r.get("note", "")])
+            if finished:
                 totals[level] = totals.get(level, 0) + area
     with open(os.path.join(EXP, "schedules", "rooms.csv"), "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["level", "room", "bbox_width_ft", "bbox_depth_ft", "area_sqft", "note"])
+        w.writerow(["level", "room", "bbox_width_ft", "bbox_depth_ft", "area_sqft", "finished", "note"])
         w.writerows(rows)
     with open(os.path.join(EXP, "schedules", "openings.csv"), "w", newline="") as f:
         w = csv.writer(f)

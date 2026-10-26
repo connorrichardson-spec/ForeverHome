@@ -13,7 +13,7 @@ DEFAULT_PAINT = "#e6e1d6"
 SKIN, BASE_H, BASE_T = 0.02, 0.4, 0.05      # paint film, baseboard height / proud depth
 SIDING_T, STONE_T, STONE_H = 0.08, 0.2, 2.5  # exterior cladding depths, stone base height (main level)
 FLOOR_MAT = {"hardwood": "hardwood", "concrete": "concrete", "rubber": "rubber",
-             "cedar": "wood:#c48a57", "pavers": "pavers", "tile": "floorTile"}
+             "cedar": "wood:#c48a57", "pavers": "pavers", "tile": "floorTile", "subfloor": "wood:#b89a6e"}
 CASE_W, CASE_T = 0.3, 0.06                   # door/window casing width, proud depth
 TREAD, MAX_RISE, RAIL_H = 0.833, 0.646, 3.0  # 10" treads, 7.75" max riser (IRC), 36" guard
 
@@ -326,7 +326,8 @@ def boxes_for_level(level):
             mat = paint if ":" in paint else "paint:" + paint
             face = w["c"] + s * w["t"] / 2
             for t, za, zb, m in ((SKIN, z0, z1, mat), (BASE_T, z0, z0 + BASE_H, "trim")):
-                if m == "trim" and (z0 > z_floor + 1e-6 or r["name"] in ("Garage", "Sauna", "Mechanical")):
+                if m == "trim" and (z0 > z_floor + 1e-6 or r["name"] in ("Garage", "Sauna", "Mechanical")
+                                     or r.get("unfinished")):
                     continue
                 c0 = face if s > 0 else face - t
                 add(w["axis"], c0 + t / 2, lo, hi, t, za, min(zb, z1), m, False)
