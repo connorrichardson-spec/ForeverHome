@@ -110,7 +110,7 @@ def build_openings(level, walls):
         pos = (a + b) / 2
         if "at" in opt:
             pos = opt["at"][0] if ax == "h" else opt["at"][1]
-        w, h = {"door": (DOOR_W, DOOR_H), "cased": (CASED_W, CASED_H),
+        w, h = {"door": (DOOR_W, DOOR_H), "closet": (4.0, DOOR_H), "cased": (CASED_W, CASED_H),
                 "patio": (PATIO_W, PATIO_H)}[kind]
         w = min(opt.get("w", w), b - a - 0.5)
         ops.append(dict(axis=ax, c=c, pos=pos, w=w, sill=0.0, h=h, kind=kind,
@@ -294,6 +294,10 @@ def boxes_for_level(level):
                 add(w["axis"], w["c"], lo, hi, 0.2, z_floor, head, "garageDoor", False)
             elif o["kind"] == "patio":
                 add(w["axis"], w["c"], lo, hi, 0.1, z_floor, head, "glass", False)
+            elif o["kind"] == "closet":                       # bypass sliders, closed
+                mid = (lo + hi) / 2
+                add(w["axis"], w["c"] - 0.06, lo + 0.04, mid + 0.08, 0.08, z_floor, head - 0.04, "door", False)
+                add(w["axis"], w["c"] + 0.06, mid - 0.08, hi - 0.04, 0.08, z_floor, head - 0.04, "door", False)
             elif o["kind"] == "door" and w["ext"]:
                 add(w["axis"], w["c"], lo, hi, 0.2, z_floor, head, "doorExt", False)
             cur = hi

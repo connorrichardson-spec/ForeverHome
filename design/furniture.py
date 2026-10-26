@@ -31,22 +31,54 @@ def _legs(p, W, D, h, t=0.15, mat=BLACK_METAL, inset=0.1):
             _box(p, u, v, 0, t, t, h, mat, False)
 
 
-def _cab_fronts(p, u0, W, D, z0, h, mat, pull=STEEL, door_w=1.5, drawers=False):
-    """Slightly proud door/drawer fronts with gaps + pulls on the front face."""
+def _cab_fronts(p, u0, W, D, z0, h, mat, pull=STEEL, door_w=1.5, drawers=False, out=1):
+    """Slightly proud door/drawer fronts with gaps + pulls on the face at v=D.
+    out=1: the face looks toward +v (the piece's front); out=-1: toward -v (its back)."""
     n = max(1, round(W / door_w))
     dw = W / n
+    fv = D if out > 0 else D - 0.04          # front panel slab
+    pv = D + 0.04 if out > 0 else D - 0.09   # pull
     for i in range(n):
         if drawers:
             rows = 3
             dh = h / rows
             for r in range(rows):
-                _box(p, u0 + i * dw + 0.02, D, z0 + r * dh + 0.02, dw - 0.04, 0.04, dh - 0.04, mat, False)
-                _box(p, u0 + i * dw + dw / 2 - 0.25, D + 0.04, z0 + r * dh + dh * 0.7, 0.5, 0.05, 0.05, pull, False)
+                _box(p, u0 + i * dw + 0.02, fv, z0 + r * dh + 0.02, dw - 0.04, 0.04, dh - 0.04, mat, False)
+                _box(p, u0 + i * dw + dw / 2 - 0.25, pv, z0 + r * dh + dh * 0.7, 0.5, 0.05, 0.05, pull, False)
         else:
-            _box(p, u0 + i * dw + 0.02, D, z0 + 0.02, dw - 0.04, 0.04, h - 0.04, mat, False)
+            _box(p, u0 + i * dw + 0.02, fv, z0 + 0.02, dw - 0.04, 0.04, h - 0.04, mat, False)
             pu = u0 + i * dw + (dw - 0.2 if i % 2 == 0 else 0.15)
             pz = z0 + h - 0.6 if z0 < 2 else z0 + 0.25
-            _box(p, pu, D + 0.04, pz, 0.05, 0.05, 0.4, pull, False)
+            _box(p, pu, pv, pz, 0.05, 0.05, 0.4, pull, False)
+
+
+def _carcass(p, u0, w, v0, d, z0, z1, mat, hole=None):
+    """Cabinet body; hole=(su, sw, sv0, sv1, zh) leaves room for a basin above height zh."""
+    if hole is None:
+        _box(p, u0, v0, z0, w, d, z1 - z0, mat)
+        return
+    su, sw, sv0, sv1, zh = hole
+    _box(p, u0, v0, z0, w, d, zh - z0, mat)
+    _box(p, u0, v0, zh, su - u0, d, z1 - zh, mat)
+    _box(p, su + sw, v0, zh, u0 + w - su - sw, d, z1 - zh, mat)
+    _box(p, su, v0, zh, sw, max(0, sv0 - v0), z1 - zh, mat, False)
+    _box(p, su, sv1, zh, sw, max(0, v0 + d - sv1), z1 - zh, mat, False)
+
+
+def _sink_cutout(p, u0, u1, v0, v1, ct, top, su, sw, sv0, sv1, basin=STEEL, depth=0.75):
+    """Counter slab u0..u1 x v0..v1 at height ct with a sw x (sv1-sv0) hole at u=su, plus a hollow
+    undermount basin hanging below the hole."""
+    t = 0.12
+    _box(p, u0, v0, ct, su - u0, v1 - v0, t, top)
+    _box(p, su + sw, v0, ct, u1 - su - sw, v1 - v0, t, top)
+    _box(p, su, v0, ct, sw, sv0 - v0, t, top)
+    _box(p, su, sv1, ct, sw, v1 - sv1, t, top)
+    zb = ct - depth
+    _box(p, su, sv0, zb, sw, sv1 - sv0, 0.05, basin, False)                       # basin floor
+    for u, v, w, d in ((su, sv0, sw, 0.04), (su, sv1 - 0.04, sw, 0.04),
+                       (su, sv0, 0.04, sv1 - sv0), (su + sw - 0.04, sv0, 0.04, sv1 - sv0)):
+        _box(p, u, v, zb, w, d, depth + 0.02, basin, False)                       # basin walls
+    _box(p, su + sw / 2 - 0.12, (sv0 + sv1) / 2 - 0.12, zb + 0.05, 0.24, 0.24, 0.01, "fix:#3a3a3a", False)
 
 
 # ---------------------------------------------------------------- living
@@ -202,18 +234,15 @@ def base_cab(W=6.0, D=2.0, color=CAB, top=QUARTZ, sink=None, drawers=False):
     """Base cabinet run with counter. sink=u offset of a 2.6 ft wide basin."""
     p = []
     _box(p, 0, 0, 0, W, D - 0.25, 0.35, "fix:#2a2a2a")            # toe kick
-    _box(p, 0, 0, 0.35, W, D - 0.05, 2.6, color)
+    hole = None if sink is None else (sink, 2.6, 0.5, D - 0.22, 2.95 - 0.8)
+    _carcass(p, 0, W, 0, D - 0.05, 0.35, 2.95, color, hole)
     _cab_fronts(p, 0, W, D - 0.05, 0.4, 2.5, color, drawers=drawers)
     ct, cd = 2.95, D + 0.08
     if sink is None:
         _box(p, 0, 0, ct, W, cd, 0.12, top)
     else:
         su, sw = sink, 2.6
-        _box(p, 0, 0, ct, su, cd, 0.12, top)
-        _box(p, su + sw, 0, ct, W - su - sw, cd, 0.12, top)
-        _box(p, su, 0, ct, sw, 0.5, 0.12, top)
-        _box(p, su, cd - 0.3, ct, sw, 0.3, 0.12, top)
-        _box(p, su, 0.5, ct - 0.7, sw, cd - 0.8, 0.7, STEEL, False)   # basin
+        _sink_cutout(p, 0, W, 0, cd, ct, top, su, sw, 0.5, cd - 0.3)
         _faucet(p, su + sw / 2, 0.25, ct + 0.12)
     return p
 
@@ -274,28 +303,34 @@ def dishwasher(W=2.0, D=2.0):
 
 
 def island(W=10.0, D=4.5, color=CAB_ISLAND, top=QUARTZ, overhang=1.1):
-    """Cabinets on the back (v=0) side, seating overhang on the front."""
+    """Cabinets on the back (v=0, work) side, seating overhang on the front. Prep sink centered,
+    faucet on the far side of the basin so it reaches back toward the cook."""
     p = []
     cd = D - overhang
     _box(p, 0.1, 0.1, 0, W - 0.2, cd - 0.25, 0.35, "fix:#222")
-    _box(p, 0, 0, 0.35, W, cd, 2.6, color)
-    _cab_fronts(p, 0, W, 0, 0.4, 2.5, color, drawers=True)      # fronts on the work side
-    _box(p, -0.1, -0.08, 2.95, W + 0.2, D + 0.08, 0.15, top)
-    _box(p, -0.1, -0.08, 0, 0.12, D + 0.08, 2.95, top)            # waterfall ends
-    _box(p, W - 0.02, -0.08, 0, 0.12, D + 0.08, 2.95, top)
-    _box(p, W / 2 - 1.0, 0.4, 2.6, 2.0, 1.4, 0.38, STEEL, False)   # prep sink
-    _box(p, W / 2 - 1.0, 0.25, 2.95, 2.0, 0.15, 0.15, top)
-    _faucet(p, W / 2, 0.1, 3.1, BRASS, 0.5)
+    ct = 2.95
+    sw, su = 2.4, W / 2 - 1.2
+    _carcass(p, 0, W, 0, cd, 0.35, ct, color, (su, sw, 0.4, 1.9, ct - 0.8))
+    _cab_fronts(p, 0, W, 0, 0.4, 2.5, color, drawers=True, out=-1)      # fronts face the work side
+    _sink_cutout(p, -0.1, W + 0.1, -0.08, D + 0.08, ct, top, su, sw, 0.4, 1.9)
+    _box(p, -0.1, -0.08, 0, 0.12, D + 0.08, ct + 0.12, top)              # waterfall ends
+    _box(p, W - 0.02, -0.08, 0, 0.12, D + 0.08, ct + 0.12, top)
+    cu, z = W / 2, ct + 0.12                                              # brass faucet behind basin
+    _box(p, cu - 0.07, 2.1, z, 0.14, 0.14, 1.2, BRASS, False)
+    _box(p, cu - 0.05, 1.45, z + 1.1, 0.1, 0.75, 0.1, BRASS, False)
+    _box(p, cu - 0.05, 1.45, z + 0.85, 0.1, 0.1, 0.3, BRASS, False)
+    _box(p, cu + 0.25, 2.12, z, 0.1, 0.1, 0.45, BRASS, False)            # side handle
     return p
 
 
-def pantry_shelves(W=10.0, D=1.4, H=7.5, wood=WHITE_OAK, seed=1):
+def pantry_shelves(W=10.0, D=1.4, H=7.5, wood=WHITE_OAK, seed=1, z0=0.0):
+    """Open shelving stocked with jars/boxes; z0 > 0 starts it above a counter."""
     p = []
     rnd = random.Random(seed)
     goods = ["gloss:#f3efe6", "fix:#c94f3d", "fix:#e2b04a", "fix:#5a8c5a", "fix:#d8d2c2", "fix:#8a5a3c", "glass"]
-    _box(p, 0, 0, 0, 0.1, D, H, wood)
-    _box(p, W - 0.1, 0, 0, 0.1, D, H, wood)
-    z = 0.4
+    _box(p, 0, 0, z0, 0.1, D, H - z0, wood, z0 == 0)
+    _box(p, W - 0.1, 0, z0, 0.1, D, H - z0, wood, z0 == 0)
+    z = z0 + 0.4
     while z < H - 0.4:
         _box(p, 0, 0, z, W, D, 0.08, wood, z < 4.5)
         u = 0.2
@@ -426,7 +461,7 @@ def closet_island(W=6.0, D=2.5):
     p = []
     _box(p, 0, 0, 0, W, D, 3.0, "gloss:#ece8df")
     _cab_fronts(p, 0, W, D, 0.1, 2.8, "gloss:#ece8df", BRASS, door_w=1.5, drawers=True)
-    _cab_fronts(p, 0, W, 0, 0.1, 2.8, "gloss:#ece8df", BRASS, door_w=1.5, drawers=True)
+    _cab_fronts(p, 0, W, 0, 0.1, 2.8, "gloss:#ece8df", BRASS, door_w=1.5, drawers=True, out=-1)
     _box(p, -0.1, -0.1, 3.0, W + 0.2, D + 0.2, 0.12, QUARTZ)
     _box(p, 0.6, 0.6, 3.12, 1.0, 0.8, 0.5, "fix:#b98a5a", False)   # jewelry box / decor
     return p
@@ -772,6 +807,8 @@ def place(kind, x, y, facing, opts):
     parts = fn(**opts)
     out = []
     for u, v, z, pw, pd, h, mat, c in parts:
+        if min(pw, pd, h) <= 1e-6:
+            continue
         if facing == "N":
             X, Y, w, d = x + u, y + v, pw, pd
         elif facing == "S":

@@ -46,6 +46,23 @@ Owners are flexible on which floor a room lands on.
 - Walk-in pantry (off kitchen)
 - Covered patio with outdoor kitchen and fireplace
 
+**Added (2026-10-25, Tasks.md round 2)**
+- Upper hall widened 4 ft -> 5.5 ft (back bedroom wing moved north 1.5 ft)
+- Primary bath: separate water closet (3.5x5) with its own door; bath->bedroom door now swings into the bedroom
+- Basement bath is a Jack-and-Jill: doors from the hall (via small entry) and the bedroom; basement closet shrank to 4x4
+- Pantry: real doors at both ends, base cabinets + counters both sides, upper cabinets / open shelves above
+- Bedrooms 2 and 3: 5x2.5 reach-in closets with sliding doors
+- Bonus room (26x26 play/flex) + storage (8x26) over the garage, off the east end of the upper hall.
+  Modeled with full-height walls for now; sloped ceiling / knee walls depend on the roofline (not designed yet).
+  Side effect: laundry lost its exterior window (its east wall now backs onto the bonus room).
+
+**Added (2026-10-25, Tasks.md round 3)**
+- Front row (office, foyer, stair hall) 2 ft deeper: stair walkway foyer <-> hall is now 5.2 ft (was 3.2), office 14x16,
+  wider cased openings into it (4.5 ft from the foyer, 3.5 ft from the hall). Living/dining lose 2 ft on the south side.
+- Kids Playroom (26x12) bumped out north of the living room, 8 ft cased opening from the living room and 8 ft sliding
+  doors to the covered patio. Single story; roof TBD. Living room's north windows are gone (wall is now interior).
+- Bonus room: storage door moved to the south end (was behind the TV); bookcase moved between windows.
+
 **Still unspecified:** exact garage door layout. Finishes in the model are placeholders to react to (see Design Notes).
 
 ## Design Notes / Constraints
@@ -83,11 +100,13 @@ Owners are flexible on which floor a room lands on.
   Deep link to a view: `index.html#main/38/27/60` (level/x/y/heading deg, 0 = north), or `#doll`.
 - `.github/workflows/pages.yml` — publishes `web/` + `exports/` to GitHub Pages on every push to main.
 - Live site (once Pages is enabled): https://connorrichardson-spec.github.io/ForeverHome/
-- Preview locally: `cd web && python3 -m http.server 8000`, open http://localhost:8000
+- Preview locally: `./run-local.sh` (serves web/ + exports/ on http://localhost:8000 and opens a separate Firefox
+  instance on the NVIDIA GPU; plain Firefox on this laptop runs on the slower Intel iGPU). Ctrl+C to stop.
 
 ## Draft v0 Status / Known Gaps
 - Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
-- Finished area in draft: basement ~1,650 + main ~2,620 + upper ~2,130 = **~6,400 sq ft** (excl. garage, patio).
+- Finished area in draft: basement ~1,650 + main ~2,910 + upper ~3,100 (incl. ~880 bonus over garage) = **~7,700 sq ft**
+  (excl. garage, patio).
   That is bigger than expected; generous great room, halls and basement. Trim once priorities are set.
 - Not modeled yet: roof, foundation, stairs geometry (steps are visual only; use floor buttons in viewer),
   structure, MEP, sections, IFC export, site/lot. Furniture is blocky (boxes only); walk mode can't climb stairs.
@@ -98,6 +117,11 @@ Owners are flexible on which floor a room lands on.
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-25 (late, round 3): wider stair walkway + bigger office, Kids Playroom bump-out with patio sliders,
+  bonus-room door/bookcase fixes.
+- 2026-10-25 (late): Tasks.md round 2 done (wider hall, primary WC + door swing, Jack-and-Jill basement bath, pantry
+  doors/cabinets, bonus room over garage, closets for bedrooms 2/3, island sink rebuilt with real cut-out). Added
+  run-local.sh (local preview on the NVIDIA GPU).
 - 2026-10-25 (night): Blender handoff exports (house.json + house.glb). Tasks.md cleared: HDRI, soft shadows + GTAO,
   door/window casings (baseboards already done), stair rebuilt as stacked U-stairs with walkway + guard, wet rooms to tile.
 - 2026-10-25 (evening): Made the walkthrough realistic: furniture in every room, kitchen cabinets/appliances/island, baths

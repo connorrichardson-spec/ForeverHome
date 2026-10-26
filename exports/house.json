@@ -189,15 +189,23 @@
      10
     ],
     [
-     38,
+     44,
      10
+    ],
+    [
+     44,
+     14
+    ],
+    [
+     38,
+     14
     ]
    ],
-   "area_sqft": 100,
+   "area_sqft": 124,
    "paint": "#e9ece8",
    "floor": "tile",
    "windows": "small",
-   "note": "Full bath",
+   "note": "Full bath; doors from hall and bedroom",
    "zones": []
   },
   {
@@ -206,7 +214,7 @@
    "kind": "indoor",
    "polygon": [
     [
-     38,
+     44,
      10
     ],
     [
@@ -218,11 +226,11 @@
      14
     ],
     [
-     38,
+     44,
      14
     ]
    ],
-   "area_sqft": 40,
+   "area_sqft": 16,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
@@ -331,14 +339,14 @@
     ],
     [
      14,
-     14
+     16
     ],
     [
      0,
-     14
+     16
     ]
    ],
-   "area_sqft": 196,
+   "area_sqft": 224,
    "paint": "#4f5e53",
    "floor": "hardwood",
    "windows": "normal",
@@ -360,14 +368,14 @@
     ],
     [
      28,
-     14
+     16
     ],
     [
      14,
-     14
+     16
     ]
    ],
-   "area_sqft": 196,
+   "area_sqft": 224,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "normal",
@@ -389,30 +397,30 @@
     ],
     [
      38,
-     14
+     16
     ],
     [
      28,
-     14
+     16
     ]
    ],
-   "area_sqft": 140,
+   "area_sqft": 160,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
-   "note": "",
+   "note": "5.2 ft walkway foyer <-> hall",
    "zones": [],
    "floor_rect": [
     28,
     10.8,
     38,
-    14
+    16
    ],
    "ceiling_rect": [
     28,
     10.8,
     38,
-    14
+    16
    ]
   },
   {
@@ -538,6 +546,14 @@
    "polygon": [
     [
      0,
+     16
+    ],
+    [
+     38,
+     16
+    ],
+    [
+     38,
      14
     ],
     [
@@ -561,7 +577,7 @@
      46
     ]
    ],
-   "area_sqft": 1776,
+   "area_sqft": 1700,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "normal",
@@ -571,7 +587,7 @@
      "name": "Living",
      "rect": [
       0,
-      14,
+      16,
       26,
       46
      ]
@@ -580,7 +596,7 @@
      "name": "Dining",
      "rect": [
       26,
-      14,
+      16,
       48,
       30
      ]
@@ -637,6 +653,35 @@
   },
   {
    "level": "main",
+   "name": "Kids Playroom",
+   "kind": "indoor",
+   "polygon": [
+    [
+     0,
+     46
+    ],
+    [
+     26,
+     46
+    ],
+    [
+     26,
+     58
+    ],
+    [
+     0,
+     58
+    ]
+   ],
+   "area_sqft": 312,
+   "paint": "#d9e6dc",
+   "floor": "hardwood",
+   "windows": "normal",
+   "note": "Bump-out off the living room; single story (roof TBD)",
+   "zones": []
+  },
+  {
+   "level": "main",
    "name": "Covered Patio",
    "kind": "outdoor",
    "polygon": [
@@ -682,14 +727,51 @@
      14
     ],
     [
+     5,
+     14
+    ],
+    [
+     5,
+     11.5
+    ],
+    [
+     0,
+     11.5
+    ]
+   ],
+   "area_sqft": 183.5,
+   "paint": "#c6d4de",
+   "floor": "hardwood",
+   "windows": "normal",
+   "note": "",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Bed 2 Closet",
+   "kind": "indoor",
+   "polygon": [
+    [
+     0,
+     11.5
+    ],
+    [
+     5,
+     11.5
+    ],
+    [
+     5,
+     14
+    ],
+    [
      0,
      14
     ]
    ],
-   "area_sqft": 196,
+   "area_sqft": 12.5,
    "paint": "#c6d4de",
    "floor": "hardwood",
-   "windows": "normal",
+   "windows": "none",
    "note": "",
    "zones": []
   },
@@ -711,14 +793,51 @@
      14
     ],
     [
+     19,
+     14
+    ],
+    [
+     19,
+     11.5
+    ],
+    [
+     14,
+     11.5
+    ]
+   ],
+   "area_sqft": 183.5,
+   "paint": "#ccd6c3",
+   "floor": "hardwood",
+   "windows": "normal",
+   "note": "",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Bed 3 Closet",
+   "kind": "indoor",
+   "polygon": [
+    [
+     14,
+     11.5
+    ],
+    [
+     19,
+     11.5
+    ],
+    [
+     19,
+     14
+    ],
+    [
      14,
      14
     ]
    ],
-   "area_sqft": 196,
+   "area_sqft": 12.5,
    "paint": "#ccd6c3",
    "floor": "hardwood",
-   "windows": "normal",
+   "windows": "none",
    "note": "",
    "zones": []
   },
@@ -888,18 +1007,18 @@
     ],
     [
      60,
-     18
+     19.5
     ],
     [
      0,
-     18
+     19.5
     ]
    ],
-   "area_sqft": 240,
+   "area_sqft": 330.0,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
-   "note": "",
+   "note": "5.5 ft wide",
    "zones": []
   },
   {
@@ -909,22 +1028,22 @@
    "polygon": [
     [
      0,
-     18
+     19.5
     ],
     [
      22,
-     18
+     19.5
     ],
     [
      22,
-     40
+     41.5
     ],
     [
      0,
-     40
+     41.5
     ]
    ],
-   "area_sqft": 484,
+   "area_sqft": 484.0,
    "paint": "#cfd5d0",
    "floor": "hardwood",
    "windows": "normal",
@@ -938,22 +1057,22 @@
    "polygon": [
     [
      22,
-     18
+     19.5
     ],
     [
      38,
-     18
+     19.5
     ],
     [
      38,
-     30
+     31.5
     ],
     [
      22,
-     30
+     31.5
     ]
    ],
-   "area_sqft": 192,
+   "area_sqft": 192.0,
    "paint": "#ece7dd",
    "floor": "hardwood",
    "windows": "small",
@@ -967,26 +1086,63 @@
    "polygon": [
     [
      22,
-     30
+     31.5
     ],
     [
      38,
-     30
+     31.5
     ],
     [
      38,
-     40
+     36.5
+    ],
+    [
+     34.5,
+     36.5
+    ],
+    [
+     34.5,
+     41.5
     ],
     [
      22,
-     40
+     41.5
     ]
    ],
-   "area_sqft": 160,
+   "area_sqft": 142.5,
    "paint": "#e5e9e6",
    "floor": "tile",
    "windows": "normal",
    "note": "",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Primary WC",
+   "kind": "indoor",
+   "polygon": [
+    [
+     34.5,
+     36.5
+    ],
+    [
+     38,
+     36.5
+    ],
+    [
+     38,
+     41.5
+    ],
+    [
+     34.5,
+     41.5
+    ]
+   ],
+   "area_sqft": 17.5,
+   "paint": "#e5e9e6",
+   "floor": "tile",
+   "windows": "none",
+   "note": "Water closet",
    "zones": []
   },
   {
@@ -996,22 +1152,22 @@
    "polygon": [
     [
      42,
-     18
+     19.5
     ],
     [
      60,
-     18
+     19.5
     ],
     [
      60,
-     34
+     35.5
     ],
     [
      42,
-     34
+     35.5
     ]
    ],
-   "area_sqft": 288,
+   "area_sqft": 288.0,
    "paint": "#e3d7c5",
    "floor": "hardwood",
    "windows": "normal",
@@ -1025,26 +1181,84 @@
    "polygon": [
     [
      38,
-     18
+     19.5
     ],
     [
      42,
-     18
+     19.5
     ],
     [
      42,
-     34
+     35.5
     ],
     [
      38,
-     34
+     35.5
     ]
    ],
-   "area_sqft": 64,
+   "area_sqft": 64.0,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
    "note": "",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Bonus Room",
+   "kind": "indoor",
+   "polygon": [
+    [
+     60,
+     0
+    ],
+    [
+     86,
+     0
+    ],
+    [
+     86,
+     26
+    ],
+    [
+     60,
+     26
+    ]
+   ],
+   "area_sqft": 676,
+   "paint": "#e6dccb",
+   "floor": "hardwood",
+   "windows": "normal",
+   "note": "Over garage: play / flex. Sloped ceiling + knee walls TBD with the roofline",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Bonus Storage",
+   "kind": "indoor",
+   "polygon": [
+    [
+     86,
+     0
+    ],
+    [
+     94,
+     0
+    ],
+    [
+     94,
+     26
+    ],
+    [
+     86,
+     26
+    ]
+   ],
+   "area_sqft": 208,
+   "paint": "#ece9e2",
+   "floor": "hardwood",
+   "windows": "none",
+   "note": "Over garage, TBD with roofline",
    "zones": []
   }
  ],
@@ -1409,6 +1623,25 @@
     14
    ],
    "end": [
+    44,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bsmt Bath",
+    "Bsmt Hall"
+   ],
+   "node": "basement/wall/19 Bsmt Bath | Bsmt Hall"
+  },
+  {
+   "id": "wall20",
+   "level": "basement",
+   "start": [
+    44,
+    14
+   ],
+   "end": [
     48,
     14
    ],
@@ -1418,10 +1651,10 @@
     "Bsmt Closet",
     "Bsmt Hall"
    ],
-   "node": "basement/wall/19 Bsmt Closet | Bsmt Hall"
+   "node": "basement/wall/20 Bsmt Closet | Bsmt Hall"
   },
   {
-   "id": "wall20",
+   "id": "wall21",
    "level": "basement",
    "start": [
     48,
@@ -1437,33 +1670,14 @@
     "Bsmt Bedroom",
     "Bsmt Hall"
    ],
-   "node": "basement/wall/20 Bsmt Bedroom | Bsmt Hall"
-  },
-  {
-   "id": "wall21",
-   "level": "basement",
-   "start": [
-    38,
-    0
-   ],
-   "end": [
-    38,
-    10
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bsmt Bath",
-    "Stair"
-   ],
-   "node": "basement/wall/21 Bsmt Bath | Stair"
+   "node": "basement/wall/21 Bsmt Bedroom | Bsmt Hall"
   },
   {
    "id": "wall22",
    "level": "basement",
    "start": [
     38,
-    10
+    0
    ],
    "end": [
     38,
@@ -1472,10 +1686,10 @@
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Bsmt Closet",
+    "Bsmt Bath",
     "Stair"
    ],
-   "node": "basement/wall/22 Bsmt Closet | Stair"
+   "node": "basement/wall/22 Bsmt Bath | Stair"
   },
   {
    "id": "wall23",
@@ -1592,7 +1806,7 @@
    "id": "wall29",
    "level": "basement",
    "start": [
-    38,
+    44,
     10
    ],
    "end": [
@@ -1611,6 +1825,25 @@
    "id": "wall30",
    "level": "basement",
    "start": [
+    44,
+    10
+   ],
+   "end": [
+    44,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bsmt Bath",
+    "Bsmt Closet"
+   ],
+   "node": "basement/wall/30 Bsmt Bath | Bsmt Closet"
+  },
+  {
+   "id": "wall31",
+   "level": "basement",
+   "start": [
     28,
     38
    ],
@@ -1623,10 +1856,10 @@
    "rooms": [
     "Play Area"
    ],
-   "node": "basement/wall/30 Play Area"
+   "node": "basement/wall/31 Play Area"
   },
   {
-   "id": "wall31",
+   "id": "wall32",
    "level": "basement",
    "start": [
     48,
@@ -1641,7 +1874,7 @@
    "rooms": [
     "Storage"
    ],
-   "node": "basement/wall/31 Storage"
+   "node": "basement/wall/32 Storage"
   },
   {
    "id": "wall0",
@@ -1760,7 +1993,7 @@
    ],
    "end": [
     14,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1775,11 +2008,11 @@
    "level": "main",
    "start": [
     0,
-    14
+    16
    ],
    "end": [
     14,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1794,11 +2027,11 @@
    "level": "main",
    "start": [
     14,
-    14
+    16
    ],
    "end": [
     28,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1813,11 +2046,11 @@
    "level": "main",
    "start": [
     28,
-    14
+    16
    ],
    "end": [
     38,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1829,6 +2062,193 @@
   },
   {
    "id": "wall10",
+   "level": "main",
+   "start": [
+    0,
+    0
+   ],
+   "end": [
+    0,
+    16
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Office"
+   ],
+   "node": "main/wall/10 Office"
+  },
+  {
+   "id": "wall11",
+   "level": "main",
+   "start": [
+    0,
+    16
+   ],
+   "end": [
+    0,
+    46
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Great Room"
+   ],
+   "node": "main/wall/11 Great Room"
+  },
+  {
+   "id": "wall12",
+   "level": "main",
+   "start": [
+    0,
+    46
+   ],
+   "end": [
+    0,
+    58
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Kids Playroom"
+   ],
+   "node": "main/wall/12 Kids Playroom"
+  },
+  {
+   "id": "wall13",
+   "level": "main",
+   "start": [
+    28,
+    0
+   ],
+   "end": [
+    28,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Foyer",
+    "Stair"
+   ],
+   "node": "main/wall/13 Foyer | Stair"
+  },
+  {
+   "id": "wall14",
+   "level": "main",
+   "start": [
+    38,
+    0
+   ],
+   "end": [
+    38,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Half Bath",
+    "Stair"
+   ],
+   "node": "main/wall/14 Half Bath | Stair"
+  },
+  {
+   "id": "wall15",
+   "level": "main",
+   "start": [
+    38,
+    8
+   ],
+   "end": [
+    38,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Hall",
+    "Stair"
+   ],
+   "node": "main/wall/15 Hall | Stair"
+  },
+  {
+   "id": "wall16",
+   "level": "main",
+   "start": [
+    38,
+    14
+   ],
+   "end": [
+    38,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Great Room",
+    "Stair"
+   ],
+   "node": "main/wall/16 Great Room | Stair"
+  },
+  {
+   "id": "wall17",
+   "level": "main",
+   "start": [
+    46,
+    0
+   ],
+   "end": [
+    46,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Half Bath",
+    "Mudroom"
+   ],
+   "node": "main/wall/17 Half Bath | Mudroom"
+  },
+  {
+   "id": "wall18",
+   "level": "main",
+   "start": [
+    46,
+    8
+   ],
+   "end": [
+    46,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Hall",
+    "Mudroom"
+   ],
+   "node": "main/wall/18 Hall | Mudroom"
+  },
+  {
+   "id": "wall19",
+   "level": "main",
+   "start": [
+    38,
+    8
+   ],
+   "end": [
+    46,
+    8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Half Bath",
+    "Hall"
+   ],
+   "node": "main/wall/19 Half Bath | Hall"
+  },
+  {
+   "id": "wall20",
    "level": "main",
    "start": [
     38,
@@ -1844,10 +2264,10 @@
     "Great Room",
     "Hall"
    ],
-   "node": "main/wall/10 Great Room | Hall"
+   "node": "main/wall/20 Great Room | Hall"
   },
   {
-   "id": "wall11",
+   "id": "wall21",
    "level": "main",
    "start": [
     46,
@@ -1863,10 +2283,10 @@
     "Great Room",
     "Mudroom"
    ],
-   "node": "main/wall/11 Great Room | Mudroom"
+   "node": "main/wall/21 Great Room | Mudroom"
   },
   {
-   "id": "wall12",
+   "id": "wall22",
    "level": "main",
    "start": [
     48,
@@ -1882,220 +2302,33 @@
     "Mudroom",
     "Pantry"
    ],
-   "node": "main/wall/12 Mudroom | Pantry"
-  },
-  {
-   "id": "wall13",
-   "level": "main",
-   "start": [
-    0,
-    0
-   ],
-   "end": [
-    0,
-    14
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Office"
-   ],
-   "node": "main/wall/13 Office"
-  },
-  {
-   "id": "wall14",
-   "level": "main",
-   "start": [
-    0,
-    14
-   ],
-   "end": [
-    0,
-    46
-   ],
-   "thickness": 0.5,
-   "exterior": true,
-   "rooms": [
-    "Great Room"
-   ],
-   "node": "main/wall/14 Great Room"
-  },
-  {
-   "id": "wall15",
-   "level": "main",
-   "start": [
-    28,
-    0
-   ],
-   "end": [
-    28,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Foyer",
-    "Stair"
-   ],
-   "node": "main/wall/15 Foyer | Stair"
-  },
-  {
-   "id": "wall16",
-   "level": "main",
-   "start": [
-    38,
-    0
-   ],
-   "end": [
-    38,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Half Bath",
-    "Stair"
-   ],
-   "node": "main/wall/16 Half Bath | Stair"
-  },
-  {
-   "id": "wall17",
-   "level": "main",
-   "start": [
-    38,
-    8
-   ],
-   "end": [
-    38,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Hall",
-    "Stair"
-   ],
-   "node": "main/wall/17 Hall | Stair"
-  },
-  {
-   "id": "wall18",
-   "level": "main",
-   "start": [
-    46,
-    0
-   ],
-   "end": [
-    46,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Half Bath",
-    "Mudroom"
-   ],
-   "node": "main/wall/18 Half Bath | Mudroom"
-  },
-  {
-   "id": "wall19",
-   "level": "main",
-   "start": [
-    46,
-    8
-   ],
-   "end": [
-    46,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Hall",
-    "Mudroom"
-   ],
-   "node": "main/wall/19 Hall | Mudroom"
-  },
-  {
-   "id": "wall20",
-   "level": "main",
-   "start": [
-    38,
-    8
-   ],
-   "end": [
-    46,
-    8
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Half Bath",
-    "Hall"
-   ],
-   "node": "main/wall/20 Half Bath | Hall"
-  },
-  {
-   "id": "wall21",
-   "level": "main",
-   "start": [
-    60,
-    0
-   ],
-   "end": [
-    60,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Garage",
-    "Mudroom"
-   ],
-   "node": "main/wall/21 Garage | Mudroom"
-  },
-  {
-   "id": "wall22",
-   "level": "main",
-   "start": [
-    60,
-    14
-   ],
-   "end": [
-    60,
-    26
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Garage",
-    "Pantry"
-   ],
-   "node": "main/wall/22 Garage | Pantry"
+   "node": "main/wall/22 Mudroom | Pantry"
   },
   {
    "id": "wall23",
    "level": "main",
    "start": [
     60,
-    26
+    0
    ],
    "end": [
     60,
-    46
+    14
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
-    "Great Room"
+    "Garage",
+    "Mudroom"
    ],
-   "node": "main/wall/23 Great Room"
+   "node": "main/wall/23 Garage | Mudroom"
   },
   {
    "id": "wall24",
    "level": "main",
    "start": [
-    48,
-    26
+    60,
+    14
    ],
    "end": [
     60,
@@ -2104,10 +2337,10 @@
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Great Room",
+    "Garage",
     "Pantry"
    ],
-   "node": "main/wall/24 Great Room | Pantry"
+   "node": "main/wall/24 Garage | Pantry"
   },
   {
    "id": "wall25",
@@ -2117,25 +2350,25 @@
     26
    ],
    "end": [
-    94,
-    26
+    60,
+    46
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
-    "Garage"
+    "Great Room"
    ],
-   "node": "main/wall/25 Garage"
+   "node": "main/wall/25 Great Room"
   },
   {
    "id": "wall26",
    "level": "main",
    "start": [
     48,
-    14
+    26
    ],
    "end": [
-    48,
+    60,
     26
    ],
    "thickness": 0.33,
@@ -2150,6 +2383,43 @@
    "id": "wall27",
    "level": "main",
    "start": [
+    60,
+    26
+   ],
+   "end": [
+    94,
+    26
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Garage"
+   ],
+   "node": "main/wall/27 Garage"
+  },
+  {
+   "id": "wall28",
+   "level": "main",
+   "start": [
+    48,
+    14
+   ],
+   "end": [
+    48,
+    26
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Great Room",
+    "Pantry"
+   ],
+   "node": "main/wall/28 Great Room | Pantry"
+  },
+  {
+   "id": "wall29",
+   "level": "main",
+   "start": [
     0,
     46
    ],
@@ -2157,15 +2427,16 @@
     26,
     46
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
-    "Great Room"
+    "Great Room",
+    "Kids Playroom"
    ],
-   "node": "main/wall/27 Great Room"
+   "node": "main/wall/29 Great Room | Kids Playroom"
   },
   {
-   "id": "wall28",
+   "id": "wall30",
    "level": "main",
    "start": [
     26,
@@ -2181,10 +2452,10 @@
     "Covered Patio",
     "Great Room"
    ],
-   "node": "main/wall/28 Covered Patio | Great Room"
+   "node": "main/wall/30 Covered Patio | Great Room"
   },
   {
-   "id": "wall29",
+   "id": "wall31",
    "level": "main",
    "start": [
     94,
@@ -2199,7 +2470,44 @@
    "rooms": [
     "Garage"
    ],
-   "node": "main/wall/29 Garage"
+   "node": "main/wall/31 Garage"
+  },
+  {
+   "id": "wall32",
+   "level": "main",
+   "start": [
+    26,
+    46
+   ],
+   "end": [
+    26,
+    58
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Covered Patio",
+    "Kids Playroom"
+   ],
+   "node": "main/wall/32 Covered Patio | Kids Playroom"
+  },
+  {
+   "id": "wall33",
+   "level": "main",
+   "start": [
+    0,
+    58
+   ],
+   "end": [
+    26,
+    58
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Kids Playroom"
+   ],
+   "node": "main/wall/33 Kids Playroom"
   },
   {
    "id": "wall0",
@@ -2295,8 +2603,63 @@
    "id": "wall5",
    "level": "upper",
    "start": [
+    60,
+    0
+   ],
+   "end": [
+    86,
+    0
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bonus Room"
+   ],
+   "node": "upper/wall/05 Bonus Room"
+  },
+  {
+   "id": "wall6",
+   "level": "upper",
+   "start": [
+    86,
+    0
+   ],
+   "end": [
+    94,
+    0
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bonus Storage"
+   ],
+   "node": "upper/wall/06 Bonus Storage"
+  },
+  {
+   "id": "wall7",
+   "level": "upper",
+   "start": [
     14,
     0
+   ],
+   "end": [
+    14,
+    11.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bedroom 2",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/07 Bedroom 2 | Bedroom 3"
+  },
+  {
+   "id": "wall8",
+   "level": "upper",
+   "start": [
+    14,
+    11.5
    ],
    "end": [
     14,
@@ -2305,16 +2668,35 @@
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Bedroom 2",
-    "Bedroom 3"
+    "Bed 3 Closet",
+    "Bedroom 2"
    ],
-   "node": "upper/wall/05 Bedroom 2 | Bedroom 3"
+   "node": "upper/wall/08 Bed 3 Closet | Bedroom 2"
   },
   {
-   "id": "wall6",
+   "id": "wall9",
    "level": "upper",
    "start": [
     0,
+    14
+   ],
+   "end": [
+    5,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 2 Closet",
+    "Upper Hall"
+   ],
+   "node": "upper/wall/09 Bed 2 Closet | Upper Hall"
+  },
+  {
+   "id": "wall10",
+   "level": "upper",
+   "start": [
+    5,
     14
    ],
    "end": [
@@ -2327,13 +2709,32 @@
     "Bedroom 2",
     "Upper Hall"
    ],
-   "node": "upper/wall/06 Bedroom 2 | Upper Hall"
+   "node": "upper/wall/10 Bedroom 2 | Upper Hall"
   },
   {
-   "id": "wall7",
+   "id": "wall11",
    "level": "upper",
    "start": [
     14,
+    14
+   ],
+   "end": [
+    19,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Upper Hall"
+   ],
+   "node": "upper/wall/11 Bed 3 Closet | Upper Hall"
+  },
+  {
+   "id": "wall12",
+   "level": "upper",
+   "start": [
+    19,
     14
    ],
    "end": [
@@ -2346,10 +2747,10 @@
     "Bedroom 3",
     "Upper Hall"
    ],
-   "node": "upper/wall/07 Bedroom 3 | Upper Hall"
+   "node": "upper/wall/12 Bedroom 3 | Upper Hall"
   },
   {
-   "id": "wall8",
+   "id": "wall13",
    "level": "upper",
    "start": [
     28,
@@ -2365,10 +2766,10 @@
     "Stair",
     "Upper Hall"
    ],
-   "node": "upper/wall/08 Stair | Upper Hall"
+   "node": "upper/wall/13 Stair | Upper Hall"
   },
   {
-   "id": "wall9",
+   "id": "wall14",
    "level": "upper",
    "start": [
     38,
@@ -2384,10 +2785,10 @@
     "Bath 2",
     "Upper Hall"
    ],
-   "node": "upper/wall/09 Bath 2 | Upper Hall"
+   "node": "upper/wall/14 Bath 2 | Upper Hall"
   },
   {
-   "id": "wall10",
+   "id": "wall15",
    "level": "upper",
    "start": [
     48,
@@ -2403,10 +2804,67 @@
     "Laundry",
     "Upper Hall"
    ],
-   "node": "upper/wall/10 Laundry | Upper Hall"
+   "node": "upper/wall/15 Laundry | Upper Hall"
   },
   {
-   "id": "wall11",
+   "id": "wall16",
+   "level": "upper",
+   "start": [
+    5,
+    11.5
+   ],
+   "end": [
+    5,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 2 Closet",
+    "Bedroom 2"
+   ],
+   "node": "upper/wall/16 Bed 2 Closet | Bedroom 2"
+  },
+  {
+   "id": "wall17",
+   "level": "upper",
+   "start": [
+    0,
+    11.5
+   ],
+   "end": [
+    5,
+    11.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 2 Closet",
+    "Bedroom 2"
+   ],
+   "node": "upper/wall/17 Bed 2 Closet | Bedroom 2"
+  },
+  {
+   "id": "wall18",
+   "level": "upper",
+   "start": [
+    14,
+    11.5
+   ],
+   "end": [
+    19,
+    11.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/18 Bed 3 Closet | Bedroom 3"
+  },
+  {
+   "id": "wall19",
    "level": "upper",
    "start": [
     0,
@@ -2414,17 +2872,35 @@
    ],
    "end": [
     0,
-    14
+    11.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Bedroom 2"
    ],
-   "node": "upper/wall/11 Bedroom 2"
+   "node": "upper/wall/19 Bedroom 2"
   },
   {
-   "id": "wall12",
+   "id": "wall20",
+   "level": "upper",
+   "start": [
+    0,
+    11.5
+   ],
+   "end": [
+    0,
+    14
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bed 2 Closet"
+   ],
+   "node": "upper/wall/20 Bed 2 Closet"
+  },
+  {
+   "id": "wall21",
    "level": "upper",
    "start": [
     0,
@@ -2432,35 +2908,35 @@
    ],
    "end": [
     0,
-    18
+    19.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Upper Hall"
    ],
-   "node": "upper/wall/12 Upper Hall"
+   "node": "upper/wall/21 Upper Hall"
   },
   {
-   "id": "wall13",
+   "id": "wall22",
    "level": "upper",
    "start": [
     0,
-    18
+    19.5
    ],
    "end": [
     0,
-    40
+    41.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/13 Primary Bedroom"
+   "node": "upper/wall/22 Primary Bedroom"
   },
   {
-   "id": "wall14",
+   "id": "wall23",
    "level": "upper",
    "start": [
     28,
@@ -2476,10 +2952,29 @@
     "Bedroom 3",
     "Stair"
    ],
-   "node": "upper/wall/14 Bedroom 3 | Stair"
+   "node": "upper/wall/23 Bedroom 3 | Stair"
   },
   {
-   "id": "wall15",
+   "id": "wall24",
+   "level": "upper",
+   "start": [
+    19,
+    11.5
+   ],
+   "end": [
+    19,
+    14
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/24 Bed 3 Closet | Bedroom 3"
+  },
+  {
+   "id": "wall25",
    "level": "upper",
    "start": [
     38,
@@ -2495,10 +2990,10 @@
     "Linen",
     "Stair"
    ],
-   "node": "upper/wall/15 Linen | Stair"
+   "node": "upper/wall/25 Linen | Stair"
   },
   {
-   "id": "wall16",
+   "id": "wall26",
    "level": "upper",
    "start": [
     38,
@@ -2514,18 +3009,18 @@
     "Bath 2",
     "Stair"
    ],
-   "node": "upper/wall/16 Bath 2 | Stair"
+   "node": "upper/wall/26 Bath 2 | Stair"
   },
   {
-   "id": "wall17",
+   "id": "wall27",
    "level": "upper",
    "start": [
     38,
-    18
+    19.5
    ],
    "end": [
     38,
-    30
+    31.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2533,18 +3028,18 @@
     "Bed 4 Closet",
     "Primary Closet"
    ],
-   "node": "upper/wall/17 Bed 4 Closet | Primary Closet"
+   "node": "upper/wall/27 Bed 4 Closet | Primary Closet"
   },
   {
-   "id": "wall18",
+   "id": "wall28",
    "level": "upper",
    "start": [
     38,
-    30
+    31.5
    ],
    "end": [
     38,
-    34
+    35.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2552,28 +3047,46 @@
     "Bed 4 Closet",
     "Primary Bath"
    ],
-   "node": "upper/wall/18 Bed 4 Closet | Primary Bath"
+   "node": "upper/wall/28 Bed 4 Closet | Primary Bath"
   },
   {
-   "id": "wall19",
+   "id": "wall29",
    "level": "upper",
    "start": [
     38,
-    34
+    35.5
    ],
    "end": [
     38,
-    40
+    36.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Primary Bath"
    ],
-   "node": "upper/wall/19 Primary Bath"
+   "node": "upper/wall/29 Primary Bath"
   },
   {
-   "id": "wall20",
+   "id": "wall30",
+   "level": "upper",
+   "start": [
+    38,
+    36.5
+   ],
+   "end": [
+    38,
+    41.5
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Primary WC"
+   ],
+   "node": "upper/wall/30 Primary WC"
+  },
+  {
+   "id": "wall31",
    "level": "upper",
    "start": [
     38,
@@ -2589,10 +3102,10 @@
     "Bath 2",
     "Linen"
    ],
-   "node": "upper/wall/20 Bath 2 | Linen"
+   "node": "upper/wall/31 Bath 2 | Linen"
   },
   {
-   "id": "wall21",
+   "id": "wall32",
    "level": "upper",
    "start": [
     48,
@@ -2608,10 +3121,10 @@
     "Laundry",
     "Storage Closet"
    ],
-   "node": "upper/wall/21 Laundry | Storage Closet"
+   "node": "upper/wall/32 Laundry | Storage Closet"
   },
   {
-   "id": "wall22",
+   "id": "wall33",
    "level": "upper",
    "start": [
     48,
@@ -2627,10 +3140,10 @@
     "Linen",
     "Storage Closet"
    ],
-   "node": "upper/wall/22 Linen | Storage Closet"
+   "node": "upper/wall/33 Linen | Storage Closet"
   },
   {
-   "id": "wall23",
+   "id": "wall34",
    "level": "upper",
    "start": [
     48,
@@ -2646,10 +3159,10 @@
     "Bath 2",
     "Laundry"
    ],
-   "node": "upper/wall/23 Bath 2 | Laundry"
+   "node": "upper/wall/34 Bath 2 | Laundry"
   },
   {
-   "id": "wall24",
+   "id": "wall35",
    "level": "upper",
    "start": [
     60,
@@ -2659,15 +3172,16 @@
     60,
     4
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
+    "Bonus Room",
     "Storage Closet"
    ],
-   "node": "upper/wall/24 Storage Closet"
+   "node": "upper/wall/35 Bonus Room | Storage Closet"
   },
   {
-   "id": "wall25",
+   "id": "wall36",
    "level": "upper",
    "start": [
     60,
@@ -2677,15 +3191,16 @@
     60,
     14
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
+    "Bonus Room",
     "Laundry"
    ],
-   "node": "upper/wall/25 Laundry"
+   "node": "upper/wall/36 Bonus Room | Laundry"
   },
   {
-   "id": "wall26",
+   "id": "wall37",
    "level": "upper",
    "start": [
     60,
@@ -2693,43 +3208,63 @@
    ],
    "end": [
     60,
-    18
+    19.5
    ],
-   "thickness": 0.5,
-   "exterior": true,
+   "thickness": 0.33,
+   "exterior": false,
    "rooms": [
+    "Bonus Room",
     "Upper Hall"
    ],
-   "node": "upper/wall/26 Upper Hall"
+   "node": "upper/wall/37 Bonus Room | Upper Hall"
   },
   {
-   "id": "wall27",
+   "id": "wall38",
    "level": "upper",
    "start": [
     60,
-    18
+    19.5
    ],
    "end": [
     60,
-    34
+    26
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bedroom 4",
+    "Bonus Room"
+   ],
+   "node": "upper/wall/38 Bedroom 4 | Bonus Room"
+  },
+  {
+   "id": "wall39",
+   "level": "upper",
+   "start": [
+    60,
+    26
+   ],
+   "end": [
+    60,
+    35.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Bedroom 4"
    ],
-   "node": "upper/wall/27 Bedroom 4"
+   "node": "upper/wall/39 Bedroom 4"
   },
   {
-   "id": "wall28",
+   "id": "wall40",
    "level": "upper",
    "start": [
     0,
-    18
+    19.5
    ],
    "end": [
     22,
-    18
+    19.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2737,18 +3272,18 @@
     "Primary Bedroom",
     "Upper Hall"
    ],
-   "node": "upper/wall/28 Primary Bedroom | Upper Hall"
+   "node": "upper/wall/40 Primary Bedroom | Upper Hall"
   },
   {
-   "id": "wall29",
+   "id": "wall41",
    "level": "upper",
    "start": [
     22,
-    18
+    19.5
    ],
    "end": [
     38,
-    18
+    19.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2756,18 +3291,18 @@
     "Primary Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/29 Primary Closet | Upper Hall"
+   "node": "upper/wall/41 Primary Closet | Upper Hall"
   },
   {
-   "id": "wall30",
+   "id": "wall42",
    "level": "upper",
    "start": [
     38,
-    18
+    19.5
    ],
    "end": [
     42,
-    18
+    19.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2775,18 +3310,18 @@
     "Bed 4 Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/30 Bed 4 Closet | Upper Hall"
+   "node": "upper/wall/42 Bed 4 Closet | Upper Hall"
   },
   {
-   "id": "wall31",
+   "id": "wall43",
    "level": "upper",
    "start": [
     42,
-    18
+    19.5
    ],
    "end": [
     60,
-    18
+    19.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2794,18 +3329,18 @@
     "Bedroom 4",
     "Upper Hall"
    ],
-   "node": "upper/wall/31 Bedroom 4 | Upper Hall"
+   "node": "upper/wall/43 Bedroom 4 | Upper Hall"
   },
   {
-   "id": "wall32",
+   "id": "wall44",
    "level": "upper",
    "start": [
     22,
-    18
+    19.5
    ],
    "end": [
     22,
-    30
+    31.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2813,18 +3348,18 @@
     "Primary Bedroom",
     "Primary Closet"
    ],
-   "node": "upper/wall/32 Primary Bedroom | Primary Closet"
+   "node": "upper/wall/44 Primary Bedroom | Primary Closet"
   },
   {
-   "id": "wall33",
+   "id": "wall45",
    "level": "upper",
    "start": [
     22,
-    30
+    31.5
    ],
    "end": [
     22,
-    40
+    41.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2832,54 +3367,72 @@
     "Primary Bath",
     "Primary Bedroom"
    ],
-   "node": "upper/wall/33 Primary Bath | Primary Bedroom"
+   "node": "upper/wall/45 Primary Bath | Primary Bedroom"
   },
   {
-   "id": "wall34",
+   "id": "wall46",
    "level": "upper",
    "start": [
     0,
-    40
+    41.5
    ],
    "end": [
     22,
-    40
+    41.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/34 Primary Bedroom"
+   "node": "upper/wall/46 Primary Bedroom"
   },
   {
-   "id": "wall35",
+   "id": "wall47",
    "level": "upper",
    "start": [
     22,
-    40
+    41.5
    ],
    "end": [
-    38,
-    40
+    34.5,
+    41.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Primary Bath"
    ],
-   "node": "upper/wall/35 Primary Bath"
+   "node": "upper/wall/47 Primary Bath"
   },
   {
-   "id": "wall36",
+   "id": "wall48",
    "level": "upper",
    "start": [
-    22,
-    30
+    34.5,
+    41.5
    ],
    "end": [
     38,
-    30
+    41.5
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Primary WC"
+   ],
+   "node": "upper/wall/48 Primary WC"
+  },
+  {
+   "id": "wall49",
+   "level": "upper",
+   "start": [
+    22,
+    31.5
+   ],
+   "end": [
+    38,
+    31.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2887,54 +3440,92 @@
     "Primary Bath",
     "Primary Closet"
    ],
-   "node": "upper/wall/36 Primary Bath | Primary Closet"
+   "node": "upper/wall/49 Primary Bath | Primary Closet"
   },
   {
-   "id": "wall37",
+   "id": "wall50",
+   "level": "upper",
+   "start": [
+    34.5,
+    36.5
+   ],
+   "end": [
+    38,
+    36.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Primary Bath",
+    "Primary WC"
+   ],
+   "node": "upper/wall/50 Primary Bath | Primary WC"
+  },
+  {
+   "id": "wall51",
+   "level": "upper",
+   "start": [
+    34.5,
+    36.5
+   ],
+   "end": [
+    34.5,
+    41.5
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Primary Bath",
+    "Primary WC"
+   ],
+   "node": "upper/wall/51 Primary Bath | Primary WC"
+  },
+  {
+   "id": "wall52",
    "level": "upper",
    "start": [
     38,
-    34
+    35.5
    ],
    "end": [
     42,
-    34
+    35.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Bed 4 Closet"
    ],
-   "node": "upper/wall/37 Bed 4 Closet"
+   "node": "upper/wall/52 Bed 4 Closet"
   },
   {
-   "id": "wall38",
+   "id": "wall53",
    "level": "upper",
    "start": [
     42,
-    34
+    35.5
    ],
    "end": [
     60,
-    34
+    35.5
    ],
    "thickness": 0.5,
    "exterior": true,
    "rooms": [
     "Bedroom 4"
    ],
-   "node": "upper/wall/38 Bedroom 4"
+   "node": "upper/wall/53 Bedroom 4"
   },
   {
-   "id": "wall39",
+   "id": "wall54",
    "level": "upper",
    "start": [
     42,
-    18
+    19.5
    ],
    "end": [
     42,
-    34
+    35.5
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2942,7 +3533,80 @@
     "Bed 4 Closet",
     "Bedroom 4"
    ],
-   "node": "upper/wall/39 Bed 4 Closet | Bedroom 4"
+   "node": "upper/wall/54 Bed 4 Closet | Bedroom 4"
+  },
+  {
+   "id": "wall55",
+   "level": "upper",
+   "start": [
+    86,
+    0
+   ],
+   "end": [
+    86,
+    26
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bonus Room",
+    "Bonus Storage"
+   ],
+   "node": "upper/wall/55 Bonus Room | Bonus Storage"
+  },
+  {
+   "id": "wall56",
+   "level": "upper",
+   "start": [
+    60,
+    26
+   ],
+   "end": [
+    86,
+    26
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bonus Room"
+   ],
+   "node": "upper/wall/56 Bonus Room"
+  },
+  {
+   "id": "wall57",
+   "level": "upper",
+   "start": [
+    86,
+    26
+   ],
+   "end": [
+    94,
+    26
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bonus Storage"
+   ],
+   "node": "upper/wall/57 Bonus Storage"
+  },
+  {
+   "id": "wall58",
+   "level": "upper",
+   "start": [
+    94,
+    0
+   ],
+   "end": [
+    94,
+    26
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bonus Storage"
+   ],
+   "node": "upper/wall/58 Bonus Storage"
   }
  ],
  "openings": [
@@ -3000,10 +3664,10 @@
   },
   {
    "level": "basement",
-   "wall": "wall19",
+   "wall": "wall20",
    "kind": "door",
    "center": [
-    43.0,
+    46.0,
     14
    ],
    "width": 3.0,
@@ -3013,7 +3677,7 @@
   },
   {
    "level": "basement",
-   "wall": "wall20",
+   "wall": "wall21",
    "kind": "door",
    "center": [
     57.5,
@@ -3036,6 +3700,19 @@
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Bsmt Bedroom"
+  },
+  {
+   "level": "basement",
+   "wall": "wall19",
+   "kind": "door",
+   "center": [
+    41.0,
+    14
+   ],
+   "width": 3.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bsmt Bath"
   },
   {
    "level": "basement",
@@ -3195,7 +3872,7 @@
   },
   {
    "level": "basement",
-   "wall": "wall30",
+   "wall": "wall31",
    "kind": "window",
    "center": [
     33.0,
@@ -3208,7 +3885,7 @@
   },
   {
    "level": "basement",
-   "wall": "wall30",
+   "wall": "wall31",
    "kind": "window",
    "center": [
     43.0,
@@ -3234,7 +3911,7 @@
   },
   {
    "level": "main",
-   "wall": "wall25",
+   "wall": "wall27",
    "kind": "door",
    "center": [
     75,
@@ -3251,7 +3928,7 @@
    "kind": "door",
    "center": [
     14,
-    7.0
+    8.0
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3260,13 +3937,13 @@
   },
   {
    "level": "main",
-   "wall": "wall15",
+   "wall": "wall13",
    "kind": "cased",
    "center": [
     28,
-    12.4
+    13.4
    ],
-   "width": 3.0,
+   "width": 4.5,
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Foyer"
@@ -3277,7 +3954,7 @@
    "kind": "cased",
    "center": [
     21.0,
-    14
+    16
    ],
    "width": 6.0,
    "height": 8.0,
@@ -3286,20 +3963,20 @@
   },
   {
    "level": "main",
-   "wall": "wall17",
+   "wall": "wall15",
    "kind": "cased",
    "center": [
     38,
-    12.4
+    12.0
    ],
-   "width": 3.0,
+   "width": 3.5,
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Stair"
   },
   {
    "level": "main",
-   "wall": "wall20",
+   "wall": "wall19",
    "kind": "door",
    "center": [
     42.0,
@@ -3312,7 +3989,7 @@
   },
   {
    "level": "main",
-   "wall": "wall10",
+   "wall": "wall20",
    "kind": "cased",
    "center": [
     42.0,
@@ -3325,7 +4002,7 @@
   },
   {
    "level": "main",
-   "wall": "wall19",
+   "wall": "wall18",
    "kind": "cased",
    "center": [
     46,
@@ -3338,7 +4015,7 @@
   },
   {
    "level": "main",
-   "wall": "wall21",
+   "wall": "wall23",
    "kind": "door",
    "center": [
     60,
@@ -3351,33 +4028,33 @@
   },
   {
    "level": "main",
-   "wall": "wall12",
-   "kind": "cased",
+   "wall": "wall22",
+   "kind": "door",
    "center": [
     54.0,
     14
    ],
-   "width": 6.0,
-   "height": 8.0,
-   "sill": 0.0,
-   "swings_into": "Mudroom"
-  },
-  {
-   "level": "main",
-   "wall": "wall24",
-   "kind": "cased",
-   "center": [
-    54.0,
-    26
-   ],
-   "width": 6.0,
-   "height": 8.0,
+   "width": 3.0,
+   "height": 6.67,
    "sill": 0.0,
    "swings_into": "Pantry"
   },
   {
    "level": "main",
-   "wall": "wall28",
+   "wall": "wall26",
+   "kind": "door",
+   "center": [
+    54.0,
+    26
+   ],
+   "width": 3.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Pantry"
+  },
+  {
+   "level": "main",
+   "wall": "wall30",
    "kind": "patio",
    "center": [
     43.0,
@@ -3387,6 +4064,32 @@
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Great Room"
+  },
+  {
+   "level": "main",
+   "wall": "wall29",
+   "kind": "cased",
+   "center": [
+    13.0,
+    46
+   ],
+   "width": 8.0,
+   "height": 8.0,
+   "sill": 0.0,
+   "swings_into": "Kids Playroom"
+  },
+  {
+   "level": "main",
+   "wall": "wall32",
+   "kind": "patio",
+   "center": [
+    26,
+    52.0
+   ],
+   "width": 8.0,
+   "height": 8.0,
+   "sill": 0.0,
+   "swings_into": "Kids Playroom"
   },
   {
    "level": "main",
@@ -3468,11 +4171,11 @@
   },
   {
    "level": "main",
-   "wall": "wall13",
+   "wall": "wall10",
    "kind": "window",
    "center": [
     0,
-    7.0
+    8.0
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3481,11 +4184,11 @@
   },
   {
    "level": "main",
-   "wall": "wall14",
+   "wall": "wall11",
    "kind": "window",
    "center": [
     0,
-    22.0
+    23.5
    ],
    "width": 6.0,
    "height": 6.0,
@@ -3494,11 +4197,11 @@
   },
   {
    "level": "main",
-   "wall": "wall14",
+   "wall": "wall11",
    "kind": "window",
    "center": [
     0,
-    38.0
+    38.5
    ],
    "width": 6.0,
    "height": 6.0,
@@ -3507,7 +4210,20 @@
   },
   {
    "level": "main",
-   "wall": "wall23",
+   "wall": "wall12",
+   "kind": "window",
+   "center": [
+    0,
+    52.0
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "main",
+   "wall": "wall25",
    "kind": "window",
    "center": [
     60,
@@ -3520,36 +4236,49 @@
   },
   {
    "level": "main",
-   "wall": "wall27",
+   "wall": "wall33",
    "kind": "window",
    "center": [
-    6.5,
-    46
+    4.333,
+    58
    ],
-   "width": 6.0,
-   "height": 6.0,
-   "sill": 2.0,
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
    "swings_into": null
   },
   {
    "level": "main",
-   "wall": "wall27",
+   "wall": "wall33",
    "kind": "window",
    "center": [
-    19.5,
-    46
+    13.0,
+    58
    ],
-   "width": 6.0,
-   "height": 6.0,
-   "sill": 2.0,
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "main",
+   "wall": "wall33",
+   "kind": "window",
+   "center": [
+    21.667,
+    58
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
    "swings_into": null
   },
   {
    "level": "upper",
-   "wall": "wall6",
+   "wall": "wall10",
    "kind": "door",
    "center": [
-    7.0,
+    7,
     14
    ],
    "width": 3.0,
@@ -3559,10 +4288,10 @@
   },
   {
    "level": "upper",
-   "wall": "wall7",
+   "wall": "wall12",
    "kind": "door",
    "center": [
-    21.0,
+    21,
     14
    ],
    "width": 3.0,
@@ -3572,7 +4301,33 @@
   },
   {
    "level": "upper",
-   "wall": "wall8",
+   "wall": "wall17",
+   "kind": "closet",
+   "center": [
+    2.5,
+    11.5
+   ],
+   "width": 4.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bed 2 Closet"
+  },
+  {
+   "level": "upper",
+   "wall": "wall18",
+   "kind": "closet",
+   "center": [
+    16.5,
+    11.5
+   ],
+   "width": 4.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bed 3 Closet"
+  },
+  {
+   "level": "upper",
+   "wall": "wall13",
    "kind": "cased",
    "center": [
     33.0,
@@ -3585,7 +4340,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall20",
+   "wall": "wall31",
    "kind": "door",
    "center": [
     43.0,
@@ -3598,7 +4353,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall10",
+   "wall": "wall15",
    "kind": "door",
    "center": [
     54.0,
@@ -3611,7 +4366,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall21",
+   "wall": "wall32",
    "kind": "door",
    "center": [
     54.0,
@@ -3624,7 +4379,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall9",
+   "wall": "wall14",
    "kind": "door",
    "center": [
     43.0,
@@ -3637,11 +4392,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall28",
+   "wall": "wall40",
    "kind": "door",
    "center": [
     11.0,
-    18
+    19.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3650,11 +4405,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall32",
+   "wall": "wall44",
    "kind": "door",
    "center": [
     22,
-    24.0
+    25.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3663,24 +4418,37 @@
   },
   {
    "level": "upper",
-   "wall": "wall33",
+   "wall": "wall45",
    "kind": "door",
    "center": [
     22,
-    35.0
+    36.5
    ],
    "width": 3.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Primary Bedroom"
+  },
+  {
+   "level": "upper",
+   "wall": "wall51",
+   "kind": "door",
+   "center": [
+    34.5,
+    39.0
+   ],
+   "width": 2.5,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Primary Bath"
   },
   {
    "level": "upper",
-   "wall": "wall36",
+   "wall": "wall49",
    "kind": "door",
    "center": [
     30.0,
-    30
+    31.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3689,11 +4457,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall31",
+   "wall": "wall43",
    "kind": "door",
    "center": [
     51.0,
-    18
+    19.5
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3702,16 +4470,42 @@
   },
   {
    "level": "upper",
-   "wall": "wall39",
+   "wall": "wall54",
    "kind": "door",
    "center": [
     42,
-    26.0
+    27.5
    ],
    "width": 3.0,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Bedroom 4"
+  },
+  {
+   "level": "upper",
+   "wall": "wall37",
+   "kind": "door",
+   "center": [
+    60,
+    16.75
+   ],
+   "width": 3.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bonus Room"
+  },
+  {
+   "level": "upper",
+   "wall": "wall55",
+   "kind": "door",
+   "center": [
+    86,
+    3.5
+   ],
+   "width": 3.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bonus Storage"
   },
   {
    "level": "upper",
@@ -3741,11 +4535,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall11",
+   "wall": "wall5",
    "kind": "window",
    "center": [
-    0,
-    7.0
+    64.333,
+    0
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3754,11 +4548,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall13",
+   "wall": "wall5",
    "kind": "window",
    "center": [
-    0,
-    23.5
+    73.0,
+    0
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3767,11 +4561,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall13",
+   "wall": "wall5",
    "kind": "window",
    "center": [
-    0,
-    34.5
+    81.667,
+    0
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3783,8 +4577,8 @@
    "wall": "wall19",
    "kind": "window",
    "center": [
-    38,
-    37.0
+    0,
+    5.75
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3793,11 +4587,37 @@
   },
   {
    "level": "upper",
-   "wall": "wall25",
+   "wall": "wall22",
+   "kind": "window",
+   "center": [
+    0,
+    25.0
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "upper",
+   "wall": "wall22",
+   "kind": "window",
+   "center": [
+    0,
+    36.0
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "upper",
+   "wall": "wall39",
    "kind": "window",
    "center": [
     60,
-    9.0
+    30.75
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3806,24 +4626,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall27",
-   "kind": "window",
-   "center": [
-    60,
-    26.0
-   ],
-   "width": 4.0,
-   "height": 4.5,
-   "sill": 3.0,
-   "swings_into": null
-  },
-  {
-   "level": "upper",
-   "wall": "wall34",
+   "wall": "wall46",
    "kind": "window",
    "center": [
     5.5,
-    40
+    41.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3832,11 +4639,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall34",
+   "wall": "wall46",
    "kind": "window",
    "center": [
     16.5,
-    40
+    41.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3845,11 +4652,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall35",
+   "wall": "wall47",
    "kind": "window",
    "center": [
-    30.0,
-    40
+    28.25,
+    41.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3858,11 +4665,11 @@
   },
   {
    "level": "upper",
-   "wall": "wall38",
+   "wall": "wall53",
    "kind": "window",
    "center": [
     46.5,
-    34
+    35.5
    ],
    "width": 4.0,
    "height": 4.5,
@@ -3871,11 +4678,50 @@
   },
   {
    "level": "upper",
-   "wall": "wall38",
+   "wall": "wall53",
    "kind": "window",
    "center": [
     55.5,
-    34
+    35.5
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "upper",
+   "wall": "wall56",
+   "kind": "window",
+   "center": [
+    64.333,
+    26
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "upper",
+   "wall": "wall56",
+   "kind": "window",
+   "center": [
+    73.0,
+    26
+   ],
+   "width": 4.0,
+   "height": 4.5,
+   "sill": 3.0,
+   "swings_into": null
+  },
+  {
+   "level": "upper",
+   "wall": "wall56",
+   "kind": "window",
+   "center": [
+    81.667,
+    26
    ],
    "width": 4.0,
    "height": 4.5,
@@ -4218,25 +5064,47 @@
    "label": "Rod/shelf",
    "facing": "N",
    "center": [
-    43.0,
+    46.0,
     10.8
    ],
-   "width": 9.0,
+   "width": 3.4,
    "depth": 1.2,
    "footprint": [
-    38.5,
+    44.3,
     10.2,
-    47.5,
+    47.7,
     11.4
    ],
    "node": "basement/furniture/Bsmt Closet/Rod/shelf 13",
    "opts": {
-    "W": 9,
+    "W": 3.4,
     "D": 1.2
    }
   },
   {
    "id": "furn14",
+   "level": "basement",
+   "room": "Bsmt Bath",
+   "kind": "towel_bar",
+   "label": null,
+   "facing": "E",
+   "center": [
+    38.325,
+    12.25
+   ],
+   "width": 2.5,
+   "depth": 0.25,
+   "footprint": [
+    38.2,
+    11,
+    38.45,
+    13.5
+   ],
+   "node": "basement/furniture/Bsmt Bath/towel_bar 14",
+   "opts": {}
+  },
+  {
+   "id": "furn15",
    "level": "basement",
    "room": "Bsmt Bedroom",
    "kind": "bed",
@@ -4254,7 +5122,7 @@
     54.9,
     12
    ],
-   "node": "basement/furniture/Bsmt Bedroom/Bed 14",
+   "node": "basement/furniture/Bsmt Bedroom/Bed 15",
    "opts": {
     "W": 5,
     "D": 6.7,
@@ -4262,7 +5130,7 @@
    }
   },
   {
-   "id": "furn15",
+   "id": "furn16",
    "level": "basement",
    "room": "Bsmt Bedroom",
    "kind": "nightstand",
@@ -4280,13 +5148,13 @@
     49.7,
     13.7
    ],
-   "node": "basement/furniture/Bsmt Bedroom/nightstand 15",
+   "node": "basement/furniture/Bsmt Bedroom/nightstand 16",
    "opts": {
     "W": 1.6
    }
   },
   {
-   "id": "furn16",
+   "id": "furn17",
    "level": "basement",
    "room": "Bsmt Bedroom",
    "kind": "dresser",
@@ -4304,13 +5172,13 @@
     59.65,
     4.9
    ],
-   "node": "basement/furniture/Bsmt Bedroom/Dresser 16",
+   "node": "basement/furniture/Bsmt Bedroom/Dresser 17",
    "opts": {
     "W": 4.5
    }
   },
   {
-   "id": "furn17",
+   "id": "furn18",
    "level": "basement",
    "room": "Bsmt Bedroom",
    "kind": "rug",
@@ -4328,14 +5196,14 @@
     57,
     13.5
    ],
-   "node": "basement/furniture/Bsmt Bedroom/rug 17",
+   "node": "basement/furniture/Bsmt Bedroom/rug 18",
    "opts": {
     "W": 7,
     "D": 8
    }
   },
   {
-   "id": "furn18",
+   "id": "furn19",
    "level": "basement",
    "room": "Play Area",
    "kind": "sofa",
@@ -4353,7 +5221,7 @@
     31.6,
     33
    ],
-   "node": "basement/furniture/Play Area/Sofa 18",
+   "node": "basement/furniture/Play Area/Sofa 19",
    "opts": {
     "W": 8,
     "D": 3.3,
@@ -4361,7 +5229,7 @@
    }
   },
   {
-   "id": "furn19",
+   "id": "furn20",
    "level": "basement",
    "room": "Play Area",
    "kind": "media_console",
@@ -4379,13 +5247,13 @@
     47.8,
     32.5
    ],
-   "node": "basement/furniture/Play Area/Media 19",
+   "node": "basement/furniture/Play Area/Media 20",
    "opts": {
     "W": 6.5
    }
   },
   {
-   "id": "furn20",
+   "id": "furn21",
    "level": "basement",
    "room": "Play Area",
    "kind": "tv_wall",
@@ -4403,11 +5271,11 @@
     47.83,
     32.0
    ],
-   "node": "basement/furniture/Play Area/tv_wall 20",
+   "node": "basement/furniture/Play Area/tv_wall 21",
    "opts": {}
   },
   {
-   "id": "furn21",
+   "id": "furn22",
    "level": "basement",
    "room": "Play Area",
    "kind": "rug",
@@ -4425,7 +5293,7 @@
     44,
     33.5
    ],
-   "node": "basement/furniture/Play Area/rug 21",
+   "node": "basement/furniture/Play Area/rug 22",
    "opts": {
     "W": 11,
     "D": 9,
@@ -4434,7 +5302,7 @@
    }
   },
   {
-   "id": "furn22",
+   "id": "furn23",
    "level": "basement",
    "room": "Play Area",
    "kind": "kids_table",
@@ -4452,11 +5320,11 @@
     37.0,
     36.5
    ],
-   "node": "basement/furniture/Play Area/Kids table 22",
+   "node": "basement/furniture/Play Area/Kids table 23",
    "opts": {}
   },
   {
-   "id": "furn23",
+   "id": "furn24",
    "level": "basement",
    "room": "Play Area",
    "kind": "toy_storage",
@@ -4474,11 +5342,11 @@
     47.0,
     37.75
    ],
-   "node": "basement/furniture/Play Area/Toys 23",
+   "node": "basement/furniture/Play Area/Toys 24",
    "opts": {}
   },
   {
-   "id": "furn24",
+   "id": "furn25",
    "level": "basement",
    "room": "Play Area",
    "kind": "beanbag",
@@ -4496,11 +5364,11 @@
     42.8,
     28.0
    ],
-   "node": "basement/furniture/Play Area/beanbag 24",
+   "node": "basement/furniture/Play Area/beanbag 25",
    "opts": {}
   },
   {
-   "id": "furn25",
+   "id": "furn26",
    "level": "basement",
    "room": "Play Area",
    "kind": "beanbag",
@@ -4518,13 +5386,13 @@
     42.8,
     31.8
    ],
-   "node": "basement/furniture/Play Area/beanbag 25",
+   "node": "basement/furniture/Play Area/beanbag 26",
    "opts": {
     "color": "fabric:#7fa6b5"
    }
   },
   {
-   "id": "furn26",
+   "id": "furn27",
    "level": "basement",
    "room": "Storage",
    "kind": "shelving_metal",
@@ -4542,11 +5410,11 @@
     50.2,
     30.0
    ],
-   "node": "basement/furniture/Storage/Shelving 26",
+   "node": "basement/furniture/Storage/Shelving 27",
    "opts": {}
   },
   {
-   "id": "furn27",
+   "id": "furn28",
    "level": "basement",
    "room": "Storage",
    "kind": "shelving_metal",
@@ -4564,33 +5432,9 @@
     50.2,
     36.5
    ],
-   "node": "basement/furniture/Storage/Shelving 27",
-   "opts": {
-    "seed": 2
-   }
-  },
-  {
-   "id": "furn28",
-   "level": "basement",
-   "room": "Storage",
-   "kind": "shelving_metal",
-   "label": "Shelving",
-   "facing": "W",
-   "center": [
-    58.75,
-    27.0
-   ],
-   "width": 6.0,
-   "depth": 2.0,
-   "footprint": [
-    57.75,
-    24,
-    59.75,
-    30.0
-   ],
    "node": "basement/furniture/Storage/Shelving 28",
    "opts": {
-    "seed": 3
+    "seed": 2
    }
   },
   {
@@ -4602,6 +5446,30 @@
    "facing": "W",
    "center": [
     58.75,
+    27.0
+   ],
+   "width": 6.0,
+   "depth": 2.0,
+   "footprint": [
+    57.75,
+    24,
+    59.75,
+    30.0
+   ],
+   "node": "basement/furniture/Storage/Shelving 29",
+   "opts": {
+    "seed": 3
+   }
+  },
+  {
+   "id": "furn30",
+   "level": "basement",
+   "room": "Storage",
+   "kind": "shelving_metal",
+   "label": "Shelving",
+   "facing": "W",
+   "center": [
+    58.75,
     33.5
    ],
    "width": 6.0,
@@ -4612,13 +5480,13 @@
     59.75,
     36.5
    ],
-   "node": "basement/furniture/Storage/Shelving 29",
+   "node": "basement/furniture/Storage/Shelving 30",
    "opts": {
     "seed": 4
    }
   },
   {
-   "id": "furn30",
+   "id": "furn31",
    "level": "basement",
    "room": "Storage",
    "kind": "shelving_metal",
@@ -4636,7 +5504,7 @@
     57.0,
     37.75
    ],
-   "node": "basement/furniture/Storage/Shelving 30",
+   "node": "basement/furniture/Storage/Shelving 31",
    "opts": {
     "seed": 5
    }
@@ -4904,15 +5772,15 @@
    "facing": "N",
    "center": [
     6.0,
-    14.875
+    16.875
    ],
    "width": 6,
    "depth": 1.25,
    "footprint": [
     3,
-    14.25,
+    16.25,
     9,
-    15.5
+    17.5
    ],
    "node": "main/furniture/Great Room/Console 11",
    "opts": {
@@ -4928,15 +5796,15 @@
    "facing": "N",
    "center": [
     6.0,
-    14.25
+    16.25
    ],
    "width": 4,
    "depth": 0.1,
    "footprint": [
     4,
-    14.2,
+    16.2,
     8,
-    14.3
+    16.3
    ],
    "node": "main/furniture/Great Room/art 12",
    "opts": {
@@ -5253,15 +6121,15 @@
    "facing": "N",
    "center": [
     30.5,
-    15.05
+    17.05
    ],
    "width": 7,
    "depth": 1.6,
    "footprint": [
     27,
-    14.25,
+    16.25,
     34,
-    15.85
+    17.85
    ],
    "node": "main/furniture/Great Room/Buffet 26",
    "opts": {
@@ -5278,15 +6146,15 @@
    "facing": "N",
    "center": [
     30.5,
-    14.25
+    16.25
    ],
    "width": 4.0,
    "depth": 0.1,
    "footprint": [
     28.5,
-    14.2,
+    16.2,
     32.5,
-    14.3
+    16.3
    ],
    "node": "main/furniture/Great Room/art 27",
    "opts": {
@@ -5817,24 +6685,25 @@
    "id": "furn50",
    "level": "main",
    "room": "Pantry",
-   "kind": "pantry_shelves",
-   "label": "Shelves",
+   "kind": "base_cab",
+   "label": "Pantry cabs",
    "facing": "E",
    "center": [
-    48.9,
+    49.2,
     20.0
    ],
-   "width": 11.0,
-   "depth": 1.4,
+   "width": 11.2,
+   "depth": 2.0,
    "footprint": [
     48.2,
-    14.5,
-    49.6,
-    25.5
+    14.4,
+    50.2,
+    25.6
    ],
-   "node": "main/furniture/Pantry/Shelves 50",
+   "node": "main/furniture/Pantry/Pantry cabs 50",
    "opts": {
-    "W": 11
+    "W": 11.2,
+    "label": "Pantry cabs"
    }
   },
   {
@@ -5842,28 +6711,82 @@
    "level": "main",
    "room": "Pantry",
    "kind": "pantry_shelves",
-   "label": "Shelves",
-   "facing": "W",
+   "label": null,
+   "facing": "E",
    "center": [
-    59.1,
+    48.8,
     20.0
    ],
-   "width": 11.0,
-   "depth": 1.4,
+   "width": 11.2,
+   "depth": 1.2,
    "footprint": [
-    58.4,
-    14.5,
-    59.8,
-    25.5
+    48.2,
+    14.4,
+    49.4,
+    25.6
    ],
-   "node": "main/furniture/Pantry/Shelves 51",
+   "node": "main/furniture/Pantry/pantry_shelves 51",
    "opts": {
-    "W": 11,
-    "seed": 2
+    "W": 11.2,
+    "D": 1.2,
+    "z0": 4.2,
+    "label": null
    }
   },
   {
    "id": "furn52",
+   "level": "main",
+   "room": "Pantry",
+   "kind": "base_cab",
+   "label": "Pantry cabs",
+   "facing": "W",
+   "center": [
+    58.8,
+    20.0
+   ],
+   "width": 11.2,
+   "depth": 2.0,
+   "footprint": [
+    57.8,
+    14.4,
+    59.8,
+    25.6
+   ],
+   "node": "main/furniture/Pantry/Pantry cabs 52",
+   "opts": {
+    "W": 11.2,
+    "drawers": true,
+    "label": "Pantry cabs"
+   }
+  },
+  {
+   "id": "furn53",
+   "level": "main",
+   "room": "Pantry",
+   "kind": "upper_cab",
+   "label": null,
+   "facing": "W",
+   "center": [
+    59.25,
+    20.0
+   ],
+   "width": 11.2,
+   "depth": 1.1,
+   "footprint": [
+    58.7,
+    14.4,
+    59.8,
+    25.6
+   ],
+   "node": "main/furniture/Pantry/upper_cab 53",
+   "opts": {
+    "W": 11.2,
+    "z": 4.6,
+    "H": 3.6
+   }
+  },
+  {
+   "id": "furn54",
    "level": "main",
    "room": "Office",
    "kind": "desk",
@@ -5881,11 +6804,11 @@
     7.5,
     9.5
    ],
-   "node": "main/furniture/Office/Desk 52",
+   "node": "main/furniture/Office/Desk 54",
    "opts": {}
   },
   {
-   "id": "furn53",
+   "id": "furn55",
    "level": "main",
    "room": "Office",
    "kind": "office_chair",
@@ -5903,56 +6826,8 @@
     4.8,
     7.75
    ],
-   "node": "main/furniture/Office/office_chair 53",
+   "node": "main/furniture/Office/office_chair 55",
    "opts": {}
-  },
-  {
-   "id": "furn54",
-   "level": "main",
-   "room": "Office",
-   "kind": "bookcase",
-   "label": "Books",
-   "facing": "S",
-   "center": [
-    3.0,
-    13.2
-   ],
-   "width": 4.0,
-   "depth": 1.2,
-   "footprint": [
-    1,
-    12.6,
-    5.0,
-    13.8
-   ],
-   "node": "main/furniture/Office/Books 54",
-   "opts": {
-    "seed": 1
-   }
-  },
-  {
-   "id": "furn55",
-   "level": "main",
-   "room": "Office",
-   "kind": "bookcase",
-   "label": "Books",
-   "facing": "S",
-   "center": [
-    7.0,
-    13.2
-   ],
-   "width": 4.0,
-   "depth": 1.2,
-   "footprint": [
-    5,
-    12.6,
-    9.0,
-    13.8
-   ],
-   "node": "main/furniture/Office/Books 55",
-   "opts": {
-    "seed": 5
-   }
   },
   {
    "id": "furn56",
@@ -5962,24 +6837,72 @@
    "label": "Books",
    "facing": "S",
    "center": [
+    3.0,
+    15.2
+   ],
+   "width": 4.0,
+   "depth": 1.2,
+   "footprint": [
+    1,
+    14.6,
+    5.0,
+    15.8
+   ],
+   "node": "main/furniture/Office/Books 56",
+   "opts": {
+    "seed": 1
+   }
+  },
+  {
+   "id": "furn57",
+   "level": "main",
+   "room": "Office",
+   "kind": "bookcase",
+   "label": "Books",
+   "facing": "S",
+   "center": [
+    7.0,
+    15.2
+   ],
+   "width": 4.0,
+   "depth": 1.2,
+   "footprint": [
+    5,
+    14.6,
+    9.0,
+    15.8
+   ],
+   "node": "main/furniture/Office/Books 57",
+   "opts": {
+    "seed": 5
+   }
+  },
+  {
+   "id": "furn58",
+   "level": "main",
+   "room": "Office",
+   "kind": "bookcase",
+   "label": "Books",
+   "facing": "S",
+   "center": [
     11.0,
-    13.2
+    15.2
    ],
    "width": 4.0,
    "depth": 1.2,
    "footprint": [
     9,
-    12.6,
+    14.6,
     13.0,
-    13.8
+    15.8
    ],
-   "node": "main/furniture/Office/Books 56",
+   "node": "main/furniture/Office/Books 58",
    "opts": {
     "seed": 9
    }
   },
   {
-   "id": "furn57",
+   "id": "furn59",
    "level": "main",
    "room": "Office",
    "kind": "rug",
@@ -5997,7 +6920,7 @@
     10,
     9.5
    ],
-   "node": "main/furniture/Office/rug 57",
+   "node": "main/furniture/Office/rug 59",
    "opts": {
     "W": 8,
     "D": 6,
@@ -6006,7 +6929,7 @@
    }
   },
   {
-   "id": "furn58",
+   "id": "furn60",
    "level": "main",
    "room": "Office",
    "kind": "plant",
@@ -6024,11 +6947,11 @@
     13.5,
     2.0
    ],
-   "node": "main/furniture/Office/plant 58",
+   "node": "main/furniture/Office/plant 60",
    "opts": {}
   },
   {
-   "id": "furn59",
+   "id": "furn61",
    "level": "main",
    "room": "Foyer",
    "kind": "bench",
@@ -6046,11 +6969,11 @@
     15.6,
     13.0
    ],
-   "node": "main/furniture/Foyer/Bench 59",
+   "node": "main/furniture/Foyer/Bench 61",
    "opts": {}
   },
   {
-   "id": "furn60",
+   "id": "furn62",
    "level": "main",
    "room": "Foyer",
    "kind": "art",
@@ -6068,14 +6991,14 @@
     14.28,
     12.5
    ],
-   "node": "main/furniture/Foyer/art 60",
+   "node": "main/furniture/Foyer/art 62",
    "opts": {
     "W": 3,
     "color": "fix:#a7745a"
    }
   },
   {
-   "id": "furn61",
+   "id": "furn63",
    "level": "main",
    "room": "Foyer",
    "kind": "console_table",
@@ -6093,11 +7016,11 @@
     27.5,
     1.55
    ],
-   "node": "main/furniture/Foyer/Console 61",
+   "node": "main/furniture/Foyer/Console 63",
    "opts": {}
   },
   {
-   "id": "furn62",
+   "id": "furn64",
    "level": "main",
    "room": "Foyer",
    "kind": "rug",
@@ -6115,7 +7038,7 @@
     23.5,
     10
    ],
-   "node": "main/furniture/Foyer/rug 62",
+   "node": "main/furniture/Foyer/rug 64",
    "opts": {
     "W": 5,
     "D": 8,
@@ -6124,7 +7047,7 @@
    }
   },
   {
-   "id": "furn63",
+   "id": "furn65",
    "level": "main",
    "room": "Foyer",
    "kind": "pendant",
@@ -6132,17 +7055,17 @@
    "facing": "N",
    "center": [
     21.0,
-    7.0
+    8.0
    ],
    "width": 2,
    "depth": 2,
    "footprint": [
     20,
-    6,
+    7,
     22,
-    8
+    9
    ],
-   "node": "main/furniture/Foyer/pendant 63",
+   "node": "main/furniture/Foyer/pendant 65",
    "opts": {
     "W": 2,
     "D": 2,
@@ -6151,7 +7074,7 @@
    }
   },
   {
-   "id": "furn64",
+   "id": "furn66",
    "level": "main",
    "room": "Foyer",
    "kind": "plant",
@@ -6169,11 +7092,11 @@
     27.7,
     8.5
    ],
-   "node": "main/furniture/Foyer/plant 64",
+   "node": "main/furniture/Foyer/plant 66",
    "opts": {}
   },
   {
-   "id": "furn65",
+   "id": "furn67",
    "level": "main",
    "room": "Half Bath",
    "kind": "vanity",
@@ -6191,14 +7114,14 @@
     40.0,
     4.5
    ],
-   "node": "main/furniture/Half Bath/Vanity 65",
+   "node": "main/furniture/Half Bath/Vanity 67",
    "opts": {
     "W": 3,
     "D": 1.8
    }
   },
   {
-   "id": "furn66",
+   "id": "furn68",
    "level": "main",
    "room": "Half Bath",
    "kind": "toilet",
@@ -6216,11 +7139,11 @@
     45.8,
     3.7
    ],
-   "node": "main/furniture/Half Bath/WC 66",
+   "node": "main/furniture/Half Bath/WC 68",
    "opts": {}
   },
   {
-   "id": "furn67",
+   "id": "furn69",
    "level": "main",
    "room": "Hall",
    "kind": "rug",
@@ -6238,7 +7161,7 @@
     45,
     13.2
    ],
-   "node": "main/furniture/Hall/rug 67",
+   "node": "main/furniture/Hall/rug 69",
    "opts": {
     "W": 6,
     "D": 4.4,
@@ -6246,7 +7169,7 @@
    }
   },
   {
-   "id": "furn68",
+   "id": "furn70",
    "level": "main",
    "room": "Mudroom",
    "kind": "wardrobe_wall",
@@ -6264,7 +7187,7 @@
     47.95,
     7.4
    ],
-   "node": "main/furniture/Mudroom/Lockers 68",
+   "node": "main/furniture/Mudroom/Lockers 70",
    "opts": {
     "W": 7,
     "D": 1.75,
@@ -6272,7 +7195,7 @@
    }
   },
   {
-   "id": "furn69",
+   "id": "furn71",
    "level": "main",
    "room": "Mudroom",
    "kind": "bench",
@@ -6290,13 +7213,13 @@
     57,
     1.7
    ],
-   "node": "main/furniture/Mudroom/Bench 69",
+   "node": "main/furniture/Mudroom/Bench 71",
    "opts": {
     "W": 8
    }
   },
   {
-   "id": "furn70",
+   "id": "furn72",
    "level": "main",
    "room": "Mudroom",
    "kind": "rug",
@@ -6314,7 +7237,7 @@
     54,
     11.5
    ],
-   "node": "main/furniture/Mudroom/rug 70",
+   "node": "main/furniture/Mudroom/rug 72",
    "opts": {
     "W": 3,
     "D": 8,
@@ -6323,7 +7246,179 @@
    }
   },
   {
-   "id": "furn71",
+   "id": "furn73",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "rug",
+   "label": null,
+   "facing": "N",
+   "center": [
+    10.5,
+    52.25
+   ],
+   "width": 13,
+   "depth": 7.5,
+   "footprint": [
+    4,
+    48.5,
+    17,
+    56.0
+   ],
+   "node": "main/furniture/Kids Playroom/rug 73",
+   "opts": {
+    "W": 13,
+    "D": 7.5,
+    "color": "fabric:#f0e2c0",
+    "border": "fabric:#7fa6b5"
+   }
+  },
+  {
+   "id": "furn74",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "sofa",
+   "label": "Sofa",
+   "facing": "E",
+   "center": [
+    1.8,
+    51.0
+   ],
+   "width": 7.0,
+   "depth": 3.0,
+   "footprint": [
+    0.3,
+    47.5,
+    3.3,
+    54.5
+   ],
+   "node": "main/furniture/Kids Playroom/Sofa 74",
+   "opts": {
+    "W": 7,
+    "D": 3,
+    "color": "fabric:#c96f5a",
+    "pillow": "fabric:#f0e2c0"
+   }
+  },
+  {
+   "id": "furn75",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "toy_storage",
+   "label": "Toys",
+   "facing": "S",
+   "center": [
+    6.5,
+    57.05
+   ],
+   "width": 8.0,
+   "depth": 1.4,
+   "footprint": [
+    2.5,
+    56.35,
+    10.5,
+    57.75
+   ],
+   "node": "main/furniture/Kids Playroom/Toys 75",
+   "opts": {
+    "W": 8,
+    "seed": 21
+   }
+  },
+  {
+   "id": "furn76",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "bookcase",
+   "label": "Books",
+   "facing": "S",
+   "center": [
+    17.3,
+    57.15
+   ],
+   "width": 4.0,
+   "depth": 1.2,
+   "footprint": [
+    15.3,
+    56.55,
+    19.3,
+    57.75
+   ],
+   "node": "main/furniture/Kids Playroom/Books 76",
+   "opts": {
+    "W": 4,
+    "seed": 23
+   }
+  },
+  {
+   "id": "furn77",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "kids_table",
+   "label": "Kids table",
+   "facing": "N",
+   "center": [
+    21.0,
+    51.5
+   ],
+   "width": 3.0,
+   "depth": 3.0,
+   "footprint": [
+    19.5,
+    50,
+    22.5,
+    53.0
+   ],
+   "node": "main/furniture/Kids Playroom/Kids table 77",
+   "opts": {}
+  },
+  {
+   "id": "furn78",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "beanbag",
+   "label": null,
+   "facing": "W",
+   "center": [
+    10.4,
+    52.4
+   ],
+   "width": 2.8,
+   "depth": 2.8,
+   "footprint": [
+    9,
+    51,
+    11.8,
+    53.8
+   ],
+   "node": "main/furniture/Kids Playroom/beanbag 78",
+   "opts": {}
+  },
+  {
+   "id": "furn79",
+   "level": "main",
+   "room": "Kids Playroom",
+   "kind": "beanbag",
+   "label": null,
+   "facing": "W",
+   "center": [
+    10.4,
+    55.9
+   ],
+   "width": 2.8,
+   "depth": 2.8,
+   "footprint": [
+    9,
+    54.5,
+    11.8,
+    57.3
+   ],
+   "node": "main/furniture/Kids Playroom/beanbag 79",
+   "opts": {
+    "color": "fabric:#7fa6b5"
+   }
+  },
+  {
+   "id": "furn80",
    "level": "main",
    "room": "Garage",
    "kind": "car",
@@ -6341,11 +7436,11 @@
     69.65,
     17.0
    ],
-   "node": "main/furniture/Garage/Car 71",
+   "node": "main/furniture/Garage/Car 80",
    "opts": {}
   },
   {
-   "id": "furn72",
+   "id": "furn81",
    "level": "main",
    "room": "Garage",
    "kind": "car",
@@ -6363,13 +7458,13 @@
     80.65,
     17.0
    ],
-   "node": "main/furniture/Garage/Car 72",
+   "node": "main/furniture/Garage/Car 81",
    "opts": {
     "color": "gloss:#b8bcc0"
    }
   },
   {
-   "id": "furn73",
+   "id": "furn82",
    "level": "main",
    "room": "Garage",
    "kind": "workbench",
@@ -6387,11 +7482,11 @@
     70.0,
     25.75
    ],
-   "node": "main/furniture/Garage/Workbench 73",
+   "node": "main/furniture/Garage/Workbench 82",
    "opts": {}
   },
   {
-   "id": "furn74",
+   "id": "furn83",
    "level": "main",
    "room": "Garage",
    "kind": "shelving_metal",
@@ -6409,11 +7504,11 @@
     86.0,
     25.6
    ],
-   "node": "main/furniture/Garage/Shelving 74",
+   "node": "main/furniture/Garage/Shelving 83",
    "opts": {}
   },
   {
-   "id": "furn75",
+   "id": "furn84",
    "level": "main",
    "room": "Garage",
    "kind": "shelving_metal",
@@ -6431,13 +7526,13 @@
     92.0,
     25.6
    ],
-   "node": "main/furniture/Garage/Shelving 75",
+   "node": "main/furniture/Garage/Shelving 84",
    "opts": {
     "seed": 6
    }
   },
   {
-   "id": "furn76",
+   "id": "furn85",
    "level": "main",
    "room": "Covered Patio",
    "kind": "outdoor_kitchen",
@@ -6455,11 +7550,11 @@
     54.0,
     61.8
    ],
-   "node": "main/furniture/Covered Patio/Outdoor kitchen 76",
+   "node": "main/furniture/Covered Patio/Outdoor kitchen 85",
    "opts": {}
   },
   {
-   "id": "furn77",
+   "id": "furn86",
    "level": "main",
    "room": "Covered Patio",
    "kind": "outdoor_fireplace",
@@ -6477,29 +7572,29 @@
     34.0,
     61.6
    ],
-   "node": "main/furniture/Covered Patio/Fireplace 77",
+   "node": "main/furniture/Covered Patio/Fireplace 86",
    "opts": {}
   },
   {
-   "id": "furn78",
+   "id": "furn87",
    "level": "main",
    "room": "Covered Patio",
    "kind": "sofa",
    "label": "Sofa",
    "facing": "N",
    "center": [
-    31.0,
+    33.0,
     52.6
    ],
    "width": 7.0,
    "depth": 3.2,
    "footprint": [
-    27.5,
+    29.5,
     51,
-    34.5,
+    36.5,
     54.2
    ],
-   "node": "main/furniture/Covered Patio/Sofa 78",
+   "node": "main/furniture/Covered Patio/Sofa 87",
    "opts": {
     "W": 7,
     "D": 3.2,
@@ -6508,25 +7603,25 @@
    }
   },
   {
-   "id": "furn79",
+   "id": "furn88",
    "level": "main",
    "room": "Covered Patio",
    "kind": "coffee_table",
    "label": "Coffee tbl",
    "facing": "N",
    "center": [
-    30.95,
+    32.95,
     56.0
    ],
    "width": 3.5,
    "depth": 2,
    "footprint": [
-    29.2,
+    31.2,
     55,
-    32.7,
+    34.7,
     57
    ],
-   "node": "main/furniture/Covered Patio/Coffee tbl 79",
+   "node": "main/furniture/Covered Patio/Coffee tbl 88",
    "opts": {
     "W": 3.5,
     "D": 2,
@@ -6534,7 +7629,7 @@
    }
   },
   {
-   "id": "furn80",
+   "id": "furn89",
    "level": "main",
    "room": "Covered Patio",
    "kind": "outdoor_table",
@@ -6552,11 +7647,11 @@
     50.0,
     55.2
    ],
-   "node": "main/furniture/Covered Patio/Table 80",
+   "node": "main/furniture/Covered Patio/Table 89",
    "opts": {}
   },
   {
-   "id": "furn81",
+   "id": "furn90",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6574,14 +7669,14 @@
     45.6,
     52.0
    ],
-   "node": "main/furniture/Covered Patio/chair 81",
+   "node": "main/furniture/Covered Patio/chair 90",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn82",
+   "id": "furn91",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6599,14 +7694,14 @@
     47.3,
     52.0
    ],
-   "node": "main/furniture/Covered Patio/chair 82",
+   "node": "main/furniture/Covered Patio/chair 91",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn83",
+   "id": "furn92",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6624,14 +7719,14 @@
     49.0,
     52.0
    ],
-   "node": "main/furniture/Covered Patio/chair 83",
+   "node": "main/furniture/Covered Patio/chair 92",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn84",
+   "id": "furn93",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6649,14 +7744,14 @@
     45.6,
     56.7
    ],
-   "node": "main/furniture/Covered Patio/chair 84",
+   "node": "main/furniture/Covered Patio/chair 93",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn85",
+   "id": "furn94",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6674,14 +7769,14 @@
     47.3,
     56.7
    ],
-   "node": "main/furniture/Covered Patio/chair 85",
+   "node": "main/furniture/Covered Patio/chair 94",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn86",
+   "id": "furn95",
    "level": "main",
    "room": "Covered Patio",
    "kind": "chair",
@@ -6699,7 +7794,7 @@
     49.0,
     56.7
    ],
-   "node": "main/furniture/Covered Patio/chair 86",
+   "node": "main/furniture/Covered Patio/chair 95",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
@@ -7216,32 +8311,86 @@
   {
    "id": "furn21",
    "level": "upper",
+   "room": "Bed 2 Closet",
+   "kind": "closet_rod",
+   "label": "Closet",
+   "facing": "S",
+   "center": [
+    2.5,
+    12.8
+   ],
+   "width": 4.4,
+   "depth": 2.0,
+   "footprint": [
+    0.3,
+    11.8,
+    4.7,
+    13.8
+   ],
+   "node": "upper/furniture/Bed 2 Closet/Closet 21",
+   "opts": {
+    "W": 4.4,
+    "D": 2.0,
+    "seed": 31,
+    "label": "Closet"
+   }
+  },
+  {
+   "id": "furn22",
+   "level": "upper",
+   "room": "Bed 3 Closet",
+   "kind": "closet_rod",
+   "label": "Closet",
+   "facing": "S",
+   "center": [
+    16.5,
+    12.8
+   ],
+   "width": 4.4,
+   "depth": 2.0,
+   "footprint": [
+    14.3,
+    11.8,
+    18.7,
+    13.8
+   ],
+   "node": "upper/furniture/Bed 3 Closet/Closet 22",
+   "opts": {
+    "W": 4.4,
+    "D": 2.0,
+    "seed": 33,
+    "label": "Closet"
+   }
+  },
+  {
+   "id": "furn23",
+   "level": "upper",
    "room": "Upper Hall",
    "kind": "rug",
    "label": null,
    "facing": "N",
    "center": [
     15.0,
-    16.0
+    16.75
    ],
    "width": 24,
-   "depth": 2.6,
+   "depth": 3.0,
    "footprint": [
     3,
-    14.7,
+    15.25,
     27,
-    17.3
+    18.25
    ],
-   "node": "upper/furniture/Upper Hall/rug 21",
+   "node": "upper/furniture/Upper Hall/rug 23",
    "opts": {
     "W": 24,
-    "D": 2.6,
+    "D": 3,
     "color": "fabric:#a49a8b",
     "border": "fabric:#5d564d"
    }
   },
   {
-   "id": "furn22",
+   "id": "furn24",
    "level": "upper",
    "room": "Upper Hall",
    "kind": "rug",
@@ -7249,26 +8398,26 @@
    "facing": "N",
    "center": [
     48.0,
-    16.0
+    16.75
    ],
    "width": 20,
-   "depth": 2.6,
+   "depth": 3.0,
    "footprint": [
     38,
-    14.7,
+    15.25,
     58,
-    17.3
+    18.25
    ],
-   "node": "upper/furniture/Upper Hall/rug 22",
+   "node": "upper/furniture/Upper Hall/rug 24",
    "opts": {
     "W": 20,
-    "D": 2.6,
+    "D": 3,
     "color": "fabric:#a49a8b",
     "border": "fabric:#5d564d"
    }
   },
   {
-   "id": "furn23",
+   "id": "furn25",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "bed",
@@ -7276,17 +8425,17 @@
    "facing": "E",
    "center": [
     3.8,
-    29.0
+    30.5
    ],
    "width": 6.5,
    "depth": 7.0,
    "footprint": [
     0.3,
-    25.75,
+    27.25,
     7.3,
-    32.25
+    33.75
    ],
-   "node": "upper/furniture/Primary Bedroom/King bed 23",
+   "node": "upper/furniture/Primary Bedroom/King bed 25",
    "opts": {
     "W": 6.5,
     "D": 7,
@@ -7296,51 +8445,51 @@
    }
   },
   {
-   "id": "furn24",
-   "level": "upper",
-   "room": "Primary Bedroom",
-   "kind": "nightstand",
-   "label": null,
-   "facing": "E",
-   "center": [
-    1.05,
-    24.75
-   ],
-   "width": 1.8,
-   "depth": 1.5,
-   "footprint": [
-    0.3,
-    23.85,
-    1.8,
-    25.65
-   ],
-   "node": "upper/furniture/Primary Bedroom/nightstand 24",
-   "opts": {}
-  },
-  {
-   "id": "furn25",
-   "level": "upper",
-   "room": "Primary Bedroom",
-   "kind": "nightstand",
-   "label": null,
-   "facing": "E",
-   "center": [
-    1.05,
-    33.25
-   ],
-   "width": 1.8,
-   "depth": 1.5,
-   "footprint": [
-    0.3,
-    32.35,
-    1.8,
-    34.15
-   ],
-   "node": "upper/furniture/Primary Bedroom/nightstand 25",
-   "opts": {}
-  },
-  {
    "id": "furn26",
+   "level": "upper",
+   "room": "Primary Bedroom",
+   "kind": "nightstand",
+   "label": null,
+   "facing": "E",
+   "center": [
+    1.05,
+    26.25
+   ],
+   "width": 1.8,
+   "depth": 1.5,
+   "footprint": [
+    0.3,
+    25.35,
+    1.8,
+    27.15
+   ],
+   "node": "upper/furniture/Primary Bedroom/nightstand 26",
+   "opts": {}
+  },
+  {
+   "id": "furn27",
+   "level": "upper",
+   "room": "Primary Bedroom",
+   "kind": "nightstand",
+   "label": null,
+   "facing": "E",
+   "center": [
+    1.05,
+    34.75
+   ],
+   "width": 1.8,
+   "depth": 1.5,
+   "footprint": [
+    0.3,
+    33.85,
+    1.8,
+    35.65
+   ],
+   "node": "upper/furniture/Primary Bedroom/nightstand 27",
+   "opts": {}
+  },
+  {
+   "id": "furn28",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "bench",
@@ -7348,23 +8497,23 @@
    "facing": "E",
    "center": [
     8.2,
-    29.0
+    30.5
    ],
    "width": 4.0,
    "depth": 1.4,
    "footprint": [
     7.5,
-    27,
+    28.5,
     8.9,
-    31.0
+    32.5
    ],
-   "node": "upper/furniture/Primary Bedroom/Bench 26",
+   "node": "upper/furniture/Primary Bedroom/Bench 28",
    "opts": {
     "cushion": "fabric:#b39a7a"
    }
   },
   {
-   "id": "furn27",
+   "id": "furn29",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "rug",
@@ -7372,17 +8521,17 @@
    "facing": "N",
    "center": [
     8.0,
-    29.0
+    30.5
    ],
    "width": 10,
-   "depth": 11.0,
+   "depth": 11,
    "footprint": [
     3,
-    23.5,
+    25,
     13,
-    34.5
+    36
    ],
-   "node": "upper/furniture/Primary Bedroom/rug 27",
+   "node": "upper/furniture/Primary Bedroom/rug 29",
    "opts": {
     "W": 10,
     "D": 11,
@@ -7391,7 +8540,7 @@
    }
   },
   {
-   "id": "furn28",
+   "id": "furn30",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "dresser",
@@ -7399,23 +8548,23 @@
    "facing": "N",
    "center": [
     4.0,
-    19.075
+    20.575
    ],
    "width": 6,
    "depth": 1.75,
    "footprint": [
     1,
-    18.2,
+    19.7,
     7,
-    19.95
+    21.45
    ],
-   "node": "upper/furniture/Primary Bedroom/Dresser 28",
+   "node": "upper/furniture/Primary Bedroom/Dresser 30",
    "opts": {
     "W": 6
    }
   },
   {
-   "id": "furn29",
+   "id": "furn31",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "armchair",
@@ -7423,23 +8572,23 @@
    "facing": "S",
    "center": [
     14.9,
-    38.05
+    39.55
    ],
    "width": 2.8,
    "depth": 2.9,
    "footprint": [
     13.5,
-    36.6,
+    38.1,
     16.3,
-    39.5
+    41.0
    ],
-   "node": "upper/furniture/Primary Bedroom/Chair 29",
+   "node": "upper/furniture/Primary Bedroom/Chair 31",
    "opts": {
     "color": "fabric:#c7b79c"
    }
   },
   {
-   "id": "furn30",
+   "id": "furn32",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "armchair",
@@ -7447,23 +8596,23 @@
    "facing": "S",
    "center": [
     18.8,
-    38.05
+    39.55
    ],
    "width": 2.8,
    "depth": 2.9,
    "footprint": [
     17.4,
-    36.6,
+    38.1,
     20.2,
-    39.5
+    41.0
    ],
-   "node": "upper/furniture/Primary Bedroom/Chair 30",
+   "node": "upper/furniture/Primary Bedroom/Chair 32",
    "opts": {
     "color": "fabric:#c7b79c"
    }
   },
   {
-   "id": "furn31",
+   "id": "furn33",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "media_console",
@@ -7471,23 +8620,23 @@
    "facing": "W",
    "center": [
     21.0,
-    29.5
+    31.0
    ],
-   "width": 6.0,
+   "width": 6,
    "depth": 1.6,
    "footprint": [
     20.2,
-    26.5,
+    28,
     21.8,
-    32.5
+    34
    ],
-   "node": "upper/furniture/Primary Bedroom/Media 31",
+   "node": "upper/furniture/Primary Bedroom/Media 33",
    "opts": {
     "W": 6
    }
   },
   {
-   "id": "furn32",
+   "id": "furn34",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "tv_wall",
@@ -7495,68 +8644,19 @@
    "facing": "W",
    "center": [
     21.755,
-    29.5
+    31.0
    ],
-   "width": 5,
+   "width": 5.0,
    "depth": 0.15,
    "footprint": [
     21.68,
-    27,
+    28.5,
     21.83,
-    32
+    33.5
    ],
-   "node": "upper/furniture/Primary Bedroom/tv_wall 32",
+   "node": "upper/furniture/Primary Bedroom/tv_wall 34",
    "opts": {
     "W": 5
-   }
-  },
-  {
-   "id": "furn33",
-   "level": "upper",
-   "room": "Primary Closet",
-   "kind": "wardrobe_wall",
-   "label": "Closet system",
-   "facing": "N",
-   "center": [
-    30.0,
-    19.075
-   ],
-   "width": 15.4,
-   "depth": 1.75,
-   "footprint": [
-    22.3,
-    18.2,
-    37.7,
-    19.95
-   ],
-   "node": "upper/furniture/Primary Closet/Closet system 33",
-   "opts": {
-    "W": 15.4
-   }
-  },
-  {
-   "id": "furn34",
-   "level": "upper",
-   "room": "Primary Closet",
-   "kind": "wardrobe_wall",
-   "label": "Closet system",
-   "facing": "W",
-   "center": [
-    36.825,
-    24.9
-   ],
-   "width": 9.6,
-   "depth": 1.75,
-   "footprint": [
-    35.95,
-    20.1,
-    37.7,
-    29.7
-   ],
-   "node": "upper/furniture/Primary Closet/Closet system 34",
-   "opts": {
-    "W": 9.6,
-    "seed": 17
    }
   },
   {
@@ -7565,23 +8665,22 @@
    "room": "Primary Closet",
    "kind": "wardrobe_wall",
    "label": "Closet system",
-   "facing": "S",
+   "facing": "N",
    "center": [
-    25.3,
-    28.925
+    30.0,
+    20.575
    ],
-   "width": 6.0,
+   "width": 15.4,
    "depth": 1.75,
    "footprint": [
     22.3,
-    28.05,
-    28.3,
-    29.8
+    19.7,
+    37.7,
+    21.45
    ],
    "node": "upper/furniture/Primary Closet/Closet system 35",
    "opts": {
-    "W": 6,
-    "seed": 21
+    "W": 15.4
    }
   },
   {
@@ -7590,27 +8689,77 @@
    "room": "Primary Closet",
    "kind": "wardrobe_wall",
    "label": "Closet system",
+   "facing": "W",
+   "center": [
+    36.825,
+    26.4
+   ],
+   "width": 9.6,
+   "depth": 1.75,
+   "footprint": [
+    35.95,
+    21.6,
+    37.7,
+    31.2
+   ],
+   "node": "upper/furniture/Primary Closet/Closet system 36",
+   "opts": {
+    "W": 9.6,
+    "seed": 17
+   }
+  },
+  {
+   "id": "furn37",
+   "level": "upper",
+   "room": "Primary Closet",
+   "kind": "wardrobe_wall",
+   "label": "Closet system",
+   "facing": "S",
+   "center": [
+    25.3,
+    30.425
+   ],
+   "width": 6.0,
+   "depth": 1.75,
+   "footprint": [
+    22.3,
+    29.55,
+    28.3,
+    31.3
+   ],
+   "node": "upper/furniture/Primary Closet/Closet system 37",
+   "opts": {
+    "W": 6,
+    "seed": 21
+   }
+  },
+  {
+   "id": "furn38",
+   "level": "upper",
+   "room": "Primary Closet",
+   "kind": "wardrobe_wall",
+   "label": "Closet system",
    "facing": "S",
    "center": [
     33.75,
-    28.925
+    30.425
    ],
    "width": 4.1,
    "depth": 1.75,
    "footprint": [
     31.7,
-    28.05,
+    29.55,
     35.8,
-    29.8
+    31.3
    ],
-   "node": "upper/furniture/Primary Closet/Closet system 36",
+   "node": "upper/furniture/Primary Closet/Closet system 38",
    "opts": {
     "W": 4.1,
     "seed": 25
    }
   },
   {
-   "id": "furn37",
+   "id": "furn39",
    "level": "upper",
    "room": "Primary Closet",
    "kind": "closet_island",
@@ -7618,21 +8767,21 @@
    "facing": "N",
    "center": [
     29.5,
-    23.85
+    25.35
    ],
    "width": 6.0,
    "depth": 2.5,
    "footprint": [
     26.5,
-    22.6,
+    24.1,
     32.5,
-    25.1
+    26.6
    ],
-   "node": "upper/furniture/Primary Closet/Island 37",
+   "node": "upper/furniture/Primary Closet/Island 39",
    "opts": {}
   },
   {
-   "id": "furn38",
+   "id": "furn40",
    "level": "upper",
    "room": "Primary Closet",
    "kind": "pendant",
@@ -7640,24 +8789,24 @@
    "facing": "N",
    "center": [
     29.5,
-    23.85
+    25.35
    ],
    "width": 1.4,
    "depth": 1.4,
    "footprint": [
     28.8,
-    23.15,
+    24.65,
     30.2,
-    24.55
+    26.05
    ],
-   "node": "upper/furniture/Primary Closet/pendant 38",
+   "node": "upper/furniture/Primary Closet/pendant 40",
    "opts": {
     "z": 6.6,
     "ceil": 9.0
    }
   },
   {
-   "id": "furn39",
+   "id": "furn41",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "shower",
@@ -7665,17 +8814,17 @@
    "facing": "W",
    "center": [
     35.55,
-    32.45
+    33.95
    ],
    "width": 4.5,
    "depth": 4.5,
    "footprint": [
     33.3,
-    30.2,
+    31.7,
     37.8,
-    34.7
+    36.2
    ],
-   "node": "upper/furniture/Primary Bath/Shower 39",
+   "node": "upper/furniture/Primary Bath/Shower 41",
    "opts": {
     "W": 4.5,
     "D": 4.5,
@@ -7683,7 +8832,7 @@
    }
   },
   {
-   "id": "furn40",
+   "id": "furn42",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "vanity",
@@ -7691,89 +8840,89 @@
    "facing": "N",
    "center": [
     25.3,
-    31.1
+    32.6
    ],
    "width": 6.0,
    "depth": 1.8,
    "footprint": [
     22.3,
-    30.2,
+    31.7,
     28.3,
-    32.0
+    33.5
    ],
-   "node": "upper/furniture/Primary Bath/Vanity 40",
+   "node": "upper/furniture/Primary Bath/Vanity 42",
    "opts": {
     "W": 6,
     "sinks": 2
    }
   },
   {
-   "id": "furn41",
+   "id": "furn43",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "tub",
    "label": "Soaking tub",
    "facing": "S",
    "center": [
-    30.0,
-    38.2
+    28.25,
+    39.7
    ],
    "width": 5.0,
    "depth": 2.6,
    "footprint": [
-    27.5,
-    36.9,
-    32.5,
-    39.5
+    25.75,
+    38.4,
+    30.75,
+    41.0
    ],
-   "node": "upper/furniture/Primary Bath/Soaking tub 41",
+   "node": "upper/furniture/Primary Bath/Soaking tub 43",
    "opts": {
     "freestanding": true,
     "label": "Soaking tub"
    }
   },
   {
-   "id": "furn42",
+   "id": "furn44",
    "level": "upper",
-   "room": "Primary Bath",
+   "room": "Primary WC",
    "kind": "toilet",
    "label": "WC",
-   "facing": "E",
+   "facing": "W",
    "center": [
-    23.5,
-    38.35
+    36.6,
+    39.05
    ],
    "width": 1.7,
    "depth": 2.4,
    "footprint": [
-    22.3,
-    37.5,
-    24.7,
-    39.2
+    35.4,
+    38.2,
+    37.8,
+    39.9
    ],
-   "node": "upper/furniture/Primary Bath/WC 42",
+   "node": "upper/furniture/Primary WC/WC 44",
    "opts": {}
   },
   {
-   "id": "furn43",
+   "id": "furn45",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "rug",
    "label": null,
    "facing": "N",
    "center": [
-    30.0,
-    34.75
+    29.0,
+    36.25
    ],
    "width": 4,
    "depth": 2.5,
    "footprint": [
-    28,
-    33.5,
-    32,
-    36.0
+    27,
+    35.0,
+    31,
+    37.5
    ],
-   "node": "upper/furniture/Primary Bath/rug 43",
+   "node": "upper/furniture/Primary Bath/rug 45",
    "opts": {
     "W": 4,
     "D": 2.5,
@@ -7781,29 +8930,29 @@
    }
   },
   {
-   "id": "furn44",
+   "id": "furn46",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "plant",
    "label": null,
    "facing": "N",
    "center": [
-    36.75,
-    38.55
+    31.95,
+    40.55
    ],
    "width": 1.5,
    "depth": 1.5,
    "footprint": [
-    36,
-    37.8,
-    37.5,
-    39.3
+    31.2,
+    39.8,
+    32.7,
+    41.3
    ],
-   "node": "upper/furniture/Primary Bath/plant 44",
+   "node": "upper/furniture/Primary Bath/plant 46",
    "opts": {}
   },
   {
-   "id": "furn45",
+   "id": "furn47",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "bed",
@@ -7811,17 +8960,17 @@
    "facing": "N",
    "center": [
     57.0,
-    21.7
+    23.2
    ],
    "width": 5.0,
    "depth": 7.0,
    "footprint": [
     54.5,
-    18.2,
+    19.7,
     59.5,
-    25.2
+    26.7
    ],
-   "node": "upper/furniture/Bedroom 4/Bed 45",
+   "node": "upper/furniture/Bedroom 4/Bed 47",
    "opts": {
     "W": 5,
     "D": 7,
@@ -7829,7 +8978,7 @@
    }
   },
   {
-   "id": "furn46",
+   "id": "furn48",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "nightstand",
@@ -7837,23 +8986,23 @@
    "facing": "N",
    "center": [
     53.6,
-    18.95
+    20.45
    ],
    "width": 1.6,
    "depth": 1.5,
    "footprint": [
     52.8,
-    18.2,
+    19.7,
     54.4,
-    19.7
+    21.2
    ],
-   "node": "upper/furniture/Bedroom 4/nightstand 46",
+   "node": "upper/furniture/Bedroom 4/nightstand 48",
    "opts": {
     "W": 1.6
    }
   },
   {
-   "id": "furn47",
+   "id": "furn49",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "dresser",
@@ -7861,23 +9010,23 @@
    "facing": "E",
    "center": [
     43.075,
-    31.0
+    32.5
    ],
-   "width": 5.0,
+   "width": 5,
    "depth": 1.75,
    "footprint": [
     42.2,
-    28.5,
+    30,
     43.95,
-    33.5
+    35
    ],
-   "node": "upper/furniture/Bedroom 4/Dresser 47",
+   "node": "upper/furniture/Bedroom 4/Dresser 49",
    "opts": {
     "W": 5
    }
   },
   {
-   "id": "furn48",
+   "id": "furn50",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "desk",
@@ -7885,23 +9034,23 @@
    "facing": "S",
    "center": [
     51.25,
-    32.5
+    34.0
    ],
    "width": 4.5,
    "depth": 2.5,
    "footprint": [
     49,
-    31.25,
+    32.75,
     53.5,
-    33.75
+    35.25
    ],
-   "node": "upper/furniture/Bedroom 4/Desk 48",
+   "node": "upper/furniture/Bedroom 4/Desk 50",
    "opts": {
     "W": 4.5
    }
   },
   {
-   "id": "furn49",
+   "id": "furn51",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "office_chair",
@@ -7909,23 +9058,23 @@
    "facing": "N",
    "center": [
     51.3,
-    30.2
+    31.7
    ],
    "width": 2.0,
    "depth": 2.0,
    "footprint": [
     50.3,
-    29.2,
+    30.7,
     52.3,
-    31.2
+    32.7
    ],
-   "node": "upper/furniture/Bedroom 4/office_chair 49",
+   "node": "upper/furniture/Bedroom 4/office_chair 51",
    "opts": {
     "color": "fabric:#8a9aa8"
    }
   },
   {
-   "id": "furn50",
+   "id": "furn52",
    "level": "upper",
    "room": "Bedroom 4",
    "kind": "rug",
@@ -7933,17 +9082,17 @@
    "facing": "N",
    "center": [
     55.0,
-    25.5
+    27.0
    ],
    "width": 9.0,
-   "depth": 7,
+   "depth": 7.0,
    "footprint": [
     50.5,
-    22,
+    23.5,
     59.5,
-    29
+    30.5
    ],
-   "node": "upper/furniture/Bedroom 4/rug 50",
+   "node": "upper/furniture/Bedroom 4/rug 52",
    "opts": {
     "W": 9,
     "D": 7,
@@ -7951,7 +9100,7 @@
    }
   },
   {
-   "id": "furn51",
+   "id": "furn53",
    "level": "upper",
    "room": "Bed 4 Closet",
    "kind": "closet_rod",
@@ -7959,19 +9108,384 @@
    "facing": "E",
    "center": [
     39.2,
-    26.0
+    27.5
    ],
-   "width": 15.0,
+   "width": 15,
    "depth": 2.0,
    "footprint": [
     38.2,
-    18.5,
+    20,
     40.2,
-    33.5
+    35
    ],
-   "node": "upper/furniture/Bed 4 Closet/Rod/shelf 51",
+   "node": "upper/furniture/Bed 4 Closet/Rod/shelf 53",
    "opts": {
     "W": 15
+   }
+  },
+  {
+   "id": "furn54",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "rug",
+   "label": null,
+   "facing": "N",
+   "center": [
+    75.0,
+    12.5
+   ],
+   "width": 12,
+   "depth": 15,
+   "footprint": [
+    69,
+    5,
+    81,
+    20
+   ],
+   "node": "upper/furniture/Bonus Room/rug 54",
+   "opts": {
+    "W": 12,
+    "D": 15,
+    "color": "fabric:#d6c9b0",
+    "border": "fabric:#8c6a55"
+   }
+  },
+  {
+   "id": "furn55",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "sofa",
+   "label": "Sofa",
+   "facing": "E",
+   "center": [
+    71.65,
+    12.5
+   ],
+   "width": 10.0,
+   "depth": 3.3,
+   "footprint": [
+    70,
+    7.5,
+    73.3,
+    17.5
+   ],
+   "node": "upper/furniture/Bonus Room/Sofa 55",
+   "opts": {
+    "W": 10,
+    "D": 3.3,
+    "color": "fabric:#5f7d8c"
+   }
+  },
+  {
+   "id": "furn56",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "coffee_table",
+   "label": "Coffee tbl",
+   "facing": "E",
+   "center": [
+    76.2,
+    12.5
+   ],
+   "width": 4.5,
+   "depth": 2.4,
+   "footprint": [
+    75,
+    10.25,
+    77.4,
+    14.75
+   ],
+   "node": "upper/furniture/Bonus Room/Coffee tbl 56",
+   "opts": {
+    "W": 4.5,
+    "D": 2.4
+   }
+  },
+  {
+   "id": "furn57",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "beanbag",
+   "label": null,
+   "facing": "E",
+   "center": [
+    80.9,
+    8.9
+   ],
+   "width": 2.8,
+   "depth": 2.8,
+   "footprint": [
+    79.5,
+    7.5,
+    82.3,
+    10.3
+   ],
+   "node": "upper/furniture/Bonus Room/beanbag 57",
+   "opts": {}
+  },
+  {
+   "id": "furn58",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "beanbag",
+   "label": null,
+   "facing": "E",
+   "center": [
+    80.9,
+    14.9
+   ],
+   "width": 2.8,
+   "depth": 2.8,
+   "footprint": [
+    79.5,
+    13.5,
+    82.3,
+    16.3
+   ],
+   "node": "upper/furniture/Bonus Room/beanbag 58",
+   "opts": {
+    "color": "fabric:#c96f5a"
+   }
+  },
+  {
+   "id": "furn59",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "media_console",
+   "label": "Media",
+   "facing": "W",
+   "center": [
+    85.0,
+    12.5
+   ],
+   "width": 7,
+   "depth": 1.6,
+   "footprint": [
+    84.2,
+    9,
+    85.8,
+    16
+   ],
+   "node": "upper/furniture/Bonus Room/Media 59",
+   "opts": {
+    "W": 7
+   }
+  },
+  {
+   "id": "furn60",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "tv_wall",
+   "label": null,
+   "facing": "W",
+   "center": [
+    85.755,
+    12.5
+   ],
+   "width": 5.5,
+   "depth": 0.15,
+   "footprint": [
+    85.68,
+    9.75,
+    85.83,
+    15.25
+   ],
+   "node": "upper/furniture/Bonus Room/tv_wall 60",
+   "opts": {
+    "W": 5.5
+   }
+  },
+  {
+   "id": "furn61",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "kids_table",
+   "label": "Kids table",
+   "facing": "N",
+   "center": [
+    66.0,
+    21.0
+   ],
+   "width": 4,
+   "depth": 3.0,
+   "footprint": [
+    64,
+    19.5,
+    68,
+    22.5
+   ],
+   "node": "upper/furniture/Bonus Room/Kids table 61",
+   "opts": {
+    "W": 4,
+    "D": 3
+   }
+  },
+  {
+   "id": "furn62",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "toy_storage",
+   "label": "Toys",
+   "facing": "S",
+   "center": [
+    69.5,
+    25.05
+   ],
+   "width": 10.0,
+   "depth": 1.4,
+   "footprint": [
+    64.5,
+    24.35,
+    74.5,
+    25.75
+   ],
+   "node": "upper/furniture/Bonus Room/Toys 62",
+   "opts": {
+    "W": 10,
+    "seed": 13
+   }
+  },
+  {
+   "id": "furn63",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "bookcase",
+   "label": "Books",
+   "facing": "S",
+   "center": [
+    77.3,
+    25.15
+   ],
+   "width": 4.0,
+   "depth": 1.2,
+   "footprint": [
+    75.3,
+    24.55,
+    79.3,
+    25.75
+   ],
+   "node": "upper/furniture/Bonus Room/Books 63",
+   "opts": {
+    "W": 4,
+    "seed": 15
+   }
+  },
+  {
+   "id": "furn64",
+   "level": "upper",
+   "room": "Bonus Room",
+   "kind": "plant",
+   "label": null,
+   "facing": "N",
+   "center": [
+    61.25,
+    24.75
+   ],
+   "width": 1.5,
+   "depth": 1.5,
+   "footprint": [
+    60.5,
+    24,
+    62.0,
+    25.5
+   ],
+   "node": "upper/furniture/Bonus Room/plant 64",
+   "opts": {}
+  },
+  {
+   "id": "furn65",
+   "level": "upper",
+   "room": "Bonus Storage",
+   "kind": "shelving_metal",
+   "label": "Shelving",
+   "facing": "W",
+   "center": [
+    92.75,
+    4.0
+   ],
+   "width": 6.0,
+   "depth": 2.0,
+   "footprint": [
+    91.75,
+    1,
+    93.75,
+    7.0
+   ],
+   "node": "upper/furniture/Bonus Storage/Shelving 65",
+   "opts": {
+    "seed": 40
+   }
+  },
+  {
+   "id": "furn66",
+   "level": "upper",
+   "room": "Bonus Storage",
+   "kind": "shelving_metal",
+   "label": "Shelving",
+   "facing": "W",
+   "center": [
+    92.75,
+    11.0
+   ],
+   "width": 6.0,
+   "depth": 2.0,
+   "footprint": [
+    91.75,
+    8,
+    93.75,
+    14.0
+   ],
+   "node": "upper/furniture/Bonus Storage/Shelving 66",
+   "opts": {
+    "seed": 41
+   }
+  },
+  {
+   "id": "furn67",
+   "level": "upper",
+   "room": "Bonus Storage",
+   "kind": "shelving_metal",
+   "label": "Shelving",
+   "facing": "W",
+   "center": [
+    92.75,
+    18.0
+   ],
+   "width": 6.0,
+   "depth": 2.0,
+   "footprint": [
+    91.75,
+    15,
+    93.75,
+    21.0
+   ],
+   "node": "upper/furniture/Bonus Storage/Shelving 67",
+   "opts": {
+    "seed": 42
+   }
+  },
+  {
+   "id": "furn68",
+   "level": "upper",
+   "room": "Bonus Storage",
+   "kind": "shelving_metal",
+   "label": "Shelving",
+   "facing": "S",
+   "center": [
+    90.0,
+    24.75
+   ],
+   "width": 6.0,
+   "depth": 2.0,
+   "footprint": [
+    87,
+    23.75,
+    93.0,
+    25.75
+   ],
+   "node": "upper/furniture/Bonus Storage/Shelving 68",
+   "opts": {
+    "seed": 44
    }
   }
  ]

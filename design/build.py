@@ -45,8 +45,9 @@ def glass_boxes(level):
 
 def room_label(r):
     x0, y0, x1, y1 = G.bounds(r)
-    if "poly" in r:  # label the open-plan zones separately
-        return [(r["name"], (x0 + x1) / 2 - 10, (y0 + y1) / 2 + 4, G.room_area(r), None)]
+    if "poly" in r:  # L-shaped rooms: area instead of dimensions
+        lx, ly = r.get("label_at", ((x0 + x1) / 2, (y0 + y1) / 2))
+        return [(r["name"], lx, ly, G.room_area(r), None)]
     return [(r["name"], (x0 + x1) / 2, (y0 + y1) / 2, None, (x1 - x0, y1 - y0))]
 
 

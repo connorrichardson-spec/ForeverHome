@@ -4,31 +4,37 @@ basement,Sauna,6,8,48,
 basement,Mechanical,6,6,36,
 basement,Stair,10,14,140,
 basement,Bsmt Hall,38,8,304,
-basement,Bsmt Bath,10,10,100,Full bath
-basement,Bsmt Closet,10,4,40,
+basement,Bsmt Bath,10,14,124,Full bath; doors from hall and bedroom
+basement,Bsmt Closet,4,4,16,
 basement,Bsmt Bedroom,12,14,168,Egress window required
 basement,Play Area,20,16,320,
 basement,Storage,12,16,192,
-main,Office,14,14,196,
-main,Foyer,14,14,196,
-main,Stair,10,14,140,
+main,Office,14,16,224,
+main,Foyer,14,16,224,
+main,Stair,10,16,160,5.2 ft walkway foyer <-> hall
 main,Half Bath,8,8,64,
 main,Hall,8,6,48,
 main,Mudroom,14,14,196,
 main,Pantry,12,12,144,Walk-in
-main,Great Room,60,32,1776,Open plan: living / dining / kitchen
+main,Great Room,60,32,1700,Open plan: living / dining / kitchen
 main,Garage,34,26,884,3-car + storage/workspace
+main,Kids Playroom,26,12,312,Bump-out off the living room; single story (roof TBD)
 main,Covered Patio,34,16,544,Outdoor kitchen + fireplace
-upper,Bedroom 2,14,14,196,
-upper,Bedroom 3,14,14,196,
+upper,Bedroom 2,14,14,183.5,
+upper,Bed 2 Closet,5,2.5,12.5,
+upper,Bedroom 3,14,14,183.5,
+upper,Bed 3 Closet,5,2.5,12.5,
 upper,Stair,10,14,140,
 upper,Bath 2,10,10,100,Shared by bedrooms 2-4
 upper,Linen,10,4,40,
 upper,Laundry,12,10,120,
 upper,Storage Closet,12,4,48,
-upper,Upper Hall,60,4,240,
+upper,Upper Hall,60,5.5,330,5.5 ft wide
 upper,Primary Bedroom,22,22,484,
 upper,Primary Closet,16,12,192,Center island
-upper,Primary Bath,16,10,160,
+upper,Primary Bath,16,10,142.5,
+upper,Primary WC,3.5,5,17.5,Water closet
 upper,Bedroom 4,18,16,288,
 upper,Bed 4 Closet,4,16,64,
+upper,Bonus Room,26,26,676,Over garage: play / flex. Sloped ceiling + knee walls TBD with the roofline
+upper,Bonus Storage,8,26,208,"Over garage, TBD with roofline"
