@@ -54,12 +54,19 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 - 2026-10-26: Main-floor half bath -> 3/4 "Main Bath" (3.5x3.6 shower in the NE corner, toilet moved to the SE corner,
   door shifted west to x 36). Aging in place: the office (next to the foyer) can become a main-floor bedroom later.
 
+- 2026-10-26: Bedrooms bigger (owners: "all too small", accept the cost). Upper floor extended north 34.5 -> 40 ft
+  so it lines up with the main floor (no new foundation; rear 4:12 shed roof gone, main gable now 40 ft deep, ridge
+  ~33.3 ft). Hall moved another 2 ft north (y 18-22.5). Bedrooms 2 + 3: 12x16 -> 12x18 (216 / ~225 sq ft incl. the
+  bay nook). Primary bedroom 18x14 -> 20x17.5 (350 sq ft, sitting area at the rear windows); primary bath 11x17.5 + WC;
+  closet 11x17.5 with island; Bedroom 4 14x17.5. Bath 2 vanity room 10x10, laundry 12x14. +~310 finished sq ft.
+
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
 - Budget: owners want to be **under $1M** (2026-10-26; excl. land/site work). Rough estimates (TN/MO, not builder
-  quotes): ~8,150 sq ft start was $1.9M-2.7M. Now ~4,290 finished (incl. stairs) + ~2,300 unfinished basement,
-  500 sq ft front porch, side-load garage court: custom builder ($250-350/sf) ~$1.25M-1.8M; semi-custom/production
-  builder ($175-225/sf) ~$0.92M-1.26M. <$1M needs a semi-custom builder at the lower-middle of its range.
+  quotes): ~8,150 sq ft start was $1.9M-2.7M. Now ~4,600 finished (incl. stairs) + ~2,300 unfinished basement,
+  500 sq ft front porch, side-load garage court: custom builder ($250-350/sf) ~$1.33M-1.9M; semi-custom/production
+  builder ($175-225/sf) ~$0.98M-1.33M. The bigger bedrooms (+~310 sq ft, 2026-10-26) added ~$55k-110k; <$1M now
+  needs a semi-custom builder at the very bottom of its range.
   Rule of thumb: every 500 finished sq ft ~ $90k-175k depending on builder tier.
 - Shared Bath 2 serves 3 teenagers, so it is compartmented (2026-10-26): toilet + tub/shower + shower in a 10x7 room
   behind a door, double vanity in the 10x7 room off the hall. Vanity side has no window (could add a skylight/tube).
@@ -126,10 +133,9 @@ Owners are flexible on which floor a room lands on.
 **Exterior (2026-10-25, draft)** — modern farmhouse read of "modern meets traditional":
 - White board-and-batten siding, ledgestone base (2.5 ft) on the main level, white trim, black window frames with
   2-over-2 grilles, black front door, carriage-style garage doors with a glass top row.
-- Roof (2026-10-26): one 8:12 side gable (charcoal architectural shingles) over the 56x34.5 two-story block
-  (modeled as 3 coplanar pieces), a front-facing 8:12 entry gable over the 20 ft entry bay, one full-width 4:12 metal
-  shed at the back, a one-story 8:12 side-load garage gable (gable end over the doors), and a full-width 10 ft deep
-  front porch with a 4:12 metal shed roof on cedar posts. Ridges ~31.5 ft (main), ~26.7 ft (entry), ~20 ft (garage).
+- Roof (2026-10-26): one 8:12 side gable (charcoal architectural shingles) over the 56x40 two-story block
+  (modeled as 3 coplanar pieces), a front-facing 8:12 entry gable over the 20 ft entry bay, a one-story 8:12 side-load garage gable (gable end over the doors), and a full-width 10 ft deep
+  front porch with a 4:12 metal shed roof on cedar posts. Ridges ~33.3 ft (main), ~26.7 ft (entry), ~20 ft (garage).
 - Garage (2026-10-26): side-load, 26x30, one 16 ft + one 9 ft door on the east wall, windows facing the street,
   30x32 concrete turnaround court. Needs a lot roughly 115 ft+ wide (house + garage 82 ft + court).
 - Patio: open pavers, no roof; stone chimney for the outdoor fireplace.
@@ -197,8 +203,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 
 ## Draft v0 Status / Known Gaps
 - Layout is a **placeholder** to react to, not a design. Rooms are rectangles; all sizes are guesses.
-- Area (from `rooms.csv`, excl. garage + patio + porch, 2026-10-26): **finished ~4,290 sq ft** incl. stairs
-  (main ~2,300, upper ~1,990); build.py prints ~3,930 (excludes stairs). Basement ~2,300 all unfinished.
+- Area (from `rooms.csv`, excl. garage + patio + porch, 2026-10-26): **finished ~4,600 sq ft** incl. stairs
+  (main ~2,300, upper ~2,300); build.py prints ~4,200 (excludes stairs). Basement ~2,300 all unfinished.
   Was ~8,150 all finished at the start of 2026-10-26.
 - Not modeled yet: foundation, structure, MEP, sections, IFC export, real lot/grading, gutters, window wells.
   Furniture is blocky (boxes only); walk mode can't climb stairs. PDF now has a roof plan (A-6.0) and elevations with roofs.
@@ -216,6 +222,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
   the office door. Roofs take `label=False` to skip the roof-plan label.
 - 2026-10-26 (late night, cont.): half bath -> 3/4 Main Bath (aging in place).
 - 2026-10-26 (late night, cont.): upper hall trimmed to 40 ft; dead ends -> walk-ins for Bedrooms 2 and 4.
+- 2026-10-26 (bedrooms): upper extended to 40 ft deep; Bedrooms 2 + 3 12x18, primary 20x17.5 (see Key Decisions).
+- 2026-10-26 (mech): furnace + panel moved beside the water heater (SE basement corner, Mechanical zone).
 - 2026-10-26 (perf): Pages felt laggy vs local — cause was the browser GPU (Intel iGPU), not hosting. Viewer made
   lighter: baked shadows, render on demand, HQ/AO off by default, capped + adaptive pixel ratio, high-performance GPU
   hint; `run-local.sh --live`.
