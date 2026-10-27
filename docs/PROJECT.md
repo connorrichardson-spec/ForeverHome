@@ -40,7 +40,8 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   one-story 8:12 gable (attic-truss storage, pull-down stair). Laundry stays windowless (garage roof is in the way).
 - 2026-10-26: Basement has **no windows** (owners expect the lot won't allow them; no egress window/well). So the future
   basement bedroom is now a "future flex room": a legal bedroom would need an egress window + well (or a walk-out lot).
-  Water heater is its own unit in the SE basement corner (was beside the furnace); squat rack on the west gym wall;
+  Mechanical (furnace, water heater, electrical panel) grouped in the SE basement corner, garage side
+  (2026-10-26; furnace + panel were by the stair); old mech spot is now just the future sauna; flex room moved north; squat rack on the west gym wall;
   treadmill dropped.
 - 2026-10-26: Bedrooms 2 + 3 grown 12x14 -> 12x16 (~171 / ~201 sq ft incl. the bay nook) by moving the upper hall 2 ft
   north (now y 16-20.5). Same footprint, no added cost; the north rooms each give up 2 ft: primary bedroom 18x14,

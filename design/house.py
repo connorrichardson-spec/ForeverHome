@@ -30,8 +30,9 @@ ROOMS = {
   dict(name="Unfinished", paint="#d8d6d0", floor="concrete", unfinished=True, win="none",
        poly=[(0, 0), (14, 0), (14, -3), (24, -3), (24, 14), (34, 14), (34, 0), (56, 0), (56, 40), (0, 40)],
        note="Unfinished basement; future rooms shown as zones",
-       zones=[("Future gym", (0, 0, 18, 24)), ("Mech / future sauna", (18, 0, 24, 14)),
-              ("Future bath (rough-in)", (34, 0, 44, 14)), ("Future flex room", (44, 0, 56, 14)),
+       zones=[("Future gym", (0, 0, 18, 24)), ("Future sauna", (18, 0, 24, 14)),
+              ("Future bath (rough-in)", (34, 0, 44, 14)), ("Mechanical", (44, 0, 56, 7)),
+              ("Future flex room", (44, 7, 56, 20)),
               ("Storage / future rec room", (0, 24, 56, 40))]),
  ],
  "main": [
@@ -129,9 +130,10 @@ FURNITURE = [
  ("basement", "squat_rack", 1.8, 8, "E", {}),
  ("basement", "dumbbell_rack", 2, 22.1, "S", {}),
  ("basement", "weight_bench", 12, 9, "N", {}),
- ("basement", "furnace", 18.3, 8.3, "N", {}),
+ # mechanical grouped in the SE corner (garage side): furnace + water heater on the south wall, panel on the east
+ ("basement", "furnace", 50.6, 0.3, "N", {}),
  ("basement", "water_heater", 53.9, 0.3, "N", {}),
- ("basement", "elec_panel", 23.4, 11, "W", {}),
+ ("basement", "elec_panel", 55.4, 3.8, "W", {}),
  *[("basement", "shelving_metal", sx, 37.75, "S", dict(seed=sx)) for sx in (30, 36.5, 43, 49.5)],
  ("basement", "shelving_metal", 53.75, 24, "W", dict(seed=3)), ("basement", "shelving_metal", 53.75, 30.5, "W", dict(seed=4)),
  # ---------------- main: living
