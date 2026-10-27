@@ -128,8 +128,8 @@ F_WALNUT = "wood:#6e4f37"
 FURNITURE = [
  # ---------------- basement (unfinished: gym gear on mats, rack on the west wall, mechanical, storage)
  ("basement", "squat_rack", 1.8, 8, "E", {}),
- ("basement", "dumbbell_rack", 2, 22.1, "S", {}),
- ("basement", "weight_bench", 12, 9, "N", {}),
+ ("basement", "dumbbell_rack", 0.3, 15.5, "E", {}),       # mirror on the west wall, beside the rack
+ ("basement", "weight_bench", 3.8, 17.8, "E", {}),
  # mechanical grouped in the SE corner (garage side): furnace + water heater on the south wall, panel on the east
  ("basement", "furnace", 50.6, 0.3, "N", {}),
  ("basement", "water_heater", 53.9, 0.3, "N", {}),
