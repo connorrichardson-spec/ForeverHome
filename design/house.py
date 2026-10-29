@@ -182,8 +182,8 @@ FURNITURE = [
  *[("main", "pendant", px, 30.85, "N", dict(z=6.8, ceil=10.0)) for px in (40.8, 43.3, 45.8)],
  ("main", "base_cab", 24, 37.75, "S", dict(W=8, label="Coffee bar")),
  ("main", "upper_cab", 24.5, 38.65, "S", dict(W=7)),
- # bar on the pantry's west wall: 8 ft counter with a bar sink, open bottle shelves above
- ("main", "base_cab", 41.8, 17, "W", dict(W=8, sink=2.7, label="Bar")),
+ # bar on the pantry's west wall: 8 ft counter (no sink), open bottle shelves above
+ ("main", "base_cab", 41.8, 17, "W", dict(W=8, label="Bar")),
  ("main", "pantry_shelves", 42.7, 17, "W", dict(W=8, D=1.1, H=8.0, z0=4.6, wood="wood:#6e4f37", seed=12, label=None)),
  # pantry
  ("main", "base_cab", 44.2, 16.4, "E", dict(W=9.2, label="Pantry cabs")),
