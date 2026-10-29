@@ -39,8 +39,9 @@ upper,door,2.5,6.67,0,16.5,v
 upper,cased,4.5,8,0,31.5,h
 upper,door,2.5,6.67,0,47.0,h
 upper,door,3,6.67,0,50.8,h
-upper,door,3,6.67,0,39.8,h
+upper,door,3,6.67,0,35.8,h
 upper,door,2.5,6.67,0,37.5,h
+upper,closet,4,6.67,0,42.5,h
 upper,door,3,6.67,0,12.0,h
 upper,door,3,6.67,0,38.0,v
 upper,door,2.5,6.67,0,28.8,h
@@ -48,7 +49,7 @@ upper,door,2.5,6.67,0,30.5,v
 upper,door,3,6.67,0,47.0,h
 upper,door,2.5,6.67,0,52.2,h
 upper,window,4,4.5,3,6.0,h
-upper,window,2,2,5,39.8,h
+upper,window,2,2,5,36.8,h
 upper,window,4,4.5,3,4.5,v
 upper,window,4,4.5,3,13.5,v
 upper,window,4,4.5,3,31.2,v

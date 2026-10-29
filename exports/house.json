@@ -733,8 +733,16 @@
      0
     ],
     [
-     45.5,
+     39.5,
      0
+    ],
+    [
+     39.5,
+     3
+    ],
+    [
+     45.5,
+     3
     ],
     [
      45.5,
@@ -745,11 +753,40 @@
      8
     ]
    ],
-   "area_sqft": 92.0,
+   "area_sqft": 74.0,
    "paint": "#eef0ee",
    "floor": "tile",
    "windows": "small",
-   "note": "Toilet, tub/shower + separate shower behind a door",
+   "note": "Toilet + tub/shower behind a door",
+   "zones": []
+  },
+  {
+   "level": "upper",
+   "name": "Bath 2 Closet",
+   "kind": "indoor",
+   "polygon": [
+    [
+     39.5,
+     0
+    ],
+    [
+     45.5,
+     0
+    ],
+    [
+     45.5,
+     3
+    ],
+    [
+     39.5,
+     3
+    ]
+   ],
+   "area_sqft": 18.0,
+   "paint": "#eef0ee",
+   "floor": "hardwood",
+   "windows": "none",
+   "note": "Linen/towel closet, sliding doors (where the separate shower was)",
    "zones": []
   },
   {
@@ -2022,7 +2059,7 @@
     0
    ],
    "end": [
-    45.5,
+    39.5,
     0
    ],
    "thickness": 0.5,
@@ -2034,6 +2071,24 @@
   },
   {
    "id": "wall3",
+   "level": "upper",
+   "start": [
+    39.5,
+    0
+   ],
+   "end": [
+    45.5,
+    0
+   ],
+   "thickness": 0.5,
+   "exterior": true,
+   "rooms": [
+    "Bath 2 Closet"
+   ],
+   "node": "upper/wall/03 Bath 2 Closet"
+  },
+  {
+   "id": "wall4",
    "level": "upper",
    "start": [
     45.5,
@@ -2048,10 +2103,10 @@
    "rooms": [
     "Linen"
    ],
-   "node": "upper/wall/03 Linen"
+   "node": "upper/wall/04 Linen"
   },
   {
-   "id": "wall4",
+   "id": "wall5",
    "level": "upper",
    "start": [
     12,
@@ -2067,10 +2122,10 @@
     "Bedroom 2",
     "Bedroom 3"
    ],
-   "node": "upper/wall/04 Bedroom 2 | Bedroom 3"
+   "node": "upper/wall/05 Bedroom 2 | Bedroom 3"
   },
   {
-   "id": "wall5",
+   "id": "wall6",
    "level": "upper",
    "start": [
     0,
@@ -2086,10 +2141,10 @@
     "Bed 2 Closet",
     "Bedroom 2"
    ],
-   "node": "upper/wall/05 Bed 2 Closet | Bedroom 2"
+   "node": "upper/wall/06 Bed 2 Closet | Bedroom 2"
   },
   {
-   "id": "wall6",
+   "id": "wall7",
    "level": "upper",
    "start": [
     8.5,
@@ -2105,10 +2160,10 @@
     "Bedroom 2",
     "Upper Hall"
    ],
-   "node": "upper/wall/06 Bedroom 2 | Upper Hall"
+   "node": "upper/wall/07 Bedroom 2 | Upper Hall"
   },
   {
-   "id": "wall7",
+   "id": "wall8",
    "level": "upper",
    "start": [
     12,
@@ -2124,10 +2179,10 @@
     "Bedroom 3",
     "Upper Hall"
    ],
-   "node": "upper/wall/07 Bedroom 3 | Upper Hall"
+   "node": "upper/wall/08 Bedroom 3 | Upper Hall"
   },
   {
-   "id": "wall8",
+   "id": "wall9",
    "level": "upper",
    "start": [
     24,
@@ -2143,10 +2198,10 @@
     "Bed 3 Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/08 Bed 3 Closet | Upper Hall"
+   "node": "upper/wall/09 Bed 3 Closet | Upper Hall"
   },
   {
-   "id": "wall9",
+   "id": "wall10",
    "level": "upper",
    "start": [
     29,
@@ -2162,10 +2217,10 @@
     "Stair",
     "Upper Hall"
    ],
-   "node": "upper/wall/09 Stair | Upper Hall"
+   "node": "upper/wall/10 Stair | Upper Hall"
   },
   {
-   "id": "wall10",
+   "id": "wall11",
    "level": "upper",
    "start": [
     34,
@@ -2181,10 +2236,10 @@
     "Bath 2",
     "Upper Hall"
    ],
-   "node": "upper/wall/10 Bath 2 | Upper Hall"
+   "node": "upper/wall/11 Bath 2 | Upper Hall"
   },
   {
-   "id": "wall11",
+   "id": "wall12",
    "level": "upper",
    "start": [
     45.5,
@@ -2200,10 +2255,10 @@
     "Laundry",
     "Upper Hall"
    ],
-   "node": "upper/wall/11 Laundry | Upper Hall"
+   "node": "upper/wall/12 Laundry | Upper Hall"
   },
   {
-   "id": "wall12",
+   "id": "wall13",
    "level": "upper",
    "start": [
     48.5,
@@ -2219,10 +2274,10 @@
     "Bed 4 Closet",
     "Laundry"
    ],
-   "node": "upper/wall/12 Bed 4 Closet | Laundry"
+   "node": "upper/wall/13 Bed 4 Closet | Laundry"
   },
   {
-   "id": "wall13",
+   "id": "wall14",
    "level": "upper",
    "start": [
     0,
@@ -2237,10 +2292,10 @@
    "rooms": [
     "Bedroom 2"
    ],
-   "node": "upper/wall/13 Bedroom 2"
+   "node": "upper/wall/14 Bedroom 2"
   },
   {
-   "id": "wall14",
+   "id": "wall15",
    "level": "upper",
    "start": [
     0,
@@ -2255,10 +2310,10 @@
    "rooms": [
     "Bed 2 Closet"
    ],
-   "node": "upper/wall/14 Bed 2 Closet"
+   "node": "upper/wall/15 Bed 2 Closet"
   },
   {
-   "id": "wall15",
+   "id": "wall16",
    "level": "upper",
    "start": [
     0,
@@ -2273,10 +2328,10 @@
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/15 Primary Bedroom"
+   "node": "upper/wall/16 Primary Bedroom"
   },
   {
-   "id": "wall16",
+   "id": "wall17",
    "level": "upper",
    "start": [
     8.5,
@@ -2292,10 +2347,10 @@
     "Bed 2 Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/16 Bed 2 Closet | Upper Hall"
+   "node": "upper/wall/17 Bed 2 Closet | Upper Hall"
   },
   {
-   "id": "wall17",
+   "id": "wall18",
    "level": "upper",
    "start": [
     0,
@@ -2311,10 +2366,10 @@
     "Bed 2 Closet",
     "Primary Bedroom"
    ],
-   "node": "upper/wall/17 Bed 2 Closet | Primary Bedroom"
+   "node": "upper/wall/18 Bed 2 Closet | Primary Bedroom"
   },
   {
-   "id": "wall18",
+   "id": "wall19",
    "level": "upper",
    "start": [
     8.5,
@@ -2330,10 +2385,10 @@
     "Primary Bedroom",
     "Upper Hall"
    ],
-   "node": "upper/wall/18 Primary Bedroom | Upper Hall"
+   "node": "upper/wall/19 Primary Bedroom | Upper Hall"
   },
   {
-   "id": "wall19",
+   "id": "wall20",
    "level": "upper",
    "start": [
     20,
@@ -2349,10 +2404,10 @@
     "Primary Bath",
     "Upper Hall"
    ],
-   "node": "upper/wall/19 Primary Bath | Upper Hall"
+   "node": "upper/wall/20 Primary Bath | Upper Hall"
   },
   {
-   "id": "wall20",
+   "id": "wall21",
    "level": "upper",
    "start": [
     26.5,
@@ -2368,10 +2423,10 @@
     "Primary WC",
     "Upper Hall"
    ],
-   "node": "upper/wall/20 Primary WC | Upper Hall"
+   "node": "upper/wall/21 Primary WC | Upper Hall"
   },
   {
-   "id": "wall21",
+   "id": "wall22",
    "level": "upper",
    "start": [
     31,
@@ -2387,10 +2442,10 @@
     "Primary Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/21 Primary Closet | Upper Hall"
+   "node": "upper/wall/22 Primary Closet | Upper Hall"
   },
   {
-   "id": "wall22",
+   "id": "wall23",
    "level": "upper",
    "start": [
     42,
@@ -2406,10 +2461,10 @@
     "Bedroom 4",
     "Upper Hall"
    ],
-   "node": "upper/wall/22 Bedroom 4 | Upper Hall"
+   "node": "upper/wall/23 Bedroom 4 | Upper Hall"
   },
   {
-   "id": "wall23",
+   "id": "wall24",
    "level": "upper",
    "start": [
     48.5,
@@ -2425,10 +2480,10 @@
     "Bed 4 Closet",
     "Bedroom 4"
    ],
-   "node": "upper/wall/23 Bed 4 Closet | Bedroom 4"
+   "node": "upper/wall/24 Bed 4 Closet | Bedroom 4"
   },
   {
-   "id": "wall24",
+   "id": "wall25",
    "level": "upper",
    "start": [
     14,
@@ -2443,10 +2498,10 @@
    "rooms": [
     "Bedroom 3"
    ],
-   "node": "upper/wall/24 Bedroom 3"
+   "node": "upper/wall/25 Bedroom 3"
   },
   {
-   "id": "wall25",
+   "id": "wall26",
    "level": "upper",
    "start": [
     14,
@@ -2461,10 +2516,10 @@
    "rooms": [
     "Bedroom 3"
    ],
-   "node": "upper/wall/25 Bedroom 3"
+   "node": "upper/wall/26 Bedroom 3"
   },
   {
-   "id": "wall26",
+   "id": "wall27",
    "level": "upper",
    "start": [
     24,
@@ -2479,10 +2534,10 @@
    "rooms": [
     "Stair"
    ],
-   "node": "upper/wall/26 Stair"
+   "node": "upper/wall/27 Stair"
   },
   {
-   "id": "wall27",
+   "id": "wall28",
    "level": "upper",
    "start": [
     24,
@@ -2498,10 +2553,10 @@
     "Bedroom 3",
     "Stair"
    ],
-   "node": "upper/wall/27 Bedroom 3 | Stair"
+   "node": "upper/wall/28 Bedroom 3 | Stair"
   },
   {
-   "id": "wall28",
+   "id": "wall29",
    "level": "upper",
    "start": [
     24,
@@ -2517,10 +2572,10 @@
     "Bed 3 Closet",
     "Bedroom 3"
    ],
-   "node": "upper/wall/28 Bed 3 Closet | Bedroom 3"
+   "node": "upper/wall/29 Bed 3 Closet | Bedroom 3"
   },
   {
-   "id": "wall29",
+   "id": "wall30",
    "level": "upper",
    "start": [
     24,
@@ -2536,10 +2591,10 @@
     "Bed 3 Closet",
     "Stair"
    ],
-   "node": "upper/wall/29 Bed 3 Closet | Stair"
+   "node": "upper/wall/30 Bed 3 Closet | Stair"
   },
   {
-   "id": "wall30",
+   "id": "wall31",
    "level": "upper",
    "start": [
     29,
@@ -2555,10 +2610,10 @@
     "Bed 3 Closet",
     "Stair"
    ],
-   "node": "upper/wall/30 Bed 3 Closet | Stair"
+   "node": "upper/wall/31 Bed 3 Closet | Stair"
   },
   {
-   "id": "wall31",
+   "id": "wall32",
    "level": "upper",
    "start": [
     34,
@@ -2573,10 +2628,10 @@
    "rooms": [
     "Stair"
    ],
-   "node": "upper/wall/31 Stair"
+   "node": "upper/wall/32 Stair"
   },
   {
-   "id": "wall32",
+   "id": "wall33",
    "level": "upper",
    "start": [
     34,
@@ -2592,10 +2647,10 @@
     "Bath 2 Tub/WC",
     "Stair"
    ],
-   "node": "upper/wall/32 Bath 2 Tub/WC | Stair"
+   "node": "upper/wall/33 Bath 2 Tub/WC | Stair"
   },
   {
-   "id": "wall33",
+   "id": "wall34",
    "level": "upper",
    "start": [
     34,
@@ -2611,14 +2666,71 @@
     "Bath 2",
     "Stair"
    ],
-   "node": "upper/wall/33 Bath 2 | Stair"
+   "node": "upper/wall/34 Bath 2 | Stair"
   },
   {
-   "id": "wall34",
+   "id": "wall35",
+   "level": "upper",
+   "start": [
+    39.5,
+    0
+   ],
+   "end": [
+    39.5,
+    3
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Closet",
+    "Bath 2 Tub/WC"
+   ],
+   "node": "upper/wall/35 Bath 2 Closet | Bath 2 Tub/WC"
+  },
+  {
+   "id": "wall36",
+   "level": "upper",
+   "start": [
+    39.5,
+    3
+   ],
+   "end": [
+    45.5,
+    3
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Closet",
+    "Bath 2 Tub/WC"
+   ],
+   "node": "upper/wall/36 Bath 2 Closet | Bath 2 Tub/WC"
+  },
+  {
+   "id": "wall37",
    "level": "upper",
    "start": [
     45.5,
     0
+   ],
+   "end": [
+    45.5,
+    3
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bath 2 Closet",
+    "Linen"
+   ],
+   "node": "upper/wall/37 Bath 2 Closet | Linen"
+  },
+  {
+   "id": "wall38",
+   "level": "upper",
+   "start": [
+    45.5,
+    3
    ],
    "end": [
     45.5,
@@ -2630,10 +2742,10 @@
     "Bath 2 Tub/WC",
     "Linen"
    ],
-   "node": "upper/wall/34 Bath 2 Tub/WC | Linen"
+   "node": "upper/wall/38 Bath 2 Tub/WC | Linen"
   },
   {
-   "id": "wall35",
+   "id": "wall39",
    "level": "upper",
    "start": [
     45.5,
@@ -2649,10 +2761,10 @@
     "Bath 2 Tub/WC",
     "Laundry"
    ],
-   "node": "upper/wall/35 Bath 2 Tub/WC | Laundry"
+   "node": "upper/wall/39 Bath 2 Tub/WC | Laundry"
   },
   {
-   "id": "wall36",
+   "id": "wall40",
    "level": "upper",
    "start": [
     45.5,
@@ -2668,10 +2780,10 @@
     "Bath 2",
     "Laundry"
    ],
-   "node": "upper/wall/36 Bath 2 | Laundry"
+   "node": "upper/wall/40 Bath 2 | Laundry"
   },
   {
-   "id": "wall37",
+   "id": "wall41",
    "level": "upper",
    "start": [
     34,
@@ -2687,10 +2799,10 @@
     "Bath 2",
     "Bath 2 Tub/WC"
    ],
-   "node": "upper/wall/37 Bath 2 | Bath 2 Tub/WC"
+   "node": "upper/wall/41 Bath 2 | Bath 2 Tub/WC"
   },
   {
-   "id": "wall38",
+   "id": "wall42",
    "level": "upper",
    "start": [
     45.5,
@@ -2706,10 +2818,10 @@
     "Laundry",
     "Linen"
    ],
-   "node": "upper/wall/38 Laundry | Linen"
+   "node": "upper/wall/42 Laundry | Linen"
   },
   {
-   "id": "wall39",
+   "id": "wall43",
    "level": "upper",
    "start": [
     56,
@@ -2724,10 +2836,10 @@
    "rooms": [
     "Linen"
    ],
-   "node": "upper/wall/39 Linen"
+   "node": "upper/wall/43 Linen"
   },
   {
-   "id": "wall40",
+   "id": "wall44",
    "level": "upper",
    "start": [
     56,
@@ -2742,10 +2854,10 @@
    "rooms": [
     "Laundry"
    ],
-   "node": "upper/wall/40 Laundry"
+   "node": "upper/wall/44 Laundry"
   },
   {
-   "id": "wall41",
+   "id": "wall45",
    "level": "upper",
    "start": [
     56,
@@ -2760,10 +2872,10 @@
    "rooms": [
     "Bed 4 Closet"
    ],
-   "node": "upper/wall/41 Bed 4 Closet"
+   "node": "upper/wall/45 Bed 4 Closet"
   },
   {
-   "id": "wall42",
+   "id": "wall46",
    "level": "upper",
    "start": [
     56,
@@ -2778,10 +2890,10 @@
    "rooms": [
     "Bedroom 4"
    ],
-   "node": "upper/wall/42 Bedroom 4"
+   "node": "upper/wall/46 Bedroom 4"
   },
   {
-   "id": "wall43",
+   "id": "wall47",
    "level": "upper",
    "start": [
     48.5,
@@ -2797,10 +2909,10 @@
     "Bed 4 Closet",
     "Upper Hall"
    ],
-   "node": "upper/wall/43 Bed 4 Closet | Upper Hall"
+   "node": "upper/wall/47 Bed 4 Closet | Upper Hall"
   },
   {
-   "id": "wall44",
+   "id": "wall48",
    "level": "upper",
    "start": [
     20,
@@ -2816,10 +2928,10 @@
     "Primary Bath",
     "Primary Bedroom"
    ],
-   "node": "upper/wall/44 Primary Bath | Primary Bedroom"
+   "node": "upper/wall/48 Primary Bath | Primary Bedroom"
   },
   {
-   "id": "wall45",
+   "id": "wall49",
    "level": "upper",
    "start": [
     0,
@@ -2834,10 +2946,10 @@
    "rooms": [
     "Primary Bedroom"
    ],
-   "node": "upper/wall/45 Primary Bedroom"
+   "node": "upper/wall/49 Primary Bedroom"
   },
   {
-   "id": "wall46",
+   "id": "wall50",
    "level": "upper",
    "start": [
     20,
@@ -2852,10 +2964,10 @@
    "rooms": [
     "Primary Bath"
    ],
-   "node": "upper/wall/46 Primary Bath"
+   "node": "upper/wall/50 Primary Bath"
   },
   {
-   "id": "wall47",
+   "id": "wall51",
    "level": "upper",
    "start": [
     31,
@@ -2870,10 +2982,10 @@
    "rooms": [
     "Primary Closet"
    ],
-   "node": "upper/wall/47 Primary Closet"
+   "node": "upper/wall/51 Primary Closet"
   },
   {
-   "id": "wall48",
+   "id": "wall52",
    "level": "upper",
    "start": [
     42,
@@ -2888,10 +3000,10 @@
    "rooms": [
     "Bedroom 4"
    ],
-   "node": "upper/wall/48 Bedroom 4"
+   "node": "upper/wall/52 Bedroom 4"
   },
   {
-   "id": "wall49",
+   "id": "wall53",
    "level": "upper",
    "start": [
     26.5,
@@ -2907,10 +3019,10 @@
     "Primary Bath",
     "Primary WC"
    ],
-   "node": "upper/wall/49 Primary Bath | Primary WC"
+   "node": "upper/wall/53 Primary Bath | Primary WC"
   },
   {
-   "id": "wall50",
+   "id": "wall54",
    "level": "upper",
    "start": [
     26.5,
@@ -2926,10 +3038,10 @@
     "Primary Bath",
     "Primary WC"
    ],
-   "node": "upper/wall/50 Primary Bath | Primary WC"
+   "node": "upper/wall/54 Primary Bath | Primary WC"
   },
   {
-   "id": "wall51",
+   "id": "wall55",
    "level": "upper",
    "start": [
     31,
@@ -2945,10 +3057,10 @@
     "Primary Closet",
     "Primary WC"
    ],
-   "node": "upper/wall/51 Primary Closet | Primary WC"
+   "node": "upper/wall/55 Primary Closet | Primary WC"
   },
   {
-   "id": "wall52",
+   "id": "wall56",
    "level": "upper",
    "start": [
     31,
@@ -2964,10 +3076,10 @@
     "Primary Bath",
     "Primary Closet"
    ],
-   "node": "upper/wall/52 Primary Bath | Primary Closet"
+   "node": "upper/wall/56 Primary Bath | Primary Closet"
   },
   {
-   "id": "wall53",
+   "id": "wall57",
    "level": "upper",
    "start": [
     42,
@@ -2983,7 +3095,7 @@
     "Bedroom 4",
     "Primary Closet"
    ],
-   "node": "upper/wall/53 Bedroom 4 | Primary Closet"
+   "node": "upper/wall/57 Bedroom 4 | Primary Closet"
   }
  ],
  "openings": [
@@ -3418,7 +3530,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall6",
+   "wall": "wall7",
    "kind": "door",
    "center": [
     10.25,
@@ -3431,7 +3543,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall5",
+   "wall": "wall6",
    "kind": "door",
    "center": [
     4.25,
@@ -3444,7 +3556,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall7",
+   "wall": "wall8",
    "kind": "door",
    "center": [
     13.75,
@@ -3457,7 +3569,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall28",
+   "wall": "wall29",
    "kind": "door",
    "center": [
     24,
@@ -3470,7 +3582,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall9",
+   "wall": "wall10",
    "kind": "cased",
    "center": [
     31.5,
@@ -3483,7 +3595,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall11",
+   "wall": "wall12",
    "kind": "door",
    "center": [
     47,
@@ -3496,7 +3608,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall38",
+   "wall": "wall42",
    "kind": "door",
    "center": [
     50.75,
@@ -3509,10 +3621,10 @@
   },
   {
    "level": "upper",
-   "wall": "wall10",
+   "wall": "wall11",
    "kind": "door",
    "center": [
-    39.75,
+    35.75,
     18
    ],
    "width": 3.0,
@@ -3522,7 +3634,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall37",
+   "wall": "wall41",
    "kind": "door",
    "center": [
     37.5,
@@ -3535,7 +3647,20 @@
   },
   {
    "level": "upper",
-   "wall": "wall18",
+   "wall": "wall36",
+   "kind": "closet",
+   "center": [
+    42.5,
+    3
+   ],
+   "width": 4.0,
+   "height": 6.67,
+   "sill": 0.0,
+   "swings_into": "Bath 2 Closet"
+  },
+  {
+   "level": "upper",
+   "wall": "wall19",
    "kind": "door",
    "center": [
     12,
@@ -3548,7 +3673,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall44",
+   "wall": "wall48",
    "kind": "door",
    "center": [
     20,
@@ -3561,7 +3686,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall50",
+   "wall": "wall54",
    "kind": "door",
    "center": [
     28.75,
@@ -3574,7 +3699,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall52",
+   "wall": "wall56",
    "kind": "door",
    "center": [
     31,
@@ -3587,7 +3712,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall22",
+   "wall": "wall23",
    "kind": "door",
    "center": [
     47,
@@ -3600,7 +3725,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall23",
+   "wall": "wall24",
    "kind": "door",
    "center": [
     52.25,
@@ -3629,7 +3754,7 @@
    "wall": "wall2",
    "kind": "window",
    "center": [
-    39.75,
+    36.75,
     0
    ],
    "width": 2.0,
@@ -3639,7 +3764,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall13",
+   "wall": "wall14",
    "kind": "window",
    "center": [
     0,
@@ -3652,7 +3777,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall13",
+   "wall": "wall14",
    "kind": "window",
    "center": [
     0,
@@ -3665,7 +3790,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall15",
+   "wall": "wall16",
    "kind": "window",
    "center": [
     0,
@@ -3678,7 +3803,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall24",
+   "wall": "wall25",
    "kind": "window",
    "center": [
     14,
@@ -3691,7 +3816,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall25",
+   "wall": "wall26",
    "kind": "window",
    "center": [
     19.0,
@@ -3704,7 +3829,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall26",
+   "wall": "wall27",
    "kind": "window",
    "center": [
     29.0,
@@ -3717,7 +3842,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall31",
+   "wall": "wall32",
    "kind": "window",
    "center": [
     34,
@@ -3730,7 +3855,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall42",
+   "wall": "wall46",
    "kind": "window",
    "center": [
     56,
@@ -3743,7 +3868,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall45",
+   "wall": "wall49",
    "kind": "window",
    "center": [
     5.0,
@@ -3756,7 +3881,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall45",
+   "wall": "wall49",
    "kind": "window",
    "center": [
     15.0,
@@ -3769,7 +3894,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall46",
+   "wall": "wall50",
    "kind": "window",
    "center": [
     25.5,
@@ -3782,7 +3907,7 @@
   },
   {
    "level": "upper",
-   "wall": "wall48",
+   "wall": "wall52",
    "kind": "window",
    "center": [
     49.0,
@@ -6682,27 +6807,29 @@
   {
    "id": "furn16",
    "level": "upper",
-   "room": "Bath 2 Tub/WC",
-   "kind": "shower",
-   "label": "Shower",
+   "room": "Bath 2 Closet",
+   "kind": "pantry_shelves",
+   "label": "Towels / linen",
    "facing": "N",
    "center": [
-    42.8,
+    42.5,
+    1.3
+   ],
+   "width": 5.4,
+   "depth": 2.0,
+   "footprint": [
+    39.8,
+    0.3,
+    45.2,
     2.3
    ],
-   "width": 5.0,
-   "depth": 4.0,
-   "footprint": [
-    40.3,
-    0.3,
-    45.3,
-    4.3
-   ],
-   "node": "upper/furniture/Bath 2 Tub/WC/Shower 16",
+   "node": "upper/furniture/Bath 2 Closet/Towels / linen 16",
    "opts": {
-    "W": 5.0,
-    "D": 4.0,
-    "glass": "F"
+    "W": 5.4,
+    "D": 2.0,
+    "wood": "gloss:#f2f0ea",
+    "label": "Towels / linen",
+    "seed": 9
    }
   },
   {

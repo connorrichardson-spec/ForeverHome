@@ -17,7 +17,8 @@ upper,Bed 2 Closet,8.5,4.5,38.25,yes,Walk-in in the old west end of the hall
 upper,Bedroom 3,12,21,246,yes,"Teen room: queen, desk (in the entry-bay nook), dresser"
 upper,Bed 3 Closet,5,7.2,36,yes,Walk-in on the west half of the stair landing (was beside the guard)
 upper,Stair,10,21,174,no,Two-story stair hall; tall window stacked over the main-floor one
-upper,Bath 2 Tub/WC,11.5,8,92,yes,"Toilet, tub/shower + separate shower behind a door"
+upper,Bath 2 Tub/WC,11.5,8,74,yes,Toilet + tub/shower behind a door
+upper,Bath 2 Closet,6,3,18,yes,"Linen/towel closet, sliding doors (where the separate shower was)"
 upper,Bath 2,11.5,10,115,yes,Shared double vanity (Bedrooms 2-4); compartmented so two or three can use it at once
 upper,Laundry,10.5,14,147,yes,10.5x14
 upper,Linen,10.5,4,42,yes,"Linen / storage, off the laundry"

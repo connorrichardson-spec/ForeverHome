@@ -68,6 +68,8 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 - 2026-10-28: Bath 2 / laundry wall moved 1.5 ft east (x 44 -> 45.5): Bath 2 halves 11.5x8 (tub/WC, shower now 5x4)
   and 11.5x10 (vanity now 7 ft); laundry 10.5x14, linen 10.5x4. Not further: the laundry's hall door needs the
   hall, which ends at x 48.5 (door now 2.5 ft at x 47).
+- 2026-10-28: Bath 2's separate shower removed (tub/shower only); its spot is a 6x3 linen/towel closet with sliding
+  doors off the tub/WC room. Bath 2's hall door moved to the west wall (x 35.75).
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -224,6 +226,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-28: Bath 2 shower -> linen closet; hall door against the west wall.
 - 2026-10-28: laundry 1.5 ft narrower, Bath 2 1.5 ft wider (bigger shower + vanity).
 - 2026-10-28: Bed 3 closet onto the stair landing; primary tub out, bath door moved, dresser/TV centered on the bed.
   Known: viewer.js logs "Cannot access 'dirty' before initialization" on load (pre-existing; page still renders).
