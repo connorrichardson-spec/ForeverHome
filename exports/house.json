@@ -733,11 +733,11 @@
      0
     ],
     [
-     44,
+     45.5,
      0
     ],
     [
-     44,
+     45.5,
      8
     ],
     [
@@ -745,7 +745,7 @@
      8
     ]
    ],
-   "area_sqft": 80,
+   "area_sqft": 92.0,
    "paint": "#eef0ee",
    "floor": "tile",
    "windows": "small",
@@ -762,11 +762,11 @@
      8
     ],
     [
-     44,
+     45.5,
      8
     ],
     [
-     44,
+     45.5,
      18
     ],
     [
@@ -774,7 +774,7 @@
      18
     ]
    ],
-   "area_sqft": 100,
+   "area_sqft": 115.0,
    "paint": "#eef0ee",
    "floor": "tile",
    "windows": "none",
@@ -787,7 +787,7 @@
    "kind": "indoor",
    "polygon": [
     [
-     44,
+     45.5,
      4
     ],
     [
@@ -799,15 +799,15 @@
      18
     ],
     [
-     44,
+     45.5,
      18
     ]
    ],
-   "area_sqft": 168,
+   "area_sqft": 147.0,
    "paint": "#d3dde0",
    "floor": "tile",
    "windows": "none",
-   "note": "",
+   "note": "10.5x14",
    "zones": []
   },
   {
@@ -816,7 +816,7 @@
    "kind": "indoor",
    "polygon": [
     [
-     44,
+     45.5,
      0
     ],
     [
@@ -828,11 +828,11 @@
      4
     ],
     [
-     44,
+     45.5,
      4
     ]
    ],
-   "area_sqft": 48,
+   "area_sqft": 42.0,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "none",
@@ -2022,7 +2022,7 @@
     0
    ],
    "end": [
-    44,
+    45.5,
     0
    ],
    "thickness": 0.5,
@@ -2036,7 +2036,7 @@
    "id": "wall3",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     0
    ],
    "end": [
@@ -2172,7 +2172,7 @@
     18
    ],
    "end": [
-    44,
+    45.5,
     18
    ],
    "thickness": 0.33,
@@ -2187,7 +2187,7 @@
    "id": "wall11",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     18
    ],
    "end": [
@@ -2617,11 +2617,11 @@
    "id": "wall34",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     0
    ],
    "end": [
-    44,
+    45.5,
     4
    ],
    "thickness": 0.33,
@@ -2636,11 +2636,11 @@
    "id": "wall35",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     4
    ],
    "end": [
-    44,
+    45.5,
     8
    ],
    "thickness": 0.33,
@@ -2655,11 +2655,11 @@
    "id": "wall36",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     8
    ],
    "end": [
-    44,
+    45.5,
     18
    ],
    "thickness": 0.33,
@@ -2678,7 +2678,7 @@
     8
    ],
    "end": [
-    44,
+    45.5,
     8
    ],
    "thickness": 0.33,
@@ -2693,7 +2693,7 @@
    "id": "wall38",
    "level": "upper",
    "start": [
-    44,
+    45.5,
     4
    ],
    "end": [
@@ -3486,10 +3486,10 @@
    "wall": "wall11",
    "kind": "door",
    "center": [
-    46,
+    47,
     18
    ],
-   "width": 3.0,
+   "width": 2.5,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Laundry"
@@ -3499,7 +3499,7 @@
    "wall": "wall38",
    "kind": "door",
    "center": [
-    50.0,
+    50.75,
     4
    ],
    "width": 3.0,
@@ -3512,7 +3512,7 @@
    "wall": "wall10",
    "kind": "door",
    "center": [
-    39.0,
+    39.75,
     18
    ],
    "width": 3.0,
@@ -3629,7 +3629,7 @@
    "wall": "wall2",
    "kind": "window",
    "center": [
-    39.0,
+    39.75,
     0
    ],
    "width": 2.0,
@@ -6687,20 +6687,20 @@
    "label": "Shower",
    "facing": "N",
    "center": [
-    41.65,
+    42.8,
     2.3
    ],
-   "width": 4.3,
+   "width": 5.0,
    "depth": 4.0,
    "footprint": [
-    39.5,
+    40.3,
     0.3,
-    43.8,
+    45.3,
     4.3
    ],
    "node": "upper/furniture/Bath 2 Tub/WC/Shower 16",
    "opts": {
-    "W": 4.3,
+    "W": 5.0,
     "D": 4.0,
     "glass": "F"
    }
@@ -6735,20 +6735,20 @@
    "label": "Vanity",
    "facing": "W",
    "center": [
-    42.9,
-    12.5
+    44.4,
+    13.0
    ],
-   "width": 6.0,
+   "width": 7.0,
    "depth": 1.8,
    "footprint": [
-    42,
+    43.5,
     9.5,
-    43.8,
-    15.5
+    45.3,
+    16.5
    ],
    "node": "upper/furniture/Bath 2/Vanity 18",
    "opts": {
-    "W": 6,
+    "W": 7,
     "sinks": 2
    }
   },
@@ -6786,20 +6786,20 @@
    "label": "Linen shelves",
    "facing": "N",
    "center": [
-    50.0,
+    50.75,
     1.0
    ],
-   "width": 11.0,
+   "width": 9.5,
    "depth": 1.4,
    "footprint": [
-    44.5,
+    46.0,
     0.3,
     55.5,
     1.7
    ],
    "node": "upper/furniture/Linen/Linen shelves 20",
    "opts": {
-    "W": 11,
+    "W": 9.5,
     "wood": "gloss:#f2f0ea",
     "label": "Linen shelves",
     "seed": 8
@@ -6813,15 +6813,15 @@
    "label": "W",
    "facing": "E",
    "center": [
-    45.4,
+    46.9,
     6.65
    ],
    "width": 2.3,
    "depth": 2.4,
    "footprint": [
-    44.2,
+    45.7,
     5.5,
-    46.6,
+    48.1,
     7.8
    ],
    "node": "upper/furniture/Laundry/W 21",
@@ -6835,15 +6835,15 @@
    "label": "D",
    "facing": "E",
    "center": [
-    45.4,
+    46.9,
     9.05
    ],
    "width": 2.3,
    "depth": 2.4,
    "footprint": [
-    44.2,
+    45.7,
     7.9,
-    46.6,
+    48.1,
     10.2
    ],
    "node": "upper/furniture/Laundry/D 22",
@@ -6857,15 +6857,15 @@
    "label": null,
    "facing": "E",
    "center": [
-    44.75,
+    46.25,
     7.8
    ],
    "width": 5.0,
    "depth": 1.1,
    "footprint": [
-    44.2,
+    45.7,
     5.3,
-    45.3,
+    46.8,
     10.3
    ],
    "node": "upper/furniture/Laundry/upper_cab 23",
