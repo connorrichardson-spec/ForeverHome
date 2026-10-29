@@ -14,15 +14,15 @@ main,Garage,26,30,780,no,3-car side-load + storage/workspace
 main,Patio,34,16,544,no,Open paver patio + fireplace; outdoor kitchen deferred (stub gas/power/water for later)
 upper,Bedroom 2,12,18,216,yes,"Teen room: queen, desk, dresser"
 upper,Bed 2 Closet,8.5,4.5,38.25,yes,Walk-in in the old west end of the hall
-upper,Bedroom 3,12,21,224.75,yes,"Teen room: queen, desk (in the entry-bay nook), dresser"
-upper,Bed 3 Closet,8.5,2.5,21.25,yes,"Reach-in, sliding doors"
-upper,Stair,10,21,210,no,Two-story stair hall; tall window stacked over the main-floor one
+upper,Bedroom 3,12,21,246,yes,"Teen room: queen, desk (in the entry-bay nook), dresser"
+upper,Bed 3 Closet,5,7.2,36,yes,Walk-in on the west half of the stair landing (was beside the guard)
+upper,Stair,10,21,174,no,Two-story stair hall; tall window stacked over the main-floor one
 upper,Bath 2 Tub/WC,10,8,80,yes,"Toilet, tub/shower + separate shower behind a door"
 upper,Bath 2,10,10,100,yes,Shared double vanity (Bedrooms 2-4); compartmented so two or three can use it at once
 upper,Laundry,12,14,168,yes,
 upper,Linen,12,4,48,yes,"Linen / storage, off the laundry"
 upper,Upper Hall,40,4.5,180,yes,4.5 ft wide; ends at the last doors
-upper,Primary Bedroom,20,17.5,350,yes,"20x17.5, sitting area at the rear windows"
+upper,Primary Bedroom,20,17.5,350,yes,"20x17.5, sitting area at the rear windows; dresser + TV centered on the bed"
 upper,Primary Bath,11,17.5,170,yes,
 upper,Primary WC,4.5,5,22.5,yes,Water closet
 upper,Primary Closet,11,17.5,192.5,yes,"Walk-in, center island"

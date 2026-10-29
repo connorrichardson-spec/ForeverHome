@@ -417,9 +417,11 @@ def boxes_for_level(level):
             # partial slab (stair opening): close the floor-thickness band in the room's walls
             paint = r.get("paint", DEFAULT_PAINT)
             paint = paint if ":" in paint else "paint:" + paint
-            x0, y0, x1, y1 = r["rect"]
-            for ax, c, a0, a1, s in (("h", y0, x0, x1, 1), ("h", y1, x0, x1, -1),
-                                     ("v", x0, y0, y1, 1), ("v", x1, y0, y1, -1)):
+            pts = room_poly(r)
+            for p, q in edges(pts):
+                ax, c, a0, a1 = seg_axis(p, q)
+                m = (a0 + a1) / 2
+                s = 1 if inside(pts, *((m, c + 0.01) if ax == "h" else (c + 0.01, m))) else -1
                 add(ax, c, a0 - H.EXT_T / 2, a1 + H.EXT_T / 2, H.EXT_T, elev - H.FLOOR_T, elev, "wallExt", False)
                 add(ax, c + s * (H.EXT_T / 2 + SKIN / 2), a0, a1, SKIN, elev - H.FLOOR_T, elev, paint, False)
         if not outdoor:
@@ -483,10 +485,11 @@ def stair_boxes(level, r, box):
         below = list(H.LEVELS)[list(H.LEVELS).index(level) - 1]
         rb = next(q for q in H.ROOMS[below] if q["name"] == r["name"])
         L = stair_layout(below, rb)
-        gx1 = L["X1"] - L["fw"]
-        box(x=L["X0"], y=L["Y"] - 0.3, z=elev, w=gx1 - L["X0"], d=0.3, h=RAIL_H, mat=paint, c=True)
-        box(x=L["X0"], y=L["Y"] - 0.35, z=elev + RAIL_H, w=gx1 - L["X0"], d=0.4, h=0.12, mat="wood:#6e4f37",
-            c=False)
+        gx0, gx1 = max(L["X0"], r.get("floor_rect", (L["X0"],))[0]), L["X1"] - L["fw"]
+        if gx0 < gx1:      # (a room built over the west half of the landing replaces the guard)
+            box(x=gx0, y=L["Y"] - 0.3, z=elev, w=gx1 - gx0, d=0.3, h=RAIL_H, mat=paint, c=True)
+            box(x=gx0, y=L["Y"] - 0.35, z=elev + RAIL_H, w=gx1 - gx0, d=0.4, h=0.12, mat="wood:#6e4f37",
+                c=False)
         box(x=L["X0"], y=L["Y0"], z=elev + 0.3, w=L["X1"] - L["X0"], d=L["Y"] - L["Y0"], h=4.5, mat="block",
             c=True)
 

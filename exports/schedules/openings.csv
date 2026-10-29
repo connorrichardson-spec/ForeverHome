@@ -35,14 +35,14 @@ main,window,4,4.5,3,77.7,h
 upper,door,3,6.67,0,10.2,h
 upper,door,2.5,6.67,0,4.2,h
 upper,door,3,6.67,0,13.8,h
-upper,closet,4,6.67,0,19.8,h
-upper,cased,6,8,0,29.0,h
+upper,door,2.5,6.67,0,16.5,v
+upper,cased,4.5,8,0,31.5,h
 upper,door,3,6.67,0,46.0,h
 upper,door,3,6.67,0,50.0,h
 upper,door,3,6.67,0,39.0,h
 upper,door,2.5,6.67,0,37.5,h
 upper,door,3,6.67,0,12.0,h
-upper,door,3,6.67,0,30.0,v
+upper,door,3,6.67,0,38.0,v
 upper,door,2.5,6.67,0,28.8,h
 upper,door,2.5,6.67,0,30.5,v
 upper,door,3,6.67,0,47.0,h

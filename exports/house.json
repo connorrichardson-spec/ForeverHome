@@ -637,14 +637,6 @@
     ],
     [
      24,
-     15.5
-    ],
-    [
-     15.5,
-     15.5
-    ],
-    [
-     15.5,
      18
     ],
     [
@@ -652,7 +644,7 @@
      18
     ]
    ],
-   "area_sqft": 224.8,
+   "area_sqft": 246,
    "paint": "#d9dfd6",
    "floor": "hardwood",
    "windows": "normal",
@@ -665,27 +657,27 @@
    "kind": "indoor",
    "polygon": [
     [
-     15.5,
-     15.5
+     24,
+     10.8
     ],
     [
-     24,
-     15.5
+     29,
+     10.8
     ],
     [
-     24,
+     29,
      18
     ],
     [
-     15.5,
+     24,
      18
     ]
    ],
-   "area_sqft": 21.2,
+   "area_sqft": 36.0,
    "paint": "#d9dfd6",
    "floor": "hardwood",
    "windows": "none",
-   "note": "Reach-in, sliding doors",
+   "note": "Walk-in on the west half of the stair landing (was beside the guard)",
    "zones": []
   },
   {
@@ -706,18 +698,26 @@
      18
     ],
     [
-     24,
+     29,
      18
+    ],
+    [
+     29,
+     10.8
+    ],
+    [
+     24,
+     10.8
     ]
    ],
-   "area_sqft": 210,
+   "area_sqft": 174.0,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "normal",
    "note": "Two-story stair hall; tall window stacked over the main-floor one",
    "zones": [],
    "floor_rect": [
-    24,
+    29,
     10.8,
     34,
     18
@@ -894,7 +894,7 @@
    "paint": "#cfd5d0",
    "floor": "hardwood",
    "windows": "normal",
-   "note": "20x17.5, sitting area at the rear windows",
+   "note": "20x17.5, sitting area at the rear windows; dresser + TV centered on the bed",
    "zones": []
   },
   {
@@ -2115,7 +2115,7 @@
     18
    ],
    "end": [
-    15.5,
+    24,
     18
    ],
    "thickness": 0.33,
@@ -2130,11 +2130,11 @@
    "id": "wall8",
    "level": "upper",
    "start": [
-    15.5,
+    24,
     18
    ],
    "end": [
-    24,
+    29,
     18
    ],
    "thickness": 0.33,
@@ -2149,7 +2149,7 @@
    "id": "wall9",
    "level": "upper",
    "start": [
-    24,
+    29,
     18
    ],
    "end": [
@@ -2490,7 +2490,7 @@
    ],
    "end": [
     24,
-    15.5
+    10.8
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -2505,10 +2505,48 @@
    "level": "upper",
    "start": [
     24,
-    15.5
+    10.8
    ],
    "end": [
     24,
+    18
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Bedroom 3"
+   ],
+   "node": "upper/wall/28 Bed 3 Closet | Bedroom 3"
+  },
+  {
+   "id": "wall29",
+   "level": "upper",
+   "start": [
+    24,
+    10.8
+   ],
+   "end": [
+    29,
+    10.8
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Bed 3 Closet",
+    "Stair"
+   ],
+   "node": "upper/wall/29 Bed 3 Closet | Stair"
+  },
+  {
+   "id": "wall30",
+   "level": "upper",
+   "start": [
+    29,
+    10.8
+   ],
+   "end": [
+    29,
     18
    ],
    "thickness": 0.33,
@@ -2517,45 +2555,7 @@
     "Bed 3 Closet",
     "Stair"
    ],
-   "node": "upper/wall/28 Bed 3 Closet | Stair"
-  },
-  {
-   "id": "wall29",
-   "level": "upper",
-   "start": [
-    15.5,
-    15.5
-   ],
-   "end": [
-    24,
-    15.5
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 3 Closet",
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/29 Bed 3 Closet | Bedroom 3"
-  },
-  {
-   "id": "wall30",
-   "level": "upper",
-   "start": [
-    15.5,
-    15.5
-   ],
-   "end": [
-    15.5,
-    18
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Bed 3 Closet",
-    "Bedroom 3"
-   ],
-   "node": "upper/wall/30 Bed 3 Closet | Bedroom 3"
+   "node": "upper/wall/30 Bed 3 Closet | Stair"
   },
   {
    "id": "wall31",
@@ -3457,13 +3457,13 @@
   },
   {
    "level": "upper",
-   "wall": "wall29",
-   "kind": "closet",
+   "wall": "wall28",
+   "kind": "door",
    "center": [
-    19.75,
-    15.5
+    24,
+    16.5
    ],
-   "width": 4.0,
+   "width": 2.5,
    "height": 6.67,
    "sill": 0.0,
    "swings_into": "Bed 3 Closet"
@@ -3473,10 +3473,10 @@
    "wall": "wall9",
    "kind": "cased",
    "center": [
-    29.0,
+    31.5,
     18
    ],
-   "width": 6.0,
+   "width": 4.5,
    "height": 8.0,
    "sill": 0.0,
    "swings_into": "Stair"
@@ -3552,7 +3552,7 @@
    "kind": "door",
    "center": [
     20,
-    30
+    38
    ],
    "width": 3.0,
    "height": 6.67,
@@ -6608,28 +6608,54 @@
    "room": "Bed 3 Closet",
    "kind": "closet_rod",
    "label": "Rod/shelf",
-   "facing": "S",
+   "facing": "N",
    "center": [
-    19.8,
-    17.2
+    26.5,
+    11.6
    ],
-   "width": 7.8,
+   "width": 4.6,
    "depth": 1.2,
    "footprint": [
-    15.9,
-    16.6,
-    23.7,
-    17.8
+    24.2,
+    11.0,
+    28.8,
+    12.2
    ],
    "node": "upper/furniture/Bed 3 Closet/Rod/shelf 13",
    "opts": {
-    "W": 7.8,
+    "W": 4.6,
     "D": 1.2,
     "seed": 33
    }
   },
   {
    "id": "furn14",
+   "level": "upper",
+   "room": "Bed 3 Closet",
+   "kind": "closet_rod",
+   "label": "Rod/shelf",
+   "facing": "W",
+   "center": [
+    28.2,
+    15.05
+   ],
+   "width": 5.5,
+   "depth": 1.2,
+   "footprint": [
+    27.6,
+    12.3,
+    28.8,
+    17.8
+   ],
+   "node": "upper/furniture/Bed 3 Closet/Rod/shelf 14",
+   "opts": {
+    "W": 5.5,
+    "D": 1.2,
+    "seed": 34
+   }
+  },
+  {
+   "id": "furn15",
    "level": "upper",
    "room": "Bath 2 Tub/WC",
    "kind": "tub",
@@ -6647,14 +6673,14 @@
     39.2,
     2.9
    ],
-   "node": "upper/furniture/Bath 2 Tub/WC/Tub/shower 14",
+   "node": "upper/furniture/Bath 2 Tub/WC/Tub/shower 15",
    "opts": {
     "shower_walls": true,
     "label": "Tub/shower"
    }
   },
   {
-   "id": "furn15",
+   "id": "furn16",
    "level": "upper",
    "room": "Bath 2 Tub/WC",
    "kind": "shower",
@@ -6672,7 +6698,7 @@
     43.8,
     4.3
    ],
-   "node": "upper/furniture/Bath 2 Tub/WC/Shower 15",
+   "node": "upper/furniture/Bath 2 Tub/WC/Shower 16",
    "opts": {
     "W": 4.3,
     "D": 4.0,
@@ -6680,7 +6706,7 @@
    }
   },
   {
-   "id": "furn16",
+   "id": "furn17",
    "level": "upper",
    "room": "Bath 2 Tub/WC",
    "kind": "toilet",
@@ -6698,11 +6724,11 @@
     36.6,
     6.2
    ],
-   "node": "upper/furniture/Bath 2 Tub/WC/WC 16",
+   "node": "upper/furniture/Bath 2 Tub/WC/WC 17",
    "opts": {}
   },
   {
-   "id": "furn17",
+   "id": "furn18",
    "level": "upper",
    "room": "Bath 2",
    "kind": "vanity",
@@ -6720,14 +6746,14 @@
     43.8,
     15.5
    ],
-   "node": "upper/furniture/Bath 2/Vanity 17",
+   "node": "upper/furniture/Bath 2/Vanity 18",
    "opts": {
     "W": 6,
     "sinks": 2
    }
   },
   {
-   "id": "furn18",
+   "id": "furn19",
    "level": "upper",
    "room": "Bath 2",
    "kind": "rug",
@@ -6745,7 +6771,7 @@
     41.0,
     13.7
    ],
-   "node": "upper/furniture/Bath 2/rug 18",
+   "node": "upper/furniture/Bath 2/rug 19",
    "opts": {
     "W": 3.5,
     "D": 2.2,
@@ -6753,7 +6779,7 @@
    }
   },
   {
-   "id": "furn19",
+   "id": "furn20",
    "level": "upper",
    "room": "Linen",
    "kind": "pantry_shelves",
@@ -6771,7 +6797,7 @@
     55.5,
     1.7
    ],
-   "node": "upper/furniture/Linen/Linen shelves 19",
+   "node": "upper/furniture/Linen/Linen shelves 20",
    "opts": {
     "W": 11,
     "wood": "gloss:#f2f0ea",
@@ -6780,7 +6806,7 @@
    }
   },
   {
-   "id": "furn20",
+   "id": "furn21",
    "level": "upper",
    "room": "Laundry",
    "kind": "washer",
@@ -6798,11 +6824,11 @@
     46.6,
     7.8
    ],
-   "node": "upper/furniture/Laundry/W 20",
+   "node": "upper/furniture/Laundry/W 21",
    "opts": {}
   },
   {
-   "id": "furn21",
+   "id": "furn22",
    "level": "upper",
    "room": "Laundry",
    "kind": "dryer",
@@ -6820,11 +6846,11 @@
     46.6,
     10.2
    ],
-   "node": "upper/furniture/Laundry/D 21",
+   "node": "upper/furniture/Laundry/D 22",
    "opts": {}
   },
   {
-   "id": "furn22",
+   "id": "furn23",
    "level": "upper",
    "room": "Laundry",
    "kind": "upper_cab",
@@ -6842,7 +6868,7 @@
     45.3,
     10.3
    ],
-   "node": "upper/furniture/Laundry/upper_cab 22",
+   "node": "upper/furniture/Laundry/upper_cab 23",
    "opts": {
     "W": 5,
     "z": 5.0,
@@ -6850,7 +6876,7 @@
    }
   },
   {
-   "id": "furn23",
+   "id": "furn24",
    "level": "upper",
    "room": "Laundry",
    "kind": "utility_sink",
@@ -6868,11 +6894,11 @@
     55.75,
     13.0
    ],
-   "node": "upper/furniture/Laundry/Sink / counter 23",
+   "node": "upper/furniture/Laundry/Sink / counter 24",
    "opts": {}
   },
   {
-   "id": "furn24",
+   "id": "furn25",
    "level": "upper",
    "room": "Upper Hall",
    "kind": "rug",
@@ -6890,7 +6916,7 @@
     23,
     21.75
    ],
-   "node": "upper/furniture/Upper Hall/rug 24",
+   "node": "upper/furniture/Upper Hall/rug 25",
    "opts": {
     "W": 13,
     "D": 3,
@@ -6899,7 +6925,7 @@
    }
   },
   {
-   "id": "furn25",
+   "id": "furn26",
    "level": "upper",
    "room": "Upper Hall",
    "kind": "rug",
@@ -6917,7 +6943,7 @@
     47,
     21.75
    ],
-   "node": "upper/furniture/Upper Hall/rug 25",
+   "node": "upper/furniture/Upper Hall/rug 26",
    "opts": {
     "W": 13,
     "D": 3,
@@ -6926,7 +6952,7 @@
    }
   },
   {
-   "id": "furn26",
+   "id": "furn27",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "bed",
@@ -6944,7 +6970,7 @@
     7.3,
     33.0
    ],
-   "node": "upper/furniture/Primary Bedroom/King bed 26",
+   "node": "upper/furniture/Primary Bedroom/King bed 27",
    "opts": {
     "W": 6.5,
     "D": 7,
@@ -6954,7 +6980,7 @@
    }
   },
   {
-   "id": "furn27",
+   "id": "furn28",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "nightstand",
@@ -6972,11 +6998,11 @@
     1.8,
     26.4
    ],
-   "node": "upper/furniture/Primary Bedroom/nightstand 27",
+   "node": "upper/furniture/Primary Bedroom/nightstand 28",
    "opts": {}
   },
   {
-   "id": "furn28",
+   "id": "furn29",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "nightstand",
@@ -6994,11 +7020,11 @@
     1.8,
     34.9
    ],
-   "node": "upper/furniture/Primary Bedroom/nightstand 28",
+   "node": "upper/furniture/Primary Bedroom/nightstand 29",
    "opts": {}
   },
   {
-   "id": "furn29",
+   "id": "furn30",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "bench",
@@ -7016,13 +7042,13 @@
     8.9,
     31.75
    ],
-   "node": "upper/furniture/Primary Bedroom/Bench 29",
+   "node": "upper/furniture/Primary Bedroom/Bench 30",
    "opts": {
     "cushion": "fabric:#b39a7a"
    }
   },
   {
-   "id": "furn30",
+   "id": "furn31",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "rug",
@@ -7040,7 +7066,7 @@
     13,
     34.75
    ],
-   "node": "upper/furniture/Primary Bedroom/rug 30",
+   "node": "upper/furniture/Primary Bedroom/rug 31",
    "opts": {
     "W": 10,
     "D": 10,
@@ -7049,7 +7075,7 @@
    }
   },
   {
-   "id": "furn31",
+   "id": "furn32",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "armchair",
@@ -7067,13 +7093,13 @@
     12.8,
     39.65
    ],
-   "node": "upper/furniture/Primary Bedroom/Chair 31",
+   "node": "upper/furniture/Primary Bedroom/Chair 32",
    "opts": {
     "color": "fabric:#c7b79c"
    }
   },
   {
-   "id": "furn32",
+   "id": "furn33",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "armchair",
@@ -7091,37 +7117,37 @@
     16.7,
     39.65
    ],
-   "node": "upper/furniture/Primary Bedroom/Chair 32",
+   "node": "upper/furniture/Primary Bedroom/Chair 33",
    "opts": {
     "color": "fabric:#c7b79c"
    }
   },
   {
-   "id": "furn33",
+   "id": "furn34",
    "level": "upper",
    "room": "Primary Bedroom",
-   "kind": "media_console",
-   "label": "Media",
+   "kind": "dresser",
+   "label": "Dresser",
    "facing": "W",
    "center": [
-    19.0,
-    26.0
+    18.925,
+    29.75
    ],
    "width": 6.0,
-   "depth": 1.6,
+   "depth": 1.75,
    "footprint": [
-    18.2,
-    23.0,
+    18.05,
+    26.75,
     19.8,
-    29.0
+    32.75
    ],
-   "node": "upper/furniture/Primary Bedroom/Media 33",
+   "node": "upper/furniture/Primary Bedroom/Dresser 34",
    "opts": {
     "W": 6
    }
   },
   {
-   "id": "furn34",
+   "id": "furn35",
    "level": "upper",
    "room": "Primary Bedroom",
    "kind": "tv_wall",
@@ -7129,23 +7155,24 @@
    "facing": "W",
    "center": [
     19.755,
-    26.0
+    29.75
    ],
    "width": 5.0,
    "depth": 0.15,
    "footprint": [
     19.68,
-    23.5,
+    27.25,
     19.83,
-    28.5
+    32.25
    ],
-   "node": "upper/furniture/Primary Bedroom/tv_wall 34",
+   "node": "upper/furniture/Primary Bedroom/tv_wall 35",
    "opts": {
-    "W": 5
+    "W": 5,
+    "z": 4.2
    }
   },
   {
-   "id": "furn35",
+   "id": "furn36",
    "level": "upper",
    "room": "Primary Bath",
    "kind": "vanity",
@@ -7163,14 +7190,14 @@
     26.3,
     24.5
    ],
-   "node": "upper/furniture/Primary Bath/Vanity 35",
+   "node": "upper/furniture/Primary Bath/Vanity 36",
    "opts": {
     "W": 6,
     "sinks": 2
    }
   },
   {
-   "id": "furn36",
+   "id": "furn37",
    "level": "upper",
    "room": "Primary WC",
    "kind": "toilet",
@@ -7188,33 +7215,8 @@
     29.7,
     25.1
    ],
-   "node": "upper/furniture/Primary WC/WC 36",
+   "node": "upper/furniture/Primary WC/WC 37",
    "opts": {}
-  },
-  {
-   "id": "furn37",
-   "level": "upper",
-   "room": "Primary Bath",
-   "kind": "tub",
-   "label": "Soaking tub",
-   "facing": "S",
-   "center": [
-    24.0,
-    38.2
-   ],
-   "width": 5.0,
-   "depth": 2.6,
-   "footprint": [
-    21.5,
-    36.9,
-    26.5,
-    39.5
-   ],
-   "node": "upper/furniture/Primary Bath/Soaking tub 37",
-   "opts": {
-    "freestanding": true,
-    "label": "Soaking tub"
-   }
   },
   {
    "id": "furn38",

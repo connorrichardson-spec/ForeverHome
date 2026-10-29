@@ -12,7 +12,7 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
 - **Timeline (2026-10-26):** build is likely several years out; state (and so lot) not chosen. Goal for now: decide as
   much as possible that doesn't depend on the lot (layout, finishes, kitchen/bath design, specs), keep it all current
   here and in the model, so it's ready to hand to a builder later. Lot-dependent items stay flagged as open.
-- **Last updated:** 2026-10-26
+- **Last updated:** 2026-10-28
 
 ## Key Decisions
 - 2026-10-26: Shrink to cut cost. Great room 30 -> 24 ft deep (whole house 46 -> 40 ft deep on main, 41.5 -> 40 upper),
@@ -59,6 +59,12 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   ~33.3 ft). Hall moved another 2 ft north (y 18-22.5). Bedrooms 2 + 3: 12x16 -> 12x18 (216 / ~225 sq ft incl. the
   bay nook). Primary bedroom 18x14 -> 20x17.5 (350 sq ft, sitting area at the rear windows); primary bath 11x17.5 + WC;
   closet 11x17.5 with island; Bedroom 4 14x17.5. Bath 2 vanity room 10x10, laundry 12x14. +~310 finished sq ft.
+- 2026-10-28: Bedroom 3's reach-in moved onto the west half of the upper stair landing (the dead floor beside the
+  guard): 5x7.2 walk-in (x 24-29, y 10.8-18) entered from Bedroom 3, which is now a clean 10x21 + nook. Landing
+  walkway is now 5 ft wide (x 29-34), in line with the arriving flight; the closet's south wall replaces the guard.
+  Upper Stair room is a polygon now (geometry handles a non-rect stair room).
+- 2026-10-28: Primary bath soaking tub removed (shower only); the bedroom->bath door moved to where the tub was (north
+  end of the shared wall), so a 6 ft dresser + wall TV sit centered on the bed.
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -215,6 +221,8 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-28: Bed 3 closet onto the stair landing; primary tub out, bath door moved, dresser/TV centered on the bed.
+  Known: viewer.js logs "Cannot access 'dirty' before initialization" on load (pre-existing; page still renders).
 - 2026-10-26 (late night, cont.): walkthrough touch-ups. Siding/stone no longer wrap into rooms at inside corners
   (entry bay, garage/great-room corner); paint + baseboard now wrap outside corners (no bare wall core); entry gable
   split at the front wall so its side overhangs stop hanging into Bedroom 3 / Bath 2; stair flights get a drywall
