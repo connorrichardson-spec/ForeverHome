@@ -4506,21 +4506,21 @@
    "label": null,
    "facing": "N",
    "center": [
-    33.0,
-    22.0
+    29.5,
+    27.0
    ],
-   "width": 12,
-   "depth": 9.0,
+   "width": 9,
+   "depth": 12,
    "footprint": [
-    27,
-    17.5,
-    39,
-    26.5
+    25,
+    21,
+    34,
+    33
    ],
    "node": "main/furniture/Great Room/rug 13",
    "opts": {
-    "W": 12,
-    "D": 9,
+    "W": 9,
+    "D": 12,
     "color": "fabric:#b9b0a1",
     "border": "fabric:#6e6457"
    }
@@ -4531,21 +4531,23 @@
    "room": "Great Room",
    "kind": "dining_table",
    "label": "Dining table",
-   "facing": "N",
+   "facing": "E",
    "center": [
-    33.0,
-    22.0
+    29.5,
+    27.0
    ],
-   "width": 8.0,
+   "width": 9.5,
    "depth": 3.6,
    "footprint": [
-    29,
-    20.2,
-    37.0,
-    23.8
+    27.7,
+    22.25,
+    31.3,
+    31.75
    ],
    "node": "main/furniture/Great Room/Dining table 14",
-   "opts": {}
+   "opts": {
+    "W": 9.5
+   }
   },
   {
    "id": "furn15",
@@ -4553,18 +4555,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "N",
+   "facing": "E",
    "center": [
-    30.8,
-    19.65
+    27.15,
+    23.7
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    30.0,
-    18.8,
-    31.6,
-    20.5
+    26.3,
+    22.9,
+    28.0,
+    24.5
    ],
    "node": "main/furniture/Great Room/chair 15",
    "opts": {}
@@ -4575,18 +4577,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "N",
+   "facing": "E",
    "center": [
-    33.0,
-    19.65
+    27.15,
+    25.9
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    32.2,
-    18.8,
-    33.8,
-    20.5
+    26.3,
+    25.1,
+    28.0,
+    26.7
    ],
    "node": "main/furniture/Great Room/chair 16",
    "opts": {}
@@ -4597,18 +4599,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "N",
+   "facing": "E",
    "center": [
-    35.2,
-    19.65
+    27.15,
+    28.1
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    34.4,
-    18.8,
-    36.0,
-    20.5
+    26.3,
+    27.3,
+    28.0,
+    28.9
    ],
    "node": "main/furniture/Great Room/chair 17",
    "opts": {}
@@ -4619,18 +4621,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "S",
+   "facing": "E",
    "center": [
-    30.8,
-    24.35
+    27.15,
+    30.3
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    30.0,
-    23.5,
-    31.6,
-    25.2
+    26.3,
+    29.5,
+    28.0,
+    31.1
    ],
    "node": "main/furniture/Great Room/chair 18",
    "opts": {}
@@ -4641,18 +4643,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "S",
+   "facing": "W",
    "center": [
-    33.0,
-    24.35
+    31.85,
+    23.7
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    32.2,
-    23.5,
-    33.8,
-    25.2
+    31.0,
+    22.9,
+    32.7,
+    24.5
    ],
    "node": "main/furniture/Great Room/chair 19",
    "opts": {}
@@ -4663,18 +4665,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "S",
+   "facing": "W",
    "center": [
-    35.2,
-    24.35
+    31.85,
+    25.9
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    34.4,
-    23.5,
-    36.0,
-    25.2
+    31.0,
+    25.1,
+    32.7,
+    26.7
    ],
    "node": "main/furniture/Great Room/chair 20",
    "opts": {}
@@ -4685,18 +4687,18 @@
    "room": "Great Room",
    "kind": "chair",
    "label": null,
-   "facing": "E",
+   "facing": "W",
    "center": [
-    28.25,
-    22.0
+    31.85,
+    28.1
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    27.4,
-    21.2,
-    29.1,
-    22.8
+    31.0,
+    27.3,
+    32.7,
+    28.9
    ],
    "node": "main/furniture/Great Room/chair 21",
    "opts": {}
@@ -4709,16 +4711,16 @@
    "label": null,
    "facing": "W",
    "center": [
-    37.75,
-    22.0
+    31.85,
+    30.3
    ],
    "width": 1.6,
    "depth": 1.7,
    "footprint": [
-    36.9,
-    21.2,
-    38.6,
-    22.8
+    31.0,
+    29.5,
+    32.7,
+    31.1
    ],
    "node": "main/furniture/Great Room/chair 22",
    "opts": {}
@@ -4727,51 +4729,45 @@
    "id": "furn23",
    "level": "main",
    "room": "Great Room",
-   "kind": "pendant",
+   "kind": "chair",
    "label": null,
    "facing": "N",
    "center": [
-    31.0,
-    22.0
+    29.5,
+    21.7
    ],
-   "width": 1.4,
-   "depth": 1.4,
+   "width": 1.6,
+   "depth": 1.7,
    "footprint": [
+    28.7,
+    20.85,
     30.3,
-    21.3,
-    31.7,
-    22.7
+    22.55
    ],
-   "node": "main/furniture/Great Room/pendant 23",
-   "opts": {
-    "z": 6.8,
-    "ceil": 10.0
-   }
+   "node": "main/furniture/Great Room/chair 23",
+   "opts": {}
   },
   {
    "id": "furn24",
    "level": "main",
    "room": "Great Room",
-   "kind": "pendant",
+   "kind": "chair",
    "label": null,
-   "facing": "N",
+   "facing": "S",
    "center": [
-    33.0,
-    22.0
+    29.5,
+    32.3
    ],
-   "width": 1.4,
-   "depth": 1.4,
+   "width": 1.6,
+   "depth": 1.7,
    "footprint": [
-    32.3,
-    21.3,
-    33.7,
-    22.7
+    28.7,
+    31.45,
+    30.3,
+    33.15
    ],
-   "node": "main/furniture/Great Room/pendant 24",
-   "opts": {
-    "z": 6.8,
-    "ceil": 10.0
-   }
+   "node": "main/furniture/Great Room/chair 24",
+   "opts": {}
   },
   {
    "id": "furn25",
@@ -4781,16 +4777,16 @@
    "label": null,
    "facing": "N",
    "center": [
-    35.0,
-    22.0
+    29.5,
+    25.0
    ],
    "width": 1.4,
    "depth": 1.4,
    "footprint": [
-    34.3,
-    21.3,
-    35.7,
-    22.7
+    28.8,
+    24.3,
+    30.2,
+    25.7
    ],
    "node": "main/furniture/Great Room/pendant 25",
    "opts": {
@@ -4800,6 +4796,56 @@
   },
   {
    "id": "furn26",
+   "level": "main",
+   "room": "Great Room",
+   "kind": "pendant",
+   "label": null,
+   "facing": "N",
+   "center": [
+    29.5,
+    27.0
+   ],
+   "width": 1.4,
+   "depth": 1.4,
+   "footprint": [
+    28.8,
+    26.3,
+    30.2,
+    27.7
+   ],
+   "node": "main/furniture/Great Room/pendant 26",
+   "opts": {
+    "z": 6.8,
+    "ceil": 10.0
+   }
+  },
+  {
+   "id": "furn27",
+   "level": "main",
+   "room": "Great Room",
+   "kind": "pendant",
+   "label": null,
+   "facing": "N",
+   "center": [
+    29.5,
+    29.0
+   ],
+   "width": 1.4,
+   "depth": 1.4,
+   "footprint": [
+    28.8,
+    28.3,
+    30.2,
+    29.7
+   ],
+   "node": "main/furniture/Great Room/pendant 27",
+   "opts": {
+    "z": 6.8,
+    "ceil": 10.0
+   }
+  },
+  {
+   "id": "furn28",
    "level": "main",
    "room": "Great Room",
    "kind": "media_console",
@@ -4817,14 +4863,14 @@
     30,
     17.85
    ],
-   "node": "main/furniture/Great Room/Buffet 26",
+   "node": "main/furniture/Great Room/Buffet 28",
    "opts": {
     "W": 7,
     "label": "Buffet"
    }
   },
   {
-   "id": "furn27",
+   "id": "furn29",
    "level": "main",
    "room": "Great Room",
    "kind": "art",
@@ -4842,7 +4888,7 @@
     28.5,
     16.3
    ],
-   "node": "main/furniture/Great Room/art 27",
+   "node": "main/furniture/Great Room/art 29",
    "opts": {
     "W": 4,
     "z": 4.8,
@@ -4850,7 +4896,7 @@
    }
   },
   {
-   "id": "furn28",
+   "id": "furn30",
    "level": "main",
    "room": "Great Room",
    "kind": "fridge",
@@ -4868,11 +4914,11 @@
     55.75,
     29.5
    ],
-   "node": "main/furniture/Great Room/Ref 28",
+   "node": "main/furniture/Great Room/Ref 30",
    "opts": {}
   },
   {
-   "id": "furn29",
+   "id": "furn31",
    "level": "main",
    "room": "Great Room",
    "kind": "dishwasher",
@@ -4890,11 +4936,11 @@
     55.75,
     31.5
    ],
-   "node": "main/furniture/Great Room/DW 29",
+   "node": "main/furniture/Great Room/DW 31",
    "opts": {}
   },
   {
-   "id": "furn30",
+   "id": "furn32",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -4912,14 +4958,14 @@
     55.75,
     33.0
    ],
-   "node": "main/furniture/Great Room/Base cab 30",
+   "node": "main/furniture/Great Room/Base cab 32",
    "opts": {
     "W": 1.5,
     "drawers": true
    }
   },
   {
-   "id": "furn31",
+   "id": "furn33",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -4937,7 +4983,7 @@
     55.75,
     37.0
    ],
-   "node": "main/furniture/Great Room/Sink 31",
+   "node": "main/furniture/Great Room/Sink 33",
    "opts": {
     "W": 4.0,
     "sink": 0.7,
@@ -4945,7 +4991,7 @@
    }
   },
   {
-   "id": "furn32",
+   "id": "furn34",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -4963,14 +5009,14 @@
     55.75,
     39.75
    ],
-   "node": "main/furniture/Great Room/Base cab 32",
+   "node": "main/furniture/Great Room/Base cab 34",
    "opts": {
     "W": 2.75,
     "drawers": true
    }
   },
   {
-   "id": "furn33",
+   "id": "furn35",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -4988,13 +5034,13 @@
     47.75,
     39.75
    ],
-   "node": "main/furniture/Great Room/Base cab 33",
+   "node": "main/furniture/Great Room/Base cab 35",
    "opts": {
     "W": 2.25
    }
   },
   {
-   "id": "furn34",
+   "id": "furn36",
    "level": "main",
    "room": "Great Room",
    "kind": "range",
@@ -5012,11 +5058,11 @@
     50.75,
     39.75
    ],
-   "node": "main/furniture/Great Room/Range 34",
+   "node": "main/furniture/Great Room/Range 36",
    "opts": {}
   },
   {
-   "id": "furn35",
+   "id": "furn37",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -5034,14 +5080,14 @@
     53.75,
     39.75
    ],
-   "node": "main/furniture/Great Room/Base cab 35",
+   "node": "main/furniture/Great Room/Base cab 37",
    "opts": {
     "W": 3.0,
     "drawers": true
    }
   },
   {
-   "id": "furn36",
+   "id": "furn38",
    "level": "main",
    "room": "Great Room",
    "kind": "hood",
@@ -5059,11 +5105,11 @@
     51.0,
     39.75
    ],
-   "node": "main/furniture/Great Room/hood 36",
+   "node": "main/furniture/Great Room/hood 38",
    "opts": {}
   },
   {
-   "id": "furn37",
+   "id": "furn39",
    "level": "main",
    "room": "Great Room",
    "kind": "upper_cab",
@@ -5081,13 +5127,13 @@
     55.75,
     32.4
    ],
-   "node": "main/furniture/Great Room/upper_cab 37",
+   "node": "main/furniture/Great Room/upper_cab 39",
    "opts": {
     "W": 2.9
    }
   },
   {
-   "id": "furn38",
+   "id": "furn40",
    "level": "main",
    "room": "Great Room",
    "kind": "upper_cab",
@@ -5105,13 +5151,13 @@
     55.75,
     39.75
    ],
-   "node": "main/furniture/Great Room/upper_cab 38",
+   "node": "main/furniture/Great Room/upper_cab 40",
    "opts": {
     "W": 2.15
    }
   },
   {
-   "id": "furn39",
+   "id": "furn41",
    "level": "main",
    "room": "Great Room",
    "kind": "upper_cab",
@@ -5129,13 +5175,13 @@
     47.5,
     39.75
    ],
-   "node": "main/furniture/Great Room/upper_cab 39",
+   "node": "main/furniture/Great Room/upper_cab 41",
    "opts": {
     "W": 2.0
    }
   },
   {
-   "id": "furn40",
+   "id": "furn42",
    "level": "main",
    "room": "Great Room",
    "kind": "upper_cab",
@@ -5153,13 +5199,13 @@
     54.65,
     39.75
    ],
-   "node": "main/furniture/Great Room/upper_cab 40",
+   "node": "main/furniture/Great Room/upper_cab 42",
    "opts": {
     "W": 3.65
    }
   },
   {
-   "id": "furn41",
+   "id": "furn43",
    "level": "main",
    "room": "Great Room",
    "kind": "island",
@@ -5177,11 +5223,11 @@
     49.0,
     33.75
    ],
-   "node": "main/furniture/Great Room/Island 41",
+   "node": "main/furniture/Great Room/Island 43",
    "opts": {}
   },
   {
-   "id": "furn42",
+   "id": "furn44",
    "level": "main",
    "room": "Great Room",
    "kind": "stool",
@@ -5199,11 +5245,11 @@
     41.4,
     29.35
    ],
-   "node": "main/furniture/Great Room/stool 42",
+   "node": "main/furniture/Great Room/stool 44",
    "opts": {}
   },
   {
-   "id": "furn43",
+   "id": "furn45",
    "level": "main",
    "room": "Great Room",
    "kind": "stool",
@@ -5221,11 +5267,11 @@
     43.7,
     29.35
    ],
-   "node": "main/furniture/Great Room/stool 43",
+   "node": "main/furniture/Great Room/stool 45",
    "opts": {}
   },
   {
-   "id": "furn44",
+   "id": "furn46",
    "level": "main",
    "room": "Great Room",
    "kind": "stool",
@@ -5243,11 +5289,11 @@
     46.0,
     29.35
    ],
-   "node": "main/furniture/Great Room/stool 44",
+   "node": "main/furniture/Great Room/stool 46",
    "opts": {}
   },
   {
-   "id": "furn45",
+   "id": "furn47",
    "level": "main",
    "room": "Great Room",
    "kind": "stool",
@@ -5265,11 +5311,11 @@
     48.3,
     29.35
    ],
-   "node": "main/furniture/Great Room/stool 45",
+   "node": "main/furniture/Great Room/stool 47",
    "opts": {}
   },
   {
-   "id": "furn46",
+   "id": "furn48",
    "level": "main",
    "room": "Great Room",
    "kind": "pendant",
@@ -5287,14 +5333,14 @@
     42.2,
     32.25
    ],
-   "node": "main/furniture/Great Room/pendant 46",
+   "node": "main/furniture/Great Room/pendant 48",
    "opts": {
     "z": 6.8,
     "ceil": 10.0
    }
   },
   {
-   "id": "furn47",
+   "id": "furn49",
    "level": "main",
    "room": "Great Room",
    "kind": "pendant",
@@ -5312,14 +5358,14 @@
     44.7,
     32.25
    ],
-   "node": "main/furniture/Great Room/pendant 47",
+   "node": "main/furniture/Great Room/pendant 49",
    "opts": {
     "z": 6.8,
     "ceil": 10.0
    }
   },
   {
-   "id": "furn48",
+   "id": "furn50",
    "level": "main",
    "room": "Great Room",
    "kind": "pendant",
@@ -5337,14 +5383,14 @@
     47.2,
     32.25
    ],
-   "node": "main/furniture/Great Room/pendant 48",
+   "node": "main/furniture/Great Room/pendant 50",
    "opts": {
     "z": 6.8,
     "ceil": 10.0
    }
   },
   {
-   "id": "furn49",
+   "id": "furn51",
    "level": "main",
    "room": "Great Room",
    "kind": "base_cab",
@@ -5362,14 +5408,14 @@
     32,
     39.75
    ],
-   "node": "main/furniture/Great Room/Coffee bar 49",
+   "node": "main/furniture/Great Room/Coffee bar 51",
    "opts": {
     "W": 8,
     "label": "Coffee bar"
    }
   },
   {
-   "id": "furn50",
+   "id": "furn52",
    "level": "main",
    "room": "Great Room",
    "kind": "upper_cab",
@@ -5387,13 +5433,13 @@
     31.5,
     39.75
    ],
-   "node": "main/furniture/Great Room/upper_cab 50",
+   "node": "main/furniture/Great Room/upper_cab 52",
    "opts": {
     "W": 7
    }
   },
   {
-   "id": "furn51",
+   "id": "furn53",
    "level": "main",
    "room": "Pantry",
    "kind": "base_cab",
@@ -5411,14 +5457,14 @@
     46.2,
     25.6
    ],
-   "node": "main/furniture/Pantry/Pantry cabs 51",
+   "node": "main/furniture/Pantry/Pantry cabs 53",
    "opts": {
     "W": 9.2,
     "label": "Pantry cabs"
    }
   },
   {
-   "id": "furn52",
+   "id": "furn54",
    "level": "main",
    "room": "Pantry",
    "kind": "pantry_shelves",
@@ -5436,7 +5482,7 @@
     45.4,
     25.6
    ],
-   "node": "main/furniture/Pantry/pantry_shelves 52",
+   "node": "main/furniture/Pantry/pantry_shelves 54",
    "opts": {
     "W": 9.2,
     "D": 1.2,
@@ -5445,7 +5491,7 @@
    }
   },
   {
-   "id": "furn53",
+   "id": "furn55",
    "level": "main",
    "room": "Pantry",
    "kind": "tall_cab",
@@ -5463,14 +5509,14 @@
     55.8,
     21.4
    ],
-   "node": "main/furniture/Pantry/Pantry cab 53",
+   "node": "main/furniture/Pantry/Pantry cab 55",
    "opts": {
     "W": 5.0,
     "H": 9.6
    }
   },
   {
-   "id": "furn54",
+   "id": "furn56",
    "level": "main",
    "room": "Pantry",
    "kind": "base_cab",
@@ -5488,7 +5534,7 @@
     55.8,
     25.6
    ],
-   "node": "main/furniture/Pantry/Pantry cabs 54",
+   "node": "main/furniture/Pantry/Pantry cabs 56",
    "opts": {
     "W": 4.2,
     "drawers": true,
@@ -5496,7 +5542,7 @@
    }
   },
   {
-   "id": "furn55",
+   "id": "furn57",
    "level": "main",
    "room": "Pantry",
    "kind": "upper_cab",
@@ -5514,7 +5560,7 @@
     55.8,
     25.6
    ],
-   "node": "main/furniture/Pantry/upper_cab 55",
+   "node": "main/furniture/Pantry/upper_cab 57",
    "opts": {
     "W": 4.2,
     "z": 4.6,
@@ -5522,7 +5568,7 @@
    }
   },
   {
-   "id": "furn56",
+   "id": "furn58",
    "level": "main",
    "room": "Office",
    "kind": "desk",
@@ -5540,11 +5586,11 @@
     7.5,
     9.5
    ],
-   "node": "main/furniture/Office/Desk 56",
+   "node": "main/furniture/Office/Desk 58",
    "opts": {}
   },
   {
-   "id": "furn57",
+   "id": "furn59",
    "level": "main",
    "room": "Office",
    "kind": "office_chair",
@@ -5562,11 +5608,11 @@
     4.8,
     7.75
    ],
-   "node": "main/furniture/Office/office_chair 57",
+   "node": "main/furniture/Office/office_chair 59",
    "opts": {}
   },
   {
-   "id": "furn58",
+   "id": "furn60",
    "level": "main",
    "room": "Office",
    "kind": "bookcase",
@@ -5584,13 +5630,13 @@
     5.0,
     15.8
    ],
-   "node": "main/furniture/Office/Books 58",
+   "node": "main/furniture/Office/Books 60",
    "opts": {
     "seed": 1
    }
   },
   {
-   "id": "furn59",
+   "id": "furn61",
    "level": "main",
    "room": "Office",
    "kind": "bookcase",
@@ -5608,13 +5654,13 @@
     9.0,
     15.8
    ],
-   "node": "main/furniture/Office/Books 59",
+   "node": "main/furniture/Office/Books 61",
    "opts": {
     "seed": 5
    }
   },
   {
-   "id": "furn60",
+   "id": "furn62",
    "level": "main",
    "room": "Office",
    "kind": "bookcase",
@@ -5632,13 +5678,13 @@
     13.0,
     15.8
    ],
-   "node": "main/furniture/Office/Books 60",
+   "node": "main/furniture/Office/Books 62",
    "opts": {
     "seed": 9
    }
   },
   {
-   "id": "furn61",
+   "id": "furn63",
    "level": "main",
    "room": "Office",
    "kind": "rug",
@@ -5656,7 +5702,7 @@
     10,
     9.5
    ],
-   "node": "main/furniture/Office/rug 61",
+   "node": "main/furniture/Office/rug 63",
    "opts": {
     "W": 8,
     "D": 6,
@@ -5665,7 +5711,7 @@
    }
   },
   {
-   "id": "furn62",
+   "id": "furn64",
    "level": "main",
    "room": "Office",
    "kind": "plant",
@@ -5683,11 +5729,11 @@
     13.5,
     2.0
    ],
-   "node": "main/furniture/Office/plant 62",
+   "node": "main/furniture/Office/plant 64",
    "opts": {}
   },
   {
-   "id": "furn63",
+   "id": "furn65",
    "level": "main",
    "room": "Foyer",
    "kind": "bench",
@@ -5705,11 +5751,11 @@
     15.6,
     14.0
    ],
-   "node": "main/furniture/Foyer/Bench 63",
+   "node": "main/furniture/Foyer/Bench 65",
    "opts": {}
   },
   {
-   "id": "furn64",
+   "id": "furn66",
    "level": "main",
    "room": "Foyer",
    "kind": "art",
@@ -5727,14 +5773,14 @@
     14.28,
     13.5
    ],
-   "node": "main/furniture/Foyer/art 64",
+   "node": "main/furniture/Foyer/art 66",
    "opts": {
     "W": 3,
     "color": "fix:#a7745a"
    }
   },
   {
-   "id": "furn65",
+   "id": "furn67",
    "level": "main",
    "room": "Foyer",
    "kind": "console_table",
@@ -5752,11 +5798,11 @@
     15.45,
     2.0
    ],
-   "node": "main/furniture/Foyer/Console 65",
+   "node": "main/furniture/Foyer/Console 67",
    "opts": {}
   },
   {
-   "id": "furn66",
+   "id": "furn68",
    "level": "main",
    "room": "Foyer Closet",
    "kind": "closet_rod",
@@ -5774,7 +5820,7 @@
     23.8,
     -0.7
    ],
-   "node": "main/furniture/Foyer Closet/Coats 66",
+   "node": "main/furniture/Foyer Closet/Coats 68",
    "opts": {
     "W": 3.1,
     "D": 2.0,
@@ -5783,7 +5829,7 @@
    }
   },
   {
-   "id": "furn67",
+   "id": "furn69",
    "level": "main",
    "room": "Foyer",
    "kind": "rug",
@@ -5801,7 +5847,7 @@
     20.5,
     6.5
    ],
-   "node": "main/furniture/Foyer/rug 67",
+   "node": "main/furniture/Foyer/rug 69",
    "opts": {
     "W": 5,
     "D": 8,
@@ -5810,7 +5856,7 @@
    }
   },
   {
-   "id": "furn68",
+   "id": "furn70",
    "level": "main",
    "room": "Foyer",
    "kind": "pendant",
@@ -5828,7 +5874,7 @@
     19,
     5
    ],
-   "node": "main/furniture/Foyer/pendant 68",
+   "node": "main/furniture/Foyer/pendant 70",
    "opts": {
     "W": 2,
     "D": 2,
@@ -5837,7 +5883,7 @@
    }
   },
   {
-   "id": "furn69",
+   "id": "furn71",
    "level": "main",
    "room": "Foyer",
    "kind": "plant",
@@ -5855,11 +5901,11 @@
     23.7,
     8.5
    ],
-   "node": "main/furniture/Foyer/plant 69",
+   "node": "main/furniture/Foyer/plant 71",
    "opts": {}
   },
   {
-   "id": "furn70",
+   "id": "furn72",
    "level": "main",
    "room": "Main Bath",
    "kind": "vanity",
@@ -5877,14 +5923,14 @@
     36.0,
     5.0
    ],
-   "node": "main/furniture/Main Bath/Vanity 70",
+   "node": "main/furniture/Main Bath/Vanity 72",
    "opts": {
     "W": 4,
     "D": 1.8
    }
   },
   {
-   "id": "furn71",
+   "id": "furn73",
    "level": "main",
    "room": "Main Bath",
    "kind": "toilet",
@@ -5902,11 +5948,11 @@
     41.8,
     2.3
    ],
-   "node": "main/furniture/Main Bath/WC 71",
+   "node": "main/furniture/Main Bath/WC 73",
    "opts": {}
   },
   {
-   "id": "furn72",
+   "id": "furn74",
    "level": "main",
    "room": "Main Bath",
    "kind": "shower",
@@ -5924,7 +5970,7 @@
     41.8,
     9.8
    ],
-   "node": "main/furniture/Main Bath/Shower 72",
+   "node": "main/furniture/Main Bath/Shower 74",
    "opts": {
     "W": 4.5,
     "D": 3.6,
@@ -5932,7 +5978,7 @@
    }
   },
   {
-   "id": "furn73",
+   "id": "furn75",
    "level": "main",
    "room": "Hall",
    "kind": "rug",
@@ -5950,7 +5996,7 @@
     41,
     15.2
    ],
-   "node": "main/furniture/Hall/rug 73",
+   "node": "main/furniture/Hall/rug 75",
    "opts": {
     "W": 6,
     "D": 4.4,
@@ -5958,7 +6004,7 @@
    }
   },
   {
-   "id": "furn74",
+   "id": "furn76",
    "level": "main",
    "room": "Mudroom",
    "kind": "wardrobe_wall",
@@ -5976,7 +6022,7 @@
     43.95,
     7.4
    ],
-   "node": "main/furniture/Mudroom/Lockers 74",
+   "node": "main/furniture/Mudroom/Lockers 76",
    "opts": {
     "W": 7,
     "D": 1.75,
@@ -5984,7 +6030,7 @@
    }
   },
   {
-   "id": "furn75",
+   "id": "furn77",
    "level": "main",
    "room": "Mudroom",
    "kind": "mudroom_lockers",
@@ -6002,7 +6048,7 @@
     54.75,
     2.05
    ],
-   "node": "main/furniture/Mudroom/Lockers / bench 75",
+   "node": "main/furniture/Mudroom/Lockers / bench 77",
    "opts": {
     "W": 9.2,
     "sections": 4,
@@ -6010,7 +6056,7 @@
    }
   },
   {
-   "id": "furn76",
+   "id": "furn78",
    "level": "main",
    "room": "Mudroom",
    "kind": "rug",
@@ -6028,7 +6074,7 @@
     50,
     11.5
    ],
-   "node": "main/furniture/Mudroom/rug 76",
+   "node": "main/furniture/Mudroom/rug 78",
    "opts": {
     "W": 3,
     "D": 8,
@@ -6037,7 +6083,7 @@
    }
   },
   {
-   "id": "furn77",
+   "id": "furn79",
    "level": "main",
    "room": "Garage",
    "kind": "car",
@@ -6055,11 +6101,11 @@
     78.0,
     9.1
    ],
-   "node": "main/furniture/Garage/Car 77",
+   "node": "main/furniture/Garage/Car 79",
    "opts": {}
   },
   {
-   "id": "furn78",
+   "id": "furn80",
    "level": "main",
    "room": "Garage",
    "kind": "car",
@@ -6077,13 +6123,13 @@
     78.0,
     16.7
    ],
-   "node": "main/furniture/Garage/Car 78",
+   "node": "main/furniture/Garage/Car 80",
    "opts": {
     "color": "gloss:#b8bcc0"
    }
   },
   {
-   "id": "furn79",
+   "id": "furn81",
    "level": "main",
    "room": "Garage",
    "kind": "shelving_metal",
@@ -6101,11 +6147,11 @@
     58.2,
     21.0
    ],
-   "node": "main/furniture/Garage/Shelving 79",
+   "node": "main/furniture/Garage/Shelving 81",
    "opts": {}
   },
   {
-   "id": "furn80",
+   "id": "furn82",
    "level": "main",
    "room": "Garage",
    "kind": "workbench",
@@ -6123,11 +6169,11 @@
     58.7,
     29.5
    ],
-   "node": "main/furniture/Garage/Workbench 80",
+   "node": "main/furniture/Garage/Workbench 82",
    "opts": {}
   },
   {
-   "id": "furn81",
+   "id": "furn83",
    "level": "main",
    "room": "Patio",
    "kind": "outdoor_fireplace",
@@ -6145,11 +6191,11 @@
     30.0,
     55.6
    ],
-   "node": "main/furniture/Patio/Fireplace 81",
+   "node": "main/furniture/Patio/Fireplace 83",
    "opts": {}
   },
   {
-   "id": "furn82",
+   "id": "furn84",
    "level": "main",
    "room": "Patio",
    "kind": "sofa",
@@ -6167,7 +6213,7 @@
     32.5,
     48.2
    ],
-   "node": "main/furniture/Patio/Sofa 82",
+   "node": "main/furniture/Patio/Sofa 84",
    "opts": {
     "W": 7,
     "D": 3.2,
@@ -6176,7 +6222,7 @@
    }
   },
   {
-   "id": "furn83",
+   "id": "furn85",
    "level": "main",
    "room": "Patio",
    "kind": "coffee_table",
@@ -6194,7 +6240,7 @@
     30.7,
     51
    ],
-   "node": "main/furniture/Patio/Coffee tbl 83",
+   "node": "main/furniture/Patio/Coffee tbl 85",
    "opts": {
     "W": 3.5,
     "D": 2,
@@ -6202,7 +6248,7 @@
    }
   },
   {
-   "id": "furn84",
+   "id": "furn86",
    "level": "main",
    "room": "Patio",
    "kind": "outdoor_table",
@@ -6220,11 +6266,11 @@
     46.0,
     49.2
    ],
-   "node": "main/furniture/Patio/Table 84",
+   "node": "main/furniture/Patio/Table 86",
    "opts": {}
   },
   {
-   "id": "furn85",
+   "id": "furn87",
    "level": "main",
    "room": "Patio",
    "kind": "chair",
@@ -6242,14 +6288,14 @@
     41.6,
     46.0
    ],
-   "node": "main/furniture/Patio/chair 85",
+   "node": "main/furniture/Patio/chair 87",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn86",
+   "id": "furn88",
    "level": "main",
    "room": "Patio",
    "kind": "chair",
@@ -6267,14 +6313,14 @@
     43.3,
     46.0
    ],
-   "node": "main/furniture/Patio/chair 86",
+   "node": "main/furniture/Patio/chair 88",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"
    }
   },
   {
-   "id": "furn87",
+   "id": "furn89",
    "level": "main",
    "room": "Patio",
    "kind": "chair",
@@ -6291,56 +6337,6 @@
     44.3,
     45.0,
     46.0
-   ],
-   "node": "main/furniture/Patio/chair 87",
-   "opts": {
-    "seat": "fabric:#d8d2c4",
-    "frame": "metal:#2b2c2e"
-   }
-  },
-  {
-   "id": "furn88",
-   "level": "main",
-   "room": "Patio",
-   "kind": "chair",
-   "label": null,
-   "facing": "S",
-   "center": [
-    40.8,
-    49.85
-   ],
-   "width": 1.6,
-   "depth": 1.7,
-   "footprint": [
-    40.0,
-    49.0,
-    41.6,
-    50.7
-   ],
-   "node": "main/furniture/Patio/chair 88",
-   "opts": {
-    "seat": "fabric:#d8d2c4",
-    "frame": "metal:#2b2c2e"
-   }
-  },
-  {
-   "id": "furn89",
-   "level": "main",
-   "room": "Patio",
-   "kind": "chair",
-   "label": null,
-   "facing": "S",
-   "center": [
-    42.5,
-    49.85
-   ],
-   "width": 1.6,
-   "depth": 1.7,
-   "footprint": [
-    41.7,
-    49.0,
-    43.3,
-    50.7
    ],
    "node": "main/furniture/Patio/chair 89",
    "opts": {
@@ -6356,6 +6352,56 @@
    "label": null,
    "facing": "S",
    "center": [
+    40.8,
+    49.85
+   ],
+   "width": 1.6,
+   "depth": 1.7,
+   "footprint": [
+    40.0,
+    49.0,
+    41.6,
+    50.7
+   ],
+   "node": "main/furniture/Patio/chair 90",
+   "opts": {
+    "seat": "fabric:#d8d2c4",
+    "frame": "metal:#2b2c2e"
+   }
+  },
+  {
+   "id": "furn91",
+   "level": "main",
+   "room": "Patio",
+   "kind": "chair",
+   "label": null,
+   "facing": "S",
+   "center": [
+    42.5,
+    49.85
+   ],
+   "width": 1.6,
+   "depth": 1.7,
+   "footprint": [
+    41.7,
+    49.0,
+    43.3,
+    50.7
+   ],
+   "node": "main/furniture/Patio/chair 91",
+   "opts": {
+    "seat": "fabric:#d8d2c4",
+    "frame": "metal:#2b2c2e"
+   }
+  },
+  {
+   "id": "furn92",
+   "level": "main",
+   "room": "Patio",
+   "kind": "chair",
+   "label": null,
+   "facing": "S",
+   "center": [
     44.2,
     49.85
    ],
@@ -6367,7 +6413,7 @@
     45.0,
     50.7
    ],
-   "node": "main/furniture/Patio/chair 90",
+   "node": "main/furniture/Patio/chair 92",
    "opts": {
     "seat": "fabric:#d8d2c4",
     "frame": "metal:#2b2c2e"

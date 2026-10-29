@@ -155,12 +155,13 @@ FURNITURE = [
  ("main", "console_table", 3, 16.25, "N", dict(W=6)),
  ("main", "art", 4, 16.2, "N", dict(W=4, color="fix:#c9a36b")),
  # dining
- ("main", "rug", 27, 17.5, "N", dict(W=12, D=9, color="fabric:#b9b0a1", border="fabric:#6e6457")),
- ("main", "dining_table", 29, 20.2, "N", {}),
- *[("main", "chair", cx, 18.8, "N", {}) for cx in (30.0, 32.2, 34.4)],
- *[("main", "chair", cx, 23.5, "S", {}) for cx in (30.0, 32.2, 34.4)],
- ("main", "chair", 27.4, 21.2, "E", {}), ("main", "chair", 36.9, 21.2, "W", {}),
- *[("main", "pendant", px, 21.3, "N", dict(z=6.8, ceil=10.0)) for px in (30.3, 32.3, 34.3)],
+ # 9.5 ft table running north-south, centered in the open floor between the sofa and the island; seats 10
+ ("main", "rug", 25, 21, "N", dict(W=9, D=12, color="fabric:#b9b0a1", border="fabric:#6e6457")),
+ ("main", "dining_table", 27.7, 22.25, "E", dict(W=9.5)),
+ *[("main", "chair", 26.3, cy, "E", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
+ *[("main", "chair", 31.0, cy, "W", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
+ ("main", "chair", 28.7, 20.85, "N", {}), ("main", "chair", 28.7, 31.45, "S", {}),
+ *[("main", "pendant", 28.8, py, "N", dict(z=6.8, ceil=10.0)) for py in (24.3, 26.3, 28.3)],
  ("main", "media_console", 23, 16.25, "N", dict(W=7, label="Buffet")),
  ("main", "art", 24.5, 16.2, "N", dict(W=4, z=4.8, color="fix:#5f7f8f")),
  # kitchen
