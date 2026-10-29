@@ -156,12 +156,12 @@ FURNITURE = [
  ("main", "art", 4, 16.2, "N", dict(W=4, color="fix:#c9a36b")),
  # dining
  # 9.5 ft table running north-south, centered in the open floor between the sofa and the island; seats 10
- ("main", "rug", 25, 21, "N", dict(W=9, D=12, color="fabric:#b9b0a1", border="fabric:#6e6457")),
- ("main", "dining_table", 27.7, 22.25, "E", dict(W=9.5)),
- *[("main", "chair", 26.3, cy, "E", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
- *[("main", "chair", 31.0, cy, "W", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
- ("main", "chair", 28.7, 20.85, "N", {}), ("main", "chair", 28.7, 31.45, "S", {}),
- *[("main", "pendant", 28.8, py, "N", dict(z=6.8, ceil=10.0)) for py in (24.3, 26.3, 28.3)],
+ ("main", "rug", 23, 21, "N", dict(W=9, D=12, color="fabric:#b9b0a1", border="fabric:#6e6457")),
+ ("main", "dining_table", 25.7, 22.25, "E", dict(W=9.5)),
+ *[("main", "chair", 24.3, cy, "E", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
+ *[("main", "chair", 29.0, cy, "W", {}) for cy in (22.9, 25.1, 27.3, 29.5)],
+ ("main", "chair", 26.7, 20.85, "N", {}), ("main", "chair", 26.7, 31.45, "S", {}),
+ *[("main", "pendant", 26.8, py, "N", dict(z=6.8, ceil=10.0)) for py in (24.3, 26.3, 28.3)],
  ("main", "media_console", 23, 16.25, "N", dict(W=7, label="Buffet")),
  ("main", "art", 24.5, 16.2, "N", dict(W=4, z=4.8, color="fix:#5f7f8f")),
  # kitchen
@@ -182,6 +182,9 @@ FURNITURE = [
  *[("main", "pendant", px, 30.85, "N", dict(z=6.8, ceil=10.0)) for px in (40.8, 43.3, 45.8)],
  ("main", "base_cab", 24, 37.75, "S", dict(W=8, label="Coffee bar")),
  ("main", "upper_cab", 24.5, 38.65, "S", dict(W=7)),
+ # bar on the pantry's west wall: 8 ft counter with a bar sink, open bottle shelves above
+ ("main", "base_cab", 41.8, 17, "W", dict(W=8, sink=2.7, label="Bar")),
+ ("main", "pantry_shelves", 42.7, 17, "W", dict(W=8, D=1.1, H=8.0, z0=4.6, wood="wood:#6e4f37", seed=12, label=None)),
  # pantry
  ("main", "base_cab", 44.2, 16.4, "E", dict(W=9.2, label="Pantry cabs")),
  ("main", "pantry_shelves", 44.2, 16.4, "E", dict(W=9.2, D=1.2, z0=4.2, label=None)),

@@ -229,6 +229,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-28: dining table 2 ft west; 8 ft bar (counter, bar sink, open shelves) on the pantry's west wall in the great room.
 - 2026-10-28: dining table turned north-south, 9.5 ft, seats 10; centered in the open floor (rug + pendants follow).
 - 2026-10-28: pantry wall lined up at y=16; Main Bath 8x10, mudroom 14x16.
 - 2026-10-28: Bath 2 shower -> linen closet; hall door against the west wall.
