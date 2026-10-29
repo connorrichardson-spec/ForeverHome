@@ -70,6 +70,9 @@ Design a custom-built family home over a multi-year planning process. Deliverabl
   hall, which ends at x 48.5 (door now 2.5 ft at x 47).
 - 2026-10-28: Bath 2's separate shower removed (tub/shower only); its spot is a 6x3 linen/towel closet with sliding
   doors off the tub/WC room. Bath 2's hall door moved to the west wall (x 35.75).
+- 2026-10-28: Pantry's south wall moved 2 ft north (y 14 -> 16) so the main floor has one straight wall across the
+  house at y=16. Pantry 12x12 -> 12x10; hall (still 8x6) and mudroom (14x14 -> 14x16) shift/grow with it; Main Bath
+  8x8 -> 8x10 (4 ft vanity, 4.5x3.6 shower).
 
 ## Open Questions
 - Lot: not selected yet. Likely Tennessee or Missouri (affects frost depth, basement norms, code, climate zone).
@@ -226,6 +229,7 @@ Rooms can be flagged `unfinished=True` in house.py: no trim, excluded from finis
 - Public repo: the design is publicly viewable. Make private (and lose free Pages) or move hosting if that matters.
 
 ## Session Log
+- 2026-10-28: pantry wall lined up at y=16; Main Bath 8x10, mudroom 14x16.
 - 2026-10-28: Bath 2 shower -> linen closet; hall door against the west wall.
 - 2026-10-28: laundry 1.5 ft narrower, Bath 2 1.5 ft wider (bigger shower + vanity).
 - 2026-10-28: Bed 3 closet onto the stair landing; primary tub out, bath door moved, dresser/TV centered on the bed.

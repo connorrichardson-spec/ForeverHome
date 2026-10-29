@@ -5,11 +5,11 @@ main,Office,14,16,224,yes,
 main,Foyer,10,19,179.5,yes,In the 3 ft entry bay under the front gable
 main,Foyer Closet,3.5,3,10.5,yes,Coat closet
 main,Stair,10,19,190,no,5.2 ft walkway foyer <-> hall; open to above
-main,Main Bath,8,8,64,yes,"3/4 bath (shower, no tub) so the office can become a main-floor bedroom later"
+main,Main Bath,8,10,80,yes,"3/4 bath (shower, no tub) so the office can become a main-floor bedroom later"
 main,Hall,8,6,48,yes,
-main,Mudroom,14,14,196,yes,
-main,Pantry,12,12,144,yes,Walk-in
-main,Great Room,56,26,1244,yes,Open plan: living / dining / kitchen
+main,Mudroom,14,16,224,yes,
+main,Pantry,12,10,120,yes,Walk-in; south wall on the y=16 line that runs across the house
+main,Great Room,56,24,1224,yes,Open plan: living / dining / kitchen
 main,Garage,26,30,780,no,3-car side-load + storage/workspace
 main,Patio,34,16,544,no,Open paver patio + fireplace; outdoor kitchen deferred (stub gas/power/water for later)
 upper,Bedroom 2,12,18,216,yes,"Teen room: queen, desk, dresser"

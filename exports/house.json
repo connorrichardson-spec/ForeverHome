@@ -314,14 +314,14 @@
     ],
     [
      42,
-     8
+     10
     ],
     [
      34,
-     8
+     10
     ]
    ],
-   "area_sqft": 64,
+   "area_sqft": 80,
    "paint": "#2f4a5c",
    "floor": "tile",
    "windows": "small",
@@ -335,19 +335,19 @@
    "polygon": [
     [
      34,
-     8
+     10
     ],
     [
      42,
-     8
+     10
     ],
     [
      42,
-     14
+     16
     ],
     [
      34,
-     14
+     16
     ]
    ],
    "area_sqft": 48,
@@ -372,14 +372,14 @@
     ],
     [
      56,
-     14
+     16
     ],
     [
      42,
-     14
+     16
     ]
    ],
-   "area_sqft": 196,
+   "area_sqft": 224,
    "paint": "#cfd9dc",
    "floor": "hardwood",
    "windows": "small",
@@ -393,11 +393,11 @@
    "polygon": [
     [
      44,
-     14
+     16
     ],
     [
      56,
-     14
+     16
     ],
     [
      56,
@@ -408,11 +408,11 @@
      26
     ]
    ],
-   "area_sqft": 144,
+   "area_sqft": 120,
    "paint": "#f0ede6",
    "floor": "hardwood",
    "windows": "none",
-   "note": "Walk-in",
+   "note": "Walk-in; south wall on the y=16 line that runs across the house",
    "zones": []
   },
   {
@@ -425,16 +425,8 @@
      16
     ],
     [
-     34,
-     16
-    ],
-    [
-     34,
-     14
-    ],
-    [
      44,
-     14
+     16
     ],
     [
      44,
@@ -453,7 +445,7 @@
      40
     ]
    ],
-   "area_sqft": 1244,
+   "area_sqft": 1224,
    "paint": "#e6e1d6",
    "floor": "hardwood",
    "windows": "normal",
@@ -1497,6 +1489,63 @@
    "id": "wall10",
    "level": "main",
    "start": [
+    34,
+    16
+   ],
+   "end": [
+    42,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Great Room",
+    "Hall"
+   ],
+   "node": "main/wall/10 Great Room | Hall"
+  },
+  {
+   "id": "wall11",
+   "level": "main",
+   "start": [
+    42,
+    16
+   ],
+   "end": [
+    44,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Great Room",
+    "Mudroom"
+   ],
+   "node": "main/wall/11 Great Room | Mudroom"
+  },
+  {
+   "id": "wall12",
+   "level": "main",
+   "start": [
+    44,
+    16
+   ],
+   "end": [
+    56,
+    16
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Mudroom",
+    "Pantry"
+   ],
+   "node": "main/wall/12 Mudroom | Pantry"
+  },
+  {
+   "id": "wall13",
+   "level": "main",
+   "start": [
     0,
     0
    ],
@@ -1509,10 +1558,10 @@
    "rooms": [
     "Office"
    ],
-   "node": "main/wall/10 Office"
+   "node": "main/wall/13 Office"
   },
   {
-   "id": "wall11",
+   "id": "wall14",
    "level": "main",
    "start": [
     0,
@@ -1527,10 +1576,10 @@
    "rooms": [
     "Great Room"
    ],
-   "node": "main/wall/11 Great Room"
+   "node": "main/wall/14 Great Room"
   },
   {
-   "id": "wall12",
+   "id": "wall15",
    "level": "main",
    "start": [
     14,
@@ -1545,10 +1594,10 @@
    "rooms": [
     "Foyer"
    ],
-   "node": "main/wall/12 Foyer"
+   "node": "main/wall/15 Foyer"
   },
   {
-   "id": "wall13",
+   "id": "wall16",
    "level": "main",
    "start": [
     20.5,
@@ -1563,10 +1612,10 @@
    "rooms": [
     "Foyer Closet"
    ],
-   "node": "main/wall/13 Foyer Closet"
+   "node": "main/wall/16 Foyer Closet"
   },
   {
-   "id": "wall14",
+   "id": "wall17",
    "level": "main",
    "start": [
     24,
@@ -1581,10 +1630,10 @@
    "rooms": [
     "Stair"
    ],
-   "node": "main/wall/14 Stair"
+   "node": "main/wall/17 Stair"
   },
   {
-   "id": "wall15",
+   "id": "wall18",
    "level": "main",
    "start": [
     20.5,
@@ -1600,10 +1649,10 @@
     "Foyer",
     "Foyer Closet"
    ],
-   "node": "main/wall/15 Foyer | Foyer Closet"
+   "node": "main/wall/18 Foyer | Foyer Closet"
   },
   {
-   "id": "wall16",
+   "id": "wall19",
    "level": "main",
    "start": [
     24,
@@ -1619,10 +1668,10 @@
     "Foyer Closet",
     "Stair"
    ],
-   "node": "main/wall/16 Foyer Closet | Stair"
+   "node": "main/wall/19 Foyer Closet | Stair"
   },
   {
-   "id": "wall17",
+   "id": "wall20",
    "level": "main",
    "start": [
     24,
@@ -1638,10 +1687,10 @@
     "Foyer",
     "Stair"
    ],
-   "node": "main/wall/17 Foyer | Stair"
+   "node": "main/wall/20 Foyer | Stair"
   },
   {
-   "id": "wall18",
+   "id": "wall21",
    "level": "main",
    "start": [
     34,
@@ -1656,10 +1705,10 @@
    "rooms": [
     "Stair"
    ],
-   "node": "main/wall/18 Stair"
+   "node": "main/wall/21 Stair"
   },
   {
-   "id": "wall19",
+   "id": "wall22",
    "level": "main",
    "start": [
     34,
@@ -1667,7 +1716,7 @@
    ],
    "end": [
     34,
-    8
+    10
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1675,33 +1724,14 @@
     "Main Bath",
     "Stair"
    ],
-   "node": "main/wall/19 Main Bath | Stair"
+   "node": "main/wall/22 Main Bath | Stair"
   },
   {
-   "id": "wall20",
+   "id": "wall23",
    "level": "main",
    "start": [
     34,
-    8
-   ],
-   "end": [
-    34,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Hall",
-    "Stair"
-   ],
-   "node": "main/wall/20 Hall | Stair"
-  },
-  {
-   "id": "wall21",
-   "level": "main",
-   "start": [
-    34,
-    14
+    10
    ],
    "end": [
     34,
@@ -1710,13 +1740,13 @@
    "thickness": 0.33,
    "exterior": false,
    "rooms": [
-    "Great Room",
+    "Hall",
     "Stair"
    ],
-   "node": "main/wall/21 Great Room | Stair"
+   "node": "main/wall/23 Hall | Stair"
   },
   {
-   "id": "wall22",
+   "id": "wall24",
    "level": "main",
    "start": [
     42,
@@ -1724,7 +1754,7 @@
    ],
    "end": [
     42,
-    8
+    10
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1732,18 +1762,18 @@
     "Main Bath",
     "Mudroom"
    ],
-   "node": "main/wall/22 Main Bath | Mudroom"
+   "node": "main/wall/24 Main Bath | Mudroom"
   },
   {
-   "id": "wall23",
+   "id": "wall25",
    "level": "main",
    "start": [
     42,
-    8
+    10
    ],
    "end": [
     42,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1751,18 +1781,18 @@
     "Hall",
     "Mudroom"
    ],
-   "node": "main/wall/23 Hall | Mudroom"
+   "node": "main/wall/25 Hall | Mudroom"
   },
   {
-   "id": "wall24",
+   "id": "wall26",
    "level": "main",
    "start": [
     34,
-    8
+    10
    ],
    "end": [
     42,
-    8
+    10
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1770,67 +1800,10 @@
     "Hall",
     "Main Bath"
    ],
-   "node": "main/wall/24 Hall | Main Bath"
-  },
-  {
-   "id": "wall25",
-   "level": "main",
-   "start": [
-    34,
-    14
-   ],
-   "end": [
-    42,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Great Room",
-    "Hall"
-   ],
-   "node": "main/wall/25 Great Room | Hall"
-  },
-  {
-   "id": "wall26",
-   "level": "main",
-   "start": [
-    42,
-    14
-   ],
-   "end": [
-    44,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Great Room",
-    "Mudroom"
-   ],
-   "node": "main/wall/26 Great Room | Mudroom"
+   "node": "main/wall/26 Hall | Main Bath"
   },
   {
    "id": "wall27",
-   "level": "main",
-   "start": [
-    44,
-    14
-   ],
-   "end": [
-    56,
-    14
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Mudroom",
-    "Pantry"
-   ],
-   "node": "main/wall/27 Mudroom | Pantry"
-  },
-  {
-   "id": "wall28",
    "level": "main",
    "start": [
     56,
@@ -1838,7 +1811,7 @@
    ],
    "end": [
     56,
-    14
+    16
    ],
    "thickness": 0.33,
    "exterior": false,
@@ -1846,14 +1819,14 @@
     "Garage",
     "Mudroom"
    ],
-   "node": "main/wall/28 Garage | Mudroom"
+   "node": "main/wall/27 Garage | Mudroom"
   },
   {
-   "id": "wall29",
+   "id": "wall28",
    "level": "main",
    "start": [
     56,
-    14
+    16
    ],
    "end": [
     56,
@@ -1865,10 +1838,10 @@
     "Garage",
     "Pantry"
    ],
-   "node": "main/wall/29 Garage | Pantry"
+   "node": "main/wall/28 Garage | Pantry"
   },
   {
-   "id": "wall30",
+   "id": "wall29",
    "level": "main",
    "start": [
     56,
@@ -1884,10 +1857,10 @@
     "Garage",
     "Great Room"
    ],
-   "node": "main/wall/30 Garage | Great Room"
+   "node": "main/wall/29 Garage | Great Room"
   },
   {
-   "id": "wall31",
+   "id": "wall30",
    "level": "main",
    "start": [
     56,
@@ -1902,10 +1875,10 @@
    "rooms": [
     "Great Room"
    ],
-   "node": "main/wall/31 Great Room"
+   "node": "main/wall/30 Great Room"
   },
   {
-   "id": "wall32",
+   "id": "wall31",
    "level": "main",
    "start": [
     44,
@@ -1913,6 +1886,25 @@
    ],
    "end": [
     56,
+    26
+   ],
+   "thickness": 0.33,
+   "exterior": false,
+   "rooms": [
+    "Great Room",
+    "Pantry"
+   ],
+   "node": "main/wall/31 Great Room | Pantry"
+  },
+  {
+   "id": "wall32",
+   "level": "main",
+   "start": [
+    44,
+    16
+   ],
+   "end": [
+    44,
     26
    ],
    "thickness": 0.33,
@@ -1927,25 +1919,6 @@
    "id": "wall33",
    "level": "main",
    "start": [
-    44,
-    14
-   ],
-   "end": [
-    44,
-    26
-   ],
-   "thickness": 0.33,
-   "exterior": false,
-   "rooms": [
-    "Great Room",
-    "Pantry"
-   ],
-   "node": "main/wall/33 Great Room | Pantry"
-  },
-  {
-   "id": "wall34",
-   "level": "main",
-   "start": [
     0,
     40
    ],
@@ -1958,10 +1931,10 @@
    "rooms": [
     "Great Room"
    ],
-   "node": "main/wall/34 Great Room"
+   "node": "main/wall/33 Great Room"
   },
   {
-   "id": "wall35",
+   "id": "wall34",
    "level": "main",
    "start": [
     22,
@@ -1977,10 +1950,10 @@
     "Great Room",
     "Patio"
    ],
-   "node": "main/wall/35 Great Room | Patio"
+   "node": "main/wall/34 Great Room | Patio"
   },
   {
-   "id": "wall36",
+   "id": "wall35",
    "level": "main",
    "start": [
     82,
@@ -1995,10 +1968,10 @@
    "rooms": [
     "Garage"
    ],
-   "node": "main/wall/36 Garage"
+   "node": "main/wall/35 Garage"
   },
   {
-   "id": "wall37",
+   "id": "wall36",
    "level": "main",
    "start": [
     56,
@@ -2013,7 +1986,7 @@
    "rooms": [
     "Garage"
    ],
-   "node": "main/wall/37 Garage"
+   "node": "main/wall/36 Garage"
   },
   {
    "id": "wall0",
@@ -3114,7 +3087,7 @@
   },
   {
    "level": "main",
-   "wall": "wall12",
+   "wall": "wall15",
    "kind": "door",
    "center": [
     17.25,
@@ -3127,7 +3100,7 @@
   },
   {
    "level": "main",
-   "wall": "wall37",
+   "wall": "wall36",
    "kind": "door",
    "center": [
     69,
@@ -3153,7 +3126,7 @@
   },
   {
    "level": "main",
-   "wall": "wall17",
+   "wall": "wall20",
    "kind": "cased",
    "center": [
     24,
@@ -3192,7 +3165,7 @@
   },
   {
    "level": "main",
-   "wall": "wall20",
+   "wall": "wall23",
    "kind": "cased",
    "center": [
     34,
@@ -3205,11 +3178,11 @@
   },
   {
    "level": "main",
-   "wall": "wall24",
+   "wall": "wall26",
    "kind": "door",
    "center": [
     36,
-    8
+    10
    ],
    "width": 2.5,
    "height": 6.67,
@@ -3218,11 +3191,11 @@
   },
   {
    "level": "main",
-   "wall": "wall25",
+   "wall": "wall10",
    "kind": "cased",
    "center": [
     38.0,
-    14
+    16
    ],
    "width": 6.0,
    "height": 8.0,
@@ -3231,11 +3204,11 @@
   },
   {
    "level": "main",
-   "wall": "wall23",
+   "wall": "wall25",
    "kind": "cased",
    "center": [
     42,
-    11.0
+    13.0
    ],
    "width": 5.5,
    "height": 8.0,
@@ -3244,11 +3217,11 @@
   },
   {
    "level": "main",
-   "wall": "wall28",
+   "wall": "wall27",
    "kind": "door",
    "center": [
     56,
-    7.0
+    8.0
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3257,11 +3230,11 @@
   },
   {
    "level": "main",
-   "wall": "wall27",
+   "wall": "wall12",
    "kind": "door",
    "center": [
     50.0,
-    14
+    16
    ],
    "width": 3.0,
    "height": 6.67,
@@ -3270,7 +3243,7 @@
   },
   {
    "level": "main",
-   "wall": "wall32",
+   "wall": "wall31",
    "kind": "door",
    "center": [
     50.0,
@@ -3283,7 +3256,7 @@
   },
   {
    "level": "main",
-   "wall": "wall35",
+   "wall": "wall34",
    "kind": "patio",
    "center": [
     39.0,
@@ -3296,7 +3269,7 @@
   },
   {
    "level": "main",
-   "wall": "wall36",
+   "wall": "wall35",
    "kind": "garage",
    "center": [
     82,
@@ -3309,7 +3282,7 @@
   },
   {
    "level": "main",
-   "wall": "wall36",
+   "wall": "wall35",
    "kind": "garage",
    "center": [
     82,
@@ -3413,7 +3386,7 @@
   },
   {
    "level": "main",
-   "wall": "wall10",
+   "wall": "wall13",
    "kind": "window",
    "center": [
     0,
@@ -3426,7 +3399,7 @@
   },
   {
    "level": "main",
-   "wall": "wall11",
+   "wall": "wall14",
    "kind": "window",
    "center": [
     0,
@@ -3439,7 +3412,7 @@
   },
   {
    "level": "main",
-   "wall": "wall11",
+   "wall": "wall14",
    "kind": "window",
    "center": [
     0,
@@ -3452,7 +3425,7 @@
   },
   {
    "level": "main",
-   "wall": "wall14",
+   "wall": "wall17",
    "kind": "window",
    "center": [
     29.0,
@@ -3465,7 +3438,7 @@
   },
   {
    "level": "main",
-   "wall": "wall18",
+   "wall": "wall21",
    "kind": "window",
    "center": [
     34,
@@ -3478,7 +3451,7 @@
   },
   {
    "level": "main",
-   "wall": "wall31",
+   "wall": "wall30",
    "kind": "window",
    "center": [
     56,
@@ -3491,7 +3464,7 @@
   },
   {
    "level": "main",
-   "wall": "wall34",
+   "wall": "wall33",
    "kind": "window",
    "center": [
     11.0,
@@ -3504,7 +3477,7 @@
   },
   {
    "level": "main",
-   "wall": "wall37",
+   "wall": "wall36",
    "kind": "window",
    "center": [
     60.333,
@@ -3517,7 +3490,7 @@
   },
   {
    "level": "main",
-   "wall": "wall37",
+   "wall": "wall36",
    "kind": "window",
    "center": [
     77.667,
@@ -5428,19 +5401,19 @@
    "facing": "E",
    "center": [
     45.2,
-    20.0
+    21.0
    ],
-   "width": 11.2,
+   "width": 9.2,
    "depth": 2.0,
    "footprint": [
     44.2,
-    14.4,
+    16.4,
     46.2,
     25.6
    ],
    "node": "main/furniture/Pantry/Pantry cabs 51",
    "opts": {
-    "W": 11.2,
+    "W": 9.2,
     "label": "Pantry cabs"
    }
   },
@@ -5453,19 +5426,19 @@
    "facing": "E",
    "center": [
     44.8,
-    20.0
+    21.0
    ],
-   "width": 11.2,
+   "width": 9.2,
    "depth": 1.2,
    "footprint": [
     44.2,
-    14.4,
+    16.4,
     45.4,
     25.6
    ],
    "node": "main/furniture/Pantry/pantry_shelves 52",
    "opts": {
-    "W": 11.2,
+    "W": 9.2,
     "D": 1.2,
     "z0": 4.2,
     "label": null
@@ -5480,15 +5453,15 @@
    "facing": "W",
    "center": [
     54.8,
-    16.9
+    18.9
    ],
    "width": 5.0,
    "depth": 2.0,
    "footprint": [
     53.8,
-    14.4,
+    16.4,
     55.8,
-    19.4
+    21.4
    ],
    "node": "main/furniture/Pantry/Pantry cab 53",
    "opts": {
@@ -5505,19 +5478,19 @@
    "facing": "W",
    "center": [
     54.8,
-    22.5
+    23.5
    ],
-   "width": 6.2,
+   "width": 4.2,
    "depth": 2.0,
    "footprint": [
     53.8,
-    19.4,
+    21.4,
     55.8,
     25.6
    ],
    "node": "main/furniture/Pantry/Pantry cabs 54",
    "opts": {
-    "W": 6.2,
+    "W": 4.2,
     "drawers": true,
     "label": "Pantry cabs"
    }
@@ -5531,19 +5504,19 @@
    "facing": "W",
    "center": [
     55.25,
-    22.5
+    23.5
    ],
-   "width": 6.2,
+   "width": 4.2,
    "depth": 1.1,
    "footprint": [
     54.7,
-    19.4,
+    21.4,
     55.8,
     25.6
    ],
    "node": "main/furniture/Pantry/upper_cab 55",
    "opts": {
-    "W": 6.2,
+    "W": 4.2,
     "z": 4.6,
     "H": 3.6
    }
@@ -5896,17 +5869,17 @@
     35.1,
     3.0
    ],
-   "width": 3.0,
+   "width": 4.0,
    "depth": 1.8,
    "footprint": [
     34.2,
-    1.5,
+    1.0,
     36.0,
-    4.5
+    5.0
    ],
    "node": "main/furniture/Main Bath/Vanity 70",
    "opts": {
-    "W": 3,
+    "W": 4,
     "D": 1.8
    }
   },
@@ -5941,19 +5914,19 @@
    "facing": "W",
    "center": [
     40.0,
-    6.05
+    7.55
    ],
-   "width": 3.5,
+   "width": 4.5,
    "depth": 3.6,
    "footprint": [
     38.2,
-    4.3,
+    5.3,
     41.8,
-    7.8
+    9.8
    ],
    "node": "main/furniture/Main Bath/Shower 72",
    "opts": {
-    "W": 3.5,
+    "W": 4.5,
     "D": 3.6,
     "glass": "F"
    }
@@ -5967,15 +5940,15 @@
    "facing": "N",
    "center": [
     38.0,
-    11.0
+    13.0
    ],
    "width": 6,
    "depth": 4.4,
    "footprint": [
     35,
-    8.8,
+    10.8,
     41,
-    13.2
+    15.2
    ],
    "node": "main/furniture/Hall/rug 73",
    "opts": {
